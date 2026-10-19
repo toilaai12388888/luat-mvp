@@ -1,0 +1,471 @@
+{
+  "mon": "dan-su",
+  "chuong": "c02",
+  "ten_chuong": "Hợp đồng dân sự và Biện pháp bảo đảm",
+  "de_cuong": {
+    "tom_tat": "### Hợp đồng dân sự và Biện pháp bảo đảm (BLDS 2015)\n\n- **Khái niệm (Điều 385)**: Hợp đồng là sự thỏa thuận giữa các bên về việc xác lập, thay đổi hoặc chấm dứt quyền, nghĩa vụ dân sự.\n- **Đề nghị và Chấp nhận (Điều 386, 393)**:\n  + Đề nghị giao kết hợp đồng là việc thể hiện rõ ý định giao kết hợp đồng và chịu sự ràng buộc của bên đề nghị đối với bên đã được xác định hoặc tới công chúng.\n  + Chấp nhận đề nghị là sự trả lời của bên được đề nghị chấp nhận toàn bộ nội dung của đề nghị. Sự im lặng không được coi là chấp nhận giao kết hợp đồng, trừ trường hợp có thỏa thuận hoặc thói quen đã được xác lập giữa các bên.\n- **Thời điểm giao kết hợp đồng (Điều 400)**: Hợp đồng được giao kết tại thời điểm bên đề nghị nhận được chấp nhận giao kết. Nếu các bên có thỏa thuận im lặng là đồng ý thì thời điểm giao kết là thời điểm hết thời hạn trả lời mà bên được đề nghị im lặng.\n- **Biện pháp bảo đảm thực hiện nghĩa vụ (Điều 292)**: Gồm 9 biện pháp: Cầm cố tài sản, Thế chấp tài sản, Đặt cọc, Ký cược, Ký quỹ, Bảo lưu quyền sở hữu, Bảo lãnh, Tín chấp, Cầm giữ tài sản.\n- **Đặt cọc (Điều 328)**: Một bên giao cho bên kia một khoản tiền/kim khí quý trong một thời hạn để bảo đảm giao kết hoặc thực hiện hợp đồng. Nếu bên đặt cọc từ chối thì tài sản đặt cọc thuộc về bên nhận; nếu bên nhận từ chối thì phải trả lại và nộp một khoản tiền tương đương (trừ có thỏa thuận khác).\n- **Phạt vi phạm và Bồi thường thiệt hại (Điều 418)**: Mức phạt vi phạm do các bên tự thỏa thuận (khác với Luật Thương mại khống chế 8%), trừ trường hợp luật liên quan có quy định khác. Có thể vừa áp dụng phạt vi phạm vừa bồi thường thiệt hại nếu có thỏa thuận.",
+    "dieu_hay_ra_de": [
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 385",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Khái niệm hợp đồng",
+        "ghi_chu": "Bản chất là sự thỏa thuận xác lập, thay đổi hoặc chấm dứt quyền, nghĩa vụ."
+      },
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 393",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Chấp nhận đề nghị giao kết",
+        "ghi_chu": "Im lặng không là chấp nhận trừ khi có thỏa thuận hoặc thói quen xác lập."
+      },
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 400",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Thời điểm giao kết hợp đồng",
+        "ghi_chu": "Khi bên đề nghị nhận được chấp nhận giao kết."
+      },
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 292",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "9 biện pháp bảo đảm",
+        "ghi_chu": "Cầm cố, thế chấp, đặt cọc, ký cược, ký quỹ, bảo lưu, bảo lãnh, tín chấp, cầm giữ."
+      },
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 328",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Đặt cọc",
+        "ghi_chu": "Phạt cọc gấp đôi (trả lại cọc + nộp khoản tương đương) nếu bên nhận từ chối."
+      },
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 418",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Phạt vi phạm",
+        "ghi_chu": "Tự do thỏa thuận mức phạt theo BLDS, trừ trường hợp luật khác có quy định."
+      }
+    ]
+  },
+  "trac_nghiem": [
+    {
+      "id": "dan-su-c02-tn01",
+      "cau_hoi": "Theo Bộ luật Dân sự 2015, hợp đồng dân sự là gì?",
+      "lua_chon": [
+        "Sự thỏa thuận giữa các bên về việc xác lập, thay đổi hoặc chấm dứt quyền, nghĩa vụ dân sự",
+        "Văn bản ghi nhận ý chí của một bên trong việc định đoạt tài sản",
+        "Mọi cam kết giữa các chủ thể kinh doanh có mục đích sinh lợi",
+        "Sự chấp thuận của cơ quan nhà nước cho phép các bên chuyển nhượng tài sản"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Điều 385 BLDS 2015 định nghĩa: Hợp đồng là sự thỏa thuận giữa các bên về việc xác lập, thay đổi hoặc chấm dứt quyền, nghĩa vụ dân sự.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 385",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn02",
+      "cau_hoi": "Theo BLDS 2015, sự im lặng của bên được đề nghị giao kết hợp đồng có được coi là chấp nhận giao kết không?",
+      "lua_chon": [
+        "Luôn luôn được coi là chấp nhận sau 03 ngày làm việc",
+        "Không được coi là chấp nhận, trừ trường hợp có thỏa thuận hoặc thói quen đã xác lập",
+        "Được coi là chấp nhận nếu bên đề nghị có nêu điều khoản đó trong đề nghị",
+        "Được coi là chấp nhận đối với mọi hợp đồng mua bán tài sản có giá trị nhỏ"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 2 Điều 393 BLDS 2015 quy định: Sự im lặng của bên được đề nghị không được coi là chấp nhận giao kết hợp đồng, trừ trường hợp có thỏa thuận hoặc theo thói quen đã được xác lập giữa các bên.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 393 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn03",
+      "cau_hoi": "Thời điểm giao kết hợp đồng bằng lời nói là thời điểm nào theo BLDS 2015?",
+      "lua_chon": [
+        "Thời điểm các bên trực tiếp thỏa thuận về nội dung của hợp đồng",
+        "Thời điểm một bên chuyển tiền thanh toán",
+        "Thời điểm có người thứ ba làm chứng ghi nhận lại",
+        "Sau 24 giờ kể từ khi thỏa thuận bằng lời nói"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 400 BLDS 2015 nêu: Hợp đồng bằng lời nói được giao kết tại thời điểm các bên đã trực tiếp thỏa thuận về nội dung của hợp đồng.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 400 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn04",
+      "cau_hoi": "Biện pháp nào sau đây KHÔNG PHẢI là một trong 9 biện pháp bảo đảm thực hiện nghĩa vụ theo Điều 292 BLDS 2015?",
+      "lua_chon": [
+        "Cầm cố tài sản",
+        "Ký quỹ",
+        "Phạt vi phạm",
+        "Bảo lưu quyền sở hữu"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Điều 292 BLDS 2015 quy định 9 biện pháp bảo đảm gồm: Cầm cố, Thế chấp, Đặt cọc, Ký cược, Ký quỹ, Bảo lưu quyền sở hữu, Bảo lãnh, Tín chấp, Cầm giữ tài sản. Phạt vi phạm là chế tài xử lý vi phạm hợp đồng (Điều 418), không phải biện pháp bảo đảm.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 292",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn05",
+      "cau_hoi": "Trường hợp bên nhận đặt cọc từ chối giao kết hoặc thực hiện hợp đồng thì phải xử lý tài sản đặt cọc thế nào (nếu không có thỏa thuận khác)?",
+      "lua_chon": [
+        "Chỉ phải trả lại cho bên đặt cọc đúng số tài sản đã nhận",
+        "Phải trả lại tài sản đặt cọc và trả thêm một khoản tiền tương đương giá trị tài sản đặt cọc",
+        "Phải bồi thường gấp 3 lần giá trị tài sản đặt cọc",
+        "Tịch thu toàn bộ tài sản đặt cọc nộp ngân sách nhà nước"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 2 Điều 328 BLDS 2015 quy định nếu bên nhận đặt cọc từ chối việc giao kết, thực hiện hợp đồng thì phải trả cho bên đặt cọc tài sản đặt cọc và một khoản tiền tương đương giá trị tài sản đặt cọc, trừ trường hợp có thỏa thuận khác.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 328 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn06",
+      "cau_hoi": "Mức phạt vi phạm trong hợp đồng dân sự theo Bộ luật Dân sự 2015 được quy định như thế nào?",
+      "lua_chon": [
+        "Bị khống chế tối đa không quá 8% giá trị phần nghĩa vụ bị vi phạm",
+        "Bị khống chế tối đa không quá 12% giá trị hợp đồng",
+        "Do các bên tự thỏa thuận, trừ trường hợp luật liên quan có quy định khác",
+        "Không được vượt quá 30% giá trị hợp đồng"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 2 Điều 418 BLDS 2015 quy định: Mức phạt vi phạm do các bên thỏa thuận, trừ trường hợp luật liên quan có quy định khác. (Mức 8% là của Luật Thương mại 2005, không phải của BLDS).",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 418 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn07",
+      "cau_hoi": "Điểm khác biệt cơ bản nhất giữa Cầm cố tài sản và Thế chấp tài sản theo BLDS 2015 là gì?",
+      "lua_chon": [
+        "Cầm cố chỉ áp dụng với bất động sản, thế chấp chỉ áp dụng với động sản",
+        "Cầm cố bắt buộc chuyển giao tài sản cho bên nhận cầm cố, còn thế chấp không chuyển giao tài sản",
+        "Cầm cố phải công chứng, thế chấp không cần công chứng",
+        "Thời hạn cầm cố tối đa 1 năm, thế chấp không giới hạn"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Điều 309 BLDS 2015 quy định cầm cố là việc một bên giao tài sản thuộc quyền sở hữu của mình cho bên kia. Còn Điều 317 BLDS 2015 quy định thế chấp là việc một bên dùng tài sản thuộc sở hữu để bảo đảm nhưng không giao tài sản cho bên nhận thế chấp.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 309 & Điều 317",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn08",
+      "cau_hoi": "Hợp đồng dân sự bị chấm dứt trong trường hợp nào sau đây?",
+      "lua_chon": [
+        "Hợp đồng đã được hoàn thành",
+        "Theo thỏa thuận của các bên",
+        "Hợp đồng bị hủy bỏ hoặc bị đơn phương chấm dứt thực hiện",
+        "Tất cả các trường hợp trên"
+      ],
+      "dap_an": 3,
+      "giai_thich": "Điều 422 BLDS 2015 liệt kê đầy đủ các trường hợp chấm dứt hợp đồng, bao gồm: hoàn thành, theo thỏa thuận, bị hủy bỏ, bị đơn phương chấm dứt, chủ thể cá nhân chết khi hợp đồng gắn liền với nhân thân...",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 422",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn09",
+      "cau_hoi": "Khi một bên đơn phương chấm dứt thực hiện hợp đồng hợp pháp thì hợp đồng chấm dứt từ thời điểm nào?",
+      "lua_chon": [
+        "Từ thời điểm bên kia nhận được thông báo chấm dứt",
+        "Từ thời điểm giao kết hợp đồng (có hiệu lực hồi tố)",
+        "Sau 30 ngày kể từ ngày gửi thông báo",
+        "Khi Tòa án ra phán quyết công nhận"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 3 Điều 428 BLDS 2015 nêu: Khi hợp đồng bị đơn phương chấm dứt thực hiện thì hợp đồng chấm dứt kể từ thời điểm bên kia nhận được thông báo chấm dứt. Các bên không phải tiếp tục thực hiện nghĩa vụ.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 428 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn10",
+      "cau_hoi": "Hậu quả pháp lý khi một bên hủy bỏ hợp đồng dân sự là gì?",
+      "lua_chon": [
+        "Hợp đồng không có hiệu lực từ thời điểm giao kết, các bên phải hoàn trả cho nhau những gì đã nhận",
+        "Hợp đồng vẫn có hiệu lực đối với phần nghĩa vụ đã thực hiện trước đó",
+        "Bên hủy bỏ hợp đồng phải bị phạt 8% giá trị hợp đồng",
+        "Chỉ có Tòa án mới có quyền tuyên bố giải quyết tài sản"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 và khoản 2 Điều 427 BLDS 2015 quy định khi hợp đồng bị hủy bỏ thì hợp đồng không có hiệu lực từ thời điểm giao kết, các bên không phải thực hiện nghĩa vụ đã thỏa thuận và phải hoàn trả cho nhau những gì đã nhận sau khi trừ chi phí hợp lý.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 427",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn11",
+      "cau_hoi": "Biện pháp Ký cược theo Điều 329 BLDS 2015 được áp dụng trong quan hệ nào?",
+      "lua_chon": [
+        "Hợp đồng mua bán hàng hóa trả chậm",
+        "Hợp đồng thuê tài sản là động sản",
+        "Hợp đồng vay vốn ngân hàng",
+        "Hợp đồng gửi giữ tài sản"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 1 Điều 329 BLDS 2015 quy định: Ký cược là việc bên thuê tài sản là động sản giao cho bên cho thuê một khoản tiền hoặc kim khí quý trong một thời hạn để bảo đảm việc trả lại tài sản thuê.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 329 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn12",
+      "cau_hoi": "Theo Điều 335 BLDS 2015, bên bảo lãnh cam kết thực hiện nghĩa vụ thay cho bên được bảo lãnh khi nào?",
+      "lua_chon": [
+        "Khi bên được bảo lãnh không thực hiện hoặc thực hiện không đúng nghĩa vụ khi đến hạn",
+        "Trong mọi trường hợp ngay khi hợp đồng được ký kết",
+        "Chỉ khi bên được bảo lãnh bị tuyên bố phá sản",
+        "Chỉ khi bên nhận bảo lãnh có yêu cầu bằng văn bản công chứng"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 335 BLDS 2015 quy định: Bảo lãnh là việc người thứ ba cam kết với bên có quyền sẽ thực hiện nghĩa vụ thay cho bên có nghĩa vụ, nếu khi đến thời hạn thực hiện nghĩa vụ mà bên được bảo lãnh không thực hiện hoặc thực hiện không đúng nghĩa vụ.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 335 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn13",
+      "cau_hoi": "Trường hợp một bên thay đổi hoặc rút lại đề nghị giao kết hợp đồng thì phải thông báo cho bên kia khi nào?",
+      "lua_chon": [
+        "Trước hoặc cùng thời điểm bên được đề nghị nhận được đề nghị giao kết hợp đồng",
+        "Bất kỳ lúc nào trước khi hợp đồng hoàn thành",
+        "Trong thời hạn 15 ngày kể từ ngày gửi đề nghị",
+        "Không được phép rút lại một khi đã gửi đi"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 389 BLDS 2015 quy định bên đề nghị có thể thay đổi hoặc rút lại đề nghị nếu bên được đề nghị nhận được thông báo về việc thay đổi hoặc rút lại đề nghị trước hoặc cùng với thời điểm nhận được đề nghị.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 389 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn14",
+      "cau_hoi": "Theo BLDS 2015, các bên có thể vừa thỏa thuận phạt vi phạm vừa yêu cầu bồi thường thiệt hại không?",
+      "lua_chon": [
+        "Không được phép, chỉ được chọn một trong hai chế tài",
+        "Được phép nếu các bên có thỏa thuận về việc vừa chịu phạt vi phạm vừa bồi thường thiệt hại",
+        "Chỉ được áp dụng trong quan hệ kinh doanh thương mại",
+        "Chỉ được áp dụng khi có thiệt hại thực tế từ 100 triệu đồng trở lên"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 3 Điều 418 BLDS 2015 nêu rõ: Các bên có thể thỏa thuận về việc bên vi phạm nghĩa vụ chỉ phải nộp tiền phạt vi phạm mà không phải bồi thường thiệt hại hoặc vừa phải nộp tiền phạt vi phạm và vừa phải bồi thường thiệt hại.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 418 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-tn15",
+      "cau_hoi": "Thời hiệu khởi kiện để yêu cầu Tòa án giải quyết tranh chấp hợp đồng dân sự là bao lâu kể từ ngày người có quyền yêu cầu biết hoặc phải biết quyền của mình bị xâm phạm?",
+      "lua_chon": [
+        "01 năm",
+        "02 năm",
+        "03 năm",
+        "05 năm"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Điều 429 BLDS 2015 quy định: Thời hiệu khởi kiện để yêu cầu Tòa án giải quyết tranh chấp hợp đồng là 03 năm, kể từ ngày người có quyền yêu cầu biết hoặc phải biết quyền và lợi ích hợp pháp của mình bị xâm phạm.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 429",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    }
+  ],
+  "nhan_dinh": [
+    {
+      "id": "dan-su-c02-nd01",
+      "nhan_dinh": "Trong mọi trường hợp, sự im lặng của bên được đề nghị giao kết hợp đồng đều không có giá trị pháp lý.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 2 Điều 393 BLDS 2015 quy định ngoại lệ: sự im lặng được coi là chấp nhận giao kết hợp đồng nếu các bên có thỏa thuận trước hoặc theo thói quen đã được xác lập giữa các bên.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 393 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-nd02",
+      "nhan_dinh": "Phạt vi phạm là một biện pháp bảo đảm thực hiện nghĩa vụ dân sự theo quy định của BLDS 2015.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Theo Điều 292 BLDS 2015, có 9 biện pháp bảo đảm và không bao gồm phạt vi phạm. Phạt vi phạm là biện pháp chế tài xử lý vi phạm hợp đồng được quy định tại Điều 418.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 292 & Điều 418",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-nd03",
+      "nhan_dinh": "Trong hợp đồng dân sự, các bên có quyền tự do thỏa thuận mức phạt vi phạm mà không bị khống chế mức tối đa 8% như trong Luật Thương mại.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 2 Điều 418 BLDS 2015 quy định mức phạt vi phạm do các bên tự do thỏa thuận, trừ trường hợp luật liên quan có quy định khác.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 418 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-nd04",
+      "nhan_dinh": "Hợp đồng bị hủy bỏ thì không có hiệu lực từ thời điểm giao kết (có hiệu lực hồi tố).",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 427 BLDS 2015 quy định khi hợp đồng bị hủy bỏ thì hợp đồng không có hiệu lực từ thời điểm giao kết, các bên phải hoàn trả cho nhau những gì đã nhận.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 427 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-nd05",
+      "nhan_dinh": "Khi hợp đồng bị đơn phương chấm dứt thực hiện thì hợp đồng chấm dứt kể từ thời điểm giao kết.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 3 Điều 428 BLDS 2015 quy định hợp đồng đơn phương chấm dứt kể từ thời điểm bên kia nhận được thông báo chấm dứt (không có hiệu lực hồi tố như hủy bỏ hợp đồng).",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 428 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-nd06",
+      "nhan_dinh": "Biện pháp Ký cược có thể áp dụng đối với tài sản bảo đảm là quyền sử dụng đất hoặc nhà ở.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 1 Điều 329 BLDS 2015 nêu rõ ký cược chỉ áp dụng đối với quan hệ thuê tài sản là động sản, không áp dụng cho bất động sản như nhà ở hay đất đai.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 329 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-nd07",
+      "nhan_dinh": "Bên thế chấp tài sản vẫn được giữ và tiếp tục khai thác công dụng của tài sản thế chấp.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 317 BLDS 2015 quy định thế chấp là biện pháp mà bên thế chấp không giao tài sản cho bên nhận thế chấp mà vẫn giữ tài sản hoặc giao cho người thứ ba giữ.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 317 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-nd08",
+      "nhan_dinh": "Bên đặt cọc từ chối giao kết hợp đồng thì luôn luôn bị mất tài sản đặt cọc trong mọi trường hợp.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 2 Điều 328 BLDS 2015 quy định tài sản đặt cọc thuộc về bên nhận trừ trường hợp có thỏa thuận khác. Các bên có quyền thỏa thuận điều kiện hoàn lại tiền cọc.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 328 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-nd09",
+      "nhan_dinh": "Thời hiệu khởi kiện yêu cầu Tòa án giải quyết tranh chấp hợp đồng dân sự là 02 năm kể từ ngày phát sinh tranh chấp.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Điều 429 BLDS 2015 quy định thời hiệu khởi kiện tranh chấp hợp đồng là 03 năm kể từ ngày người có quyền yêu cầu biết hoặc phải biết quyền và lợi ích hợp pháp của mình bị xâm phạm.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 429",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-nd10",
+      "nhan_dinh": "Nếu các bên không có thỏa thuận về việc bồi thường thiệt hại thì bên vi phạm hợp đồng chỉ phải nộp tiền phạt vi phạm.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 3 Điều 418 BLDS 2015 quy định trường hợp các bên có thỏa thuận về phạt vi phạm nhưng không thỏa thuận về việc vừa phải nộp phạt vi phạm và vừa phải bồi thường thiệt hại thì bên vi phạm nghĩa vụ chỉ phải nộp tiền phạt vi phạm.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 418 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,471 @@
+{
+  "mon": "doanh-nghiep",
+  "chuong": "c02",
+  "ten_chuong": "Công ty cổ phần",
+  "de_cuong": {
+    "tom_tat": "### Công ty cổ phần (Luật Doanh nghiệp 2020)\n\n- **Đặc điểm cơ bản (Điều 111)**:\n  + Vốn điều lệ được chia thành nhiều phần bằng nhau gọi là cổ phần;\n  + Cổ đông có thể là tổ chức, cá nhân; số lượng cổ đông tối thiểu là 03 và không hạn chế số lượng tối đa;\n  + Cổ đông chỉ chịu trách nhiệm về các khoản nợ và nghĩa vụ tài sản khác trong phạm vi số vốn đã góp vào công ty;\n  + Cổ đông có quyền tự do chuyển nhượng cổ phần của mình (trừ cổ phần ưu đãi biểu quyết và cổ phần phổ thông của cổ đông sáng lập trong 03 năm đầu theo Điều 120);\n  + Công ty cổ phần có tư cách pháp nhân kể từ ngày cấp GCNĐKDN và có quyền phát hành cổ phần, trái phiếu.\n- **Các loại cổ phần (Điều 113, 114, 116)**:\n  + Cổ phần phổ thông (bắt buộc phải có);\n  + Cổ phần ưu đãi (có thể có): Ưu đãi biểu quyết (chỉ tổ chức được Chính phủ ủy quyền và cổ đông sáng lập được nắm giữ trong 03 năm), Ưu đãi cổ tức, Ưu đãi hoàn lại, Ưu đãi khác theo Điều lệ. Cổ đông sở hữu cổ phần ưu đãi cổ tức và hoàn lại không có quyền biểu quyết, dự họp ĐHĐCĐ.\n- **Cơ cấu tổ chức quản lý (Điều 137)**: Có 2 mô hình:\n  + Mô hình 1: Đại hội đồng cổ đông, Hội đồng quản trị, Ban kiểm soát (bắt buộc nếu có từ 11 cổ đông cá nhân hoặc có cổ đông tổ chức sở hữu từ 50% tổng số cổ phần), Giám đốc/Tổng giám đốc.\n  + Mô hình 2: Đại hội đồng cổ đông, Hội đồng quản trị (ít nhất 20% thành viên độc lập và có Ủy ban kiểm toán trực thuộc HĐQT), Giám đốc/Tổng giám đốc (không có Ban kiểm soát).\n- **Đại hội đồng cổ đông (Điều 138 - 148)**:\n  + Là cơ quan quyết định cao nhất của CTCP.\n  + Họp lần 1: Đủ điều kiện khi có số cổ đông dự họp đại diện trên 50% tổng số phiếu biểu quyết (Điều 145). Họp lần 2: Ít nhất 33%. Họp lần 3: Không phụ thuộc tỷ lệ.\n  + Thông qua nghị quyết (Điều 148): Tỷ lệ thông thường trên 50% số phiếu biểu quyết của cổ đông dự họp; các vấn đề trọng yếu (loại cổ phần, tổ chức lại, bán tài sản ≥ 35% tổng tài sản...) cần ít nhất 65% số phiếu biểu quyết của cổ đông dự họp tán thành.\n- **Hội đồng quản trị (Điều 153, 154)**: Là cơ quan quản lý công ty, có từ 03 đến 11 thành viên, nhiệm kỳ không quá 05 năm và có thể được bầu lại với số nhiệm kỳ không hạn chế.",
+    "dieu_hay_ra_de": [
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 111",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Đặc điểm công ty cổ phần",
+        "ghi_chu": "Tối thiểu 3 cổ đông, không giới hạn tối đa, vốn chia thành cổ phần bằng nhau."
+      },
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 116",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Cổ phần ưu đãi biểu quyết",
+        "ghi_chu": "Chỉ cổ đông sáng lập và cơ quan CP ủy quyền nắm giữ, hiệu lực 03 năm."
+      },
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 120",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Chuyển nhượng của CĐ sáng lập",
+        "ghi_chu": "Hạn chế chuyển nhượng cổ phần phổ thông cho người ngoài trong 03 năm đầu."
+      },
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 145",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Điều kiện họp ĐHĐCĐ",
+        "ghi_chu": "Lần 1: > 50% tổng số phiếu; lần 2: ≥ 33%; lần 3: không phụ thuộc."
+      },
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 148",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Thông qua nghị quyết ĐHĐCĐ",
+        "ghi_chu": "Thông thường > 50%; vấn đề trọng yếu cần ≥ 65% số phiếu cổ đông dự họp."
+      },
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 153",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Hội đồng quản trị",
+        "ghi_chu": "Có từ 03 đến 11 thành viên, nhiệm kỳ tối đa 05 năm."
+      }
+    ]
+  },
+  "trac_nghiem": [
+    {
+      "id": "doanh-nghiep-c02-tn01",
+      "cau_hoi": "Theo Luật Doanh nghiệp 2020, số lượng cổ đông tối thiểu của công ty cổ phần là bao nhiêu?",
+      "lua_chon": [
+        "02 cổ đông",
+        "03 cổ đông",
+        "05 cổ đông",
+        "07 cổ đông"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Điểm b khoản 1 Điều 111 Luật Doanh nghiệp 2020 quy định công ty cổ phần phải có số lượng cổ đông tối thiểu là 03 và không hạn chế số lượng tối đa.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 111 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn02",
+      "cau_hoi": "Loại cổ phần nào sau đây BẮT BUỘC phải có trong công ty cổ phần?",
+      "lua_chon": [
+        "Cổ phần phổ thông",
+        "Cổ phần ưu đãi biểu quyết",
+        "Cổ phần ưu đãi cổ tức",
+        "Cổ phần ưu đãi hoàn lại"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 113 Luật Doanh nghiệp 2020 quy định công ty cổ phần bắt buộc phải có cổ phần phổ thông. Người sở hữu cổ phần phổ thông là cổ đông phổ thông.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 113 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn03",
+      "cau_hoi": "Ai là người có quyền nắm giữ cổ phần ưu đãi biểu quyết của công ty cổ phần?",
+      "lua_chon": [
+        "Mọi nhà đầu tư nước ngoài mua cổ phần trên sàn chứng khoán",
+        "Chỉ tổ chức được Chính phủ ủy quyền và cổ đông sáng lập",
+        "Chủ tịch Hội đồng quản trị và Giám đốc điều hành",
+        "Bất kỳ cổ đông nào mua từ 10% vốn điều lệ trở lên"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 1 Điều 116 Luật Doanh nghiệp 2020 quy định chỉ tổ chức được Chính phủ ủy quyền và cổ đông sáng lập mới có quyền nắm giữ cổ phần ưu đãi biểu quyết. Ưu đãi biểu quyết của cổ đông sáng lập chỉ có hiệu lực trong 03 năm.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 116 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn04",
+      "cau_hoi": "Trong thời hạn 03 năm kể từ ngày cấp GCNĐKDN, cổ đông sáng lập có quyền tự do chuyển nhượng cổ phần phổ thông của mình cho ai?",
+      "lua_chon": [
+        "Bất kỳ ai mà không cần thông qua ai",
+        "Tự do chuyển nhượng cho cổ đông sáng lập khác; chỉ được chuyển cho người không phải cổ đông sáng lập nếu được ĐHĐCĐ chấp thuận",
+        "Không được phép chuyển nhượng cho bất kỳ ai kể cả cổ đông sáng lập",
+        "Chỉ được chuyển nhượng cho người thân thích"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 3 Điều 120 Luật Doanh nghiệp 2020 quy định trong 03 năm đầu, cổ đông sáng lập có quyền tự do chuyển nhượng cổ phần của mình cho cổ đông sáng lập khác; và chỉ được chuyển nhượng cho người ngoài nếu được sự chấp thuận của Đại hội đồng cổ đông.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 120 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn05",
+      "cau_hoi": "Cổ đông sở hữu loại cổ phần nào sau đây KHÔNG có quyền biểu quyết, dự họp Đại hội đồng cổ đông?",
+      "lua_chon": [
+        "Cổ phần phổ thông",
+        "Cổ phần ưu đãi biểu quyết",
+        "Cổ phần ưu đãi cổ tức và cổ phần ưu đãi hoàn lại",
+        "Cổ phần của cổ đông sáng lập"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 3 Điều 117 và khoản 3 Điều 118 Luật Doanh nghiệp 2020 quy định cổ đông sở hữu cổ phần ưu đãi cổ tức và cổ đông sở hữu cổ phần ưu đãi hoàn lại không có quyền biểu quyết, dự họp Đại hội đồng cổ đông, đề cử người vào HĐQT và Ban kiểm soát.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 117 & Điều 118",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn06",
+      "cau_hoi": "Cuộc họp Đại hội đồng cổ đông được tiến hành lần thứ nhất khi có số cổ đông dự họp đại diện bao nhiêu phần trăm tổng số phiếu biểu quyết?",
+      "lua_chon": [
+        "Trên 50%",
+        "Ít nhất 65%",
+        "Ít nhất 75%",
+        "Đạt 100%"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 145 Luật Doanh nghiệp 2020 quy định cuộc họp Đại hội đồng cổ đông được tiến hành khi có số cổ đông dự họp đại diện trên 50% tổng số phiếu biểu quyết; tỷ lệ cụ thể do Điều lệ công ty quy định.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 145 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn07",
+      "cau_hoi": "Trường hợp cuộc họp lần thứ nhất không đủ điều kiện, cuộc họp ĐHĐCĐ lần thứ hai được triệu tập tiến hành khi có tỷ lệ nào?",
+      "lua_chon": [
+        "Đại diện ít nhất 33% tổng số phiếu biểu quyết",
+        "Đại diện ít nhất 50% tổng số phiếu biểu quyết",
+        "Đại diện ít nhất 20% tổng số phiếu biểu quyết",
+        "Không phụ thuộc số cổ đông và tỷ lệ phiếu"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 2 Điều 145 Luật Doanh nghiệp 2020 quy định cuộc họp lần thứ hai được tiến hành khi có số cổ đông dự họp đại diện ít nhất 33% tổng số phiếu biểu quyết; tỷ lệ cụ thể do Điều lệ công ty quy định.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 145 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn08",
+      "cau_hoi": "Nghị quyết ĐHĐCĐ về việc thay đổi ngành nghề kinh doanh, tổ chức lại công ty phải được thông qua với tỷ lệ biểu quyết nào?",
+      "lua_chon": [
+        "Ít nhất 50% số phiếu biểu quyết của cổ đông dự họp",
+        "Ít nhất 65% tổng số phiếu biểu quyết của tất cả cổ đông dự họp tán thành",
+        "Ít nhất 75% tổng số cổ đông công ty",
+        "100% cổ đông tham gia biểu quyết"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 1 Điều 148 Luật Doanh nghiệp 2020 quy định các nghị quyết về loại cổ phần, thay đổi ngành nghề, tổ chức lại, giải thể, đầu tư/bán tài sản từ 35% trở lên phải được số cổ đông đại diện ít nhất 65% tổng số phiếu biểu quyết của tất cả cổ đông dự họp tán thành.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 148 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn09",
+      "cau_hoi": "Số lượng thành viên Hội đồng quản trị của công ty cổ phần theo Luật Doanh nghiệp 2020 là bao nhiêu người?",
+      "lua_chon": [
+        "Từ 03 đến 11 thành viên",
+        "Từ 05 đến 15 thành viên",
+        "Tối thiểu 02 thành viên, không hạn chế tối đa",
+        "Cố định đúng 07 thành viên"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 154 Luật Doanh nghiệp 2020 quy định Hội đồng quản trị có từ 03 đến 11 thành viên. Điều lệ công ty quy định cụ thể số lượng thành viên Hội đồng quản trị.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 154 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn10",
+      "cau_hoi": "Nhiệm kỳ của thành viên Hội đồng quản trị công ty cổ phần là bao lâu?",
+      "lua_chon": [
+        "Không quá 03 năm và chỉ được bầu lại 01 lần",
+        "Không quá 05 năm và có thể được bầu lại với số nhiệm kỳ không hạn chế",
+        "Cố định 05 năm, không được bầu lại",
+        "Do Chủ tịch HĐQT tự quyết định"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 2 Điều 154 Luật Doanh nghiệp 2020 quy định nhiệm kỳ của thành viên Hội đồng quản trị không quá 05 năm và có thể được bầu lại với số nhiệm kỳ không hạn chế.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 154 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn11",
+      "cau_hoi": "Phương thức bầu dồn phiếu khi bầu thành viên HĐQT và Ban kiểm soát có đặc điểm gì?",
+      "lua_chon": [
+        "Mỗi cổ đông có số phiếu biểu quyết tương ứng với số cổ phần nhân với số thành viên được bầu",
+        "Mỗi cổ đông chỉ có duy nhất 01 phiếu biểu quyết cho tất cả ứng viên",
+        "Chỉ có cổ đông sáng lập mới được dồn phiếu",
+        "Cổ đông nắm giữ dưới 5% cổ phần không được dồn phiếu"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 3 Điều 148 Luật Doanh nghiệp 2020 quy định khi biểu quyết bầu thành viên HĐQT và BKS phải áp dụng phương thức bầu dồn phiếu, theo đó mỗi cổ đông có tổng số phiếu biểu quyết tương ứng với tổng số cổ phần sở hữu nhân với số thành viên được bầu của HĐQT hoặc BKS.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 148 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn12",
+      "cau_hoi": "Chủ tịch Hội đồng quản trị công ty cổ phần do cơ quan nào bầu?",
+      "lua_chon": [
+        "Đại hội đồng cổ đông bầu trực tiếp",
+        "Hội đồng quản trị bầu, miễn nhiệm, bãi nhiệm trong số các thành viên Hội đồng quản trị",
+        "Ban kiểm soát chỉ định",
+        "Giám đốc/Tổng giám đốc bổ nhiệm"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 1 Điều 156 Luật Doanh nghiệp 2020 quy định Chủ tịch Hội đồng quản trị do Hội đồng quản trị bầu, bãi nhiệm trong số các thành viên Hội đồng quản trị.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 156 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn13",
+      "cau_hoi": "Cuộc họp Hội đồng quản trị được tiến hành khi có bao nhiêu thành viên dự họp?",
+      "lua_chon": [
+        "Ít nhất 1/2 tổng số thành viên",
+        "Từ 3/4 tổng số thành viên trở lên",
+        "100% thành viên Hội đồng quản trị",
+        "Ít nhất 2/3 tổng số thành viên"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 8 Điều 157 Luật Doanh nghiệp 2020 quy định cuộc họp Hội đồng quản trị được tiến hành khi có từ ba phần tư (3/4) tổng số thành viên trở lên dự họp.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 157 khoản 8",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn14",
+      "cau_hoi": "Trong công ty cổ phần, ai là người đại diện theo pháp luật nếu Điều lệ công ty chỉ quy định 01 người?",
+      "lua_chon": [
+        "Bắt buộc là Trưởng ban kiểm soát",
+        "Chủ tịch Hội đồng quản trị hoặc Giám đốc/Tổng giám đốc theo quy định tại Điều lệ; nếu Điều lệ không quy định thì Chủ tịch HĐQT là người đại diện",
+        "Cổ đông sở hữu nhiều cổ phần nhất",
+        "Kế toán trưởng công ty"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 2 Điều 137 Luật Doanh nghiệp 2020 quy định trường hợp công ty chỉ có một người đại diện theo pháp luật thì Chủ tịch HĐQT hoặc Giám đốc/Tổng giám đốc là người đại diện theo pháp luật của công ty; trường hợp Điều lệ chưa quy định thì Chủ tịch HĐQT là người đại diện theo pháp luật.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 137 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-tn15",
+      "cau_hoi": "Cổ tức trả cho cổ phần phổ thông được xác định căn cứ vào điều kiện nào?",
+      "lua_chon": [
+        "Số lợi nhuận ròng đã thực hiện và khoản trích lập quỹ theo quy định, sau khi công ty đã hoàn thành nghĩa vụ thuế và tài chính",
+        "Cố định hàng năm bất kể công ty lãi hay lỗ",
+        "Mức lãi suất tiền gửi không kỳ hạn của ngân hàng",
+        "Số vốn điều lệ đăng ký ban đầu"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 2 Điều 135 Luật Doanh nghiệp 2020 quy định cổ tức trả cho cổ phần phổ thông được xác định căn cứ vào số lợi nhuận ròng đã thực hiện và khoản chi trả cổ tức được trích từ nguồn lợi nhuận giữ lại của công ty sau khi đã hoàn thành nghĩa vụ nộp thuế và tài chính khác.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 135 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    }
+  ],
+  "nhan_dinh": [
+    {
+      "id": "doanh-nghiep-c02-nd01",
+      "nhan_dinh": "Số lượng cổ đông của công ty cổ phần không được vượt quá 50 cổ đông.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Điểm b khoản 1 Điều 111 Luật Doanh nghiệp 2020 quy định số lượng cổ đông tối thiểu là 03 và không hạn chế số lượng tối đa. (Quy định tối đa 50 là áp dụng cho công ty TNHH 2 thành viên trở lên).",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 111 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-nd02",
+      "nhan_dinh": "Cổ đông sở hữu cổ phần ưu đãi biểu quyết có quyền tự do chuyển nhượng cổ phần đó cho người khác bất kỳ lúc nào.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 3 Điều 116 Luật Doanh nghiệp 2020 nêu rõ: Cổ đông sở hữu cổ phần ưu đãi biểu quyết không được chuyển nhượng cổ phần đó cho người khác, trừ trường hợp chuyển nhượng theo bản án, quyết định của Tòa án hoặc thừa kế.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 116 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-nd03",
+      "nhan_dinh": "Trong thời hạn 03 năm đầu kể từ ngày thành lập, cổ đông sáng lập muốn chuyển nhượng cổ phần phổ thông cho người ngoài bắt buộc phải có sự chấp thuận của Đại hội đồng cổ đông.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 3 Điều 120 Luật Doanh nghiệp 2020 quy định trong 03 năm đầu, việc chuyển nhượng cổ phần phổ thông của cổ đông sáng lập cho người không phải là cổ đông sáng lập phải được sự chấp thuận của Đại hội đồng cổ đông.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 120 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-nd04",
+      "nhan_dinh": "Mọi cổ đông trong công ty cổ phần đều có quyền dự họp và biểu quyết tại cuộc họp Đại hội đồng cổ đông.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Theo khoản 3 Điều 117 và khoản 3 Điều 118 Luật Doanh nghiệp 2020, cổ đông sở hữu cổ phần ưu đãi cổ tức và cổ đông sở hữu cổ phần ưu đãi hoàn lại không có quyền dự họp và biểu quyết tại ĐHĐCĐ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 117 & Điều 118",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-nd05",
+      "nhan_dinh": "Cuộc họp Đại hội đồng cổ đông triệu tập lần thứ nhất được tiến hành khi có số cổ đông dự họp đại diện ít nhất 65% tổng số phiếu biểu quyết.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 1 Điều 145 Luật Doanh nghiệp 2020 quy định cuộc họp ĐHĐCĐ lần thứ nhất được tiến hành khi có số cổ đông dự họp đại diện trên 50% tổng số phiếu biểu quyết (không phải 65%).",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 145 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-nd06",
+      "nhan_dinh": "Hội đồng quản trị của công ty cổ phần có số lượng thành viên từ 03 đến 11 người.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 154 Luật Doanh nghiệp 2020 quy định Hội đồng quản trị có từ 03 đến 11 thành viên theo quy định cụ thể của Điều lệ công ty.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 154 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-nd07",
+      "nhan_dinh": "Công ty cổ phần có thể lựa chọn mô hình quản trị không có Ban kiểm soát nếu đáp ứng các điều kiện luật định.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Điểm b khoản 1 Điều 137 Luật Doanh nghiệp 2020 cho phép mô hình quản trị gồm ĐHĐCĐ, HĐQT và Giám đốc/Tổng giám đốc (không có Ban kiểm soát), nếu ít nhất 20% số thành viên HĐQT là thành viên độc lập và có Ủy ban kiểm toán trực thuộc HĐQT.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 137 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-nd08",
+      "nhan_dinh": "Chủ tịch Hội đồng quản trị công ty cổ phần do Đại hội đồng cổ đông trực tiếp bầu.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 1 Điều 156 Luật Doanh nghiệp 2020 quy định Chủ tịch Hội đồng quản trị do Hội đồng quản trị bầu trong số các thành viên Hội đồng quản trị, không phải do ĐHĐCĐ trực tiếp bầu.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 156 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-nd09",
+      "nhan_dinh": "Khi bầu thành viên Hội đồng quản trị và Ban kiểm soát, bắt buộc phải áp dụng phương thức bầu dồn phiếu trừ trường hợp Điều lệ có quy định khác.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 3 Điều 148 Luật Doanh nghiệp 2020 quy định việc biểu quyết bầu thành viên HĐQT và BKS phải thực hiện theo phương thức bầu dồn phiếu, trừ trường hợp Điều lệ công ty có quy định khác.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 148 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-nd10",
+      "nhan_dinh": "Công ty cổ phần có quyền phát hành cả cổ phần và trái phiếu để huy động vốn.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 3 Điều 111 Luật Doanh nghiệp 2020 quy định công ty cổ phần có quyền phát hành cổ phần, trái phiếu và các loại chứng khoán khác của công ty.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 111 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    }
+  ]
+}

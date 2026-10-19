@@ -185,19 +185,19 @@
     },
     {
       "id": "doanh-nghiep-c01-tn08",
-      "cau_hoi": "Công ty TNHH hai thành viên trở lên bắt buộc phải thành lập Ban kiểm soát khi có bao nhiêu thành viên?",
+      "cau_hoi": "Theo Luật Doanh nghiệp 2020, công ty TNHH hai thành viên trở lên bắt buộc phải thành lập Ban kiểm soát trong trường hợp nào?",
       "lua_chon": [
-        "Từ 05 thành viên trở lên",
-        "Từ 07 thành viên trở lên",
-        "Từ 09 thành viên trở lên",
-        "Từ 11 thành viên trở lên"
+        "Khi có từ 11 thành viên trở lên",
+        "Khi công ty là doanh nghiệp nhà nước hoặc công ty con của doanh nghiệp nhà nước",
+        "Khi có vốn điều lệ từ 50 tỷ đồng trở lên",
+        "Bắt buộc đối với mọi công ty TNHH hai thành viên trở lên"
       ],
-      "dap_an": 3,
-      "giai_thich": "Khoản 1 Điều 54 Luật Doanh nghiệp 2020 quy định: Công ty trách nhiệm hữu hạn hai thành viên trở lên có từ 11 thành viên trở lên phải thành lập Ban kiểm soát; trường hợp có ít hơn 11 thành viên có thể thành lập Ban kiểm soát theo nhu cầu quản trị.",
+      "dap_an": 1,
+      "giai_thich": "Khoản 2 Điều 54 Luật Doanh nghiệp 2020 quy định chỉ công ty TNHH hai thành viên trở lên là doanh nghiệp nhà nước hoặc công ty con của doanh nghiệp nhà nước mới bắt buộc phải thành lập Ban kiểm soát; các trường hợp khác do công ty tự quyết định (quy định bắt buộc khi có từ 11 thành viên trở lên là của Luật Doanh nghiệp 2014 cũ và đã bị bãi bỏ).",
       "can_cu": [
         {
           "van_ban": "Luật Doanh nghiệp 2020",
-          "dieu": "Điều 54 khoản 1",
+          "dieu": "Điều 54 khoản 2",
           "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
         }
       ]
@@ -391,13 +391,13 @@
     },
     {
       "id": "doanh-nghiep-c01-nd05",
-      "nhan_dinh": "Công ty TNHH hai thành viên trở lên có dưới 11 thành viên thì không bắt buộc phải thành lập Ban kiểm soát.",
-      "dap_an": "dung",
-      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 54 Luật Doanh nghiệp 2020 quy định chỉ công ty có từ 11 thành viên trở lên mới bắt buộc phải thành lập Ban kiểm soát; dưới 11 thành viên thì thành lập theo nhu cầu quản trị.",
+      "nhan_dinh": "Công ty TNHH hai thành viên trở lên có từ 11 thành viên trở lên thì bắt buộc phải thành lập Ban kiểm soát.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Quy định bắt buộc lập Ban kiểm soát khi có từ 11 thành viên trở lên là của Luật Doanh nghiệp 2014 cũ. Theo khoản 2 Điều 54 Luật Doanh nghiệp 2020, chỉ công ty là doanh nghiệp nhà nước hoặc công ty con của doanh nghiệp nhà nước mới bắt buộc phải lập Ban kiểm soát; các trường hợp khác do công ty tự quyết định.",
       "can_cu": [
         {
           "van_ban": "Luật Doanh nghiệp 2020",
-          "dieu": "Điều 54 khoản 1",
+          "dieu": "Điều 54 khoản 2",
           "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
         }
       ]

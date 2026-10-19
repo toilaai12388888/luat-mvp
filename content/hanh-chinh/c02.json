@@ -1,0 +1,471 @@
+{
+  "mon": "hanh-chinh",
+  "chuong": "c02",
+  "ten_chuong": "Biện pháp ngăn chặn và Bảo đảm xử phạt VPHC",
+  "de_cuong": {
+    "tom_tat": "### Biện pháp ngăn chặn và bảo đảm xử lý VPHC (Luật XLVPHC 2012, sửa đổi 2020 & 2025)\n\n- **Mục đích áp dụng (Điều 119)**: Để ngăn chặn kịp thời vi phạm hành chính hoặc để bảo đảm việc xử lý vi phạm hành chính, người có thẩm quyền có thể áp dụng các biện pháp ngăn chặn và bảo đảm xử phạt.\n- **Các biện pháp ngăn chặn (Điều 119)**: Gồm 08 biện pháp:\n  1. Tạm giữ người theo thủ tục hành chính;\n  2. Áp giải người vi phạm;\n  3. Tạm giữ tang vật, phương tiện vi phạm hành chính, giấy phép, chứng chỉ hành nghề;\n  4. Khám người;\n  5. Khám phương tiện vận tải, đồ vật;\n  6. Khám nơi cất giấu tang vật, phương tiện vi phạm hành chính;\n  7. Bảo lãnh;\n  8. Quản lý người nước ngoài vi phạm trong thời gian làm thủ tục trục xuất.\n- **Tạm giữ người (Điều 122)**:\n  + Chỉ áp dụng khi cần ngăn chặn hành vi gây rối trật tự công cộng, thương tích, hoặc để xác định tình trạng nghiện ma túy...\n  + Thời hạn tạm giữ không quá 12 giờ; trường hợp cần thiết có thể kéo dài hơn nhưng không quá 24 giờ. Vùng rừng núi, hải đảo không quá 48 giờ.\n  + Mọi trường hợp tạm giữ người đều phải có quyết định bằng văn bản và giao cho người bị tạm giữ 01 bản.\n- **Tạm giữ tang vật, phương tiện (Điều 125)**:\n  + Thời hạn tạm giữ tang vật, phương tiện là 07 ngày làm việc kể từ ngày tạm giữ; trường hợp phức tạp có thể gia hạn nhưng không quá 30 ngày.\n  + Có thể giao cho tổ chức, cá nhân vi phạm giữ, bảo quản phương tiện dưới sự giám sát nếu có nơi cất giữ hoặc có khả năng tài chính bảo lãnh (trừ phương tiện là vật chứng vụ án hình sự, ma túy, vũ khí...).\n- **Khám người (Điều 127)**: Chỉ khám khi có căn cứ người đó cất giấu tang vật vi phạm. Nam khám nam, nữ khám nữ và phải có người cùng giới chứng kiến.\n- **Khám phương tiện, đồ vật (Điều 128) & Khám nơi cất giấu (Điều 129)**: Phải có sự chứng kiến của chủ phương tiện/người quản lý và người chứng kiến; khám nơi cất giấu là nhà ở phải có quyết định của người có thẩm quyền và đại diện chính quyền cơ sở chứng kiến.",
+    "dieu_hay_ra_de": [
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính",
+        "dieu": "Điều 119",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Các biện pháp ngăn chặn",
+        "ghi_chu": "8 biện pháp ngăn chặn và bảo đảm theo luật định."
+      },
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính",
+        "dieu": "Điều 122",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Tạm giữ người theo thủ tục hành chính",
+        "ghi_chu": "Thời hạn chuẩn 12h, gia hạn tối đa 24h (hải đảo, biên giới tối đa 48h)."
+      },
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính",
+        "dieu": "Điều 125",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Tạm giữ tang vật, phương tiện",
+        "ghi_chu": "Thời hạn 07 ngày làm việc, gia hạn tối đa 30 ngày."
+      },
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính",
+        "dieu": "Điều 127",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Khám người theo thủ tục hành chính",
+        "ghi_chu": "Nam khám nam, nữ khám nữ, phải có người cùng giới chứng kiến."
+      },
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính",
+        "dieu": "Điều 128",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Khám phương tiện, đồ vật",
+        "ghi_chu": "Phải có mặt chủ phương tiện hoặc người điều khiển và người chứng kiến."
+      },
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính",
+        "dieu": "Điều 129",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Khám nơi cất giấu tang vật",
+        "ghi_chu": "Khám chỗ ở phải có quyết định của Chủ tịch UBND cấp huyện/cấp có thẩm quyền."
+      }
+    ]
+  },
+  "trac_nghiem": [
+    {
+      "id": "hanh-chinh-c02-tn01",
+      "cau_hoi": "Theo Luật XLVPHC, thời hạn tạm giữ người theo thủ tục hành chính trong điều kiện bình thường không được quá bao nhiêu giờ?",
+      "lua_chon": [
+        "06 giờ",
+        "12 giờ",
+        "24 giờ",
+        "48 giờ"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 3 Điều 122 Luật XLVPHC quy định thời hạn tạm giữ người theo thủ tục hành chính không quá 12 giờ; trong trường hợp cần thiết, thời hạn tạm giữ có thể kéo dài hơn nhưng không quá 24 giờ kể từ thời điểm bắt đầu giữ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 122 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn02",
+      "cau_hoi": "Ở khu vực rừng núi hiểm trở, hải đảo, biên giới, thời hạn tạm giữ người theo thủ tục hành chính tối đa là bao lâu?",
+      "lua_chon": [
+        "24 giờ",
+        "36 giờ",
+        "48 giờ",
+        "72 giờ"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 3 Điều 122 Luật XLVPHC quy định đối với trường hợp tạm giữ để xác định tình trạng nghiện ma túy hoặc ở khu vực rừng núi hiểm trở, hải đảo, biên giới thì thời hạn tạm giữ có thể kéo dài hơn nhưng không quá 48 giờ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 122 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn03",
+      "cau_hoi": "Thời hạn tạm giữ tang vật, phương tiện vi phạm hành chính thông thường là bao lâu kể từ ngày tạm giữ?",
+      "lua_chon": [
+        "03 ngày làm việc",
+        "05 ngày làm việc",
+        "07 ngày làm việc",
+        "10 ngày làm việc"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 8 Điều 125 Luật XLVPHC (sửa đổi 2020) quy định thời hạn tạm giữ tang vật, phương tiện vi phạm hành chính, giấy phép, chứng chỉ hành nghề là 07 ngày làm việc, kể từ ngày tạm giữ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 125 khoản 8",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn04",
+      "cau_hoi": "Trường hợp vụ việc có nhiều tình tiết phức tạp cần xác minh thì thời hạn tạm giữ tang vật, phương tiện tối đa có thể kéo dài bao lâu?",
+      "lua_chon": [
+        "Không quá 15 ngày",
+        "Không quá 30 ngày",
+        "Không quá 60 ngày",
+        "Không quá 90 ngày"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 8 Điều 125 Luật XLVPHC quy định trường hợp vụ việc có nhiều tình tiết phức tạp, cần tiến hành xác minh thì người có thẩm quyền có thể kéo dài thời hạn tạm giữ nhưng không quá 30 ngày.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 125 khoản 8",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn05",
+      "cau_hoi": "Nguyên tắc bắt buộc khi tiến hành biện pháp khám người theo thủ tục hành chính là gì?",
+      "lua_chon": [
+        "Phải có luật sư của người bị khám tham gia",
+        "Nam khám nam, nữ khám nữ và phải có người cùng giới chứng kiến",
+        "Bắt buộc phải ghi hình và phát trực tiếp",
+        "Chỉ được thực hiện tại trụ sở Ủy ban nhân dân"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 2 Điều 127 Luật XLVPHC quy định khi tiến hành khám người, nam khám nam, nữ khám nữ và phải có người cùng giới chứng kiến.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 127 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn06",
+      "cau_hoi": "Biện pháp nào sau đây KHÔNG thuộc các biện pháp ngăn chặn và bảo đảm xử lý vi phạm hành chính (Điều 119)?",
+      "lua_chon": [
+        "Tạm giam người vi phạm theo Bộ luật Tố tụng hình sự",
+        "Tạm giữ tang vật, phương tiện vi phạm hành chính",
+        "Áp giải người vi phạm",
+        "Khám phương tiện vận tải, đồ vật"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Tạm giam là biện pháp ngăn chặn trong tố tụng hình sự. Trong Luật XLVPHC chỉ có biện pháp \"Tạm giữ người theo thủ tục hành chính\" (Điều 119, Điều 122), không có biện pháp tạm giam.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 119",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn07",
+      "cau_hoi": "Khi khám nơi cất giấu tang vật, phương tiện vi phạm hành chính là nơi ở thì bắt buộc phải có sự tham gia của ai?",
+      "lua_chon": [
+        "Đại diện Viện kiểm sát nhân dân cùng cấp",
+        "Đại diện chính quyền địa phương cơ sở và người chứng kiến",
+        "Tất cả các thành viên trong hộ gia đình",
+        "Đoàn đại biểu Quốc hội tại địa phương"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 2 Điều 129 Luật XLVPHC quy định khi khám nơi cất giấu tang vật, phương tiện là nơi ở thì phải có sự chứng kiến của người đại diện chính quyền cơ sở và người chứng kiến.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 129 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn08",
+      "cau_hoi": "Người có thẩm quyền áp dụng biện pháp tạm giữ tang vật có thể giao phương tiện giao thông vi phạm cho ai giữ bảo quản?",
+      "lua_chon": [
+        "Tuyệt đối không được giao cho ai ngoài cơ quan công an",
+        "Tổ chức, cá nhân vi phạm giữ, bảo quản dưới sự giám sát của cơ quan có thẩm quyền nếu đủ điều kiện luật định",
+        "Bán đấu giá ngay trong vòng 24 giờ",
+        "Bàn giao cho công ty bảo hiểm định đoạt"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 10 Điều 125 Luật XLVPHC (sửa đổi 2020) cho phép cá nhân, tổ chức vi phạm có nơi giữ, bảo quản phương tiện hoặc có khả năng tài chính đặt tiền bảo lãnh thì có thể được giữ, bảo quản phương tiện dưới sự quản lý của cơ quan xử phạt.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 125 khoản 10",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn09",
+      "cau_hoi": "Khi tiến hành khám phương tiện vận tải, đồ vật mà chủ phương tiện hoặc người điều khiển vắng mặt thì xử lý thế nào?",
+      "lua_chon": [
+        "Không được phép tiến hành khám trong mọi trường hợp",
+        "Vẫn được tiến hành khám nhưng phải có 01 đại diện chính quyền cơ sở và 01 người chứng kiến",
+        "Chỉ cần người thi hành công vụ tự ký biên bản",
+        "Phải hoãn lại tối đa 30 ngày chờ chủ phương tiện"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 2 Điều 128 Luật XLVPHC quy định trường hợp người chủ phương tiện, người điều khiển vắng mặt thì việc khám phương tiện vẫn được tiến hành nhưng phải có 01 người đại diện chính quyền cơ sở và 01 người chứng kiến.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 128 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn10",
+      "cau_hoi": "Thời điểm bắt đầu tính thời hạn tạm giữ người theo thủ tục hành chính là khi nào?",
+      "lua_chon": [
+        "Thời điểm ra quyết định tạm giữ",
+        "Thời điểm người có thẩm quyền bắt đầu giữ người vi phạm",
+        "Thời điểm đưa người vi phạm về đến trụ sở",
+        "Thời điểm người bị giữ ký vào biên bản tạm giữ"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 3 Điều 122 Luật XLVPHC nêu rõ thời hạn tạm giữ người tính từ thời điểm người có thẩm quyền bắt đầu giữ người vi phạm hành chính.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 122 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn11",
+      "cau_hoi": "Người bị tạm giữ người theo thủ tục hành chính có quyền gì sau đây?",
+      "lua_chon": [
+        "Được thông báo cho gia đình, cơ quan, tổ chức nơi làm việc hoặc học tập biết",
+        "Yêu cầu được trả tự do ngay sau 01 giờ nếu không có chứng cứ",
+        "Từ chối cung cấp danh tính",
+        "Yêu cầu bồi thường 1 tháng lương cơ sở"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 4 Điều 122 Luật XLVPHC quy định theo yêu cầu của người bị tạm giữ, người ra quyết định tạm giữ phải thông báo cho gia đình, cơ quan nơi làm việc hoặc học tập của họ biết.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 122 khoản 4",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn12",
+      "cau_hoi": "Trường hợp nào sau đây tang vật vi phạm hành chính bị tịch thu sung vào ngân sách nhà nước?",
+      "lua_chon": [
+        "Tang vật là hàng cấm lưu hành",
+        "Tang vật mà cá nhân, tổ chức vi phạm chiếm đoạt trái phép của chủ sở hữu hợp pháp",
+        "Phương tiện bị chiếm đoạt để vi phạm mà chủ sở hữu không có lỗi",
+        "Tất cả tài sản tìm thấy tại hiện trường"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 126 Luật XLVPHC quy định tang vật là tiền, hàng hóa cấm lưu hành thì bị tịch thu sung vào ngân sách nhà nước hoặc tiêu hủy. Tang vật, phương tiện bị chiếm đoạt hợp pháp thì trả lại cho chủ sở hữu.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 126 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn13",
+      "cau_hoi": "Trường hợp nào được áp dụng biện pháp Áp giải người vi phạm hành chính theo Điều 124?",
+      "lua_chon": [
+        "Người vi phạm không tự giác chấp hành yêu cầu của người có thẩm quyền xử phạt",
+        "Mọi trường hợp người vi phạm không mang theo giấy tờ tùy thân",
+        "Khi người vi phạm là người chưa thành niên",
+        "Chỉ khi có lệnh của Viện trưởng Viện kiểm sát"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 124 Luật XLVPHC quy định áp giải được áp dụng đối với người vi phạm không tự nguyện chấp hành quyết định xử phạt hoặc lệnh dẫn giải của cơ quan có thẩm quyền.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 124 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn14",
+      "cau_hoi": "Theo Luật XLVPHC, biên bản tạm giữ tang vật, phương tiện vi phạm hành chính phải được lập thành mấy bản?",
+      "lua_chon": [
+        "Ít nhất 01 bản",
+        "Ít nhất 02 bản (giao cho người vi phạm 01 bản)",
+        "Ít nhất 03 bản",
+        "Ít nhất 04 bản"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 4 Điều 125 Luật XLVPHC quy định trong mọi trường hợp tạm giữ tang vật, phương tiện người có thẩm quyền phải lập biên bản; biên bản phải được lập thành ít nhất 02 bản, giao cho người vi phạm hoặc đại diện tổ chức vi phạm 01 bản.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 125 khoản 4",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-tn15",
+      "cau_hoi": "Hết thời hạn tạm giữ tang vật mà người vi phạm không đến nhận mà không có lý do chính đáng thì xử lý thế nào?",
+      "lua_chon": [
+        "Người có thẩm quyền được quyền sử dụng vào mục đích cá nhân",
+        "Thông báo công khai trên phương tiện thông tin đại chúng; hết thời hạn quy định nếu không ai đến nhận thì tịch thu hoặc tiêu hủy",
+        "Chuyển giao ngay cho công ty bảo hiểm",
+        "Tự động hủy bỏ quyết định xử phạt"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 4 Điều 126 Luật XLVPHC quy định đối với tang vật, phương tiện quá thời hạn tạm giữ mà không xác định được người vi phạm hoặc người vi phạm không đến nhận thì cơ quan xử phạt phải thông báo công khai; quá thời hạn theo luật định nếu không có người nhận thì tịch thu sung công hoặc bán đấu giá, tiêu hủy theo luật.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 126 khoản 4",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    }
+  ],
+  "nhan_dinh": [
+    {
+      "id": "hanh-chinh-c02-nd01",
+      "nhan_dinh": "Thời hạn tạm giữ người theo thủ tục hành chính trong mọi trường hợp không được vượt quá 24 giờ.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 3 Điều 122 Luật XLVPHC quy định tại khu vực rừng núi hiểm trở, hải đảo, biên giới hoặc trường hợp xác định tình trạng nghiện ma túy thì thời hạn tạm giữ có thể kéo dài nhưng không quá 48 giờ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 122 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-nd02",
+      "nhan_dinh": "Mọi trường hợp tạm giữ người theo thủ tục hành chính đều bắt buộc phải có quyết định bằng văn bản của người có thẩm quyền.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 2 Điều 122 Luật XLVPHC nêu rõ: Mọi trường hợp tạm giữ người theo thủ tục hành chính phải có quyết định bằng văn bản và phải giao cho người bị tạm giữ 01 bản.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 122 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-nd03",
+      "nhan_dinh": "Khi tiến hành khám người theo thủ tục hành chính, cán bộ nam có thể khám người vi phạm là nữ nếu không có cán bộ nữ tại hiện trường.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 2 Điều 127 Luật XLVPHC quy định nghiêm ngặt: khi khám người, nam khám nam, nữ khám nữ và phải có người cùng giới chứng kiến; không có ngoại lệ cho phép nam khám nữ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 127 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-nd04",
+      "nhan_dinh": "Thời hạn tạm giữ tang vật, phương tiện vi phạm hành chính tối đa trong mọi trường hợp là 30 ngày.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 8 Điều 125 Luật XLVPHC quy định thời hạn tạm giữ là 07 ngày làm việc, gia hạn tối đa 30 ngày đối với vụ việc phức tạp; trường hợp đặc biệt nghiêm trọng có nhiều tình tiết phức tạp cần giám định thì có thể gia hạn thêm nhưng không quá 60 ngày.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 125 khoản 8",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-nd05",
+      "nhan_dinh": "Người có thẩm quyền tạm giữ phương tiện vi phạm giao thông có thể cho phép người vi phạm tự giữ, bảo quản phương tiện nếu có bảo lãnh hoặc đặt tiền.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 10 Điều 125 Luật XLVPHC quy định cho phép tổ chức, cá nhân vi phạm có nơi giữ hoặc có khả năng tài chính đặt tiền bảo lãnh thì được giao giữ, bảo quản phương tiện dưới sự giám sát.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 125 khoản 10",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-nd06",
+      "nhan_dinh": "Khám nơi cất giấu tang vật vi phạm là nơi ở chỉ cần có sự đồng ý bằng lời nói của chủ hộ.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 1 và khoản 2 Điều 129 Luật XLVPHC quy định khám nơi cất giấu là nơi ở phải có quyết định bằng văn bản của người có thẩm quyền (như Chủ tịch UBND cấp huyện) và phải có đại diện chính quyền cơ sở cùng người chứng kiến.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 129",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-nd07",
+      "nhan_dinh": "Phương tiện vi phạm hành chính bị kẻ khác chiếm đoạt, sử dụng trái phép để vi phạm thì sẽ bị tịch thu sung quỹ nhà nước.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 1 Điều 126 Luật XLVPHC nêu rõ trường hợp tang vật, phương tiện bị chiếm đoạt hoặc sử dụng trái phép để vi phạm mà chủ sở hữu không có lỗi thì được trả lại cho chủ sở hữu hợp pháp.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 126 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-nd08",
+      "nhan_dinh": "Tạm giam người vi phạm là một trong các biện pháp ngăn chặn được quy định trong Luật Xử lý vi phạm hành chính.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Luật XLVPHC chỉ có biện pháp \"Tạm giữ người theo thủ tục hành chính\" (Điều 119, 122). Biện pháp \"Tạm giam\" chỉ tồn tại trong Tố tụng hình sự.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 119",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-nd09",
+      "nhan_dinh": "Khi khám phương tiện vận tải nếu người điều khiển phương tiện vắng mặt thì không được phép tiến hành khám.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 2 Điều 128 Luật XLVPHC quy định trường hợp người điều khiển phương tiện vắng mặt thì vẫn được khám nhưng phải có 01 đại diện chính quyền địa phương cơ sở và 01 người chứng kiến.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 128 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-nd10",
+      "nhan_dinh": "Người bị tạm giữ theo thủ tục hành chính có quyền yêu cầu người ra quyết định tạm giữ thông báo cho gia đình mình biết.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 4 Điều 122 Luật XLVPHC quy định người ra quyết định tạm giữ phải thông báo cho gia đình, cơ quan, tổ chức nơi người đó làm việc hoặc học tập biết theo yêu cầu của người bị tạm giữ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính",
+          "dieu": "Điều 122 khoản 4",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    }
+  ]
+}

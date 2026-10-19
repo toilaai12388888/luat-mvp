@@ -204,18 +204,18 @@
     },
     {
       "id": "hanh-chinh-c01-tn09",
-      "cau_hoi": "Thủ tục xử phạt vi phạm hành chính không lập biên bản được áp dụng đối với mức phạt tiền nào?",
+      "cau_hoi": "Theo Luật Xử lý vi phạm hành chính (sửa đổi năm 2025 bởi Luật số 88/2025/QH15), thủ tục xử phạt không lập biên bản áp dụng đối với mức phạt tiền tối đa là bao nhiêu?",
       "lua_chon": [
-        "Phạt tiền đến 250.000 đồng đối với cá nhân, 500.000 đồng đối với tổ chức",
+        "Phạt tiền đến 250.000 đồng đối với cá nhân, 500.000 đồng đối với tổ chức (mức cũ)",
         "Phạt tiền đến 500.000 đồng đối với cá nhân, 1.000.000 đồng đối với tổ chức",
-        "Phạt tiền đến 1.000.000 đồng đối với mọi đối tượng",
-        "Chỉ áp dụng với mức phạt tiền dưới 100.000 đồng"
+        "Phạt tiền đến 1.000.000 đồng đối với cá nhân, 2.000.000 đồng đối với tổ chức",
+        "Phạt tiền đến 2.000.000 đồng đối với mọi đối tượng"
       ],
-      "dap_an": 0,
-      "giai_thich": "Khoản 1 Điều 56 Luật XLVPHC quy định xử phạt vi phạm hành chính không lập biên bản được áp dụng trong trường hợp xử phạt cảnh cáo hoặc phạt tiền đến 250.000 đồng đối với cá nhân, 500.000 đồng đối với tổ chức.",
+      "dap_an": 1,
+      "giai_thich": "Theo khoản 1 Điều 56 Luật Xử lý vi phạm hành chính (được sửa đổi, bổ sung bởi Luật số 88/2025/QH15 có hiệu lực từ ngày 01/07/2025), thủ tục xử phạt không lập biên bản được áp dụng đối với phạt cảnh cáo hoặc phạt tiền đến 500.000 đồng đối với cá nhân, 1.000.000 đồng đối với tổ chức (mức trước 2025 lần lượt là 250.000 đồng và 500.000 đồng).",
       "can_cu": [
         {
-          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "van_ban": "Luật XLVPHC 2012 (sửa đổi, bổ sung bởi Luật số 88/2025/QH15)",
           "dieu": "Điều 56 khoản 1",
           "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
         }
@@ -391,12 +391,12 @@
     },
     {
       "id": "hanh-chinh-c01-nd05",
-      "nhan_dinh": "Trường hợp xử phạt vi phạm hành chính không lập biên bản áp dụng đối với phạt tiền đến 250.000 đồng đối với cá nhân.",
-      "dap_an": "dung",
-      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 56 Luật XLVPHC quy định xử phạt không lập biên bản áp dụng đối với phạt cảnh cáo hoặc phạt tiền đến 250.000 đồng đối với cá nhân, 500.000 đồng đối với tổ chức.",
+      "nhan_dinh": "Theo Luật Xử lý vi phạm hành chính (sửa đổi bởi Luật số 88/2025/QH15), thủ tục xử phạt không lập biên bản áp dụng đối với phạt tiền đến 250.000 đồng đối với cá nhân.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Mức phạt tiền đến 250.000 đồng đối với cá nhân là quy định cũ. Kể từ ngày 01/07/2025, theo Luật số 88/2025/QH15 sửa đổi Điều 56 Luật Xử lý vi phạm hành chính, mức phạt tiền tối đa áp dụng thủ tục không lập biên bản đã được nâng lên đến 500.000 đồng đối với cá nhân (và 1.000.000 đồng đối với tổ chức).",
       "can_cu": [
         {
-          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "van_ban": "Luật XLVPHC 2012 (sửa đổi, bổ sung bởi Luật số 88/2025/QH15)",
           "dieu": "Điều 56 khoản 1",
           "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
         }
