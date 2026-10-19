@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Prototype app ôn thi Luật</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Lora:wght@600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app{--bg:#FFFFFF;--bg-2:#F4F6F9;--surface:#FFFFFF;--ink:#0E1A2E;--ink-2:#4F5B70;--ink-3:#7D889C;--line:#E6EAF0;--line-2:#D2D8E2;--btn:#14284B;--btn-ink:#FFFFFF;--navy-bar:#1F3A6B;--navy-soft:#EBF0F8;--navy-ink:#1F3A6B;--on-navy:#FFFFFF;--link:#2457C5;--gold:#D99A22;--gold-soft:#FBF1DC;--gold-ink:#875800;--fire:#E8692C;--good:#128A5B;--good-soft:#E6F5EE;--good-ink:#0D6B46;--bad:#CC3D3D;--bad-soft:#FCECEC;--bad-ink:#A82E2E;width:390px;height:844px;position:relative;overflow:hidden;background:var(--bg);color:var(--ink);font-family:'Be Vietnam Pro',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-size:16px}
+.app.dark{--bg:#0B1120;--bg-2:#141D2F;--surface:#111A2B;--ink:#E8EDF5;--ink-2:#A6B0C3;--ink-3:#707D94;--line:#1E2940;--line-2:#2B3853;--btn:#E8EDF5;--btn-ink:#0B1120;--navy-bar:#8FB2FF;--navy-soft:#16233D;--navy-ink:#A9C3FF;--on-navy:#0B1120;--link:#8FB2FF;--gold-soft:#2A2213;--gold-ink:#F2C26B;--good-soft:#0F2A20;--good-ink:#5FD3A0;--bad-soft:#2E1517;--bad-ink:#FF9090}
+.app *{box-sizing:border-box}
+.screen{height:844px;display:flex;flex-direction:column;background:var(--bg)}
+.top{height:56px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 8px 0 16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:-.01em}
+.mark{width:30px;height:30px;border-radius:8px;background:var(--btn);color:var(--btn-ink);display:grid;place-items:center;font-family:Lora,Georgia,serif;font-size:19px;font-weight:600;line-height:1}
+.chips{display:flex;align-items:center;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:5px;height:32px;padding:0 10px;border-radius:999px;background:var(--bg-2);font-weight:600;font-size:14px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.c-gold{color:var(--gold)}
+.c-fire{color:var(--fire)}
+.iconbtn{width:44px;height:44px;border-radius:10px;border:0;background:transparent;color:var(--ink-2);display:grid;place-items:center;cursor:pointer;flex:none}
+.iconbtn:active{background:var(--bg-2)}
+.body{flex:1;overflow-y:auto;padding:4px 16px 24px}
+.hello{font-size:15px;color:var(--ink-2);margin:6px 0 2px}
+.h1{font-size:28px;line-height:1.2;font-weight:700;letter-spacing:-.02em;margin:0 0 16px}
+.hero{position:relative;display:block;height:236px;border-radius:20px;overflow:hidden;margin-bottom:12px;color:#fff;border:0;padding:0;width:100%;text-align:left;font:inherit;cursor:pointer}
+.hero img,.cover img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+.shade{position:absolute;left:0;top:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(8,16,34,0) 0%,rgba(8,16,34,.45) 42%,rgba(8,16,34,.9) 100%)}
+.hero-in{position:absolute;left:0;right:0;bottom:0;padding:18px}
+.kick{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.hero-title{font-size:21px;font-weight:700;letter-spacing:-.01em;margin:6px 0 2px}
+.hero-sub{font-size:14px;opacity:.85}
+.hero-row{display:flex;align-items:center;gap:12px;margin-top:14px}
+.track{flex:1;height:6px;border-radius:999px;background:rgba(255,255,255,.28);overflow:hidden}
+.track-fill{height:100%;background:#fff;border-radius:999px}
+.pill-white{height:40px;padding:0 16px;border-radius:999px;background:#fff;color:#0E1A2E;font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:6px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px}
+.streak{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+.row-between{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.streak-title{font-weight:700;font-size:16px;display:flex;align-items:center;gap:8px}
+.meta{font-size:13px;color:var(--ink-2)}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.day{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;color:var(--ink-3);font-weight:500}
+.dot{width:34px;height:34px;border-radius:999px;border:1.5px solid var(--line-2);display:grid;place-items:center;color:transparent}
+.dot.done{background:var(--gold);border-color:var(--gold);color:#fff}
+.dot.today{border:2px solid var(--gold);color:var(--gold)}
+.sec-title{font-size:18px;font-weight:700;letter-spacing:-.01em;margin:0 0 12px}
+.course{display:block;width:100%;text-align:left;padding:0;overflow:hidden;cursor:pointer;margin-bottom:12px;font:inherit;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:16px;transition:transform .12s}
+.course:active{transform:scale(.985)}
+.course-img{height:112px;width:100%;object-fit:cover;display:block}
+.course-img.dim{filter:grayscale(.7)}
+.course-in{padding:14px 16px 16px}
+.course-name{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.pct{font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.bar{height:6px;border-radius:999px;background:var(--bg-2);overflow:hidden;margin-top:12px}
+.bar-fill{height:100%;background:var(--navy-bar);border-radius:999px}
+.tag{font-size:12px;font-weight:600;padding:4px 8px;border-radius:6px;background:var(--bg-2);color:var(--ink-2);white-space:nowrap}
+.tabbar{flex:none;height:72px;border-top:1px solid var(--line);display:flex;background:var(--surface);padding:6px 0 12px}
+.tab{flex:1;border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font:inherit;font-size:12px;font-weight:600;color:var(--ink-3);cursor:pointer}
+.tab.on{color:var(--ink)}
+.cover{position:relative;height:220px;flex:none;color:#fff;overflow:hidden}
+.back{position:absolute;top:12px;left:12px;width:44px;height:44px;border-radius:999px;background:rgba(255,255,255,.92);color:#0E1A2E;border:0;display:grid;place-items:center;cursor:pointer}
+.cover-in{position:absolute;bottom:18px;left:16px;right:16px}
+.cover-title{font-size:26px;font-weight:700;letter-spacing:-.02em;margin-top:4px}
+.statline{display:flex;gap:16px;font-size:13px;color:var(--ink-2);margin:16px 0 18px}
+.statline b{color:var(--ink);font-weight:600}
+.chapter{border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden;background:var(--surface)}
+.ch-head{padding:14px 16px;display:flex;gap:12px;align-items:center}
+.ch-num{width:36px;height:36px;border-radius:10px;background:var(--navy-soft);color:var(--navy-ink);display:grid;place-items:center;font-weight:700;font-size:15px;flex:none}
+.ch-title{font-weight:700;font-size:16px;letter-spacing:-.01em}
+.ch-item{display:flex;align-items:center;gap:12px;width:100%;padding:12px 16px;border:0;border-top:1px solid var(--line);background:none;font:inherit;color:inherit;text-align:left;cursor:pointer;min-height:56px}
+.ch-item:active{background:var(--bg-2)}
+.ch-item[disabled]{opacity:.45;cursor:not-allowed}
+.ic{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;background:var(--bg-2);color:var(--ink-2);flex:none}
+.lbl{flex:1;font-weight:600;font-size:15px}
+.cnt{font-size:13px;color:var(--ink-3)}
+.subtop{height:56px;flex:none;display:flex;align-items:center;gap:4px;padding:0 8px 0 4px;border-bottom:1px solid var(--line)}
+.subtop-title{font-size:15px;font-weight:600;color:var(--ink-2)}
+.doc{flex:1;overflow-y:auto;padding:20px 20px 28px}
+.doc-kick{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.doc h1{font-size:26px;line-height:1.25;font-weight:700;letter-spacing:-.02em;margin:6px 0 6px}
+.doc-meta{font-size:14px;color:var(--ink-2);margin-bottom:24px}
+.doc h2{font-size:17px;font-weight:700;margin:0 0 12px}
+.doc ul{margin:0 0 28px;padding-left:20px;display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.65}
+.art{display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.art-no{flex:none;font-size:13px;font-weight:700;color:var(--navy-ink);background:var(--navy-soft);border-radius:8px;padding:5px 8px;height:fit-content;white-space:nowrap;font-variant-numeric:tabular-nums}
+.art-name{font-weight:600;font-size:15px}
+.art-note{font-size:14px;color:var(--ink-2);margin-top:2px;line-height:1.5}
+.dock{flex:none;padding:12px 16px 20px;border-top:1px solid var(--line);background:var(--surface)}
+.btn{height:52px;width:100%;border-radius:12px;border:0;background:var(--btn);color:var(--btn-ink);font:inherit;font-weight:700;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform .12s,opacity .12s}
+.btn:active{transform:scale(.98)}
+.btn[disabled]{opacity:.3;cursor:not-allowed}
+.btn.good{background:var(--good);color:#fff}
+.btn.bad{background:var(--bad);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line-2)}
+.btn:focus-visible,.opt:focus-visible,.course:focus-visible,.ch-item:focus-visible,.hero:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.qtop{height:56px;flex:none;display:flex;align-items:center;gap:10px;padding:0 6px 0 4px}
+.segs{flex:1;display:flex;gap:4px}
+.seg{flex:1;height:6px;border-radius:999px;background:var(--line);transition:background .3s}
+.seg.cur{background:var(--ink-3)}
+.seg.good{background:var(--good)}
+.seg.bad{background:var(--bad)}
+.combo{display:inline-flex;align-items:center;gap:3px;height:28px;padding:0 8px;border-radius:999px;background:var(--gold-soft);color:var(--gold-ink);font-weight:700;font-size:13px;animation:pop .35s}
+.qbody{flex:1;overflow-y:auto;padding:16px 20px 20px}
+.qkick{font-size:13px;font-weight:600;color:var(--ink-3);margin-bottom:10px}
+.qtext{font-size:20px;line-height:1.45;font-weight:600;letter-spacing:-.01em;margin:0 0 24px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;padding:14px 16px;border-radius:12px;border:1.5px solid var(--line-2);background:var(--surface);font:inherit;font-size:16px;line-height:1.45;color:var(--ink);text-align:left;cursor:pointer;margin-bottom:10px;transition:border-color .15s,background .15s,transform .12s}
+.opt:active{transform:scale(.99)}
+.key{flex:none;width:28px;height:28px;border-radius:999px;border:1.5px solid var(--line-2);display:grid;place-items:center;font-size:13px;font-weight:700;color:var(--ink-2)}
+.opt-text{flex:1}
+.opt.sel{border-color:var(--navy-bar);background:var(--navy-soft);box-shadow:inset 0 0 0 1px var(--navy-bar)}
+.opt.sel .key{background:var(--navy-bar);border-color:var(--navy-bar);color:var(--on-navy)}
+.opt.good{border-color:var(--good);background:var(--good-soft);box-shadow:inset 0 0 0 1px var(--good);animation:pop .35s}
+.opt.good .key{background:var(--good);border-color:var(--good);color:#fff}
+.opt.bad{border-color:var(--bad);background:var(--bad-soft);box-shadow:inset 0 0 0 1px var(--bad);animation:shake .35s}
+.opt.bad .key{background:var(--bad);border-color:var(--bad);color:#fff}
+.opt.dim{opacity:.45}
+.lock{pointer-events:none}
+.stmt{border-radius:16px;background:var(--bg-2);padding:20px;margin-bottom:20px}
+.stmt-label{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+.stmt-text{font-size:20px;line-height:1.45;font-weight:600;letter-spacing:-.01em;margin:0}
+.fb{flex:none;padding:16px 16px 20px;background:var(--good-soft);animation:rise .28s cubic-bezier(.2,.8,.2,1);max-height:440px;display:flex;flex-direction:column;gap:12px}
+.fb.bad{background:var(--bad-soft)}
+.fb-head{display:flex;align-items:center;gap:10px}
+.fb-ic{width:32px;height:32px;border-radius:999px;background:var(--good);color:#fff;display:grid;place-items:center;flex:none}
+.fb.bad .fb-ic{background:var(--bad)}
+.fb-title{font-size:18px;font-weight:700;color:var(--good-ink)}
+.fb.bad .fb-title{color:var(--bad-ink)}
+.fb-sub{font-size:14px;color:var(--ink-2)}
+.xp{margin-left:auto;font-weight:700;font-size:14px;color:var(--gold-ink);background:var(--surface);padding:5px 10px;border-radius:999px;display:inline-flex;gap:4px;align-items:center;animation:pop .4s .08s both;flex:none;font-variant-numeric:tabular-nums}
+.fb-body{overflow-y:auto;display:flex;flex-direction:column;gap:10px}
+.why{font-size:15px;line-height:1.6;margin:0;color:var(--ink)}
+.cites{display:flex;flex-wrap:wrap;gap:8px}
+.cite{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 10px;border-radius:8px;background:var(--surface);border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--link);text-decoration:none}
+.note{font-size:12px;color:var(--ink-3);display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.linkbtn{background:none;border:0;padding:12px 4px;margin:-12px 0;font:inherit;font-weight:600;color:var(--link);cursor:pointer}
+.res{flex:1;overflow-y:auto;padding:28px 20px 24px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.ring{position:relative;width:156px;height:156px}
+.ring svg{transform:rotate(-90deg)}
+.ring-fg{animation:draw 1.1s cubic-bezier(.3,.7,.2,1)}
+.ring-in{position:absolute;left:0;top:0;width:156px;height:156px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-score{font-size:34px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.ring-lab{font-size:13px;color:var(--ink-2)}
+.res-title{font-size:24px;font-weight:700;letter-spacing:-.02em;margin:20px 0 6px}
+.res-lead{font-size:15px;color:var(--ink-2);margin:0 0 20px;line-height:1.5}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;margin-bottom:16px}
+.tile{border:1px solid var(--line);border-radius:14px;padding:12px 8px;background:var(--surface)}
+.tile-lab{font-size:12px;color:var(--ink-3);font-weight:500}
+.tile-val{font-size:20px;font-weight:700;margin-top:4px;display:flex;align-items:center;justify-content:center;gap:4px;font-variant-numeric:tabular-nums}
+.login{width:100%;text-align:left;background:var(--navy-soft);border-radius:16px;padding:16px;margin-bottom:16px}
+.login-title{font-size:16px;font-weight:700;margin-bottom:4px}
+.login-text{font-size:14px;color:var(--ink-2);line-height:1.5;margin-bottom:14px}
+.gbtn{height:48px;width:100%;border-radius:12px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);font:inherit;font-weight:600;font-size:15px;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer}
+.stack{display:flex;flex-direction:column;gap:10px;width:100%}
+.tiles3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:24px}
+.big{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.prow{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.prow:first-of-type{border-top:0;padding-top:0}
+.thumb{width:48px;height:48px;border-radius:10px;object-fit:cover;flex:none}
+.sample{font-size:12px;color:var(--ink-3);text-align:center;margin-top:16px}
+.toast{position:absolute;left:16px;right:16px;bottom:96px;padding:12px 14px;border-radius:12px;background:var(--ink);color:var(--bg);font-weight:600;font-size:14px;text-align:center;animation:rise .25s}
+@keyframes pop{0%{transform:scale(.96)}60%{transform:scale(1.02)}100%{transform:scale(1)}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}50%{transform:translateX(4px)}75%{transform:translateX(-2px)}}
+@keyframes rise{from{transform:translateY(16px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes draw{from{stroke-dashoffset:402}}
+@media (prefers-reduced-motion: reduce){.app *{animation:none !important;transition:none !important}}
+</style>
+</helmet>
+<div class="app {{themeClass}}">
+
+<sc-if value="{{isHome}}" hint-placeholder-val="{{true}}">
+<div class="screen">
+  <header class="top">
+    <div class="logo"><span class="mark" aria-hidden="true">§</span>{{appName}}</div>
+    <div class="chips">
+      <span class="chip" aria-label="Chuỗi {{streak}} ngày"><svg class="c-fire" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c1 3.6-1.6 5.2-1.6 7.7A2.6 2.6 0 0 0 13 12.3c1.7 0 2.6-1.4 2.4-3.1 2.1 1.6 3.8 4.1 3.8 6.6A7.2 7.2 0 0 1 4.8 16C4.8 10.2 10.4 8 12 2z"/></svg>{{streak}}</span>
+      <span class="chip" aria-label="{{xpTotal}} XP"><svg class="c-gold" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 2 4 14h7l-1.5 8L19 10h-7z"/></svg>{{xpTotal}}</span>
+      <button class="iconbtn" aria-label="Đổi chế độ sáng tối" onClick="{{toggleDark}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></button>
+    </div>
+  </header>
+  <main class="body">
+    <p class="hello">Chào bạn,</p>
+    <h1 class="h1">Hôm nay ôn gì?</h1>
+    <button class="hero" onClick="{{continueLearning}}">
+      <img src="/_blob/f119f60f0b4e661ae3446ec30af323af" alt="">
+      <span class="shade"></span>
+      <span class="hero-in" style="display:block">
+        <span class="kick" style="display:block">Tiếp tục học</span>
+        <span class="hero-title" style="display:block">Luật Dân sự · Chương 1</span>
+        <span class="hero-sub" style="display:block">Giao dịch dân sự · còn 13 câu</span>
+        <span class="hero-row" style="display:flex">
+          <span class="track" style="display:block"><span class="track-fill" style="display:block;width:13%"></span></span>
+          <span class="pill-white">Tiếp tục<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </span>
+      </span>
+    </button>
+    <section class="card streak">
+      <div class="row-between">
+        <div class="streak-title"><svg class="c-fire" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c1 3.6-1.6 5.2-1.6 7.7A2.6 2.6 0 0 0 13 12.3c1.7 0 2.6-1.4 2.4-3.1 2.1 1.6 3.8 4.1 3.8 6.6A7.2 7.2 0 0 1 4.8 16C4.8 10.2 10.4 8 12 2z"/></svg>Chuỗi {{streak}} ngày</div>
+        <span class="meta">{{streakHint}}</span>
+      </div>
+      <div class="week">
+        <sc-for list="{{week}}" as="w" hint-placeholder-count="7">
+          <div class="day"><span class="dot {{w.cls}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>{{w.label}}</div>
+        </sc-for>
+      </div>
+    </section>
+    <h2 class="sec-title">Môn học</h2>
+    <sc-for list="{{subjects}}" as="s" hint-placeholder-count="3">
+      <button class="course" onClick="{{s.open}}">
+        <img class="course-img {{s.imgCls}}" src="{{s.img}}" alt="" style="object-position: {{s.pos}}">
+        <span class="course-in" style="display:block">
+          <span class="row-between" style="display:flex">
+            <span>
+              <span class="course-name" style="display:block">{{s.name}}</span>
+              <span class="meta" style="display:block;margin-top:2px">{{s.meta}}</span>
+            </span>
+            <sc-if value="{{s.ready}}" hint-placeholder-val="{{true}}"><span class="pct">{{s.pctLabel}}</span></sc-if>
+            <sc-if value="{{s.soon}}" hint-placeholder-val="{{false}}"><span class="tag">Đang soạn</span></sc-if>
+          </span>
+          <span class="bar" style="display:block"><span class="bar-fill" style="{{s.barStyle}};display:block"></span></span>
+        </span>
+      </button>
+    </sc-for>
+  </main>
+  <nav class="tabbar" aria-label="Điều hướng chính">
+    <button class="tab on" aria-current="page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Học</button>
+    <button class="tab" onClick="{{goProgress}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>Tiến độ</button>
+  </nav>
+</div>
+</sc-if>
+
+<sc-if value="{{isSubject}}" hint-placeholder-val="{{false}}">
+<div class="screen">
+  <div class="cover">
+    <img src="{{subject.img}}" alt="" style="object-position: {{subject.pos}}">
+    <span class="shade"></span>
+    <button class="back" aria-label="Quay lại" onClick="{{goHome}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="cover-in">
+      <div class="kick">{{subject.source}}</div>
+      <div class="cover-title">{{subject.name}}</div>
+    </div>
+  </div>
+  <main class="body">
+    <div class="statline"><span><b>2</b> chương</span><span><b>50</b> câu</span><span><b>{{subject.pctLabel}}</b> đúng</span></div>
+    <sc-for list="{{chapters}}" as="c" hint-placeholder-count="2">
+      <section class="chapter">
+        <div class="ch-head">
+          <span class="ch-num">{{c.num}}</span>
+          <div style="flex:1;min-width:0">
+            <div class="ch-title">{{c.name}}</div>
+            <div class="meta">{{c.meta}}</div>
+          </div>
+          <sc-if value="{{c.soon}}" hint-placeholder-val="{{false}}"><span class="tag">Đang soạn</span></sc-if>
+        </div>
+        <button class="ch-item" disabled="{{c.soon}}" onClick="{{c.openDeCuong}}"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/></svg></span><span class="lbl">Đề cương</span><span class="cnt">5 điều hay ra đề</span></button>
+        <button class="ch-item" disabled="{{c.soon}}" onClick="{{c.openTn}}"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span class="lbl">Trắc nghiệm</span><span class="cnt">15 câu</span></button>
+        <button class="ch-item" disabled="{{c.soon}}" onClick="{{c.openNd}}"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h6"/></svg></span><span class="lbl">Nhận định đúng/sai</span><span class="cnt">10 câu</span></button>
+      </section>
+    </sc-for>
+  </main>
+</div>
+</sc-if>
+
+<sc-if value="{{isDeCuong}}" hint-placeholder-val="{{false}}">
+<div class="screen">
+  <div class="subtop">
+    <button class="iconbtn" aria-label="Quay lại" onClick="{{goSubject}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <span class="subtop-title">Luật Dân sự</span>
+  </div>
+  <main class="doc">
+    <div class="doc-kick">Chương 1 · Đề cương</div>
+    <h1>Giao dịch dân sự</h1>
+    <div class="doc-meta">Bộ luật Dân sự 2015, Điều 116 đến Điều 133</div>
+    <h2>Tóm tắt</h2>
+    <ul>
+      <li>Giao dịch dân sự là hợp đồng hoặc hành vi pháp lý đơn phương (Điều 116).</li>
+      <li>Có hiệu lực khi đủ 3 điều kiện: chủ thể có năng lực phù hợp, hoàn toàn tự nguyện, mục đích và nội dung không vi phạm điều cấm, không trái đạo đức xã hội. Hình thức chỉ là điều kiện khi luật có quy định (Điều 117).</li>
+      <li>Thiếu một điều kiện thì vô hiệu, trừ trường hợp Bộ luật có quy định khác (Điều 122).</li>
+      <li>Thời hiệu yêu cầu tuyên bố vô hiệu là 2 năm với các Điều 125 đến 129; giả tạo và vi phạm điều cấm không bị hạn chế (Điều 132).</li>
+    </ul>
+    <h2>Điều hay ra đề</h2>
+    <sc-for list="{{dieuHay}}" as="d" hint-placeholder-count="5">
+      <div class="art">
+        <span class="art-no">{{d.dieu}}</span>
+        <div><div class="art-name">{{d.ten}}</div><div class="art-note">{{d.note}}</div></div>
+      </div>
+    </sc-for>
+  </main>
+  <div class="dock"><button class="btn" onClick="{{startTn}}">Làm 15 câu trắc nghiệm</button></div>
+</div>
+</sc-if>
+
+<sc-if value="{{isQuiz}}" hint-placeholder-val="{{false}}">
+<div class="screen">
+  <div class="qtop">
+    <button class="iconbtn" aria-label="Thoát bài" onClick="{{goSubject}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button>
+    <div class="segs" role="progressbar" aria-label="Tiến độ bài">
+      <sc-for list="{{segs}}" as="g" hint-placeholder-count="3"><span class="seg {{g.cls}}"></span></sc-for>
+    </div>
+    <sc-if value="{{showCombo}}" hint-placeholder-val="{{false}}"><span class="combo"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c1 3.6-1.6 5.2-1.6 7.7A2.6 2.6 0 0 0 13 12.3c1.7 0 2.6-1.4 2.4-3.1 2.1 1.6 3.8 4.1 3.8 6.6A7.2 7.2 0 0 1 4.8 16C4.8 10.2 10.4 8 12 2z"/></svg>x{{combo}}</span></sc-if>
+    <button class="iconbtn" aria-label="{{soundLabel}}" onClick="{{toggleSound}}">
+      <sc-if value="{{sound}}" hint-placeholder-val="{{true}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/></svg></sc-if>
+      <sc-if value="{{muted}}" hint-placeholder-val="{{false}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M17 9l5 6"/><path d="M22 9l-5 6"/></svg></sc-if>
+    </button>
+  </div>
+  <main class="qbody">
+    <div class="qkick">{{kicker}}</div>
+    <sc-if value="{{isTn}}" hint-placeholder-val="{{true}}">
+      <h2 class="qtext">{{q.cau_hoi}}</h2>
+      <sc-for list="{{options}}" as="o" hint-placeholder-count="4">
+        <button class="opt {{o.cls}}" onClick="{{o.choose}}"><span class="key">{{o.key}}</span><span class="opt-text">{{o.text}}</span></button>
+      </sc-for>
+    </sc-if>
+    <sc-if value="{{isNd}}" hint-placeholder-val="{{false}}">
+      <div class="stmt"><div class="stmt-label">Nhận định</div><p class="stmt-text">{{q.nhan_dinh}}</p></div>
+      <button class="opt {{tfDungCls}}" onClick="{{chooseDung}}"><span class="key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="opt-text">Đúng</span></button>
+      <button class="opt {{tfSaiCls}}" onClick="{{chooseSai}}"><span class="key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></span><span class="opt-text">Sai</span></button>
+    </sc-if>
+  </main>
+  <sc-if value="{{waiting}}" hint-placeholder-val="{{true}}">
+    <div class="dock"><button class="btn" disabled="{{noSelection}}" onClick="{{check}}">Kiểm tra</button></div>
+  </sc-if>
+  <sc-if value="{{answered}}" hint-placeholder-val="{{false}}">
+    <section class="fb {{fbTone}}" aria-live="polite">
+      <div class="fb-head">
+        <span class="fb-ic" aria-hidden="true">
+          <sc-if value="{{isRight}}" hint-placeholder-val="{{true}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></sc-if>
+          <sc-if value="{{isWrong}}" hint-placeholder-val="{{false}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></sc-if>
+        </span>
+        <div><div class="fb-title">{{fbTitle}}</div><div class="fb-sub">{{fbSub}}</div></div>
+        <sc-if value="{{isRight}}" hint-placeholder-val="{{true}}"><span class="xp"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 2 4 14h7l-1.5 8L19 10h-7z"/></svg>+{{lastGain}} XP</span></sc-if>
+      </div>
+      <div class="fb-body">
+        <p class="why">{{q.giai_thich}}</p>
+        <div class="cites">
+          <sc-for list="{{canCu}}" as="c" hint-placeholder-count="1">
+            <a class="cite" href="{{c.link}}" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/></svg>{{c.label}}</a>
+          </sc-for>
+        </div>
+        <div class="note">Giải thích do AI soạn, đã đối chiếu điều luật. <button class="linkbtn" onClick="{{report}}">Báo sai</button></div>
+      </div>
+      <button class="btn {{nextCls}}" onClick="{{next}}">{{nextLabel}}</button>
+    </section>
+  </sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{isResult}}" hint-placeholder-val="{{false}}">
+<div class="screen">
+  <main class="res">
+    <div class="ring" role="img" aria-label="Đúng {{scoreLabel}} câu">
+      <svg width="156" height="156" viewBox="0 0 156 156" aria-hidden="true">
+        <circle cx="78" cy="78" r="64" fill="none" stroke="var(--line)" stroke-width="10"/>
+        <circle class="ring-fg" cx="78" cy="78" r="64" fill="none" stroke="var(--good)" stroke-width="10" stroke-linecap="round" stroke-dasharray="402" style="{{ringStyle}}"/>
+      </svg>
+      <div class="ring-in"><div class="ring-score">{{scoreLabel}}</div><div class="ring-lab">câu đúng</div></div>
+    </div>
+    <h1 class="res-title">{{resultTitle}}</h1>
+    <p class="res-lead">{{resultLead}}</p>
+    <div class="tiles">
+      <div class="tile"><div class="tile-lab">XP nhận</div><div class="tile-val"><svg class="c-gold" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 2 4 14h7l-1.5 8L19 10h-7z"/></svg>+{{xpRun}}</div></div>
+      <div class="tile"><div class="tile-lab">Combo cao nhất</div><div class="tile-val">x{{maxCombo}}</div></div>
+      <div class="tile"><div class="tile-lab">Chuỗi</div><div class="tile-val"><svg class="c-fire" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c1 3.6-1.6 5.2-1.6 7.7A2.6 2.6 0 0 0 13 12.3c1.7 0 2.6-1.4 2.4-3.1 2.1 1.6 3.8 4.1 3.8 6.6A7.2 7.2 0 0 1 4.8 16C4.8 10.2 10.4 8 12 2z"/></svg>{{streak}} ngày</div></div>
+    </div>
+    <sc-if value="{{needLogin}}" hint-placeholder-val="{{true}}">
+      <div class="login">
+        <div class="login-title">Lưu {{xpTotal}} XP và chuỗi {{streak}} ngày</div>
+        <div class="login-text">Đăng nhập để giữ tiến độ, xem lại câu sai trên mọi máy.</div>
+        <button class="gbtn" onClick="{{login}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Tiếp tục với Google</button>
+      </div>
+    </sc-if>
+    <div class="stack">
+      <button class="btn" onClick="{{switchMode}}">{{switchLabel}}</button>
+      <sc-if value="{{hasWrong}}" hint-placeholder-val="{{true}}"><button class="btn ghost" onClick="{{retryWrong}}">Làm lại {{wrongCount}} câu sai</button></sc-if>
+      <button class="btn ghost" onClick="{{goSubject}}">Về danh sách chương</button>
+    </div>
+  </main>
+</div>
+</sc-if>
+
+<sc-if value="{{isProgress}}" hint-placeholder-val="{{false}}">
+<div class="screen">
+  <header class="top"><div class="logo" style="font-size:20px">Tiến độ</div><span class="chip"><svg class="c-gold" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 2 4 14h7l-1.5 8L19 10h-7z"/></svg>{{xpTotal}}</span></header>
+  <main class="body">
+    <section class="card streak" style="margin-bottom:12px">
+      <div class="row-between">
+        <div class="streak-title"><svg class="c-fire" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c1 3.6-1.6 5.2-1.6 7.7A2.6 2.6 0 0 0 13 12.3c1.7 0 2.6-1.4 2.4-3.1 2.1 1.6 3.8 4.1 3.8 6.6A7.2 7.2 0 0 1 4.8 16C4.8 10.2 10.4 8 12 2z"/></svg>Chuỗi {{streak}} ngày</div>
+        <span class="meta">{{streakHint}}</span>
+      </div>
+      <div class="week">
+        <sc-for list="{{week}}" as="w" hint-placeholder-count="7">
+          <div class="day"><span class="dot {{w.cls}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>{{w.label}}</div>
+        </sc-for>
+      </div>
+    </section>
+    <div class="tiles3">
+      <div class="tile" style="text-align:center"><div class="big">{{xpTotal}}</div><div class="tile-lab">Tổng XP</div></div>
+      <div class="tile" style="text-align:center"><div class="big">{{doneCount}}</div><div class="tile-lab">Câu đã làm</div></div>
+      <div class="tile" style="text-align:center"><div class="big">78%</div><div class="tile-lab">Tỉ lệ đúng</div></div>
+    </div>
+    <h2 class="sec-title">Theo môn</h2>
+    <div class="card">
+      <sc-for list="{{subjects}}" as="s" hint-placeholder-count="3">
+        <div class="prow">
+          <img class="thumb" src="{{s.img}}" alt="" style="object-position: {{s.pos}}">
+          <div style="flex:1;min-width:0">
+            <div class="row-between"><span style="font-weight:600;font-size:15px">{{s.name}}</span><span class="pct">{{s.pctLabel}}</span></div>
+            <div class="bar" style="margin-top:8px"><div class="bar-fill" style="{{s.barStyle}}"></div></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <p class="sample">Số liệu trên màn này là dữ liệu mẫu.</p>
+  </main>
+  <nav class="tabbar" aria-label="Điều hướng chính">
+    <button class="tab" onClick="{{goHome}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Học</button>
+    <button class="tab on" aria-current="page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>Tiến độ</button>
+  </nav>
+</div>
+</sc-if>
+
+<sc-if value="{{showToast}}" hint-placeholder-val="{{false}}"><div class="toast" role="status">{{toast}}</div></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"appName":{"editor":"enum","options":["Đậu Luật","Thuộc Luật","Lexi","Luật Lẹ"],"default":"Đậu Luật","section":"Thương hiệu"},"dark":{"editor":"boolean","default":false,"section":"Thương hiệu"},"$preview":{"width":390,"height":844}}'>
+var BLDS = 'https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx';
+var MCQ = [
+  { id: 'dan-su-c01-tn01', cau_hoi: 'Theo Bộ luật Dân sự 2015, giao dịch dân sự là gì?',
+    lua_chon: ['Chỉ bao gồm hợp đồng giữa các bên', 'Mọi hành vi của cá nhân có liên quan đến tài sản', 'Hợp đồng hoặc hành vi pháp lý đơn phương làm phát sinh, thay đổi hoặc chấm dứt quyền, nghĩa vụ dân sự', 'Thỏa thuận đã được công chứng, chứng thực'],
+    dap_an: 2, giai_thich: 'Điều 116 định nghĩa giao dịch dân sự gồm hai loại: hợp đồng và hành vi pháp lý đơn phương (ví dụ lập di chúc). Phương án A sai vì bỏ sót hành vi pháp lý đơn phương; công chứng chỉ là yêu cầu về hình thức trong một số trường hợp.',
+    can_cu: [{ van_ban: 'BLDS 2015', dieu: 'Điều 116', link: BLDS }] },
+  { id: 'dan-su-c01-tn02', cau_hoi: 'Người từ đủ 6 tuổi đến chưa đủ 15 tuổi xác lập giao dịch dân sự như thế nào?',
+    lua_chon: ['Phải được người đại diện theo pháp luật đồng ý, trừ giao dịch phục vụ nhu cầu sinh hoạt hằng ngày phù hợp với lứa tuổi', 'Được tự mình xác lập mọi giao dịch', 'Không được xác lập bất kỳ giao dịch nào', 'Chỉ cần có một người thành niên chứng kiến'],
+    dap_an: 0, giai_thich: 'Khoản 3 Điều 21: giao dịch của người từ đủ 6 đến chưa đủ 15 tuổi phải được người đại diện theo pháp luật đồng ý, trừ giao dịch phục vụ nhu cầu sinh hoạt hằng ngày phù hợp với lứa tuổi. Người chưa đủ 6 tuổi thì do người đại diện xác lập, thực hiện.',
+    can_cu: [{ van_ban: 'BLDS 2015', dieu: 'Điều 21 khoản 3', link: BLDS }] },
+  { id: 'dan-su-c01-tn03', cau_hoi: 'Thời hiệu yêu cầu Tòa án tuyên bố giao dịch dân sự vô hiệu do bị lừa dối là bao lâu?',
+    lua_chon: ['1 năm', '2 năm', '3 năm', 'Không bị hạn chế'],
+    dap_an: 1, giai_thich: 'Khoản 1 Điều 132: thời hiệu yêu cầu tuyên bố giao dịch vô hiệu theo các Điều 125 đến 129 (trong đó lừa dối là Điều 127) là 2 năm. Giao dịch giả tạo hoặc vi phạm điều cấm, trái đạo đức xã hội thì không bị hạn chế thời hiệu.',
+    can_cu: [{ van_ban: 'BLDS 2015', dieu: 'Điều 132', link: BLDS }, { van_ban: 'BLDS 2015', dieu: 'Điều 127', link: BLDS }] }
+];
+var ND = [
+  { id: 'dan-su-c01-nd01', nhan_dinh: 'Mọi giao dịch dân sự vi phạm quy định về hình thức đều vô hiệu.', dap_an: 'sai',
+    giai_thich: 'Nhận định này sai. Theo Điều 129, giao dịch phải bằng văn bản nhưng văn bản không đúng quy định mà một bên hoặc các bên đã thực hiện ít nhất hai phần ba nghĩa vụ thì Tòa án ra quyết định công nhận hiệu lực theo yêu cầu của các bên.',
+    can_cu: [{ van_ban: 'BLDS 2015', dieu: 'Điều 129', link: BLDS }] },
+  { id: 'dan-su-c01-nd02', nhan_dinh: 'Người từ đủ 18 tuổi trở lên là người thành niên.', dap_an: 'dung',
+    giai_thich: 'Nhận định này đúng. Khoản 1 Điều 20: người thành niên là người từ đủ mười tám tuổi trở lên.',
+    can_cu: [{ van_ban: 'BLDS 2015', dieu: 'Điều 20', link: BLDS }] }
+];
+var SUBJECTS = [
+  { slug: 'dan-su', name: 'Luật Dân sự', meta: '2 chương · 50 câu', source: 'Bộ luật Dân sự 2015', pct: 64, ready: true,
+    img: '/_blob/de88160b861ca6e75d7a19f0da4f318f', pos: '50% 30%',
+    chapters: [{ name: 'Giao dịch dân sự', soon: false }, { name: 'Đại diện', soon: false }] },
+  { slug: 'hanh-chinh', name: 'Luật Hành chính', meta: '2 chương', source: 'Luật Hành chính Việt Nam', pct: 0, ready: false,
+    img: '/_blob/b1d978ed9119989f03dae22742149dca', pos: '50% 40%',
+    chapters: [{ name: 'Quan hệ pháp luật hành chính', soon: true }, { name: 'Thủ tục hành chính', soon: true }] },
+  { slug: 'doanh-nghiep', name: 'Luật Doanh nghiệp', meta: '2 chương', source: 'Luật Doanh nghiệp 2020', pct: 0, ready: false,
+    img: '/_blob/5b0ebaa3892f80284ee48c106f99f44f', pos: '60% 50%',
+    chapters: [{ name: 'Khái quát về doanh nghiệp', soon: true }, { name: 'Công ty trách nhiệm hữu hạn', soon: true }] }
+];
+var DIEU = [
+  { dieu: 'Điều 117', ten: 'Điều kiện có hiệu lực', note: 'Ba điều kiện bắt buộc, hình thức chỉ khi luật quy định.' },
+  { dieu: 'Điều 123', ten: 'Vi phạm điều cấm, trái đạo đức xã hội', note: 'Vô hiệu, không bị hạn chế thời hiệu.' },
+  { dieu: 'Điều 124', ten: 'Giao dịch giả tạo', note: 'Giao dịch bị che giấu vẫn có thể có hiệu lực.' },
+  { dieu: 'Điều 129', ten: 'Vi phạm quy định về hình thức', note: 'Ngoại lệ khi đã thực hiện ít nhất hai phần ba nghĩa vụ.' },
+  { dieu: 'Điều 132', ten: 'Thời hiệu yêu cầu tuyên bố vô hiệu', note: 'Hai năm, trừ Điều 123 và 124.' }
+];
+var PRAISE = ['Chính xác', 'Rất tốt', 'Chuẩn rồi'];
+
+class Component extends DCLogic {
+  state = { screen: 'home', subject: 'dan-su', mode: 'tn', queue: [0, 1, 2], idx: 0, selected: null, picked: null, results: [],
+    correct: 0, combo: 0, maxCombo: 0, xpRun: 0, lastGain: 0, wrong: [], sound: true,
+    streak: 3, xpTotal: 120, doneToday: false, doneCount: 48, loggedIn: false, dark: null, toast: '' };
+
+  tone(kind) {
+    if (!this.state.sound) return;
+    try {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      this._ac = this._ac || new AC();
+      var ac = this._ac;
+      var notes = kind === 'good' ? [784, 1175] : kind === 'bad' ? [233, 175] : [659, 880, 1319];
+      notes.forEach(function (f, i) {
+        var o = ac.createOscillator(), g = ac.createGain();
+        o.type = kind === 'bad' ? 'triangle' : 'sine';
+        o.frequency.value = f;
+        var t = ac.currentTime + i * 0.09;
+        g.gain.setValueAtTime(0.0001, t);
+        g.gain.exponentialRampToValueAtTime(0.12, t + 0.012);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + 0.2);
+        o.connect(g); g.connect(ac.destination);
+        o.start(t); o.stop(t + 0.22);
+      });
+    } catch (e) {}
+  }
+
+  items() { return this.state.mode === 'tn' ? MCQ : ND; }
+
+  startQuiz(mode, onlyWrong) {
+    var all = (mode === 'tn' ? MCQ : ND).map(function (_, i) { return i; });
+    var queue = onlyWrong ? this.state.wrong.slice() : all;
+    this.setState({ screen: 'quiz', mode: mode, queue: queue, idx: 0, selected: null, picked: null, results: [], correct: 0, combo: 0, maxCombo: 0, xpRun: 0, lastGain: 0, wrong: [] });
+  }
+
+  choose(v) { if (this.state.picked === null) this.setState({ selected: v }); }
+
+  check() {
+    var s = this.state;
+    if (s.picked !== null || s.selected === null) return;
+    var qi = s.queue[s.idx];
+    var cur = this.items()[qi];
+    var ok = s.selected === cur.dap_an;
+    var combo = ok ? s.combo + 1 : 0;
+    var gain = ok ? (combo >= 3 ? 15 : 10) : 0;
+    this.tone(ok ? 'good' : 'bad');
+    this.setState({ picked: s.selected, results: s.results.concat([ok ? 'good' : 'bad']), correct: s.correct + (ok ? 1 : 0), combo: combo, maxCombo: Math.max(s.maxCombo, combo), xpRun: s.xpRun + gain, lastGain: gain, wrong: ok ? s.wrong : s.wrong.concat([qi]) });
+  }
+
+  next() {
+    var s = this.state;
+    if (s.idx + 1 < s.queue.length) { this.setState({ idx: s.idx + 1, selected: null, picked: null }); return; }
+    this.tone('done');
+    this.setState({ screen: 'result', xpTotal: s.xpTotal + s.xpRun, streak: s.doneToday ? s.streak : s.streak + 1, doneToday: true, doneCount: s.doneCount + s.queue.length });
+  }
+
+  flash(msg) {
+    var self = this;
+    this.setState({ toast: msg });
+    clearTimeout(this._t);
+    this._t = setTimeout(function () { self.setState({ toast: '' }); }, 2200);
+  }
+
+  componentWillUnmount() { clearTimeout(this._t); }
+
+  renderVals() {
+    var self = this, s = this.state, p = this.props;
+    var dark = s.dark === null ? !!p.dark : s.dark;
+    var subj = SUBJECTS.filter(function (x) { return x.slug === s.subject; })[0];
+    var items = this.items();
+    var cur = items[s.queue[s.idx]] || items[0];
+    var total = s.queue.length || 1;
+    var answered = s.picked !== null;
+    var right = answered && s.picked === cur.dap_an;
+    var nd = s.mode === 'nd';
+    var optCls = function (val) {
+      if (!answered) return s.selected === val ? 'sel' : '';
+      if (val === cur.dap_an) return 'good lock';
+      if (val === s.picked) return 'bad lock';
+      return 'dim lock';
+    };
+    var sub;
+    if (nd) sub = 'Nhận định này ' + (cur.dap_an === 'dung' ? 'đúng' : 'sai');
+    else if (right) sub = s.combo >= 3 ? 'Combo x' + s.combo + ', câu này được 15 XP' : 'Giữ nhịp này nhé';
+    else sub = 'Đáp án đúng là ' + 'ABCD'.charAt(cur.dap_an);
+    var allRight = s.correct === total;
+    var segs = s.queue.map(function (_, i) {
+      if (i < s.results.length) return { cls: s.results[i] };
+      return { cls: i === s.idx ? 'cur' : '' };
+    });
+    return {
+      themeClass: dark ? 'dark' : '',
+      appName: p.appName ?? 'Đậu Luật',
+      isHome: s.screen === 'home', isSubject: s.screen === 'mon', isDeCuong: s.screen === 'decuong',
+      isQuiz: s.screen === 'quiz', isResult: s.screen === 'result', isProgress: s.screen === 'progress',
+      streak: s.streak, xpTotal: s.xpTotal, doneCount: s.doneCount,
+      streakHint: s.doneToday ? 'Hôm nay đã giữ chuỗi' : 'Làm 1 bài để giữ chuỗi',
+      toggleDark: function () { self.setState({ dark: !dark }); },
+      goHome: function () { self.setState({ screen: 'home' }); },
+      goProgress: function () { self.setState({ screen: 'progress' }); },
+      goSubject: function () { self.setState({ screen: 'mon' }); },
+      continueLearning: function () { self.setState({ subject: 'dan-su' }); self.startQuiz('tn', false); },
+      subjects: SUBJECTS.map(function (x) {
+        return { name: x.name, meta: x.meta, img: x.img, pos: x.pos, ready: x.ready, soon: !x.ready, imgCls: x.ready ? '' : 'dim',
+          pctLabel: x.pct + '% đúng', barStyle: 'width:' + x.pct + '%',
+          open: function () { self.setState({ screen: 'mon', subject: x.slug }); } };
+      }),
+      subject: { name: subj.name, img: subj.img, pos: subj.pos, source: subj.source, pctLabel: subj.pct + '%' },
+      chapters: subj.chapters.map(function (c, i) {
+        return { num: i + 1, name: c.name, soon: c.soon, meta: c.soon ? 'Sắp có' : 'Chương ' + (i + 1) + ' · 25 câu',
+          openDeCuong: function () { self.setState({ screen: 'decuong' }); },
+          openTn: function () { self.startQuiz('tn', false); },
+          openNd: function () { self.startQuiz('nd', false); } };
+      }),
+      dieuHay: DIEU,
+      startTn: function () { self.startQuiz('tn', false); },
+      isTn: !nd, isNd: nd, q: cur, segs: segs,
+      kicker: (nd ? 'Nhận định' : 'Trắc nghiệm') + ' · Câu ' + (s.idx + 1) + ' trên ' + total,
+      showCombo: s.combo >= 2, combo: s.combo,
+      sound: s.sound, muted: !s.sound, soundLabel: s.sound ? 'Tắt âm thanh' : 'Bật âm thanh',
+      toggleSound: function () { self.setState({ sound: !s.sound }); },
+      options: nd ? [] : cur.lua_chon.map(function (t, i) {
+        return { key: 'ABCD'.charAt(i), text: t, cls: optCls(i), choose: function () { self.choose(i); } };
+      }),
+      tfDungCls: nd ? optCls('dung') : '', tfSaiCls: nd ? optCls('sai') : '',
+      chooseDung: function () { self.choose('dung'); }, chooseSai: function () { self.choose('sai'); },
+      waiting: !answered, noSelection: s.selected === null, check: function () { self.check(); },
+      answered: answered, isRight: right, isWrong: answered && !right,
+      fbTone: right ? '' : 'bad',
+      fbTitle: right ? PRAISE[s.idx % 3] : 'Chưa đúng',
+      fbSub: sub, lastGain: s.lastGain,
+      canCu: cur.can_cu.map(function (c) { return { label: c.dieu + ' · ' + c.van_ban, link: c.link }; }),
+      nextCls: right ? 'good' : 'bad',
+      nextLabel: s.idx + 1 >= total ? 'Xem kết quả' : 'Tiếp tục',
+      next: function () { self.next(); },
+      report: function () { self.flash('Đã ghi nhận báo sai cho câu ' + cur.id + '. Cảm ơn bạn!'); },
+      scoreLabel: s.correct + '/' + total,
+      ringStyle: 'stroke-dashoffset:' + (402 - 402 * (s.correct / total)).toFixed(1),
+      resultTitle: allRight ? 'Xuất sắc' : (s.correct * 2 >= total ? 'Hoàn thành bài' : 'Xong rồi'),
+      resultLead: allRight ? 'Không sai câu nào. Phần này bạn nắm chắc rồi.' : 'Ôn lại mấy câu sai là chắc điểm phần này.',
+      xpRun: s.xpRun, maxCombo: s.maxCombo,
+      needLogin: !s.loggedIn,
+      login: function () { self.setState({ loggedIn: true }); self.flash('Đã lưu tiến độ vào tài khoản.'); },
+      hasWrong: s.wrong.length > 0, wrongCount: s.wrong.length,
+      retryWrong: function () { self.startQuiz(s.mode, true); },
+      switchLabel: nd ? 'Sang trắc nghiệm chương này' : 'Sang nhận định chương này',
+      switchMode: function () { self.startQuiz(nd ? 'tn' : 'nd', false); },
+      week: ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].map(function (d, i) {
+        var lit = i < 3 || (i === 3 && s.doneToday);
+        return { label: d, cls: lit ? 'done' : (i === 3 ? 'today' : '') };
+      }),
+      showToast: !!s.toast, toast: s.toast
+    };
+  }
+}
+</script>
+</body>
+</html>
