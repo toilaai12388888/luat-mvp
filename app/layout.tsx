@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Be_Vietnam_Pro, Lora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { APP_NAME } from "@/lib/config";
+import { PwaRegister } from "@/components/pwa/PwaRegister";
 import "./globals.css";
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -18,10 +19,24 @@ const lora = Lora({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#1e293b",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export const metadata: Metadata = {
   title: `${APP_NAME} — Ôn thi Luật theo phương pháp chủ động`,
   description:
     "Web app ôn thi Luật miễn phí: đề cương tóm tắt, trắc nghiệm và nhận định đúng/sai có căn cứ điều luật chính thức.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: APP_NAME,
+  },
 };
 
 export default function RootLayout({
@@ -51,6 +66,7 @@ export default function RootLayout({
         <div className="mx-auto flex min-h-screen max-w-[480px] flex-col bg-bg shadow-sm pb-16">
           {children}
         </div>
+        <PwaRegister />
         <Analytics />
       </body>
     </html>

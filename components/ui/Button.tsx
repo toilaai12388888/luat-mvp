@@ -3,19 +3,22 @@ import React from "react";
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "good" | "bad" | "ghost";
   fullWidth?: boolean;
+  size?: "sm" | "md" | "lg";
 }
 
 export function Button({
   variant = "primary",
   fullWidth = true,
+  size = "md",
   className = "",
   disabled,
   children,
   ...props
 }: ButtonProps) {
   const base =
-    "press flex h-[52px] items-center justify-center gap-2 rounded-xl font-bold text-base cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed select-none transition-all";
-  const width = fullWidth ? "w-full" : "px-5";
+    "press flex items-center justify-center gap-2 rounded-xl font-bold cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed select-none transition-all";
+  const width = fullWidth ? "w-full" : "px-4";
+  const sizeCls = size === "sm" ? "h-9 text-xs" : size === "lg" ? "h-14 text-lg" : "h-[52px] text-base";
 
   let variantCls = "";
   switch (variant) {
@@ -38,7 +41,7 @@ export function Button({
 
   return (
     <button
-      className={`${base} ${width} ${variantCls} ${className}`}
+      className={`${base} ${width} ${sizeCls} ${variantCls} ${className}`}
       disabled={disabled}
       {...props}
     >

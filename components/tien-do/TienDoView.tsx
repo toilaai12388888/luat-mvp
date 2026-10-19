@@ -3,21 +3,72 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Zap, Flame, ChevronRight } from "lucide-react";
+import {
+  Zap,
+  Flame,
+  ChevronRight,
+  User,
+  AlertTriangle,
+  Play,
+  Award,
+  Sparkles,
+  Crown,
+  Calendar,
+  CheckCircle2,
+  Star,
+  BookOpen,
+  Shield,
+  Briefcase,
+  Trophy,
+  Lock,
+} from "lucide-react";
 import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
 import { Chip } from "@/components/ui/Chip";
 import { getMyStats, UserStats } from "@/lib/stats";
+import { getLocalPlayer, PlayerProfile } from "@/lib/player";
+import { NicknameModal } from "@/components/auth/NicknameModal";
+import { getWeakestArticles, WeakArticleRecord } from "@/lib/weakness";
+import { checkAllBadges, Badge } from "@/lib/badges";
+import { getQuizItemById, QuizQuestion } from "@/lib/all-questions";
+import { OnTapRunner } from "@/components/on-tap/OnTapRunner";
 
 export function TienDoView() {
   const [stats, setStats] = useState<UserStats | null>(null);
+  const [player, setPlayer] = useState<PlayerProfile | null>(() => getLocalPlayer());
+  const [showNickModal, setShowNickModal] = useState(false);
+  const [weaknesses, setWeaknesses] = useState<WeakArticleRecord[]>(() => getWeakestArticles());
+  const [badges, setBadges] = useState<Badge[]>(() => checkAllBadges());
+  const [practiceItems, setPracticeItems] = useState<QuizQuestion[] | null>(null);
+  const [practiceTitle, setPracticeTitle] = useState("");
+
+  const refreshAll = () => {
+    getMyStats().then(setStats);
+    setPlayer(getLocalPlayer());
+    setWeaknesses(getWeakestArticles());
+    setBadges(checkAllBadges());
+  };
 
   useEffect(() => {
-    getMyStats().then(setStats);
+    let isMounted = true;
+    getMyStats().then((s) => {
+      if (isMounted) setStats(s);
+    });
     const handler = () => {
-      getMyStats().then(setStats);
+      getMyStats().then((s) => {
+        if (isMounted) setStats(s);
+      });
+      setPlayer(getLocalPlayer());
+      setWeaknesses(getWeakestArticles());
+      setBadges(checkAllBadges());
     };
     window.addEventListener("luat_attempts_updated", handler);
-    return () => window.removeEventListener("luat_attempts_updated", handler);
+    window.addEventListener("luat_badges_unlocked", handler);
+    return () => {
+      isMounted = false;
+      window.removeEventListener("luat_attempts_updated", handler);
+      window.removeEventListener("luat_badges_unlocked", handler);
+    };
   }, []);
 
   const xp = stats?.xp || 0;
@@ -40,13 +91,102 @@ export function TienDoView() {
     { slug: "doanh-nghiep", answered: 0, pctCorrect: 0 },
   ];
 
+  const handleStartWeaknessPractice = (weakness: WeakArticleRecord) => {
+    const items = weakness.questionIds
+      .map((id) => getQuizItemById(id))
+      .filter((q): q is QuizQuestion => q !== null);
+
+    if (items.length === 0) return;
+    setPracticeTitle(`Ôn tập: ${weakness.article}`);
+    setPracticeItems(items);
+  };
+
+  if (practiceItems) {
+    return (
+      <OnTapRunner
+        title={practiceTitle}
+        items={practiceItems}
+        onExit={() => {
+          setPracticeItems(null);
+          refreshAll();
+        }}
+      />
+    );
+  }
+
+  // Icon map for badges
+  const renderBadgeIcon = (iconName: string, unlocked: boolean) => {
+    const cls = unlocked ? "text-gold" : "text-ink-3";
+    switch (iconName) {
+      case "Sparkles":
+        return <Sparkles size={20} className={cls} />;
+      case "Flame":
+        return <Flame size={20} className={unlocked ? "text-fire fill-current" : cls} />;
+      case "Zap":
+        return <Zap size={20} className={cls} />;
+      case "Calendar":
+        return <Calendar size={20} className={cls} />;
+      case "Crown":
+        return <Crown size={20} className={cls} />;
+      case "CheckCircle2":
+        return <CheckCircle2 size={20} className={cls} />;
+      case "Award":
+        return <Award size={20} className={cls} />;
+      case "Star":
+        return <Star size={20} className={cls} />;
+      case "BookOpen":
+        return <BookOpen size={20} className={cls} />;
+      case "Shield":
+        return <Shield size={20} className={cls} />;
+      case "Briefcase":
+        return <Briefcase size={20} className={cls} />;
+      default:
+        return <Trophy size={20} className={cls} />;
+    }
+  };
+
   return (
-    <div className="flex flex-col gap-5">
-      {/* Header */}
+    <div className="flex flex-col gap-5 pb-16">
+      {/* Player Identity Card */}
+      <Card className="p-4 flex items-center justify-between border-line">
+        <div className="flex items-center gap-3">
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-navy-bar text-white font-black text-lg">
+            {player ? player.nickname.charAt(0).toUpperCase() : <User size={20} />}
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="font-bold text-sm text-ink">
+                {player ? player.nickname : "Chưa đặt biệt danh"}
+              </span>
+              {player && (
+                <span className="text-[10px] font-bold text-navy-ink bg-navy-soft px-1.5 py-0.5 rounded">
+                  {player.school}
+                </span>
+              )}
+            </div>
+            <p className="text-[11px] text-ink-3">
+              {player
+                ? "Tài khoản ẩn danh đã kích hoạt cộng đồng"
+                : "Đặt biệt danh để xếp hạng và thách đấu"}
+            </p>
+          </div>
+        </div>
+
+        <Button
+          onClick={() => setShowNickModal(true)}
+          size="sm"
+          variant="secondary"
+          className="h-8 text-xs font-semibold"
+        >
+          {player ? "Sửa" : "Đặt tên"}
+        </Button>
+      </Card>
+
+      {/* Header with XP */}
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold tracking-tight text-ink">Tiến độ ôn tập</h1>
+        <h1 className="text-xl font-bold tracking-tight text-ink">Hồ sơ & Tiến độ</h1>
         <Chip aria-label={`${xp} XP`}>
-          <Zap size={16} className="text-gold" fill="currentColor" />
+          <Zap size={15} className="text-gold" fill="currentColor" />
           <span>{xp} XP</span>
         </Chip>
       </div>
@@ -107,6 +247,103 @@ export function TienDoView() {
         </div>
       </div>
 
+      {/* FEATURE 5: THỐNG KÊ ĐIỂM YẾU */}
+      <section>
+        <div className="flex items-center justify-between mb-2.5">
+          <h2 className="text-base font-bold text-ink flex items-center gap-1.5">
+            <AlertTriangle size={17} className="text-danger" />
+            Điểm yếu cần củng cố
+          </h2>
+          <span className="text-xs text-ink-3">Điều luật sai nhiều</span>
+        </div>
+
+        {weaknesses.length > 0 ? (
+          <div className="flex flex-col gap-2">
+            {weaknesses.map((w) => (
+              <Card key={w.key} className="p-3.5 flex items-center justify-between border-line">
+                <div>
+                  <span className="text-xs font-bold text-navy-ink block">
+                    {w.article} · {w.lawName}
+                  </span>
+                  <span className="text-[11px] font-medium text-danger">
+                    Đã sai {w.wrongCount} lần ({w.questionIds.length} câu liên quan)
+                  </span>
+                </div>
+
+                <Button
+                  onClick={() => handleStartWeaknessPractice(w)}
+                  size="sm"
+                  className="h-8 text-xs font-bold"
+                >
+                  <Play size={12} className="mr-1 fill-current" />
+                  Ôn ngay
+                </Button>
+              </Card>
+            ))}
+          </div>
+        ) : (
+          <Card className="p-4 text-center border-dashed border-line">
+            <p className="text-xs text-ink-3">
+              Chưa phát hiện điểm yếu nào tồn đọng! Hệ thống sẽ tự động phân tích sau các bài làm của bạn.
+            </p>
+          </Card>
+        )}
+      </section>
+
+      {/* FEATURE 4: HUY HIỆU */}
+      <section>
+        <div className="flex items-center justify-between mb-2.5">
+          <h2 className="text-base font-bold text-ink flex items-center gap-1.5">
+            <Award size={18} className="text-gold" />
+            Huy hiệu đạt được
+          </h2>
+          <span className="text-xs text-ink-3 font-semibold">
+            {badges.filter((b) => b.unlocked).length} / {badges.length}
+          </span>
+        </div>
+
+        <div className="grid grid-cols-2 gap-2.5">
+          {badges.map((badge) => (
+            <div
+              key={badge.id}
+              className={`rounded-2xl border p-3 flex flex-col justify-between transition-all ${
+                badge.unlocked
+                  ? "border-gold/40 bg-gold-soft/30 shadow-sm"
+                  : "border-line bg-surface opacity-60"
+              }`}
+            >
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span
+                    className={`flex h-8 w-8 items-center justify-center rounded-xl ${
+                      badge.unlocked ? "bg-gold-soft" : "bg-bg-2"
+                    }`}
+                  >
+                    {renderBadgeIcon(badge.iconName, badge.unlocked)}
+                  </span>
+                  {badge.unlocked ? (
+                    <span className="text-[10px] font-bold text-good bg-good-soft px-1.5 py-0.5 rounded">
+                      Đã mở
+                    </span>
+                  ) : (
+                    <Lock size={13} className="text-ink-3" />
+                  )}
+                </div>
+
+                <h3 className="text-xs font-bold text-ink leading-tight">{badge.title}</h3>
+                <p className="mt-1 text-[10px] text-ink-3 leading-snug line-clamp-2">
+                  {badge.description}
+                </p>
+              </div>
+
+              <span className="mt-3 text-[10px] font-semibold text-ink-2">
+                {badge.progressText}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Theo Môn Card */}
       <section>
         <h2 className="text-base font-bold text-ink mb-3">Tiến độ theo môn học</h2>
@@ -158,6 +395,15 @@ export function TienDoView() {
           })}
         </Card>
       </section>
+
+      <NicknameModal
+        isOpen={showNickModal}
+        onClose={() => setShowNickModal(false)}
+        onSuccess={(p) => {
+          setPlayer(p);
+          refreshAll();
+        }}
+      />
     </div>
   );
 }

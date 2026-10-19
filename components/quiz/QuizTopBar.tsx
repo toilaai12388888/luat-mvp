@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
-import { X, Flame, Volume2, VolumeX } from "lucide-react";
+import { X, Flame, Volume2, VolumeX, Bookmark } from "lucide-react";
 import { isSoundEnabled, setSoundEnabled } from "./sound";
+import { isBookmarked, toggleBookmark } from "@/lib/attempts";
 
 interface QuizTopBarProps {
   results: ("good" | "bad")[];
@@ -11,6 +12,7 @@ interface QuizTopBarProps {
   total: number;
   combo: number;
   exitHref: string;
+  currentItemId?: string;
 }
 
 export function QuizTopBar({
@@ -19,8 +21,17 @@ export function QuizTopBar({
   total,
   combo,
   exitHref,
+  currentItemId,
 }: QuizTopBarProps) {
   const [sound, setSound] = useState(() => isSoundEnabled());
+  const bookmarked = useSyncExternalStore(
+    (cb) => {
+      window.addEventListener("luat_bookmarks_updated", cb);
+      return () => window.removeEventListener("luat_bookmarks_updated", cb);
+    },
+    () => (currentItemId ? isBookmarked(currentItemId) : false),
+    () => false
+  );
 
   const toggleSound = () => {
     const next = !sound;
@@ -28,8 +39,13 @@ export function QuizTopBar({
     setSoundEnabled(next);
   };
 
+  const handleToggleBookmark = () => {
+    if (!currentItemId) return;
+    toggleBookmark(currentItemId);
+  };
+
   return (
-    <header className="flex h-14 flex-none items-center justify-between gap-3 px-2 border-b border-line bg-surface">
+    <header className="flex h-14 flex-none items-center justify-between gap-2 px-2 border-b border-line bg-surface">
       <Link
         href={exitHref}
         className="press flex h-10 w-10 items-center justify-center rounded-xl text-ink-2 hover:bg-bg-2"
@@ -62,6 +78,20 @@ export function QuizTopBar({
           <Flame size={14} className="text-fire" fill="currentColor" />
           <span>x{combo}</span>
         </span>
+      )}
+
+      {/* Bookmark button */}
+      {currentItemId && (
+        <button
+          type="button"
+          onClick={handleToggleBookmark}
+          className={`press flex h-10 w-10 items-center justify-center rounded-xl transition-colors ${
+            bookmarked ? "text-gold bg-gold-soft" : "text-ink-3 hover:text-ink hover:bg-bg-2"
+          }`}
+          aria-label={bookmarked ? "Bỏ đánh dấu câu hỏi" : "Đánh dấu câu hỏi"}
+        >
+          <Bookmark size={20} fill={bookmarked ? "currentColor" : "none"} />
+        </button>
       )}
 
       {/* Sound Toggle */}

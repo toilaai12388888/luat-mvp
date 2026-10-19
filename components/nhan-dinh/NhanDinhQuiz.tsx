@@ -68,6 +68,7 @@ export function NhanDinhQuiz({ chapter }: NhanDinhQuizProps) {
           switchHref={`/mon/${chapter.mon}/trac-nghiem/${chapter.chuong}`}
           switchLabel="Làm trắc nghiệm"
           backHref={exitHref}
+          itemIds={chapter.nhan_dinh.map((s) => s.id)}
         />
       </div>
     );

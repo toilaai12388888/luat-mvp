@@ -148,3 +148,7 @@ export async function getMyStats(): Promise<UserStats> {
   const attempts = getStoredAttempts();
   return computeStatsFromAttempts(attempts);
 }
+export function getStoredStreak(): number {
+  const attempts = getStoredAttempts();
+  return computeStatsFromAttempts(attempts).streak;
+}

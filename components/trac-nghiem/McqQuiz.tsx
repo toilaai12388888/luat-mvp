@@ -67,6 +67,7 @@ export function McqQuiz({ chapter }: McqQuizProps) {
           switchHref={`/mon/${chapter.mon}/nhan-dinh/${chapter.chuong}`}
           switchLabel="Làm nhận định đúng / sai"
           backHref={exitHref}
+          itemIds={chapter.trac_nghiem.map((q) => q.id)}
         />
       </div>
     );
