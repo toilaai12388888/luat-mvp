@@ -1,0 +1,137 @@
+{
+  "mon": "dan-su",
+  "chuong": "c01",
+  "ten_chuong": "Giao dịch dân sự (MẪU)",
+  "de_cuong": {
+    "tom_tat": "### Giao dịch dân sự (Điều 116 – 133 BLDS 2015)\n\n- **Khái niệm**: Giao dịch dân sự là hợp đồng hoặc hành vi pháp lý đơn phương làm phát sinh, thay đổi hoặc chấm dứt quyền, nghĩa vụ dân sự (Điều 116).\n- **Điều kiện có hiệu lực** (Điều 117):\n  1. Chủ thể có năng lực pháp luật dân sự, năng lực hành vi dân sự phù hợp với giao dịch;\n  2. Chủ thể tham gia giao dịch hoàn toàn tự nguyện;\n  3. Mục đích và nội dung không vi phạm điều cấm của luật, không trái đạo đức xã hội.\n  *Hình thức là điều kiện có hiệu lực trong trường hợp luật có quy định.*\n- **Giao dịch vô hiệu** (Điều 122): Giao dịch không có một trong các điều kiện nêu trên thì vô hiệu, trừ trường hợp luật có quy định khác.\n- **Thời hiệu yêu cầu tuyên bố vô hiệu** (Điều 132): Thời hiệu là **02 năm** đối với các trường hợp giao dịch vô hiệu do người chưa thành niên/mất NLHV xác lập, do nhầm lẫn, lừa dối, đe dọa, không tuân thủ hình thức. Riêng giao dịch vô hiệu do vi phạm điều cấm, trái đạo đức xã hội hoặc giả tạo thì **không bị hạn chế thời hiệu**.",
+    "dieu_hay_ra_de": [
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 117",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Điều kiện có hiệu lực",
+        "ghi_chu": "Ba điều kiện bắt buộc, hình thức chỉ khi luật quy định."
+      },
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 123",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Vi phạm điều cấm, trái đạo đức",
+        "ghi_chu": "Vô hiệu tuyệt đối, không bị hạn chế thời hiệu yêu cầu."
+      },
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 124",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Giao dịch giả tạo",
+        "ghi_chu": "Giao dịch bị che giấu vẫn có thể có hiệu lực nếu đủ điều kiện."
+      },
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 129",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Vi phạm quy định hình thức",
+        "ghi_chu": "Ngoại lệ công nhận hiệu lực khi đã thực hiện ít nhất 2/3 nghĩa vụ."
+      },
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 132",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Thời hiệu yêu cầu vô hiệu",
+        "ghi_chu": "Thời hiệu 2 năm đối với vô hiệu tương đối, không hạn chế với vô hiệu tuyệt đối."
+      }
+    ]
+  },
+  "trac_nghiem": [
+    {
+      "id": "dan-su-c01-tn01",
+      "cau_hoi": "Theo Bộ luật Dân sự 2015, giao dịch dân sự là gì?",
+      "lua_chon": [
+        "Chỉ bao gồm hợp đồng giữa các bên",
+        "Mọi hành vi của cá nhân có liên quan đến tài sản",
+        "Hợp đồng hoặc hành vi pháp lý đơn phương làm phát sinh, thay đổi hoặc chấm dứt quyền, nghĩa vụ dân sự",
+        "Thỏa thuận đã được công chứng, chứng thực"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Điều 116 định nghĩa giao dịch dân sự gồm hai loại: hợp đồng và hành vi pháp lý đơn phương (ví dụ lập di chúc). Phương án A sai vì bỏ sót hành vi pháp lý đơn phương; công chứng chỉ là yêu cầu về hình thức trong một số trường hợp.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 116",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn02",
+      "cau_hoi": "Người từ đủ 6 tuổi đến chưa đủ 15 tuổi xác lập giao dịch dân sự như thế nào?",
+      "lua_chon": [
+        "Phải được người đại diện theo pháp luật đồng ý, trừ giao dịch phục vụ nhu cầu sinh hoạt hàng ngày phù hợp với lứa tuổi",
+        "Được tự mình xác lập mọi giao dịch",
+        "Không được xác lập bất kỳ giao dịch nào",
+        "Chỉ cần có một người thành niên chứng kiến"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 3 Điều 21: giao dịch của người từ đủ 6 đến chưa đủ 15 tuổi phải được người đại diện theo pháp luật đồng ý, trừ giao dịch phục vụ nhu cầu sinh hoạt hằng ngày phù hợp với lứa tuổi. Người chưa đủ 6 tuổi thì do người đại diện xác lập, thực hiện.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 21 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn03",
+      "cau_hoi": "Thời hiệu yêu cầu Tòa án tuyên bố giao dịch dân sự vô hiệu do bị lừa dối là bao lâu?",
+      "lua_chon": [
+        "1 năm",
+        "2 năm",
+        "3 năm",
+        "Không bị hạn chế"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 1 Điều 132: thời hiệu yêu cầu tuyên bố giao dịch vô hiệu theo các Điều 125 đến 129 (trong đó lừa dối là Điều 127) là 2 năm. Giao dịch giả tạo hoặc vi phạm điều cấm, trái đạo đức xã hội thì không bị hạn chế thời hiệu.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 132",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        },
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 127",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    }
+  ],
+  "nhan_dinh": [
+    {
+      "id": "dan-su-c01-nd01",
+      "nhan_dinh": "Mọi giao dịch dân sự vi phạm quy định về hình thức đều vô hiệu.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Theo Điều 129, giao dịch phải bằng văn bản nhưng văn bản không đúng quy định mà một bên hoặc các bên đã thực hiện ít nhất hai phần ba nghĩa vụ thì Tòa án ra quyết định công nhận hiệu lực theo yêu cầu của các bên.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 129",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-nd02",
+      "nhan_dinh": "Người từ đủ 18 tuổi trở lên là người thành niên.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 20: người thành niên là người từ đủ mười tám tuổi trở lên.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 20",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    }
+  ]
+}

@@ -1,26 +1,152 @@
+/* app/globals.css — Người A dán nguyên file này. Chỉ A được sửa.
+   Mọi màu trong code đều đi qua các biến dưới đây (bg-btn, text-ink, border-line...).
+   Không ai gõ mã màu (#...) trong component. */
+
 @import "tailwindcss";
 
+/* ===== Màu: chế độ sáng ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #FFFFFF;
+  --bg-2: #F4F6F9;
+  --surface: #FFFFFF;
+  --ink: #0E1A2E;
+  --ink-2: #4F5B70;
+  --ink-3: #7D889C;
+  --line: #E6EAF0;
+  --line-2: #D2D8E2;
+  --btn: #14284B;          /* nút chính, logo */
+  --btn-ink: #FFFFFF;
+  --navy-bar: #1F3A6B;     /* thanh tiến độ, đáp án đang chọn */
+  --navy-soft: #EBF0F8;
+  --navy-ink: #1F3A6B;
+  --on-navy: #FFFFFF;
+  --link: #2457C5;
+  --gold: #D99A22;         /* XP, chuỗi ngày */
+  --gold-soft: #FBF1DC;
+  --gold-ink: #875800;
+  --fire: #E8692C;
+  --good: #128A5B;         /* chỉ cho "đúng" */
+  --good-soft: #E6F5EE;
+  --good-ink: #0D6B46;
+  --bad: #CC3D3D;          /* chỉ cho "sai" */
+  --bad-soft: #FCECEC;
+  --bad-ink: #A82E2E;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ===== Màu: chế độ tối (bấm nút đổi) ===== */
+:root[data-theme="dark"] {
+  --bg: #0B1120;
+  --bg-2: #141D2F;
+  --surface: #111A2B;
+  --ink: #E8EDF5;
+  --ink-2: #A6B0C3;
+  --ink-3: #707D94;
+  --line: #1E2940;
+  --line-2: #2B3853;
+  --btn: #E8EDF5;
+  --btn-ink: #0B1120;
+  --navy-bar: #8FB2FF;
+  --navy-soft: #16233D;
+  --navy-ink: #A9C3FF;
+  --on-navy: #0B1120;
+  --link: #8FB2FF;
+  --gold-soft: #2A2213;
+  --gold-ink: #F2C26B;
+  --good-soft: #0F2A20;
+  --good-ink: #5FD3A0;
+  --bad-soft: #2E1517;
+  --bad-ink: #FF9090;
+  color-scheme: dark;
 }
 
+/* ===== Màu: chế độ tối theo máy, khi người dùng chưa bấm nút ===== */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    --bg: #0B1120;
+    --bg-2: #141D2F;
+    --surface: #111A2B;
+    --ink: #E8EDF5;
+    --ink-2: #A6B0C3;
+    --ink-3: #707D94;
+    --line: #1E2940;
+    --line-2: #2B3853;
+    --btn: #E8EDF5;
+    --btn-ink: #0B1120;
+    --navy-bar: #8FB2FF;
+    --navy-soft: #16233D;
+    --navy-ink: #A9C3FF;
+    --on-navy: #0B1120;
+    --link: #8FB2FF;
+    --gold-soft: #2A2213;
+    --gold-ink: #F2C26B;
+    --good-soft: #0F2A20;
+    --good-ink: #5FD3A0;
+    --bad-soft: #2E1517;
+    --bad-ink: #FF9090;
+    color-scheme: dark;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ===== Nối biến vào Tailwind ===== */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-btn: var(--btn);
+  --color-btn-ink: var(--btn-ink);
+  --color-navy-bar: var(--navy-bar);
+  --color-navy-soft: var(--navy-soft);
+  --color-navy-ink: var(--navy-ink);
+  --color-on-navy: var(--on-navy);
+  --color-link: var(--link);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-ink: var(--gold-ink);
+  --color-fire: var(--fire);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-good-ink: var(--good-ink);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-bad-ink: var(--bad-ink);
+
+  /* layout.tsx nạp bằng next/font/google:
+     Be_Vietnam_Pro (400, 500, 600, 700; subsets latin + vietnamese) → --font-be-vietnam
+     Lora (600; chỉ dùng cho dấu § trong logo) → --font-lora */
+  --font-sans: var(--font-be-vietnam), system-ui, sans-serif;
+  --font-mark: var(--font-lora), Georgia, serif;
+
+  --animate-pop: pop 0.35s ease-out;
+  --animate-shake: shake 0.35s ease-in-out;
+  --animate-rise: rise 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --animate-draw: draw 1.1s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+@keyframes pop { 0% { transform: scale(.96) } 60% { transform: scale(1.02) } 100% { transform: scale(1) } }
+@keyframes shake { 0%,100% { transform: translateX(0) } 25% { transform: translateX(-4px) } 50% { transform: translateX(4px) } 75% { transform: translateX(-2px) } }
+@keyframes rise { from { transform: translateY(16px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+/* Vòng điểm: circle r=64 → chu vi 402. Đặt stroke-dasharray 402 và stroke-dashoffset = 402 × (1 − đúng/tổng) */
+@keyframes draw { from { stroke-dashoffset: 402 } }
+
+/* ===== Nền tảng ===== */
+html, body { background: var(--bg); color: var(--ink); }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+@layer components {
+  /* Mọi thứ bấm được: thu nhỏ 2% khi nhấn */
+  .press { transition: transform .12s, opacity .12s, background-color .15s, border-color .15s; }
+  .press:active { transform: scale(.98); }
+  .press:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+  /* Lớp phủ tối lên ảnh để chữ trắng đọc rõ */
+  .photo-shade { background: linear-gradient(180deg, rgb(8 16 34 / 0) 0%, rgb(8 16 34 / .45) 42%, rgb(8 16 34 / .9) 100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
