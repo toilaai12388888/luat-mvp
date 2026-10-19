@@ -1,0 +1,471 @@
+{
+  "mon": "hanh-chinh",
+  "chuong": "c01",
+  "ten_chuong": "Xử phạt vi phạm hành chính",
+  "de_cuong": {
+    "tom_tat": "### Xử phạt vi phạm hành chính (Luật XLVPHC 2012, sửa đổi 2020)\n\n- **Khái niệm (Điều 2)**: Vi phạm hành chính là hành vi có lỗi do cá nhân, tổ chức thực hiện, vi phạm quy định của pháp luật về quản lý nhà nước mà không phải là tội phạm và theo quy định của pháp luật phải bị xử phạt vi phạm hành chính.\n- **Đối tượng bị xử phạt (Điều 5)**:\n  - Người từ đủ 14 tuổi đến dưới 16 tuổi: Bị xử phạt về vi phạm hành chính do cố ý (chỉ áp dụng cảnh cáo);\n  - Người từ đủ 16 tuổi trở lên: Bị xử phạt về mọi vi phạm hành chính.\n- **Thời hiệu xử phạt (Điều 6)**: 01 năm đối với vi phạm thông thường; 02 năm đối với vi phạm trong các lĩnh vực: thuế, hóa đơn, sở hữu trí tuệ, môi trường, xây dựng, đất đai...\n- **Trường hợp không xử phạt (Điều 11)**: Tình thế cấp thiết; phòng vệ chính đáng; sự kiện bất ngờ; không có năng lực trách nhiệm hành chính; chưa đủ tuổi theo luật định.\n- **Các hình thức xử phạt (Điều 21)**: Cảnh cáo; Phạt tiền; Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn; Tịch thu tang vật, phương tiện vi phạm; Trục xuất.\n- **Thủ tục xử phạt (Điều 56, 57, 58, 66)**:\n  - Xử phạt không lập biên bản (Điều 56): Áp dụng khi phạt cảnh cáo hoặc phạt tiền đến 250.000 đồng với cá nhân, 500.000 đồng với tổ chức;\n  - Xử phạt có lập biên bản (Điều 57, 58): Phải lập thành ít nhất 02 bản;\n  - Thời hạn ra quyết định xử phạt (Điều 66): 07 ngày làm việc kể từ ngày lập biên bản; vụ việc giải trình hoặc phức tạp là 01 tháng đến tối đa 02 tháng.",
+    "dieu_hay_ra_de": [
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+        "dieu": "Điều 5",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Đối tượng bị xử phạt",
+        "ghi_chu": "Độ tuổi 14 đến dưới 16 chỉ phạt cảnh cáo do cố ý; từ đủ 16 tuổi phạt về mọi VPHC."
+      },
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+        "dieu": "Điều 6",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Thời hiệu xử phạt",
+        "ghi_chu": "Thời hiệu 1 năm thông thường, 2 năm với thuế, xây dựng, môi trường, đất đai."
+      },
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+        "dieu": "Điều 11",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Trường hợp không xử phạt",
+        "ghi_chu": "Tình thế cấp thiết, phòng vệ chính đáng, sự kiện bất ngờ, không có năng lực hành vi."
+      },
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+        "dieu": "Điều 21",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Các hình thức xử phạt",
+        "ghi_chu": "Năm hình thức xử phạt chính và bổ sung theo luật định."
+      },
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+        "dieu": "Điều 56",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Xử phạt không lập biên bản",
+        "ghi_chu": "Phạt tiền đến 250.000 đồng đối với cá nhân, 500.000 đồng đối với tổ chức."
+      },
+      {
+        "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+        "dieu": "Điều 66",
+        "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+        "ten": "Thời hạn ra quyết định",
+        "ghi_chu": "Thời hạn 7 ngày làm việc, kéo dài tối đa 01 tháng hoặc 02 tháng đối với vụ việc phức tạp."
+      }
+    ]
+  },
+  "trac_nghiem": [
+    {
+      "id": "hanh-chinh-c01-tn01",
+      "cau_hoi": "Theo Luật Xử lý vi phạm hành chính, hành vi vi phạm hành chính là hành vi:",
+      "lua_chon": [
+        "Có lỗi do cá nhân, tổ chức vi phạm pháp luật về quản lý nhà nước mà không phải tội phạm",
+        "Gây thiệt hại nghiêm trọng cho tính mạng của người khác",
+        "Vi phạm kỷ luật nội bộ trong cơ quan hành chính nhà nước",
+        "Không tuân thủ các cam kết trong hợp đồng kinh tế thương mại"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 2 Luật XLVPHC quy định: Vi phạm hành chính là hành vi có lỗi do cá nhân, tổ chức thực hiện, vi phạm quy định của pháp luật về quản lý nhà nước mà không phải là tội phạm và theo quy định của pháp luật phải bị xử phạt vi phạm hành chính.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 2 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn02",
+      "cau_hoi": "Người từ đủ 14 tuổi đến dưới 16 tuổi bị xử phạt vi phạm hành chính trong trường hợp nào?",
+      "lua_chon": [
+        "Về mọi hành vi vi phạm hành chính do mình thực hiện",
+        "Chỉ về vi phạm hành chính do cố ý và chỉ áp dụng hình thức phạt cảnh cáo",
+        "Chỉ khi có sự chứng kiến và bảo lãnh của cha mẹ",
+        "Không bao giờ bị xử lý trong mọi trường hợp"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Điểm a khoản 1 Điều 5 và Điều 22 Luật XLVPHC quy định người từ đủ 14 tuổi đến dưới 16 tuổi chỉ bị xử phạt vi phạm hành chính về vi phạm hành chính do cố ý, và hình thức xử phạt áp dụng là cảnh cáo.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 5 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn03",
+      "cau_hoi": "Cá nhân từ đủ bao nhiêu tuổi trở lên thì phải chịu trách nhiệm về mọi vi phạm hành chính do mình gây ra?",
+      "lua_chon": [
+        "Từ đủ 14 tuổi trở lên",
+        "Từ đủ 15 tuổi trở lên",
+        "Từ đủ 16 tuổi trở lên",
+        "Từ đủ 18 tuổi trở lên"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Điểm a khoản 1 Điều 5 Luật XLVPHC quy định người từ đủ 16 tuổi trở lên bị xử phạt vi phạm hành chính về mọi vi phạm hành chính.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 5 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn04",
+      "cau_hoi": "Thời hiệu xử phạt vi phạm hành chính thông thường là bao lâu theo Luật sửa đổi 2020?",
+      "lua_chon": [
+        "06 tháng",
+        "02 năm",
+        "03 năm",
+        "01 năm"
+      ],
+      "dap_an": 3,
+      "giai_thich": "Điểm a khoản 1 Điều 6 Luật XLVPHC quy định thời hiệu xử phạt vi phạm hành chính là 01 năm, trừ các lĩnh vực đặc thù có quy định thời hiệu 02 năm.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 6 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn05",
+      "cau_hoi": "Lĩnh vực nào sau đây có thời hiệu xử phạt vi phạm hành chính là 02 năm?",
+      "lua_chon": [
+        "Thuế, hóa đơn, môi trường, xây dựng, đất đai, sở hữu trí tuệ",
+        "An ninh trật tự, an toàn xã hội thông thường",
+        "Giao thông đường bộ nội đô",
+        "Bảo hiểm xã hội bắt buộc"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Điểm a khoản 1 Điều 6 Luật XLVPHC quy định các vi phạm hành chính về kế toán; hóa đơn; phí, lệ phí; bảo hiểm; chứng khoán; sở hữu trí tuệ; xây dựng; bảo vệ môi trường; đất đai... thì thời hiệu xử phạt là 02 năm.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 6 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn06",
+      "cau_hoi": "Trường hợp nào sau đây KHÔNG bị xử phạt vi phạm hành chính theo Điều 11?",
+      "lua_chon": [
+        "Vi phạm trong tình trạng say rượu do cố ý",
+        "Thực hiện hành vi trong tình thế cấp thiết hoặc phòng vệ chính đáng",
+        "Vi phạm do thiếu hiểu biết về văn bản luật mới ban hành",
+        "Người vi phạm là người nước ngoài đang cư trú tại Việt Nam"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Điều 11 Luật XLVPHC quy định các trường hợp không xử phạt gồm: Thực hiện hành vi vi phạm trong tình thế cấp thiết; phòng vệ chính đáng; sự kiện bất ngờ; không có năng lực trách nhiệm hành chính; chưa đủ tuổi theo luật định.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 11",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn07",
+      "cau_hoi": "Biện pháp nào sau đây KHÔNG PHẢI là hình thức xử phạt vi phạm hành chính theo Điều 21?",
+      "lua_chon": [
+        "Cảnh cáo",
+        "Tước quyền sử dụng giấy phép có thời hạn",
+        "Buộc cải chính thông tin sai sự thật (đây là biện pháp khắc phục hậu quả)",
+        "Tịch thu tang vật vi phạm hành chính"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Điều 21 Luật XLVPHC quy định các hình thức xử phạt gồm: Cảnh cáo, Phạt tiền, Tước quyền sử dụng giấy phép/chứng chỉ hoặc đình chỉ hoạt động, Tịch thu tang vật/phương tiện, Trục xuất. Buộc cải chính thông tin là biện pháp khắc phục hậu quả (Điều 28).",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 21",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn08",
+      "cau_hoi": "Hình thức xử phạt Cảnh cáo trong vi phạm hành chính được áp dụng bằng hình thức nào?",
+      "lua_chon": [
+        "Nhắc nhở miệng bằng lời nói trực tiếp",
+        "Gửi tin nhắn cảnh báo qua điện thoại",
+        "Ghi tên vào bảng tin tại trụ sở cơ quan",
+        "Được quyết định bằng văn bản cụ thể"
+      ],
+      "dap_an": 3,
+      "giai_thich": "Khoản 2 Điều 22 Luật XLVPHC quy định rõ: Cảnh cáo được quyết định bằng văn bản.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 22 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn09",
+      "cau_hoi": "Thủ tục xử phạt vi phạm hành chính không lập biên bản được áp dụng đối với mức phạt tiền nào?",
+      "lua_chon": [
+        "Phạt tiền đến 250.000 đồng đối với cá nhân, 500.000 đồng đối với tổ chức",
+        "Phạt tiền đến 500.000 đồng đối với cá nhân, 1.000.000 đồng đối với tổ chức",
+        "Phạt tiền đến 1.000.000 đồng đối với mọi đối tượng",
+        "Chỉ áp dụng với mức phạt tiền dưới 100.000 đồng"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 56 Luật XLVPHC quy định xử phạt vi phạm hành chính không lập biên bản được áp dụng trong trường hợp xử phạt cảnh cáo hoặc phạt tiền đến 250.000 đồng đối với cá nhân, 500.000 đồng đối với tổ chức.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 56 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn10",
+      "cau_hoi": "Biên bản vi phạm hành chính phải được lập thành ít nhất bao nhiêu bản theo quy định?",
+      "lua_chon": [
+        "01 bản duy nhất lưu tại cơ quan",
+        "Ít nhất 02 bản, giao cho người vi phạm 01 bản",
+        "Ít nhất 03 bản gửi cho Tòa án",
+        "Tùy ý người có thẩm quyền quyết định"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 6 Điều 58 Luật XLVPHC quy định biên bản vi phạm hành chính phải được lập thành ít nhất 02 bản, phải được người lập biên bản và người vi phạm hoặc đại diện tổ chức vi phạm ký; giao cho người vi phạm 01 bản.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 58 khoản 6",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn11",
+      "cau_hoi": "Thời hạn ra quyết định xử phạt vi phạm hành chính thông thường là bao lâu kể từ ngày lập biên bản?",
+      "lua_chon": [
+        "03 ngày làm việc",
+        "05 ngày làm việc",
+        "07 ngày làm việc",
+        "15 ngày làm việc"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 1 Điều 66 Luật XLVPHC (sửa đổi 2020) quy định thời hạn ra quyết định xử phạt vi phạm hành chính là 07 ngày làm việc, kể từ ngày lập biên bản vi phạm hành chính.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 66 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn12",
+      "cau_hoi": "Thời hạn chấp hành quyết định xử phạt vi phạm hành chính kể từ ngày nhận quyết định là bao lâu?",
+      "lua_chon": [
+        "05 ngày",
+        "07 ngày",
+        "15 ngày",
+        "10 ngày (trừ trường hợp quyết định có ghi thời hạn khác)"
+      ],
+      "dap_an": 3,
+      "giai_thich": "Khoản 1 Điều 73 Luật XLVPHC quy định cá nhân, tổ chức bị xử phạt vi phạm hành chính phải chấp hành quyết định xử phạt trong thời hạn 10 ngày, kể từ ngày nhận quyết định xử phạt; trường hợp quyết định xử phạt có ghi thời hạn thi hành nhiều hơn 10 ngày thì thực hiện theo thời hạn đó.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 73 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn13",
+      "cau_hoi": "Tình tiết nào sau đây là tình tiết giảm nhẹ trong xử phạt vi phạm hành chính?",
+      "lua_chon": [
+        "Người vi phạm đã tự nguyện khai báo, thành thật hối lỗi hoặc bồi thường thiệt hại",
+        "Vi phạm có tổ chức chặt chẽ",
+        "Xúi giục người chưa thành niên vi phạm",
+        "Tiếp tục thực hiện hành vi vi phạm mặc dù người có thẩm quyền đã yêu cầu chấm dứt"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 và khoản 2 Điều 9 Luật XLVPHC quy định người vi phạm hành chính đã có hành vi ngăn chặn, làm giảm bớt hậu quả của vi phạm hoặc tự nguyện khắc phục hậu quả, bồi thường thiệt hại; tự nguyện khai báo, thành thật hối lỗi là các tình tiết giảm nhẹ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 9",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn14",
+      "cau_hoi": "Tình tiết nào sau đây được coi là tình tiết tăng nặng trong xử lý vi phạm hành chính?",
+      "lua_chon": [
+        "Vi phạm lần đầu do sơ suất vô ý",
+        "Tái phạm hoặc vi phạm hành chính nhiều lần",
+        "Người vi phạm là phụ nữ có thai",
+        "Người vi phạm đã tự giác nộp phạt trước hạn"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 1 Điều 10 Luật XLVPHC liệt kê các tình tiết tăng nặng, trong đó có vi phạm hành chính có tổ chức, vi phạm nhiều lần hoặc tái phạm.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 10 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-tn15",
+      "cau_hoi": "Khi phát hiện hành vi vi phạm có dấu hiệu cấu thành tội phạm, người có thẩm quyền xử phạt phải làm gì?",
+      "lua_chon": [
+        "Tăng mức phạt tiền lên mức tối đa của khung phạt",
+        "Yêu cầu người vi phạm nộp tiền bảo lãnh tại chỗ",
+        "Chuyển ngay hồ sơ vụ vi phạm cho cơ quan tiến hành tố tụng hình sự",
+        "Đình chỉ vụ việc và hủy bỏ tang vật"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 1 Điều 62 Luật XLVPHC quy định khi xem xét vụ vi phạm để quyết định xử phạt, nếu xét thấy hành vi vi phạm có dấu hiệu tội phạm, thì người có thẩm quyền xử phạt phải chuyển ngay hồ sơ vụ vi phạm cho cơ quan có thẩm quyền tiến hành tố tụng hình sự.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 62 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    }
+  ],
+  "nhan_dinh": [
+    {
+      "id": "hanh-chinh-c01-nd01",
+      "nhan_dinh": "Mọi cá nhân từ đủ 14 tuổi trở lên có hành vi vi phạm hành chính đều có thể bị áp dụng hình thức phạt tiền.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Theo khoản 1 Điều 5 và Điều 22 Luật XLVPHC, người từ đủ 14 tuổi đến dưới 16 tuổi chỉ bị phạt cảnh cáo đối với hành vi vi phạm do cố ý, không bị áp dụng hình thức phạt tiền.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 5 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-nd02",
+      "nhan_dinh": "Thời hiệu xử phạt vi phạm hành chính là 01 năm áp dụng thống nhất cho tất cả các lĩnh vực quản lý nhà nước.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Theo điểm a khoản 1 Điều 6 Luật XLVPHC, các vi phạm về thuế, hóa đơn, môi trường, xây dựng, đất đai, sở hữu trí tuệ... có thời hiệu xử phạt là 02 năm.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 6 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-nd03",
+      "nhan_dinh": "Người thực hiện hành vi vi phạm hành chính trong tình thế cấp thiết thì không bị xử phạt vi phạm hành chính.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 11 Luật XLVPHC quy định không xử phạt vi phạm hành chính đối với trường hợp thực hiện hành vi vi phạm hành chính trong tình thế cấp thiết.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 11 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-nd04",
+      "nhan_dinh": "Tịch thu tang vật, phương tiện vi phạm hành chính chỉ có thể được áp dụng như một hình thức xử phạt bổ sung.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 2 Điều 21 Luật XLVPHC quy định hình thức tịch thu tang vật, phương tiện vi phạm hành chính có thể được áp dụng là hình thức xử phạt chính hoặc hình thức xử phạt bổ sung.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 21 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-nd05",
+      "nhan_dinh": "Trường hợp xử phạt vi phạm hành chính không lập biên bản áp dụng đối với phạt tiền đến 250.000 đồng đối với cá nhân.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 56 Luật XLVPHC quy định xử phạt không lập biên bản áp dụng đối với phạt cảnh cáo hoặc phạt tiền đến 250.000 đồng đối với cá nhân, 500.000 đồng đối với tổ chức.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 56 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-nd06",
+      "nhan_dinh": "Một hành vi vi phạm hành chính có thể bị nhiều cơ quan quản lý nhà nước khác nhau cùng ra quyết định xử phạt tiền.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Điểm d khoản 1 Điều 3 Luật XLVPHC quy định nguyên tắc một hành vi vi phạm hành chính chỉ bị xử phạt một lần; nhiều người cùng thực hiện một hành vi thì mỗi người đều bị xử phạt.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 3 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-nd07",
+      "nhan_dinh": "Cá nhân, tổ chức bị xử phạt vi phạm hành chính phải chấp hành quyết định xử phạt trong thời hạn 10 ngày kể từ ngày nhận quyết định, trừ trường hợp quyết định có ghi thời hạn khác.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 73 Luật XLVPHC quy định thời hạn chấp hành là 10 ngày kể từ ngày nhận quyết định; trường hợp có ghi thời hạn dài hơn thì thực hiện theo thời hạn đó.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 73 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-nd08",
+      "nhan_dinh": "Thời hạn ra quyết định xử phạt vi phạm hành chính thông thường là 07 ngày làm việc kể từ ngày lập biên bản vi phạm hành chính.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 66 Luật XLVPHC (sửa đổi 2020) quy định thời hạn ra quyết định xử phạt là 07 ngày làm việc kể từ ngày lập biên bản vi phạm hành chính.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 66 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-nd09",
+      "nhan_dinh": "Biên bản vi phạm hành chính chỉ cần lưu tại cơ quan xử phạt, không bắt buộc phải giao cho người vi phạm.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 6 Điều 58 Luật XLVPHC quy định biên bản phải lập thành ít nhất 02 bản và bắt buộc phải giao cho cá nhân hoặc tổ chức vi phạm 01 bản.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 58 khoản 6",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-nd10",
+      "nhan_dinh": "Hành vi giữ lại vụ vi phạm có dấu hiệu tội phạm để xử phạt vi phạm hành chính là hành vi bị nghiêm cấm.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 12 Luật XLVPHC nghiêm cấm việc giữ lại vụ vi phạm có dấu hiệu tội phạm để xử lý vi phạm hành chính; khi có dấu hiệu tội phạm phải chuyển ngay cho cơ quan tiến hành tố tụng.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020)",
+          "dieu": "Điều 12 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx"
+        }
+      ]
+    }
+  ]
+}

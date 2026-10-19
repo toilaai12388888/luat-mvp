@@ -1,9 +1,9 @@
 {
   "mon": "dan-su",
   "chuong": "c01",
-  "ten_chuong": "Giao dịch dân sự (MẪU)",
+  "ten_chuong": "Giao dịch dân sự",
   "de_cuong": {
-    "tom_tat": "### Giao dịch dân sự (Điều 116 – 133 BLDS 2015)\n\n- **Khái niệm**: Giao dịch dân sự là hợp đồng hoặc hành vi pháp lý đơn phương làm phát sinh, thay đổi hoặc chấm dứt quyền, nghĩa vụ dân sự (Điều 116).\n- **Điều kiện có hiệu lực** (Điều 117):\n  1. Chủ thể có năng lực pháp luật dân sự, năng lực hành vi dân sự phù hợp với giao dịch;\n  2. Chủ thể tham gia giao dịch hoàn toàn tự nguyện;\n  3. Mục đích và nội dung không vi phạm điều cấm của luật, không trái đạo đức xã hội.\n  *Hình thức là điều kiện có hiệu lực trong trường hợp luật có quy định.*\n- **Giao dịch vô hiệu** (Điều 122): Giao dịch không có một trong các điều kiện nêu trên thì vô hiệu, trừ trường hợp luật có quy định khác.\n- **Thời hiệu yêu cầu tuyên bố vô hiệu** (Điều 132): Thời hiệu là **02 năm** đối với các trường hợp giao dịch vô hiệu do người chưa thành niên/mất NLHV xác lập, do nhầm lẫn, lừa dối, đe dọa, không tuân thủ hình thức. Riêng giao dịch vô hiệu do vi phạm điều cấm, trái đạo đức xã hội hoặc giả tạo thì **không bị hạn chế thời hiệu**.",
+    "tom_tat": "### Giao dịch dân sự (Điều 116 – 133 BLDS 2015)\n\n- **Khái niệm (Điều 116)**: Giao dịch dân sự là hợp đồng hoặc hành vi pháp lý đơn phương làm phát sinh, thay đổi hoặc chấm dứt quyền, nghĩa vụ dân sự.\n- **Điều kiện có hiệu lực (Điều 117)**:\n  1. Chủ thể có năng lực pháp luật dân sự, năng lực hành vi dân sự phù hợp;\n  2. Chủ thể tham gia giao dịch hoàn toàn tự nguyện;\n  3. Mục đích và nội dung không vi phạm điều cấm của luật, không trái đạo đức xã hội.\n  *Hình thức là điều kiện có hiệu lực trong trường hợp luật có quy định.*\n- **Hình thức giao dịch (Điều 119)**: Được thể hiện bằng lời nói, bằng văn bản hoặc bằng hành vi cụ thể. Giao dịch qua phương tiện điện tử dưới hình thức thông điệp dữ liệu được coi là giao dịch bằng văn bản.\n- **Giao dịch vô hiệu (Điều 122 - 130)**: Vô hiệu do vi phạm điều cấm, trái đạo đức (Điều 123), giả tạo (Điều 124), do người chưa thành niên/mất NLHV xác lập (Điều 125), nhầm lẫn (Điều 126), lừa dối, đe dọa (Điều 127), không nhận thức làm chủ hành vi (Điều 128), vi phạm hình thức (Điều 129).\n- **Hậu quả pháp lý (Điều 131)**: Không làm phát sinh, thay đổi, chấm dứt quyền, nghĩa vụ dân sự; các bên khôi phục lại tình trạng ban đầu, hoàn trả cho nhau những gì đã nhận; bên có lỗi gây thiệt hại phải bồi thường.\n- **Thời hiệu yêu cầu tuyên bố vô hiệu (Điều 132)**: 02 năm đối với các trường hợp vô hiệu tương đối (Điều 125-129); không bị hạn chế thời hiệu đối với trường hợp vô hiệu tuyệt đối (Điều 123, 124).",
     "dieu_hay_ra_de": [
       {
         "van_ban": "Bộ luật Dân sự 2015",
@@ -16,7 +16,7 @@
         "van_ban": "Bộ luật Dân sự 2015",
         "dieu": "Điều 123",
         "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
-        "ten": "Vi phạm điều cấm, trái đạo đức",
+        "ten": "Vi phạm điều cấm, đạo đức",
         "ghi_chu": "Vô hiệu tuyệt đối, không bị hạn chế thời hiệu yêu cầu."
       },
       {
@@ -28,16 +28,23 @@
       },
       {
         "van_ban": "Bộ luật Dân sự 2015",
+        "dieu": "Điều 126",
+        "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+        "ten": "Giao dịch do nhầm lẫn",
+        "ghi_chu": "Nhầm lẫn làm cho mục đích không đạt được thì có quyền yêu cầu vô hiệu."
+      },
+      {
+        "van_ban": "Bộ luật Dân sự 2015",
         "dieu": "Điều 129",
         "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
         "ten": "Vi phạm quy định hình thức",
-        "ghi_chu": "Ngoại lệ công nhận hiệu lực khi đã thực hiện ít nhất 2/3 nghĩa vụ."
+        "ghi_chu": "Ngoại lệ công nhận hiệu lực khi một bên đã thực hiện ít nhất 2/3 nghĩa vụ."
       },
       {
         "van_ban": "Bộ luật Dân sự 2015",
         "dieu": "Điều 132",
         "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
-        "ten": "Thời hiệu yêu cầu vô hiệu",
+        "ten": "Thời hiệu tuyên bố vô hiệu",
         "ghi_chu": "Thời hiệu 2 năm đối với vô hiệu tương đối, không hạn chế với vô hiệu tuyệt đối."
       }
     ]
@@ -47,13 +54,13 @@
       "id": "dan-su-c01-tn01",
       "cau_hoi": "Theo Bộ luật Dân sự 2015, giao dịch dân sự là gì?",
       "lua_chon": [
-        "Chỉ bao gồm hợp đồng giữa các bên",
-        "Mọi hành vi của cá nhân có liên quan đến tài sản",
-        "Hợp đồng hoặc hành vi pháp lý đơn phương làm phát sinh, thay đổi hoặc chấm dứt quyền, nghĩa vụ dân sự",
-        "Thỏa thuận đã được công chứng, chứng thực"
+        "Chỉ bao gồm các hợp đồng dân sự có đền bù",
+        "Mọi hành vi của cá nhân nhằm định đoạt tài sản",
+        "Hợp đồng hoặc hành vi pháp lý đơn phương làm phát sinh, thay đổi, chấm dứt quyền, nghĩa vụ",
+        "Thỏa thuận bắt buộc phải được công chứng, chứng thực"
       ],
       "dap_an": 2,
-      "giai_thich": "Điều 116 định nghĩa giao dịch dân sự gồm hai loại: hợp đồng và hành vi pháp lý đơn phương (ví dụ lập di chúc). Phương án A sai vì bỏ sót hành vi pháp lý đơn phương; công chứng chỉ là yêu cầu về hình thức trong một số trường hợp.",
+      "giai_thich": "Điều 116 BLDS 2015 định nghĩa giao dịch dân sự là hợp đồng hoặc hành vi pháp lý đơn phương làm phát sinh, thay đổi hoặc chấm dứt quyền, nghĩa vụ dân sự. Hành vi pháp lý đơn phương (như lập di chúc, từ chối nhận di sản) cũng là giao dịch dân sự.",
       "can_cu": [
         {
           "van_ban": "Bộ luật Dân sự 2015",
@@ -64,43 +71,266 @@
     },
     {
       "id": "dan-su-c01-tn02",
-      "cau_hoi": "Người từ đủ 6 tuổi đến chưa đủ 15 tuổi xác lập giao dịch dân sự như thế nào?",
+      "cau_hoi": "Điều kiện nào sau đây KHÔNG PHẢI là điều kiện bắt buộc để giao dịch dân sự có hiệu lực?",
       "lua_chon": [
-        "Phải được người đại diện theo pháp luật đồng ý, trừ giao dịch phục vụ nhu cầu sinh hoạt hàng ngày phù hợp với lứa tuổi",
-        "Được tự mình xác lập mọi giao dịch",
-        "Không được xác lập bất kỳ giao dịch nào",
-        "Chỉ cần có một người thành niên chứng kiến"
+        "Bắt buộc phải được lập thành văn bản có công chứng",
+        "Chủ thể tham gia giao dịch hoàn toàn tự nguyện",
+        "Chủ thể có năng lực pháp luật và năng lực hành vi phù hợp",
+        "Mục đích và nội dung không vi phạm điều cấm của luật"
       ],
       "dap_an": 0,
-      "giai_thich": "Khoản 3 Điều 21: giao dịch của người từ đủ 6 đến chưa đủ 15 tuổi phải được người đại diện theo pháp luật đồng ý, trừ giao dịch phục vụ nhu cầu sinh hoạt hằng ngày phù hợp với lứa tuổi. Người chưa đủ 6 tuổi thì do người đại diện xác lập, thực hiện.",
+      "giai_thich": "Khoản 2 Điều 117 BLDS 2015 nêu rõ: Hình thức của giao dịch dân sự là điều kiện có hiệu lực của giao dịch dân sự trong trường hợp luật có quy định. Công chứng chỉ bắt buộc khi có luật chuyên ngành quy định cụ thể, không phải điều kiện chung cho mọi giao dịch.",
       "can_cu": [
         {
           "van_ban": "Bộ luật Dân sự 2015",
-          "dieu": "Điều 21 khoản 3",
+          "dieu": "Điều 117",
           "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
         }
       ]
     },
     {
       "id": "dan-su-c01-tn03",
-      "cau_hoi": "Thời hiệu yêu cầu Tòa án tuyên bố giao dịch dân sự vô hiệu do bị lừa dối là bao lâu?",
+      "cau_hoi": "Giao dịch dân sự thông qua phương tiện điện tử dưới hình thức thông điệp dữ liệu được coi là gì?",
       "lua_chon": [
-        "1 năm",
-        "2 năm",
-        "3 năm",
-        "Không bị hạn chế"
+        "Giao dịch bằng lời nói",
+        "Giao dịch bằng hành vi cụ thể",
+        "Giao dịch vô hiệu do không có văn bản giấy",
+        "Giao dịch bằng văn bản"
       ],
-      "dap_an": 1,
-      "giai_thich": "Khoản 1 Điều 132: thời hiệu yêu cầu tuyên bố giao dịch vô hiệu theo các Điều 125 đến 129 (trong đó lừa dối là Điều 127) là 2 năm. Giao dịch giả tạo hoặc vi phạm điều cấm, trái đạo đức xã hội thì không bị hạn chế thời hiệu.",
+      "dap_an": 3,
+      "giai_thich": "Khoản 1 Điều 119 BLDS 2015 quy định: Giao dịch dân sự thông qua phương tiện điện tử dưới hình thức thông điệp dữ liệu theo quy định của pháp luật về giao dịch điện tử được coi là giao dịch bằng văn bản.",
       "can_cu": [
         {
           "van_ban": "Bộ luật Dân sự 2015",
-          "dieu": "Điều 132",
+          "dieu": "Điều 119 khoản 1",
           "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
-        },
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn04",
+      "cau_hoi": "Khi các bên thỏa thuận về giao dịch dân sự có điều kiện mà điều kiện phát sinh không thể xảy ra thì giao dịch xử lý thế nào?",
+      "lua_chon": [
+        "Giao dịch đương nhiên có hiệu lực ngay",
+        "Giao dịch không phát sinh",
+        "Tòa án quyết định sửa đổi điều kiện",
+        "Các bên bị phạt vi phạm hợp đồng"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 1 Điều 120 BLDS 2015 quy định: Trường hợp các bên có thỏa thuận về điều kiện phát sinh hoặc hủy bỏ giao dịch dân sự mà điều kiện đó không thể xảy ra thì giao dịch dân sự không phát sinh hoặc không bị hủy bỏ.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 120 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn05",
+      "cau_hoi": "Giao dịch dân sự có mục đích, nội dung vi phạm điều cấm của luật hoặc trái đạo đức xã hội thì hậu quả là gì?",
+      "lua_chon": [
+        "Giao dịch dân sự vô hiệu",
+        "Giao dịch chỉ có hiệu lực một phần",
+        "Được công nhận nếu các bên đã thực hiện xong",
+        "Có thể chuộc lỗi bằng bồi thường tiền"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Điều 123 BLDS 2015 quy định giao dịch dân sự có mục đích, nội dung vi phạm điều cấm của luật, trái đạo đức xã hội thì vô hiệu. Đây là trường hợp vô hiệu tuyệt đối nhằm bảo vệ trật tự công cộng và lợi ích quốc gia.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 123",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn06",
+      "cau_hoi": "Khi các bên xác lập giao dịch giả tạo nhằm che giấu một giao dịch dân sự khác thì xử lý thế nào?",
+      "lua_chon": [
+        "Cả hai giao dịch đều đương nhiên có hiệu lực",
+        "Cả hai giao dịch đều đương nhiên vô hiệu",
+        "Giao dịch giả tạo vô hiệu, giao dịch bị che giấu vẫn có hiệu lực nếu đủ điều kiện",
+        "Chỉ xử phạt hành chính các bên tham gia"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 1 Điều 124 BLDS 2015 quy định: Khi các bên xác lập giao dịch dân sự một cách giả tạo nhằm che giấu một giao dịch dân sự khác thì giao dịch dân sự giả tạo vô hiệu, còn giao dịch dân sự bị che giấu vẫn có hiệu lực, trừ trường hợp giao dịch đó cũng vô hiệu theo quy định của Bộ luật này.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 124 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn07",
+      "cau_hoi": "Giao dịch dân sự do người từ đủ 6 tuổi đến chưa đủ 15 tuổi tự mình xác lập không có sự đồng ý của người đại diện thì:",
+      "lua_chon": [
+        "Luôn luôn có hiệu lực nếu thanh toán tiền mặt",
+        "Tòa án tuyên bố vô hiệu theo yêu cầu của người đại diện, trừ giao dịch phục vụ nhu cầu sinh hoạt hàng ngày",
+        "Không bao giờ bị tuyên bố vô hiệu",
+        "Tự động chuyển giao quyền cho cha mẹ"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 1 và khoản 2 Điều 125 BLDS 2015 quy định giao dịch do người chưa thành niên xác lập thì theo yêu cầu của người đại diện, Tòa án tuyên bố giao dịch đó vô hiệu, trừ giao dịch phục vụ nhu cầu sinh hoạt hàng ngày phù hợp với lứa tuổi.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 125",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn08",
+      "cau_hoi": "Trường hợp một bên xác lập giao dịch dân sự do bị nhầm lẫn thì có quyền yêu cầu Tòa án tuyên bố vô hiệu khi nào?",
+      "lua_chon": [
+        "Trong mọi trường hợp có sự nhầm lẫn bất kỳ",
+        "Chỉ khi bên kia cố ý gây ra sự nhầm lẫn",
+        "Khi giá trị tài sản biến động trên 50%",
+        "Khi nhầm lẫn làm cho một bên không đạt được mục đích của việc xác lập giao dịch"
+      ],
+      "dap_an": 3,
+      "giai_thich": "Khoản 1 Điều 126 BLDS 2015 quy định: Trường hợp giao dịch dân sự được xác lập có sự nhầm lẫn làm cho một bên hoặc các bên không đạt được mục đích của việc xác lập giao dịch thì có quyền yêu cầu Tòa án tuyên bố giao dịch dân sự vô hiệu.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 126 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn09",
+      "cau_hoi": "Hành vi cố ý làm cho bên kia hiểu sai lệch về chủ thể, tính chất của đối tượng hoặc nội dung của giao dịch dân sự là:",
+      "lua_chon": [
+        "Lừa dối trong giao dịch dân sự",
+        "Đe dọa trong giao dịch dân sự",
+        "Cưỡng ép trong giao dịch dân sự",
+        "Nhầm lẫn không có lỗi"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 127 BLDS 2015 định nghĩa: Lừa dối trong giao dịch dân sự là hành vi cố ý của một bên hoặc của người thứ ba nhằm làm cho bên kia hiểu sai lệch về chủ thể, tính chất của đối tượng hoặc nội dung của giao dịch dân sự nên đã xác lập giao dịch đó.",
+      "can_cu": [
         {
           "van_ban": "Bộ luật Dân sự 2015",
           "dieu": "Điều 127",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn10",
+      "cau_hoi": "Người có năng lực hành vi dân sự nhưng đã xác lập giao dịch vào đúng thời điểm không nhận thức và làm chủ được hành vi thì:",
+      "lua_chon": [
+        "Giao dịch đương nhiên có hiệu lực không thể hủy",
+        "Phải chịu phạt gấp đôi giá trị giao dịch",
+        "Có quyền yêu cầu Tòa án tuyên bố giao dịch dân sự đó vô hiệu",
+        "Chỉ người đại diện mới được yêu cầu hủy bỏ"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Điều 128 BLDS 2015 quy định người có năng lực hành vi dân sự nhưng đã xác lập giao dịch vào đúng thời điểm không nhận thức và làm chủ được hành vi của mình thì có quyền yêu cầu Tòa án tuyên bố giao dịch dân sự đó vô hiệu.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 128",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn11",
+      "cau_hoi": "Giao dịch vi phạm quy định bắt buộc về công chứng nhưng một bên đã thực hiện nghĩa vụ thì Tòa án công nhận hiệu lực khi nào?",
+      "lua_chon": [
+        "Đã thực hiện ít nhất 1/2 nghĩa vụ trong giao dịch",
+        "Đã thực hiện ít nhất 2/3 nghĩa vụ trong giao dịch",
+        "Đã thực hiện toàn bộ 100% nghĩa vụ trong giao dịch",
+        "Chỉ cần đặt cọc trước một khoản tiền"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 2 Điều 129 BLDS 2015 quy định giao dịch dân sự đã được xác lập bằng văn bản nhưng vi phạm quy định bắt buộc về công chứng, chứng thực mà một bên hoặc các bên đã thực hiện ít nhất hai phần ba nghĩa vụ trong giao dịch thì theo yêu cầu của một bên hoặc các bên, Tòa án ra quyết định công nhận hiệu lực.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 129 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn12",
+      "cau_hoi": "Khi một phần nội dung của giao dịch dân sự vô hiệu nhưng không ảnh hưởng đến hiệu lực của phần còn lại thì:",
+      "lua_chon": [
+        "Toàn bộ giao dịch dân sự đều vô hiệu",
+        "Giao dịch được tự động gia hạn thêm thời gian",
+        "Các bên phải lập lại giao dịch hoàn toàn mới",
+        "Chỉ phần nội dung đó vô hiệu, phần còn lại vẫn có hiệu lực"
+      ],
+      "dap_an": 3,
+      "giai_thich": "Điều 130 BLDS 2015 quy định về giao dịch dân sự vô hiệu từng phần: Giao dịch dân sự vô hiệu từng phần khi một phần nội dung của giao dịch dân sự vô hiệu nhưng không ảnh hưởng đến hiệu lực của phần còn lại của giao dịch.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 130",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn13",
+      "cau_hoi": "Hậu quả pháp lý căn bản khi giao dịch dân sự bị Tòa án tuyên bố vô hiệu là gì?",
+      "lua_chon": [
+        "Không làm phát sinh quyền, nghĩa vụ; các bên hoàn trả cho nhau những gì đã nhận",
+        "Chuyển toàn bộ tài sản giao dịch vào ngân sách nhà nước",
+        "Bên nhận tài sản được quyền giữ lại làm kỷ niệm",
+        "Chỉ bồi thường thiệt hại mà không cần trả lại tài sản"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Điều 131 BLDS 2015 quy định giao dịch dân sự vô hiệu không làm phát sinh, thay đổi, chấm dứt quyền, nghĩa vụ dân sự của các bên kể từ thời điểm giao dịch được xác lập. Các bên khôi phục lại tình trạng ban đầu, hoàn trả cho nhau những gì đã nhận.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 131",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn14",
+      "cau_hoi": "Thời hiệu yêu cầu Tòa án tuyên bố giao dịch dân sự vô hiệu do bị lừa dối, đe dọa là bao lâu?",
+      "lua_chon": [
+        "01 năm kể từ ngày giao dịch được xác lập",
+        "02 năm kể từ ngày người bị đe dọa, cưỡng ép chấm dứt hành vi đó hoặc người bị lừa dối biết sự thật",
+        "03 năm kể từ ngày giao dịch hoàn thành",
+        "Không bị hạn chế thời hiệu yêu cầu"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Điểm b khoản 1 Điều 132 BLDS 2015 quy định thời hiệu yêu cầu Tòa án tuyên bố giao dịch dân sự vô hiệu quy định tại các Điều 125 đến 129 là 02 năm kể từ ngày người bị đe dọa, cưỡng ép chấm dứt hành vi đe dọa, cưỡng ép hoặc người bị lừa dối biết, phải biết mình bị lừa dối.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 132 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-tn15",
+      "cau_hoi": "Trường hợp nào sau đây KHÔNG BỊ HẠN CHẾ thời hiệu yêu cầu Tòa án tuyên bố giao dịch dân sự vô hiệu?",
+      "lua_chon": [
+        "Giao dịch vô hiệu do bị nhầm lẫn",
+        "Giao dịch vô hiệu do người chưa thành niên xác lập",
+        "Giao dịch vô hiệu do vi phạm điều cấm của luật hoặc giả tạo",
+        "Giao dịch vô hiệu do không tuân thủ quy định hình thức"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 3 Điều 132 BLDS 2015 quy định đối với giao dịch dân sự vô hiệu do vi phạm điều cấm của luật, trái đạo đức xã hội (Điều 123) và giao dịch dân sự giả tạo (Điều 124) thì thời hiệu yêu cầu Tòa án tuyên bố vô hiệu không bị hạn chế.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 132 khoản 3",
           "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
         }
       ]
@@ -109,9 +339,9 @@
   "nhan_dinh": [
     {
       "id": "dan-su-c01-nd01",
-      "nhan_dinh": "Mọi giao dịch dân sự vi phạm quy định về hình thức đều vô hiệu.",
+      "nhan_dinh": "Mọi giao dịch dân sự vi phạm quy định về hình thức bắt buộc đều vô hiệu.",
       "dap_an": "sai",
-      "giai_thich": "Nhận định này sai. Theo Điều 129, giao dịch phải bằng văn bản nhưng văn bản không đúng quy định mà một bên hoặc các bên đã thực hiện ít nhất hai phần ba nghĩa vụ thì Tòa án ra quyết định công nhận hiệu lực theo yêu cầu của các bên.",
+      "giai_thich": "Nhận định này sai. Theo Điều 129 BLDS 2015, nếu một bên hoặc các bên đã thực hiện ít nhất hai phần ba nghĩa vụ trong giao dịch thì theo yêu cầu của một bên hoặc các bên, Tòa án ra quyết định công nhận hiệu lực của giao dịch đó dù vi phạm hình thức.",
       "can_cu": [
         {
           "van_ban": "Bộ luật Dân sự 2015",
@@ -122,13 +352,117 @@
     },
     {
       "id": "dan-su-c01-nd02",
-      "nhan_dinh": "Người từ đủ 18 tuổi trở lên là người thành niên.",
+      "nhan_dinh": "Người từ đủ 18 tuổi trở lên là người thành niên và có năng lực hành vi dân sự đầy đủ, trừ trường hợp luật có quy định khác.",
       "dap_an": "dung",
-      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 20: người thành niên là người từ đủ mười tám tuổi trở lên.",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 20 BLDS 2015 quy định người thành niên là người từ đủ mười tám tuổi trở lên; người thành niên có năng lực hành vi dân sự đầy đủ, trừ trường hợp mất NLHV, hạn chế NLHV hoặc có khó khăn trong nhận thức.",
       "can_cu": [
         {
           "van_ban": "Bộ luật Dân sự 2015",
           "dieu": "Điều 20",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-nd03",
+      "nhan_dinh": "Thời hiệu yêu cầu Tòa án tuyên bố giao dịch dân sự vô hiệu do vi phạm điều cấm của luật không bị hạn chế.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 3 Điều 132 BLDS 2015 quy định các giao dịch dân sự vô hiệu quy định tại Điều 123 (vi phạm điều cấm của luật, trái đạo đức xã hội) và Điều 124 (giả tạo) thì thời hiệu yêu cầu Tòa án tuyên bố vô hiệu không bị hạn chế.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 132 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-nd04",
+      "nhan_dinh": "Mọi giao dịch dân sự đều bắt buộc phải được lập thành văn bản có công chứng hoặc chứng thực.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 1 Điều 119 BLDS 2015 quy định giao dịch dân sự được thể hiện bằng lời nói, bằng văn bản hoặc bằng hành vi cụ thể. Hình thức văn bản công chứng chỉ bắt buộc khi luật chuyên ngành có quy định.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 119",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-nd05",
+      "nhan_dinh": "Khi xác lập giao dịch giả tạo nhằm che giấu một giao dịch khác thì cả hai giao dịch đều đương nhiên vô hiệu.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 1 Điều 124 BLDS 2015 quy định giao dịch dân sự giả tạo thì vô hiệu, còn giao dịch dân sự bị che giấu vẫn có hiệu lực nếu đáp ứng đủ các điều kiện có hiệu lực theo luật định.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 124 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-nd06",
+      "nhan_dinh": "Bên bị nhầm lẫn trong giao dịch dân sự luôn có quyền yêu cầu Tòa án tuyên bố giao dịch vô hiệu dù mục đích giao dịch vẫn đạt được.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 1 Điều 126 BLDS 2015 quy định chỉ khi sự nhầm lẫn làm cho một bên hoặc các bên không đạt được mục đích của việc xác lập giao dịch thì mới có quyền yêu cầu Tòa án tuyên bố vô hiệu.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 126 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-nd07",
+      "nhan_dinh": "Hành vi đe dọa làm cho một bên vì sợ thiệt hại đến tính mạng, sức khỏe mà phải xác lập giao dịch dân sự là căn cứ tuyên bố giao dịch vô hiệu.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 127 BLDS 2015 quy định đe dọa, cưỡng ép trong giao dịch dân sự là hành vi cố ý buộc bên kia phải thực hiện giao dịch nhằm tránh thiệt hại về tính mạng, sức khỏe, danh dự, tài sản... Bên bị đe dọa có quyền yêu cầu Tòa án tuyên bố giao dịch vô hiệu.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 127",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-nd08",
+      "nhan_dinh": "Trong mọi trường hợp giao dịch dân sự vô hiệu, bên có lỗi gây thiệt hại đều phải bồi thường.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 4 Điều 131 BLDS 2015 quy định rõ bên có lỗi gây thiệt hại trong việc xác lập, thực hiện giao dịch dân sự vô hiệu thì phải bồi thường.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 131 khoản 4",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-nd09",
+      "nhan_dinh": "Giao dịch dân sự vô hiệu từng phần làm cho toàn bộ phần còn lại của giao dịch dân sự cũng đương nhiên vô hiệu theo.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Điều 130 BLDS 2015 quy định giao dịch dân sự vô hiệu từng phần khi một phần nội dung vô hiệu nhưng không ảnh hưởng đến hiệu lực của phần còn lại của giao dịch; phần còn lại vẫn giữ nguyên giá trị pháp lý.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 130",
+          "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-nd10",
+      "nhan_dinh": "Người thứ ba ngay tình nhận chuyển nhượng tài sản phải đăng ký quyền sở hữu luôn bị buộc trả lại tài sản nếu giao dịch trước đó vô hiệu.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 2 Điều 133 BLDS 2015 quy định nếu người thứ ba ngay tình căn cứ vào việc đăng ký tại cơ quan nhà nước có thẩm quyền mà xác lập, thực hiện giao dịch và đã đăng ký thì giao dịch đó không bị vô hiệu, trừ trường hợp luật định khác.",
+      "can_cu": [
+        {
+          "van_ban": "Bộ luật Dân sự 2015",
+          "dieu": "Điều 133 khoản 2",
           "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
         }
       ]

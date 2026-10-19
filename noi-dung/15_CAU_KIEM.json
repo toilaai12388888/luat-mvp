@@ -1,0 +1,221 @@
+[
+  {
+    "stt": 1,
+    "mon": "Dân sự",
+    "id": "dan-su-c01-tn02",
+    "type": "Trắc nghiệm",
+    "cau_hoi": "Điều kiện nào sau đây KHÔNG PHẢI là điều kiện bắt buộc để giao dịch dân sự có hiệu lực?",
+    "lua_chon": [
+      "Bắt buộc phải được lập thành văn bản có công chứng",
+      "Chủ thể tham gia giao dịch hoàn toàn tự nguyện",
+      "Chủ thể có năng lực pháp luật và năng lực hành vi phù hợp",
+      "Mục đích và nội dung không vi phạm điều cấm của luật"
+    ],
+    "dap_an": "A",
+    "can_cu": "Bộ luật Dân sự 2015 - Điều 117",
+    "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+    "giai_thich": "Khoản 2 Điều 117 BLDS 2015 nêu rõ: Hình thức của giao dịch dân sự là điều kiện có hiệu lực của giao dịch dân sự trong trường hợp luật có quy định. Công chứng chỉ bắt buộc khi có luật chuyên ngành quy định cụ thể, không phải điều kiện chung cho mọi giao dịch."
+  },
+  {
+    "stt": 2,
+    "mon": "Dân sự",
+    "id": "dan-su-c01-tn07",
+    "type": "Trắc nghiệm",
+    "cau_hoi": "Giao dịch dân sự do người từ đủ 6 tuổi đến chưa đủ 15 tuổi tự mình xác lập không có sự đồng ý của người đại diện thì:",
+    "lua_chon": [
+      "Luôn luôn có hiệu lực nếu thanh toán tiền mặt",
+      "Tòa án tuyên bố vô hiệu theo yêu cầu của người đại diện, trừ giao dịch phục vụ nhu cầu sinh hoạt hàng ngày",
+      "Không bao giờ bị tuyên bố vô hiệu",
+      "Tự động chuyển giao quyền cho cha mẹ"
+    ],
+    "dap_an": "B",
+    "can_cu": "Bộ luật Dân sự 2015 - Điều 125",
+    "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+    "giai_thich": "Khoản 1 và khoản 2 Điều 125 BLDS 2015 quy định giao dịch do người chưa thành niên xác lập thì theo yêu cầu của người đại diện, Tòa án tuyên bố giao dịch đó vô hiệu, trừ giao dịch phục vụ nhu cầu sinh hoạt hàng ngày phù hợp với lứa tuổi."
+  },
+  {
+    "stt": 3,
+    "mon": "Dân sự",
+    "id": "dan-su-c01-tn11",
+    "type": "Trắc nghiệm",
+    "cau_hoi": "Giao dịch vi phạm quy định bắt buộc về công chứng nhưng một bên đã thực hiện nghĩa vụ thì Tòa án công nhận hiệu lực khi nào?",
+    "lua_chon": [
+      "Đã thực hiện ít nhất 1/2 nghĩa vụ trong giao dịch",
+      "Đã thực hiện ít nhất 2/3 nghĩa vụ trong giao dịch",
+      "Đã thực hiện toàn bộ 100% nghĩa vụ trong giao dịch",
+      "Chỉ cần đặt cọc trước một khoản tiền"
+    ],
+    "dap_an": "B",
+    "can_cu": "Bộ luật Dân sự 2015 - Điều 129 khoản 2",
+    "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+    "giai_thich": "Khoản 2 Điều 129 BLDS 2015 quy định giao dịch dân sự đã được xác lập bằng văn bản nhưng vi phạm quy định bắt buộc về công chứng, chứng thực mà một bên hoặc các bên đã thực hiện ít nhất hai phần ba nghĩa vụ trong giao dịch thì theo yêu cầu của một bên hoặc các bên, Tòa án ra quyết định công nhận hiệu lực."
+  },
+  {
+    "stt": 4,
+    "mon": "Dân sự",
+    "id": "dan-su-c01-nd01",
+    "type": "Nhận định",
+    "cau_hoi": "Mọi giao dịch dân sự vi phạm quy định về hình thức bắt buộc đều vô hiệu.",
+    "dap_an": "SAI",
+    "can_cu": "Bộ luật Dân sự 2015 - Điều 129",
+    "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+    "giai_thich": "Nhận định này sai. Theo Điều 129 BLDS 2015, nếu một bên hoặc các bên đã thực hiện ít nhất hai phần ba nghĩa vụ trong giao dịch thì theo yêu cầu của một bên hoặc các bên, Tòa án ra quyết định công nhận hiệu lực của giao dịch đó dù vi phạm hình thức."
+  },
+  {
+    "stt": 5,
+    "mon": "Dân sự",
+    "id": "dan-su-c01-nd05",
+    "type": "Nhận định",
+    "cau_hoi": "Khi xác lập giao dịch giả tạo nhằm che giấu một giao dịch khác thì cả hai giao dịch đều đương nhiên vô hiệu.",
+    "dap_an": "SAI",
+    "can_cu": "Bộ luật Dân sự 2015 - Điều 124 khoản 1",
+    "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx",
+    "giai_thich": "Nhận định này sai. Khoản 1 Điều 124 BLDS 2015 quy định giao dịch dân sự giả tạo thì vô hiệu, còn giao dịch dân sự bị che giấu vẫn có hiệu lực nếu đáp ứng đủ các điều kiện có hiệu lực theo luật định."
+  },
+  {
+    "stt": 6,
+    "mon": "Hành chính",
+    "id": "hanh-chinh-c01-tn02",
+    "type": "Trắc nghiệm",
+    "cau_hoi": "Người từ đủ 14 tuổi đến dưới 16 tuổi bị xử phạt vi phạm hành chính trong trường hợp nào?",
+    "lua_chon": [
+      "Về mọi hành vi vi phạm hành chính do mình thực hiện",
+      "Chỉ về vi phạm hành chính do cố ý và chỉ áp dụng hình thức phạt cảnh cáo",
+      "Chỉ khi có sự chứng kiến và bảo lãnh của cha mẹ",
+      "Không bao giờ bị xử lý trong mọi trường hợp"
+    ],
+    "dap_an": "B",
+    "can_cu": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020) - Điều 5 khoản 1",
+    "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+    "giai_thich": "Điểm a khoản 1 Điều 5 và Điều 22 Luật XLVPHC quy định người từ đủ 14 tuổi đến dưới 16 tuổi chỉ bị xử phạt vi phạm hành chính về vi phạm hành chính do cố ý, và hình thức xử phạt áp dụng là cảnh cáo."
+  },
+  {
+    "stt": 7,
+    "mon": "Hành chính",
+    "id": "hanh-chinh-c01-tn07",
+    "type": "Trắc nghiệm",
+    "cau_hoi": "Biện pháp nào sau đây KHÔNG PHẢI là hình thức xử phạt vi phạm hành chính theo Điều 21?",
+    "lua_chon": [
+      "Cảnh cáo",
+      "Tước quyền sử dụng giấy phép có thời hạn",
+      "Buộc cải chính thông tin sai sự thật (đây là biện pháp khắc phục hậu quả)",
+      "Tịch thu tang vật vi phạm hành chính"
+    ],
+    "dap_an": "C",
+    "can_cu": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020) - Điều 21",
+    "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+    "giai_thich": "Điều 21 Luật XLVPHC quy định các hình thức xử phạt gồm: Cảnh cáo, Phạt tiền, Tước quyền sử dụng giấy phép/chứng chỉ hoặc đình chỉ hoạt động, Tịch thu tang vật/phương tiện, Trục xuất. Buộc cải chính thông tin là biện pháp khắc phục hậu quả (Điều 28)."
+  },
+  {
+    "stt": 8,
+    "mon": "Hành chính",
+    "id": "hanh-chinh-c01-tn11",
+    "type": "Trắc nghiệm",
+    "cau_hoi": "Thời hạn ra quyết định xử phạt vi phạm hành chính thông thường là bao lâu kể từ ngày lập biên bản?",
+    "lua_chon": [
+      "03 ngày làm việc",
+      "05 ngày làm việc",
+      "07 ngày làm việc",
+      "15 ngày làm việc"
+    ],
+    "dap_an": "C",
+    "can_cu": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020) - Điều 66 khoản 1",
+    "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+    "giai_thich": "Khoản 1 Điều 66 Luật XLVPHC (sửa đổi 2020) quy định thời hạn ra quyết định xử phạt vi phạm hành chính là 07 ngày làm việc, kể từ ngày lập biên bản vi phạm hành chính."
+  },
+  {
+    "stt": 9,
+    "mon": "Hành chính",
+    "id": "hanh-chinh-c01-nd01",
+    "type": "Nhận định",
+    "cau_hoi": "Mọi cá nhân từ đủ 14 tuổi trở lên có hành vi vi phạm hành chính đều có thể bị áp dụng hình thức phạt tiền.",
+    "dap_an": "SAI",
+    "can_cu": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020) - Điều 5 khoản 1",
+    "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+    "giai_thich": "Nhận định này sai. Theo khoản 1 Điều 5 và Điều 22 Luật XLVPHC, người từ đủ 14 tuổi đến dưới 16 tuổi chỉ bị phạt cảnh cáo đối với hành vi vi phạm do cố ý, không bị áp dụng hình thức phạt tiền."
+  },
+  {
+    "stt": 10,
+    "mon": "Hành chính",
+    "id": "hanh-chinh-c01-nd05",
+    "type": "Nhận định",
+    "cau_hoi": "Trường hợp xử phạt vi phạm hành chính không lập biên bản áp dụng đối với phạt tiền đến 250.000 đồng đối với cá nhân.",
+    "dap_an": "ĐÚNG",
+    "can_cu": "Luật Xử lý vi phạm hành chính 2012 (sửa đổi 2020) - Điều 56 khoản 1",
+    "link": "https://thuvienphapluat.vn/van-ban/Vi-pham-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-sua-doi-2020-so-67-2020-QH14-436166.aspx",
+    "giai_thich": "Nhận định này đúng. Khoản 1 Điều 56 Luật XLVPHC quy định xử phạt không lập biên bản áp dụng đối với phạt cảnh cáo hoặc phạt tiền đến 250.000 đồng đối với cá nhân, 500.000 đồng đối với tổ chức."
+  },
+  {
+    "stt": 11,
+    "mon": "Doanh nghiệp",
+    "id": "doanh-nghiep-c01-tn02",
+    "type": "Trắc nghiệm",
+    "cau_hoi": "Thời hạn thành viên phải góp đủ số vốn đã cam kết thành lập công ty TNHH là bao lâu kể từ ngày cấp GCNĐKDN?",
+    "lua_chon": [
+      "30 ngày",
+      "90 ngày",
+      "60 ngày",
+      "180 ngày"
+    ],
+    "dap_an": "B",
+    "can_cu": "Luật Doanh nghiệp 2020 - Điều 47 khoản 2",
+    "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+    "giai_thich": "Khoản 2 Điều 47 Luật Doanh nghiệp 2020 quy định thành viên phải góp vốn cho công ty đủ và đúng loại tài sản đã cam kết khi đăng ký thành lập doanh nghiệp trong thời hạn 90 ngày kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp."
+  },
+  {
+    "stt": 12,
+    "mon": "Doanh nghiệp",
+    "id": "doanh-nghiep-c01-tn07",
+    "type": "Trắc nghiệm",
+    "cau_hoi": "Thành viên có quyền yêu cầu công ty mua lại phần vốn góp của mình trong trường hợp nào?",
+    "lua_chon": [
+      "Khi công ty không chia lợi nhuận liên tiếp 2 năm",
+      "Khi thành viên chuyển nơi cư trú ra nước ngoài",
+      "Khi bỏ phiếu không tán thành nghị quyết HĐTV về sửa đổi điều lệ hoặc tổ chức lại công ty",
+      "Trong mọi trường hợp khi thành viên muốn rút vốn"
+    ],
+    "dap_an": "C",
+    "can_cu": "Luật Doanh nghiệp 2020 - Điều 51 khoản 1",
+    "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+    "giai_thich": "Khoản 1 Điều 51 Luật Doanh nghiệp 2020 quy định thành viên có quyền yêu cầu công ty mua lại phần vốn góp nếu thành viên đó bỏ phiếu không tán thành nghị quyết của Hội đồng thành viên về: Sửa đổi, bổ sung điều lệ liên quan quyền/nghĩa vụ; Tổ chức lại công ty; Các trường hợp khác theo Điều lệ."
+  },
+  {
+    "stt": 13,
+    "mon": "Doanh nghiệp",
+    "id": "doanh-nghiep-c01-tn11",
+    "type": "Trắc nghiệm",
+    "cau_hoi": "Trường hợp cuộc họp lần thứ nhất không đủ điều kiện, cuộc họp lần thứ hai được triệu tập tiến hành khi có tỷ lệ vốn nào?",
+    "lua_chon": [
+      "Ít nhất 35% vốn điều lệ",
+      "Ít nhất 45% vốn điều lệ",
+      "Ít nhất 50% vốn điều lệ",
+      "Không phụ thuộc số thành viên và tỷ lệ vốn"
+    ],
+    "dap_an": "C",
+    "can_cu": "Luật Doanh nghiệp 2020 - Điều 58 khoản 2",
+    "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+    "giai_thich": "Khoản 2 Điều 58 Luật Doanh nghiệp 2020 quy định trường hợp cuộc họp lần thứ nhất không đủ điều kiện thì được triệu tập cuộc họp lần thứ hai trong thời hạn 15 ngày; cuộc họp lần thứ hai được tiến hành khi có số thành viên dự họp sở hữu từ 50% vốn điều lệ trở lên."
+  },
+  {
+    "stt": 14,
+    "mon": "Doanh nghiệp",
+    "id": "doanh-nghiep-c01-nd01",
+    "type": "Nhận định",
+    "cau_hoi": "Công ty trách nhiệm hữu hạn hai thành viên trở lên có thể có tối đa lên đến 100 thành viên.",
+    "dap_an": "SAI",
+    "can_cu": "Luật Doanh nghiệp 2020 - Điều 46 khoản 1",
+    "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+    "giai_thich": "Nhận định này sai. Điểm b khoản 1 Điều 46 Luật Doanh nghiệp 2020 quy định số lượng thành viên của công ty TNHH hai thành viên trở lên không vượt quá 50 thành viên."
+  },
+  {
+    "stt": 15,
+    "mon": "Doanh nghiệp",
+    "id": "doanh-nghiep-c01-nd05",
+    "type": "Nhận định",
+    "cau_hoi": "Công ty TNHH hai thành viên trở lên có dưới 11 thành viên thì không bắt buộc phải thành lập Ban kiểm soát.",
+    "dap_an": "ĐÚNG",
+    "can_cu": "Luật Doanh nghiệp 2020 - Điều 54 khoản 1",
+    "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+    "giai_thich": "Nhận định này đúng. Khoản 1 Điều 54 Luật Doanh nghiệp 2020 quy định chỉ công ty có từ 11 thành viên trở lên mới bắt buộc phải thành lập Ban kiểm soát; dưới 11 thành viên thì thành lập theo nhu cầu quản trị."
+  }
+]

@@ -1,0 +1,471 @@
+{
+  "mon": "doanh-nghiep",
+  "chuong": "c01",
+  "ten_chuong": "Công ty TNHH hai thành viên trở lên",
+  "de_cuong": {
+    "tom_tat": "### Công ty TNHH hai thành viên trở lên (Điều 46 – 73 Luật Doanh nghiệp 2020)\n\n- **Đặc điểm pháp lý (Điều 46)**:\n  - Thành viên có thể là tổ chức, cá nhân; số lượng thành viên không vượt quá 50;\n  - Thành viên chịu trách nhiệm về các khoản nợ và nghĩa vụ tài sản khác của doanh nghiệp trong phạm vi số vốn đã góp;\n  - Có tư cách pháp nhân kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp;\n  - Không được phát hành cổ phần (trừ trường hợp chuyển đổi thành công ty cổ phần); được phát hành trái phiếu.\n- **Góp vốn thành lập (Điều 47)**: Phải góp đủ và đúng loại tài sản đã cam kết trong thời hạn 90 ngày kể từ ngày được cấp GCNĐKDN.\n- **Chuyển nhượng phần vốn góp (Điều 52)**: Phải chào bán cho các thành viên còn lại theo tỷ lệ tương ứng với điều kiện như nhau; chỉ được chuyển nhượng cho người không phải là thành viên nếu các thành viên còn lại không mua hoặc không mua hết trong thời hạn 30 ngày kể từ ngày chào bán.\n- **Mua lại phần vốn góp (Điều 51)**: Thành viên có quyền yêu cầu công ty mua lại phần vốn góp khi bỏ phiếu không tán thành nghị quyết về sửa đổi điều lệ, tổ chức lại công ty.\n- **Cơ cấu tổ chức quản lý (Điều 54, 55, 58, 59)**:\n  - Hội đồng thành viên là cơ quan quyết định cao nhất;\n  - Công ty từ 11 thành viên trở lên phải thành lập Ban kiểm soát;\n  - Họp Hội đồng thành viên lần 1: Đạt ít nhất 65% vốn điều lệ dự họp; lần 2: Đạt ít nhất 50%; lần 3: Không phụ thuộc tỷ lệ vốn.",
+    "dieu_hay_ra_de": [
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 46",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Đặc điểm pháp lý công ty",
+        "ghi_chu": "Từ 02 đến 50 thành viên, trách nhiệm hữu hạn trong phạm vi vốn góp."
+      },
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 47",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Thời hạn góp vốn 90 ngày",
+        "ghi_chu": "Thời hạn 90 ngày kể từ ngày cấp GCNĐKDN, xử lý khi không góp đủ vốn."
+      },
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 51",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Yêu cầu mua lại phần vốn",
+        "ghi_chu": "Áp dụng khi thành viên không tán thành nghị quyết sửa đổi điều lệ, tổ chức lại."
+      },
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 52",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Chuyển nhượng phần vốn góp",
+        "ghi_chu": "Bắt buộc ưu tiên chào bán cho thành viên công ty trong 30 ngày trước."
+      },
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 54",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Cơ cấu tổ chức quản lý",
+        "ghi_chu": "Từ 11 thành viên trở lên bắt buộc thành lập Ban kiểm soát."
+      },
+      {
+        "van_ban": "Luật Doanh nghiệp 2020",
+        "dieu": "Điều 58",
+        "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx",
+        "ten": "Điều kiện họp HĐTV",
+        "ghi_chu": "Tỷ lệ dự họp lần 1 ít nhất 65%, lần 2 ít nhất 50%, lần 3 không phụ thuộc."
+      }
+    ]
+  },
+  "trac_nghiem": [
+    {
+      "id": "doanh-nghiep-c01-tn01",
+      "cau_hoi": "Số lượng thành viên tối đa của công ty TNHH hai thành viên trở lên theo Luật Doanh nghiệp 2020 là:",
+      "lua_chon": [
+        "Không quá 50 thành viên",
+        "Không quá 30 thành viên",
+        "Không quá 100 thành viên",
+        "Không giới hạn số lượng thành viên"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Điểm b khoản 1 Điều 46 Luật Doanh nghiệp 2020 quy định công ty trách nhiệm hữu hạn hai thành viên trở lên có số lượng thành viên không vượt quá 50.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 46 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn02",
+      "cau_hoi": "Thời hạn thành viên phải góp đủ số vốn đã cam kết thành lập công ty TNHH là bao lâu kể từ ngày cấp GCNĐKDN?",
+      "lua_chon": [
+        "30 ngày",
+        "90 ngày",
+        "60 ngày",
+        "180 ngày"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 2 Điều 47 Luật Doanh nghiệp 2020 quy định thành viên phải góp vốn cho công ty đủ và đúng loại tài sản đã cam kết khi đăng ký thành lập doanh nghiệp trong thời hạn 90 ngày kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 47 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn03",
+      "cau_hoi": "Công ty trách nhiệm hữu hạn hai thành viên trở lên có tư cách pháp nhân kể từ thời điểm nào?",
+      "lua_chon": [
+        "Kể từ ngày các thành viên ký điều lệ công ty",
+        "Kể từ ngày góp đủ 100% vốn điều lệ",
+        "Kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp",
+        "Kể từ ngày mở tài khoản ngân hàng chính thức"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 2 Điều 46 Luật Doanh nghiệp 2020 quy định công ty trách nhiệm hữu hạn hai thành viên trở lên có tư cách pháp nhân kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 46 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn04",
+      "cau_hoi": "Công ty trách nhiệm hữu hạn hai thành viên trở lên có quyền phát hành loại chứng khoán nào?",
+      "lua_chon": [
+        "Được phát hành cổ phần phổ thông",
+        "Được phát hành chứng chỉ quỹ đầu tư",
+        "Được phát hành cổ phần ưu đãi biểu quyết",
+        "Được phát hành trái phiếu theo quy định của pháp luật"
+      ],
+      "dap_an": 3,
+      "giai_thich": "Khoản 3 và khoản 4 Điều 46 Luật Doanh nghiệp 2020 quy định công ty TNHH không được phát hành cổ phần (trừ trường hợp chuyển đổi thành CTCP); công ty được phát hành trái phiếu theo quy định.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 46 khoản 4",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn05",
+      "cau_hoi": "Khi muốn chuyển nhượng phần vốn góp cho người ngoài, trước tiên thành viên công ty TNHH phải làm gì?",
+      "lua_chon": [
+        "Chào bán phần vốn đó cho các thành viên còn lại theo tỷ lệ tương ứng với điều kiện như nhau",
+        "Đăng thông báo công khai trên cổng thông tin quốc gia",
+        "Xin phép cơ quan đăng ký kinh doanh cấp tỉnh",
+        "Bắt buộc bán lại toàn bộ cho Chủ tịch HĐTV"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Điểm a khoản 1 Điều 52 Luật Doanh nghiệp 2020 quy định thành viên phải chào bán phần vốn góp đó cho các thành viên còn lại theo tỷ lệ tương ứng với phần vốn góp của họ trong công ty với cùng điều kiện chào bán.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 52 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn06",
+      "cau_hoi": "Thời hạn các thành viên còn lại được quyền ưu tiên mua phần vốn góp chào bán trước khi bán cho người ngoài là:",
+      "lua_chon": [
+        "15 ngày",
+        "30 ngày kể từ ngày chào bán",
+        "45 ngày kể từ ngày gửi văn bản",
+        "60 ngày làm việc"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Điểm b khoản 1 Điều 52 Luật Doanh nghiệp 2020 quy định chỉ được chuyển nhượng cho người không phải là thành viên nếu các thành viên còn lại của công ty không mua hoặc không mua hết trong thời hạn 30 ngày kể từ ngày chào bán.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 52 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn07",
+      "cau_hoi": "Thành viên có quyền yêu cầu công ty mua lại phần vốn góp của mình trong trường hợp nào?",
+      "lua_chon": [
+        "Khi công ty không chia lợi nhuận liên tiếp 2 năm",
+        "Khi thành viên chuyển nơi cư trú ra nước ngoài",
+        "Khi bỏ phiếu không tán thành nghị quyết HĐTV về sửa đổi điều lệ hoặc tổ chức lại công ty",
+        "Trong mọi trường hợp khi thành viên muốn rút vốn"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 1 Điều 51 Luật Doanh nghiệp 2020 quy định thành viên có quyền yêu cầu công ty mua lại phần vốn góp nếu thành viên đó bỏ phiếu không tán thành nghị quyết của Hội đồng thành viên về: Sửa đổi, bổ sung điều lệ liên quan quyền/nghĩa vụ; Tổ chức lại công ty; Các trường hợp khác theo Điều lệ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 51 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn08",
+      "cau_hoi": "Công ty TNHH hai thành viên trở lên bắt buộc phải thành lập Ban kiểm soát khi có bao nhiêu thành viên?",
+      "lua_chon": [
+        "Từ 05 thành viên trở lên",
+        "Từ 07 thành viên trở lên",
+        "Từ 09 thành viên trở lên",
+        "Từ 11 thành viên trở lên"
+      ],
+      "dap_an": 3,
+      "giai_thich": "Khoản 1 Điều 54 Luật Doanh nghiệp 2020 quy định: Công ty trách nhiệm hữu hạn hai thành viên trở lên có từ 11 thành viên trở lên phải thành lập Ban kiểm soát; trường hợp có ít hơn 11 thành viên có thể thành lập Ban kiểm soát theo nhu cầu quản trị.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 54 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn09",
+      "cau_hoi": "Cơ quan có thẩm quyền quyết định cao nhất của công ty TNHH hai thành viên trở lên là:",
+      "lua_chon": [
+        "Hội đồng thành viên",
+        "Ban kiểm soát",
+        "Giám đốc hoặc Tổng giám đốc",
+        "Chủ tịch Hội đồng quản trị"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 55 Luật Doanh nghiệp 2020 quy định: Hội đồng thành viên là cơ quan quyết định cao nhất của công ty, bao gồm tất cả thành viên công ty là cá nhân và người đại diện theo ủy quyền của thành viên công ty là tổ chức.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 55 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn10",
+      "cau_hoi": "Cuộc họp Hội đồng thành viên lần thứ nhất được tiến hành khi có số thành viên dự họp sở hữu bao nhiêu vốn điều lệ?",
+      "lua_chon": [
+        "Ít nhất 50% vốn điều lệ",
+        "Ít nhất 65% vốn điều lệ",
+        "Ít nhất 75% vốn điều lệ",
+        "100% thành viên phải có mặt"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Khoản 1 Điều 58 Luật Doanh nghiệp 2020 quy định: Cuộc họp Hội đồng thành viên được tiến hành khi có số thành viên dự họp sở hữu từ 65% vốn điều lệ trở lên; tỷ lệ cụ thể do Điều lệ công ty quy định.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 58 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn11",
+      "cau_hoi": "Trường hợp cuộc họp lần thứ nhất không đủ điều kiện, cuộc họp lần thứ hai được triệu tập tiến hành khi có tỷ lệ vốn nào?",
+      "lua_chon": [
+        "Ít nhất 35% vốn điều lệ",
+        "Ít nhất 45% vốn điều lệ",
+        "Ít nhất 50% vốn điều lệ",
+        "Không phụ thuộc số thành viên và tỷ lệ vốn"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 2 Điều 58 Luật Doanh nghiệp 2020 quy định trường hợp cuộc họp lần thứ nhất không đủ điều kiện thì được triệu tập cuộc họp lần thứ hai trong thời hạn 15 ngày; cuộc họp lần thứ hai được tiến hành khi có số thành viên dự họp sở hữu từ 50% vốn điều lệ trở lên.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 58 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn12",
+      "cau_hoi": "Nghị quyết của HĐTV về sửa đổi, bổ sung Điều lệ công ty thông qua tại cuộc họp đòi hỏi tỷ lệ biểu quyết tối thiểu là:",
+      "lua_chon": [
+        "50% tổng số vốn góp của thành viên dự họp",
+        "65% tổng số vốn góp của thành viên dự họp",
+        "51% tổng số vốn điều lệ công ty",
+        "75% tổng số vốn góp của các thành viên dự họp tán thành"
+      ],
+      "dap_an": 3,
+      "giai_thich": "Điểm a khoản 3 Điều 59 Luật Doanh nghiệp 2020 quy định nghị quyết về sửa đổi, bổ sung điều lệ công ty; tổ chức lại công ty; chuyển nhượng tài sản có giá trị từ 50% tổng tài sản phải được số phiếu đại diện ít nhất 75% tổng số vốn góp của các thành viên dự họp tán thành.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 59 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn13",
+      "cau_hoi": "Trường hợp thành viên cá nhân chết thì người thừa kế theo pháp luật hoặc di chúc của thành viên đó sẽ:",
+      "lua_chon": [
+        "Trở thành thành viên của công ty",
+        "Bắt buộc phải bán lại phần vốn góp cho công ty",
+        "Chỉ được nhận tiền mặt tương đương phần vốn",
+        "Phải được sự đồng ý của toàn bộ thành viên còn lại"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 1 Điều 53 Luật Doanh nghiệp 2020 quy định trường hợp thành viên là cá nhân chết thì người thừa kế theo di chúc hoặc theo pháp luật của thành viên đó là thành viên công ty.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 53 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn14",
+      "cau_hoi": "Nghĩa vụ về tài sản của thành viên công ty TNHH hai thành viên trở lên đối với các khoản nợ của công ty là:",
+      "lua_chon": [
+        "Chịu trách nhiệm vô hạn bằng toàn bộ tài sản cá nhân",
+        "Chịu trách nhiệm trong phạm vi số vốn đã góp vào công ty",
+        "Chịu trách nhiệm liên đới với giám đốc công ty",
+        "Không phải chịu bất kỳ trách nhiệm tài chính nào"
+      ],
+      "dap_an": 1,
+      "giai_thich": "Điểm b khoản 1 Điều 46 Luật Doanh nghiệp 2020 quy định thành viên chịu trách nhiệm về các khoản nợ và nghĩa vụ tài sản khác của doanh nghiệp trong phạm vi số vốn đã góp vào doanh nghiệp.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 46 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-tn15",
+      "cau_hoi": "Công ty TNHH hai thành viên trở lên có thể tăng vốn điều lệ bằng hình thức nào sau đây?",
+      "lua_chon": [
+        "Phát hành cổ phiếu phổ thông ra công chúng",
+        "Chuyển nợ của khách hàng thành vốn góp bắt buộc",
+        "Tăng vốn góp của thành viên hoặc tiếp nhận thêm vốn góp của thành viên mới",
+        "Tự động nâng giá trị tài sản cố định trên sổ sách"
+      ],
+      "dap_an": 2,
+      "giai_thich": "Khoản 1 Điều 68 Luật Doanh nghiệp 2020 quy định công ty có thể tăng vốn điều lệ trong trường hợp: Tăng vốn góp của thành viên; Tiếp nhận thêm vốn góp của thành viên mới.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 68 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    }
+  ],
+  "nhan_dinh": [
+    {
+      "id": "doanh-nghiep-c01-nd01",
+      "nhan_dinh": "Công ty trách nhiệm hữu hạn hai thành viên trở lên có thể có tối đa lên đến 100 thành viên.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Điểm b khoản 1 Điều 46 Luật Doanh nghiệp 2020 quy định số lượng thành viên của công ty TNHH hai thành viên trở lên không vượt quá 50 thành viên.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 46 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-nd02",
+      "nhan_dinh": "Thành viên công ty TNHH phải góp vốn cho công ty đủ và đúng loại tài sản đã cam kết trong thời hạn 90 ngày kể từ ngày được cấp GCNĐKDN.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 2 Điều 47 Luật Doanh nghiệp 2020 quy định thời hạn góp vốn là 90 ngày kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 47 khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-nd03",
+      "nhan_dinh": "Thành viên công ty TNHH hai thành viên có quyền tự do chuyển nhượng phần vốn góp của mình cho người ngoài mà không cần chào bán cho các thành viên trong công ty.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 1 Điều 52 Luật Doanh nghiệp 2020 quy định thành viên phải chào bán cho các thành viên còn lại trước; chỉ được chuyển cho người ngoài nếu các thành viên còn lại không mua hoặc không mua hết trong thời hạn 30 ngày.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 52 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-nd04",
+      "nhan_dinh": "Thành viên công ty TNHH hai thành viên trở lên chịu trách nhiệm vô hạn bằng toàn bộ tài sản của mình đối với mọi nghĩa vụ nợ của công ty.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Điểm b khoản 1 Điều 46 Luật Doanh nghiệp 2020 quy định thành viên chỉ chịu trách nhiệm về các khoản nợ và nghĩa vụ tài sản khác trong phạm vi số vốn đã góp vào doanh nghiệp.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 46 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-nd05",
+      "nhan_dinh": "Công ty TNHH hai thành viên trở lên có dưới 11 thành viên thì không bắt buộc phải thành lập Ban kiểm soát.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 54 Luật Doanh nghiệp 2020 quy định chỉ công ty có từ 11 thành viên trở lên mới bắt buộc phải thành lập Ban kiểm soát; dưới 11 thành viên thì thành lập theo nhu cầu quản trị.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 54 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-nd06",
+      "nhan_dinh": "Cuộc họp Hội đồng thành viên triệu tập lần thứ nhất được tiến hành khi có số thành viên dự họp sở hữu từ 50% vốn điều lệ trở lên.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 1 Điều 58 Luật Doanh nghiệp 2020 quy định cuộc họp lần thứ nhất phải có số thành viên dự họp sở hữu từ 65% vốn điều lệ trở lên; tỷ lệ 50% chỉ áp dụng cho cuộc họp triệu tập lần thứ hai.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 58 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-nd07",
+      "nhan_dinh": "Trường hợp thành viên tặng cho phần vốn góp cho người khác không thuộc diện thừa kế thì người được tặng cho đương nhiên trở thành thành viên công ty mà không cần ai chấp thuận.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Điểm b khoản 6 Điều 53 Luật Doanh nghiệp 2020 quy định trường hợp tặng cho người khác không thuộc đối tượng quy định thì người được tặng cho chỉ trở thành thành viên công ty khi được Hội đồng thành viên chấp thuận.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 53 khoản 6",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-nd08",
+      "nhan_dinh": "Hội đồng thành viên là cơ quan quyết định cao nhất của công ty TNHH hai thành viên trở lên.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Khoản 1 Điều 55 Luật Doanh nghiệp 2020 quy định Hội đồng thành viên là cơ quan quyết định cao nhất của công ty trách nhiệm hữu hạn hai thành viên trở lên.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 55 khoản 1",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-nd09",
+      "nhan_dinh": "Công ty TNHH hai thành viên trở lên được quyền tự do phát hành cổ phần để huy động vốn rộng rãi trên thị trường chứng khoán.",
+      "dap_an": "sai",
+      "giai_thich": "Nhận định này sai. Khoản 3 Điều 46 Luật Doanh nghiệp 2020 quy định công ty trách nhiệm hữu hạn hai thành viên trở lên không được phát hành cổ phần, trừ trường hợp chuyển đổi thành công ty cổ phần.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 46 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-nd10",
+      "nhan_dinh": "Công ty TNHH hai thành viên trở lên có quyền hoàn trả một phần vốn góp cho thành viên theo tỷ lệ vốn góp sau 02 năm hoạt động liên tục nếu bảo đảm thanh toán đủ các khoản nợ.",
+      "dap_an": "dung",
+      "giai_thich": "Nhận định này đúng. Điểm a khoản 3 Điều 68 Luật Doanh nghiệp 2020 quy định công ty có thể giảm vốn điều lệ bằng cách hoàn trả một phần vốn góp cho thành viên theo tỷ lệ vốn góp của họ trong vốn điều lệ nếu đã hoạt động liên tục từ 02 năm trở lên và bảo đảm thanh toán đủ các khoản nợ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Doanh nghiệp 2020",
+          "dieu": "Điều 68 khoản 3",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx"
+        }
+      ]
+    }
+  ]
+}
