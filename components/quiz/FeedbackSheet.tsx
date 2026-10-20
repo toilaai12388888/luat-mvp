@@ -7,6 +7,8 @@ import { CanCuList } from "@/components/ui/CanCuList";
 import { AiNote } from "@/components/ui/AiNote";
 import { CanCu } from "@/lib/content-schema";
 import { CommentModal } from "@/components/comments/CommentModal";
+import { Bot } from "lucide-react";
+import { HoiAiModal } from "@/components/ai/HoiAiModal";
 
 export interface FeedbackSheetProps {
   isCorrect: boolean;
@@ -37,7 +39,18 @@ export function FeedbackSheet({
   references,
   onContinue,
 }: FeedbackSheetProps) {
-  const [showComments, setShowComments] = useState(false);
+    const [showComments, setShowComments] = useState(false);
+  const [aiEnabled, setAiEnabled] = useState(false);
+  const [showAiModal, setShowAiModal] = useState(false);
+
+  React.useEffect(() => {
+    fetch("/api/hoi-ai")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.enabled) setAiEnabled(true);
+      })
+      .catch(() => {});
+  }, []);
   const title = isCorrect ? "Chính xác" : "Chưa đúng";
   const displayExplanation = giaiThich || explanation || "";
   const displayCanCu = canCu || references || [];
@@ -88,7 +101,20 @@ export function FeedbackSheet({
         </div>
 
         <div className="flex items-center gap-2">
-          {itemId && (
+                      {/* MỤC G: HỎI AI NẾU SERVER CÓ KEY */}
+            {aiEnabled && itemId && (
+              <Button
+                variant="secondary"
+                type="button"
+                onClick={() => setShowAiModal(true)}
+                className="h-12 px-3 border-purple-500/40 text-purple-600 dark:text-purple-300 hover:bg-purple-500/10 flex items-center gap-1.5 font-semibold text-xs transition"
+              >
+                <Bot size={16} className="text-purple-500" />
+                Hỏi AI
+              </Button>
+            )}
+
+            {itemId && (
             <Button
               variant="secondary"
               className="flex items-center gap-1.5 px-3"
