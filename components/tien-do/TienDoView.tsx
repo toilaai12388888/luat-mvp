@@ -33,11 +33,26 @@ import { NicknameModal } from "@/components/auth/NicknameModal";
 import { getWeakestArticles, WeakArticleRecord } from "@/lib/weakness";
 import { checkAllBadges, Badge } from "@/lib/badges";
 import { getQuizItemById, QuizQuestion } from "@/lib/all-questions";
+import {
+  getExamDates,
+  setExamDate,
+  calculateSubjectPlan,
+  SubjectSlug,
+  SUBJECT_NAMES,
+  SUBJECT_FULL_NAMES,
+  ExamDates,
+} from "@/lib/study-plan";
 import { OnTapRunner } from "@/components/on-tap/OnTapRunner";
 
 export function TienDoView() {
   const [stats, setStats] = useState<UserStats | null>(null);
   const [player, setPlayer] = useState<PlayerProfile | null>(() => getLocalPlayer());
+  const [examDates, setExamDates] = useState<ExamDates>(() => getExamDates());
+
+  const handleDateChange = (slug: SubjectSlug, dateStr: string) => {
+    setExamDate(slug, dateStr || null);
+    setExamDates(getExamDates());
+  };
   const [showNickModal, setShowNickModal] = useState(false);
   const [weaknesses, setWeaknesses] = useState<WeakArticleRecord[]>(() => getWeakestArticles());
   const [badges, setBadges] = useState<Badge[]>(() => checkAllBadges());
@@ -398,7 +413,87 @@ export function TienDoView() {
         </Card>
       </section>
 
-      <NicknameModal
+              {/* MỤC C: LỘ TRÌNH ÔN ĐẾN NGÀY THI */}
+        <section id="lo-trinh" className="scroll-mt-6">
+          <div className="flex items-center justify-between mb-2.5">
+            <h2 className="text-base font-bold text-ink flex items-center gap-1.5">
+              <Calendar size={18} className="text-gold" />
+              Lộ trình & Ngày thi
+            </h2>
+            <span className="text-xs text-ink-3">Tự chia số câu mỗi ngày</span>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            {(["dan-su", "hanh-chinh", "doanh-nghiep"] as SubjectSlug[]).map((slug) => {
+              const plan = calculateSubjectPlan(slug);
+              const currentDate = examDates[slug] || "";
+
+              return (
+                <Card key={slug} className="p-4 border-line">
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <div>
+                      <span className="text-[11px] text-ink-3 block font-medium">{SUBJECT_FULL_NAMES[slug]}</span>
+                      <h3 className="font-bold text-sm text-navy-ink">Môn {SUBJECT_NAMES[slug]}</h3>
+                    </div>
+                    {plan && (
+                      <span
+                        className={`px-2 py-0.5 rounded-full text-xs font-bold ${
+                          plan.isRush
+                            ? "bg-rose-500/15 text-rose-600 border border-rose-500/30"
+                            : "bg-gold-soft text-gold-ink"
+                        }`}
+                      >
+                        Còn {plan.daysLeft} ngày
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-center gap-2 mb-2">
+                    <label className="text-xs text-ink-2 font-medium shrink-0">Ngày thi:</label>
+                    <input
+                      type="date"
+                      value={currentDate}
+                      min={new Date().toISOString().split("T")[0]}
+                      onChange={(e) => handleDateChange(slug, e.target.value)}
+                      className="flex-1 px-2.5 py-1 text-xs border border-line rounded-lg bg-surface text-ink font-mono focus:outline-none focus:ring-1 focus:ring-gold"
+                    />
+                    {currentDate && (
+                      <button
+                        onClick={() => handleDateChange(slug, "")}
+                        className="text-[11px] text-ink-3 hover:text-danger px-1.5 py-1 rounded transition cursor-pointer"
+                        title="Xóa ngày thi"
+                      >
+                        Xóa
+                      </button>
+                    )}
+                  </div>
+
+                  {plan ? (
+                    <div className="p-2.5 bg-bg-2 rounded-xl text-xs space-y-1 text-ink-2">
+                      <div className="flex items-center justify-between font-semibold text-navy-ink">
+                        <span>Mục tiêu: {plan.dailyTarget} câu/ngày</span>
+                        <span>
+                          Hôm nay: {plan.doneToday}/{plan.dailyTarget} (
+                          {Math.min(100, Math.round((plan.doneToday / plan.dailyTarget) * 100))}%)
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-ink-3">
+                        {plan.unansweredCount} câu chưa làm · {plan.wrongCount} câu sai cần phục thù ·{" "}
+                        {plan.unsolvedScenarios} tình huống
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="text-[11px] text-ink-3 italic">
+                      Chưa đặt ngày thi. Chọn ngày ở trên để kích hoạt lộ trình.
+                    </p>
+                  )}
+                </Card>
+              );
+            })}
+          </div>
+        </section>
+
+        <NicknameModal
         isOpen={showNickModal}
         onClose={() => setShowNickModal(false)}
         onSuccess={(p) => {

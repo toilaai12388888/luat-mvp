@@ -7,6 +7,7 @@ import { TabBar } from "@/components/ui/TabBar";
 import { HomeHero } from "@/components/home/HomeHero";
 import { HomeStreak } from "@/components/home/HomeStreak";
 import { HomeSearch } from "@/components/home/HomeSearch";
+import { StudyPlanCard } from "@/components/study-plan/StudyPlanCard";
 import { SUBJECTS, getChapters } from "@/lib/content";
 
 export default async function HomePage() {
@@ -34,6 +35,11 @@ export default async function HomePage() {
 
         {/* Dynamic Continue Card */}
         <HomeHero />
+
+        {/* MỤC C: LỘ TRÌNH ÔN ĐẾN NGÀY THI */}
+        <div className="mb-4">
+          <StudyPlanCard />
+        </div>
 
         {/* Dynamic Streak Card */}
         <HomeStreak />
