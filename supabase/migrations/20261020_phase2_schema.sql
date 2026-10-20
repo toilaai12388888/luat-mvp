@@ -148,9 +148,12 @@ CREATE TABLE IF NOT EXISTS public.item_reports (
   item_id TEXT NOT NULL,
   reason TEXT NOT NULL,
   note TEXT,
+  resolved BOOLEAN NOT NULL DEFAULT false,
   player_id UUID REFERENCES auth.users(id) ON DELETE SET NULL,
   created_at TIMESTAMPTZ NOT NULL DEFAULT timezone('utc'::text, now())
 );
+
+ALTER TABLE public.item_reports ADD COLUMN IF NOT EXISTS resolved BOOLEAN NOT NULL DEFAULT false;
 
 ALTER TABLE public.item_reports ENABLE ROW LEVEL SECURITY;
 
