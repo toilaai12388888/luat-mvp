@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -7,12 +7,14 @@ import {
   RotateCw,
   CheckCircle2,
   XCircle,
-  ExternalLink,
   Award,
-  } from "lucide-react";
+  BookOpen,
+} from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { DieuHayRaDe } from "@/lib/content-schema";
 import { saveAttempt } from "@/lib/attempts";
+import { getDieuLuat, TraCuuDieuResult } from "@/lib/van-ban";
+import { DieuLuatSheet } from "@/components/van-ban/DieuLuatSheet";
 
 interface FlashcardRunnerProps {
   monName: string;
@@ -30,7 +32,12 @@ export function FlashcardRunner({
   const [queue, setQueue] = useState<DieuHayRaDe[]>(cards);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-      const [isFinished, setIsFinished] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
+  const [selectedDieu, setSelectedDieu] = useState<{
+    data: TraCuuDieuResult | null;
+    fallbackLink?: string;
+    fallbackTitle?: string;
+  } | null>(null);
 
   const current = queue[currentIndex];
 
@@ -38,14 +45,12 @@ export function FlashcardRunner({
     setIsFlipped(false);
 
     if (remembered) {
-            // Advance
       if (currentIndex + 1 >= queue.length) {
         finishSession();
       } else {
         setCurrentIndex((prev) => prev + 1);
       }
     } else {
-            // Re-insert current card at end of queue for repetition
       setQueue((prev) => [...prev, current]);
       setCurrentIndex((prev) => prev + 1);
     }
@@ -53,7 +58,6 @@ export function FlashcardRunner({
 
   const finishSession = () => {
     setIsFinished(true);
-    // Award XP
     saveAttempt({
       itemId: `fc-${Date.now()}`,
       itemType: "mcq",
@@ -64,6 +68,17 @@ export function FlashcardRunner({
         : "doanh-nghiep",
       isCorrect: true,
       xp: 20,
+    });
+  };
+
+  const handleOpenSheet = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!current) return;
+    const res = getDieuLuat(current.van_ban || monName, current.dieu);
+    setSelectedDieu({
+      data: res,
+      fallbackLink: current.link,
+      fallbackTitle: `${current.dieu} · ${current.ten}`,
     });
   };
 
@@ -99,7 +114,6 @@ export function FlashcardRunner({
               setQueue(cards);
               setCurrentIndex(0);
               setIsFinished(false);
-              
             }}
             variant="secondary"
             className="w-full h-12 font-bold text-sm"
@@ -114,109 +128,116 @@ export function FlashcardRunner({
   if (!current) return null;
 
   return (
-    <div className="flex h-screen flex-col bg-bg">
-      {/* Top Header */}
-      <header className="flex h-14 flex-none items-center justify-between border-b border-line bg-surface px-4">
-        <Link
-          href={exitHref}
-          className="press flex h-9 w-9 items-center justify-center rounded-xl text-ink-2 hover:bg-bg-2"
-          aria-label="Quay lại"
-        >
-          <ArrowLeft size={20} />
-        </Link>
+    <>
+      <div className="flex h-screen flex-col bg-bg">
+        {/* Top Header */}
+        <header className="flex h-14 flex-none items-center justify-between border-b border-line bg-surface px-4">
+          <Link
+            href={exitHref}
+            className="press flex h-9 w-9 items-center justify-center rounded-xl text-ink-2 hover:bg-bg-2"
+            aria-label="Quay lại"
+          >
+            <ArrowLeft size={20} />
+          </Link>
 
-        <div className="text-center">
-          <span className="text-xs font-bold text-navy-ink block">{monName}</span>
-          <span className="text-[10px] text-ink-3">
-            Thẻ {currentIndex + 1} / {queue.length}
-          </span>
-        </div>
-
-        <div className="w-9" />
-      </header>
-
-      {/* Main Flashcard area */}
-      <main className="flex-1 p-5 flex flex-col justify-center items-center">
-        <div
-          onClick={() => setIsFlipped(!isFlipped)}
-          className={`press relative w-full max-w-sm h-80 rounded-3xl border p-6 flex flex-col justify-between cursor-pointer transition-all duration-300 shadow-md ${
-            isFlipped
-              ? "border-navy-bar bg-surface text-ink ring-2 ring-navy-bar/20"
-              : "border-line bg-surface text-ink hover:border-navy-bar/40"
-          }`}
-        >
-          {/* Top tag */}
-          <div className="flex items-center justify-between">
-            <span
-              className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${
-                isFlipped
-                  ? "bg-navy-soft text-navy-ink"
-                  : "bg-bg-2 text-ink-3"
-              }`}
-            >
-              {isFlipped ? "Mặt sau · Tóm tắt nội dung" : "Mặt trước · Tên điều"}
+          <div className="text-center">
+            <span className="text-xs font-bold text-navy-ink block">{monName}</span>
+            <span className="text-[10px] text-ink-3">
+              Thẻ {currentIndex + 1} / {queue.length}
             </span>
-            <RotateCw size={16} className="text-ink-3" />
           </div>
 
-          {/* Content */}
-          <div className="flex-1 flex flex-col justify-center text-center my-3">
-            {!isFlipped ? (
-              <div>
-                <span className="text-xs font-bold text-navy-bar uppercase tracking-wider block mb-2">
-                  {current.van_ban}
-                </span>
-                <h2 className="text-2xl font-black text-ink mb-2">{current.dieu}</h2>
-                <p className="text-base font-semibold text-ink-2">{current.ten}</p>
-              </div>
-            ) : (
-              <div>
-                <h3 className="text-base font-bold text-navy-ink mb-3">{current.ten}</h3>
-                <p className="text-sm font-medium text-ink leading-relaxed">
-                  {current.ghi_chu}
-                </p>
-                {current.link && (
-                  <a
-                    href={current.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-navy-bar hover:underline mt-4"
+          <div className="w-9" />
+        </header>
+
+        {/* Main Flashcard area */}
+        <main className="flex-1 p-5 flex flex-col justify-center items-center">
+          <div
+            onClick={() => setIsFlipped(!isFlipped)}
+            className={`press relative w-full max-w-sm h-84 rounded-3xl border p-6 flex flex-col justify-between cursor-pointer transition-all duration-300 shadow-md ${
+              isFlipped
+                ? "border-navy-bar bg-surface text-ink ring-2 ring-navy-bar/20"
+                : "border-line bg-surface text-ink hover:border-navy-bar/40"
+            }`}
+          >
+            {/* Top tag */}
+            <div className="flex items-center justify-between">
+              <span
+                className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${
+                  isFlipped
+                    ? "bg-navy-soft text-navy-ink"
+                    : "bg-bg-2 text-ink-3"
+                }`}
+              >
+                {isFlipped ? "Mặt sau · Nội dung trọng tâm" : "Mặt trước · Tên điều"}
+              </span>
+              <RotateCw size={16} className="text-ink-3" />
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 flex flex-col justify-center text-center my-3">
+              {!isFlipped ? (
+                <div>
+                  <span className="text-xs font-bold text-navy-bar uppercase tracking-wider block mb-2">
+                    {current.van_ban}
+                  </span>
+                  <h2 className="text-2xl font-black text-ink mb-2">{current.dieu}</h2>
+                  <p className="text-base font-semibold text-ink-2">{current.ten}</p>
+                </div>
+              ) : (
+                <div>
+                  <h3 className="text-base font-bold text-navy-ink mb-2">{current.ten}</h3>
+                  <p className="text-sm font-medium text-ink leading-relaxed">
+                    {current.ghi_chu}
+                  </p>
+                  <button
+                    type="button"
+                    onClick={handleOpenSheet}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-navy-bar hover:underline mt-4 bg-navy-soft/60 px-3 py-1.5 rounded-xl cursor-pointer"
                   >
-                    Xem văn bản gốc <ExternalLink size={12} />
-                  </a>
-                )}
-              </div>
-            )}
+                    <BookOpen size={13} />
+                    Xem nguyên văn điều này
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Bottom Hint */}
+            <div className="text-center text-[11px] text-ink-3">
+              {isFlipped ? "Chọn 'Nhớ rồi' hoặc 'Chưa nhớ' bên dưới" : "Chạm vào thẻ để lật xem nội dung"}
+            </div>
           </div>
+        </main>
 
-          {/* Bottom Hint */}
-          <div className="text-center text-[11px] text-ink-3">
-            {isFlipped ? "Chọn 'Nhớ rồi' hoặc 'Chưa nhớ' bên dưới" : "Chạm vào thẻ để lật xem nội dung cốt lõi"}
-          </div>
-        </div>
-      </main>
+        {/* Action buttons */}
+        <footer className="border-t border-line bg-surface p-4 flex items-center gap-3">
+          <Button
+            onClick={() => handleNext(false)}
+            variant="secondary"
+            className="flex-1 h-12 text-sm font-bold text-danger border-danger/30 hover:bg-danger-soft"
+          >
+            <XCircle size={18} className="mr-1.5" />
+            Chưa nhớ (lặp lại)
+          </Button>
 
-      {/* Action buttons */}
-      <footer className="border-t border-line bg-surface p-4 flex items-center gap-3">
-        <Button
-          onClick={() => handleNext(false)}
-          variant="secondary"
-          className="flex-1 h-12 text-sm font-bold text-danger border-danger/30 hover:bg-danger-soft"
-        >
-          <XCircle size={18} className="mr-1.5" />
-          Chưa nhớ (lặp lại)
-        </Button>
+          <Button
+            onClick={() => handleNext(true)}
+            variant="primary"
+            className="flex-1 h-12 text-sm font-bold bg-good hover:bg-good-hover border-good text-white"
+          >
+            <CheckCircle2 size={18} className="mr-1.5" />
+            Nhớ rồi!
+          </Button>
+        </footer>
+      </div>
 
-        <Button
-          onClick={() => handleNext(true)}
-          variant="primary"
-          className="flex-1 h-12 text-sm font-bold bg-good hover:bg-good-hover border-good text-white"
-        >
-          <CheckCircle2 size={18} className="mr-1.5" />
-          Nhớ rồi!
-        </Button>
-      </footer>
-    </div>
+      <DieuLuatSheet
+        isOpen={Boolean(selectedDieu)}
+        onClose={() => setSelectedDieu(null)}
+        data={selectedDieu?.data || null}
+        fallbackLink={selectedDieu?.fallbackLink}
+        fallbackTitle={selectedDieu?.fallbackTitle}
+      />
+    </>
   );
 }

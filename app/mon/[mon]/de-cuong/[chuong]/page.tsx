@@ -1,10 +1,11 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink, Sparkles } from "lucide-react";
+import { ArrowLeft, Sparkles } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { Button } from "@/components/ui/Button";
 import { SUBJECTS, getSubject, getChapter } from "@/lib/content";
+import { DeCuongDieuList } from "@/components/de-cuong/DeCuongDieuList";
 
 export function generateStaticParams() {
   const params: { mon: string; chuong: string }[] = [];
@@ -56,7 +57,7 @@ export default async function DeCuongPage({ params }: PageProps) {
         </h1>
         <p className="mt-1 mb-4 text-sm text-ink-2">{subject.lawName}</p>
 
-        {/* FEATURE 7: FLASHCARD ACTION BANNER */}
+        {/* FLASHCARD ACTION BANNER */}
         <Link
           href={`/mon/${mon}/flashcard/${chuong}`}
           className="press mb-6 flex items-center justify-between rounded-2xl border border-navy-bar/40 bg-navy-soft/60 p-4 transition-all hover:border-navy-bar"
@@ -96,30 +97,7 @@ export default async function DeCuongPage({ params }: PageProps) {
               Luyện Flashcard ({de_cuong.dieu_hay_ra_de.length} điều) →
             </Link>
           </div>
-          <div className="divide-y divide-line rounded-2xl border border-line bg-surface overflow-hidden">
-            {de_cuong.dieu_hay_ra_de.map((d, i) => (
-              <div key={i} className="flex items-start gap-3 p-4">
-                <span className="flex-none rounded-lg bg-navy-soft px-2.5 py-1 text-xs font-bold text-navy-ink">
-                  {d.dieu}
-                </span>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-bold text-sm text-ink">{d.ten}</span>
-                    <a
-                      href={d.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="press text-link text-xs flex items-center gap-1 hover:underline"
-                    >
-                      <span>Văn bản</span>
-                      <ExternalLink size={12} />
-                    </a>
-                  </div>
-                  <p className="mt-1 text-xs text-ink-2 leading-normal">{d.ghi_chu}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <DeCuongDieuList items={de_cuong.dieu_hay_ra_de} monSlug={mon} />
         </section>
       </main>
 
