@@ -10,7 +10,7 @@ import {
   RefreshCw, 
   ShieldAlert
 } from "lucide-react";
-import { getLocalPlayer } from "@/lib/player";
+import { supabase } from "@/lib/supabase";
 
 interface HoiAiModalProps {
   isOpen: boolean;
@@ -42,17 +42,16 @@ export function HoiAiModal({ isOpen, onClose, itemId, questionText }: HoiAiModal
     setErrorMsg("");
     setResponse(null);
 
-    const player = getLocalPlayer();
-
     try {
+      const { data: sessionData } = supabase ? await supabase.auth.getSession() : { data: { session: null } };
+      const accessToken = sessionData.session?.access_token;
       const res = await fetch("/api/hoi-ai", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          itemId,
-          userQuestion: q,
-          playerId: player?.id,
-        }),
+        headers: {
+          "Content-Type": "application/json",
+          ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
+        },
+        body: JSON.stringify({ itemId, userQuestion: q }),
       });
 
       const data = await res.json();

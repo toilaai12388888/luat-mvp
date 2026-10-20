@@ -1,4 +1,4 @@
-﻿import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import webpush from "web-push";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import { getVietnamDateString } from "@/lib/push";
@@ -13,18 +13,11 @@ export async function POST(req: NextRequest) {
 }
 
 async function handleCron(req: NextRequest) {
-  // Check CRON_SECRET authorization
-  const authHeader = req.headers.get("authorization");
-  const url = new URL(req.url);
-  const secretQuery = url.searchParams.get("secret");
-  const expectedSecret = process.env.CRON_SECRET;
-
-  if (expectedSecret) {
-    const isBearerValid = authHeader === `Bearer ${expectedSecret}`;
-    const isQueryValid = secretQuery === expectedSecret;
-    if (!isBearerValid && !isQueryValid) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+  // Chỉ nhận Authorization: Bearer <CRON_SECRET> (Vercel Cron tự gửi header này)
+  const expectedSecret = (process.env.CRON_SECRET || "").trim();
+  const authHeader = req.headers.get("authorization") || "";
+  if (!expectedSecret || authHeader !== `Bearer ${expectedSecret}`) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const supabaseAdmin = getSupabaseAdmin();

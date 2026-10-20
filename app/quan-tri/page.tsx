@@ -310,10 +310,10 @@ export default function QuanTriPage() {
               </label>
               <input
                 type="password"
-                maxLength={10}
+                maxLength={64}
                 value={pinInput}
                 onChange={(e) => setPinInput(e.target.value)}
-                placeholder="Nhập mã 6 số (mặc định 882026)"
+                placeholder="Nhập mã quản trị"
                 className="w-full px-4 py-3 bg-slate-950/60 border border-slate-700 rounded-xl text-center text-lg font-mono tracking-widest text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
                 autoFocus
               />

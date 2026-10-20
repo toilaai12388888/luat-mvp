@@ -3,6 +3,12 @@ import { getQuizItemById } from "@/lib/all-questions";
 import { getDieuLuat } from "@/lib/van-ban";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 import { getVietnamDateString } from "@/lib/push";
+import { getClientIp } from "@/lib/admin-auth";
+
+const USER_DAILY_LIMIT = 5;
+const IP_DAILY_LIMIT = 30;
+// Đếm theo IP trong bộ nhớ từng instance (lớp chặn phụ; lớp chính là theo tài khoản trong bảng ai_usage)
+const ipUsage = new Map<string, { day: string; count: number }>();
 
 export async function GET() {
   const hasKey = Boolean(process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY.trim());
@@ -25,7 +31,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Payload không hợp lệ" }, { status: 400 });
   }
 
-  const { itemId, userQuestion, playerId } = body as { itemId?: string; userQuestion?: string; playerId?: string };
+  const { itemId, userQuestion } = body as { itemId?: string; userQuestion?: string };
   if (!itemId) {
     return NextResponse.json({ error: "Thiếu mã câu hỏi itemId" }, { status: 400 });
   }
@@ -38,35 +44,59 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Rate Limiting (5 times/day Vietnam time)
-  const todayVn = getVietnamDateString();
-    let currentUsage = 0;
-
+  // Xác định người dùng từ access token Supabase (không tin playerId client gửi lên)
   const supabaseAdmin = getSupabaseAdmin();
-  if (supabaseAdmin && playerId) {
-    try {
-      const { data: usageRow } = await supabaseAdmin
-        .from("ai_usage")
-        .select("count")
-        .eq("player_id", playerId)
-        .eq("day", todayVn)
-        .maybeSingle();
+  if (!supabaseAdmin) {
+    return NextResponse.json({ error: "Tính năng Hỏi AI chưa được cấu hình đầy đủ trên server." }, { status: 503 });
+  }
+  const authHeader = req.headers.get("authorization") || "";
+  const token = authHeader.startsWith("Bearer ") ? authHeader.slice(7).trim() : "";
+  if (!token) {
+    return NextResponse.json({ error: "Bạn cần mở lại trang để đăng nhập ẩn danh trước khi hỏi AI." }, { status: 401 });
+  }
+  const { data: userData, error: userErr } = await supabaseAdmin.auth.getUser(token);
+  const playerId = userData?.user?.id;
+  if (userErr || !playerId) {
+    return NextResponse.json({ error: "Phiên đăng nhập không hợp lệ. Tải lại trang rồi thử lại." }, { status: 401 });
+  }
 
-      currentUsage = usageRow?.count || 0;
+  const todayVn = getVietnamDateString();
 
-      if (currentUsage >= 5) {
-        return NextResponse.json(
-          {
-            error: "Bạn đã dùng hết 5 lượt hỏi AI hôm nay (tối đa 5 lượt/ngày). Hãy quay lại ngày mai hoặc tự đối chiếu điều luật nhé!",
-            remaining: 0,
-          },
-          { status: 429 }
-        );
-      }
-    } catch (err) {
-      console.warn("Could not check ai_usage in Supabase:", err);
+  // Giới hạn theo IP
+  const ip = getClientIp(req);
+  const ipRec = ipUsage.get(ip);
+  const ipCount = ipRec && ipRec.day === todayVn ? ipRec.count : 0;
+  if (ipCount >= IP_DAILY_LIMIT) {
+    return NextResponse.json({ error: "Mạng của bạn đã dùng hết lượt hỏi AI hôm nay. Quay lại ngày mai nhé!", remaining: 0 }, { status: 429 });
+  }
+
+  // Giới hạn theo tài khoản
+  let currentUsage = 0;
+  {
+    const { data: usageRow, error: usageErr } = await supabaseAdmin
+      .from("ai_usage")
+      .select("count")
+      .eq("player_id", playerId)
+      .eq("day", todayVn)
+      .maybeSingle();
+    if (usageErr) {
+      return NextResponse.json({ error: "Không kiểm tra được lượt hỏi. Thử lại sau." }, { status: 500 });
+    }
+    currentUsage = usageRow?.count || 0;
+    if (currentUsage >= USER_DAILY_LIMIT) {
+      return NextResponse.json(
+        {
+          error: `Bạn đã dùng hết ${USER_DAILY_LIMIT} lượt hỏi AI hôm nay. Hãy quay lại ngày mai hoặc tự đối chiếu điều luật nhé!`,
+          remaining: 0,
+        },
+        { status: 429 }
+      );
     }
   }
+
+  // Ghi nhận lượt trước khi gọi AI để không bị gọi song song vượt giới hạn
+  ipUsage.set(ip, { day: todayVn, count: ipCount + 1 });
+  await supabaseAdmin.from("ai_usage").upsert({ player_id: playerId, day: todayVn, count: currentUsage + 1 });
 
   // 1. Context retrieval
   const item = getQuizItemById(itemId);
@@ -150,20 +180,7 @@ Hãy giải đáp ngắn gọn, trọng tâm, dưới 150 chữ:`;
 
     const aiAnswer = data.candidates?.[0]?.content?.parts?.[0]?.text || "Không nhận được phản hồi từ AI.";
 
-    // Increment usage count
-    if (supabaseAdmin && playerId) {
-      try {
-        await supabaseAdmin.from("ai_usage").upsert({
-          player_id: playerId,
-          day: todayVn,
-          count: currentUsage + 1,
-        });
-      } catch (upsertErr) {
-        console.warn("Failed to update ai_usage count:", upsertErr);
-      }
-    }
-
-    const remaining = Math.max(0, 5 - (currentUsage + 1));
+    const remaining = Math.max(0, USER_DAILY_LIMIT - (currentUsage + 1));
 
     return NextResponse.json({
       answer: aiAnswer.trim(),

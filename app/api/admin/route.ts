@@ -1,15 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
-
-function verifyPin(req: NextRequest): boolean {
-  const pinHeader = req.headers.get("x-admin-pin");
-  const expectedPin = process.env.ADMIN_PIN || "882026";
-  return Boolean(pinHeader && pinHeader.trim() === expectedPin.trim());
-}
+import { checkAdminPin } from "@/lib/admin-auth";
 
 export async function GET(req: NextRequest) {
-  if (!verifyPin(req)) {
-    return NextResponse.json({ error: "Mã PIN không chính xác hoặc thiếu header" }, { status: 401 });
+  const auth = checkAdminPin(req, req.headers.get("x-admin-pin"));
+  if (!auth.ok) {
+    return NextResponse.json({ error: auth.error }, { status: auth.status });
   }
 
   const supabaseAdmin = getSupabaseAdmin();
@@ -72,10 +68,9 @@ export async function POST(req: NextRequest) {
 
   const pinHeader = req.headers.get("x-admin-pin");
   const pinBody = (body as { pin?: string }).pin;
-  const pin = typeof pinHeader === "string" ? pinHeader.trim() : (typeof pinBody === "string" ? pinBody.trim() : "");
-  const expectedPin = (process.env.ADMIN_PIN || "882026").trim();
-  if (!pin || pin !== expectedPin) {
-    return NextResponse.json({ error: "Mã PIN không chính xác" }, { status: 401 });
+  const auth = checkAdminPin(req, typeof pinHeader === "string" ? pinHeader : typeof pinBody === "string" ? pinBody : "");
+  if (!auth.ok) {
+    return NextResponse.json({ error: auth.error }, { status: auth.status });
   }
 
   // Action: verify only
