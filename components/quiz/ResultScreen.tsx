@@ -6,6 +6,8 @@ import { Zap, Flame, Swords, Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { createChallenge } from "@/lib/challenge";
 import { recordActivityToday } from "@/lib/push";
+import { HeartHandshake } from "lucide-react";
+import { ContributeQuestionModal } from "@/components/contributions/ContributeQuestionModal";
 
 interface ResultScreenProps {
   correct: number;
@@ -55,6 +57,7 @@ export function ResultScreen({
   const [challengeLink, setChallengeLink] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [creating, setCreating] = useState(false);
+  const [showContributeModal, setShowContributeModal] = useState(false);
 
   useEffect(() => {
     recordActivityToday();
@@ -174,6 +177,16 @@ export function ResultScreen({
       )}
 
       {/* Action Buttons */}
+          {/* MỤC E: NÚT ĐÓNG GÓP CÂU HỎI CUỐI BÀI */}
+          <Button
+            variant="secondary"
+            type="button"
+            onClick={() => setShowContributeModal(true)}
+            className="border-gold/40 text-gold-ink hover:bg-gold-soft/40 h-11 font-semibold"
+          >
+            <HeartHandshake size={16} className="mr-2 text-gold" />
+            Đóng góp câu hỏi mới
+          </Button>
       <div className="flex w-full flex-col gap-2.5">
         {/* FEATURE 9: THÁCH ĐẤU BẠN BÈ BUTTON */}
         {itemIds && itemIds.length >= 10 && !challengeLink && (

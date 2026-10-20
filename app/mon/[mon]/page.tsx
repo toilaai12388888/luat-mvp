@@ -6,6 +6,7 @@ import { ArrowLeft, BookOpen, CheckSquare, HelpCircle, ChevronRight, Scale } fro
 import { Card } from "@/components/ui/Card";
 import { TabBar } from "@/components/ui/TabBar";
 import { SUBJECTS, getSubject, getChapter } from "@/lib/content";
+import { CommunityQuestionsList } from "@/components/contributions/CommunityQuestionsList";
 
 export function generateStaticParams() {
   return SUBJECTS.map((s) => ({ mon: s.slug }));
@@ -170,6 +171,9 @@ export default async function SubjectPage({ params }: PageProps) {
             )}
           </Card>
         ))}
+
+        {/* MỤC E: CÂU HỎI TỪ CỘNG ĐỒNG */}
+        <CommunityQuestionsList subject={mon as any} chapter="c01" />
       </main>
 
       <TabBar />

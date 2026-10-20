@@ -33,6 +33,8 @@ import { NicknameModal } from "@/components/auth/NicknameModal";
 import { getWeakestArticles, WeakArticleRecord } from "@/lib/weakness";
 import { checkAllBadges, Badge } from "@/lib/badges";
 import { getQuizItemById, QuizQuestion } from "@/lib/all-questions";
+import { ContributeQuestionModal } from "@/components/contributions/ContributeQuestionModal";
+import { getMyContributions, UserContribution } from "@/lib/contributions";
 import {
   getExamDates,
   setExamDate,
@@ -48,6 +50,8 @@ export function TienDoView() {
   const [stats, setStats] = useState<UserStats | null>(null);
   const [player, setPlayer] = useState<PlayerProfile | null>(() => getLocalPlayer());
   const [examDates, setExamDates] = useState<ExamDates>(() => getExamDates());
+  const [showContributeModal, setShowContributeModal] = useState(false);
+  const [myContribs, setMyContribs] = useState<UserContribution[]>([]);
 
   const handleDateChange = (slug: SubjectSlug, dateStr: string) => {
     setExamDate(slug, dateStr || null);
@@ -60,6 +64,7 @@ export function TienDoView() {
   const [practiceTitle, setPracticeTitle] = useState("");
 
   const refreshAll = () => {
+      getMyContributions().then(setMyContribs).catch(() => {});
     getMyStats().then(setStats);
     setPlayer(getLocalPlayer());
     setWeaknesses(getWeakestArticles());
@@ -492,6 +497,83 @@ export function TienDoView() {
             })}
           </div>
         </section>
+
+                {/* MỤC E: ĐÓNG GÓP CÂU HỎI */}
+        <section id="dong-gop">
+          <div className="flex items-center justify-between mb-2.5">
+            <h2 className="text-base font-bold text-ink flex items-center gap-1.5">
+              <HeartHandshake size={18} className="text-gold" />
+              Đóng góp câu hỏi
+            </h2>
+            <Button
+              size="sm"
+              onClick={() => setShowContributeModal(true)}
+              className="h-8 text-xs font-bold"
+            >
+              + Đóng góp mới
+            </Button>
+          </div>
+
+          {myContribs.length > 0 ? (
+            <div className="space-y-2.5">
+              {myContribs.map((c, idx) => (
+                <Card key={c.id || idx} className="p-3.5 border-line">
+                  <div className="flex items-center justify-between gap-2 mb-1.5">
+                    <span
+                      className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                        c.status === "approved"
+                          ? "bg-good-soft text-good-ink"
+                          : c.status === "rejected"
+                          ? "bg-danger-soft text-danger-ink"
+                          : "bg-gold-soft text-gold-ink"
+                      }`}
+                    >
+                      {c.status === "approved"
+                        ? "Đã duyệt"
+                        : c.status === "rejected"
+                        ? "Từ chối"
+                        : "Chờ duyệt"}
+                    </span>
+                    <span className="text-[11px] text-ink-3 font-mono">
+                      {new Date(c.created_at).toLocaleDateString("vi-VN")}
+                    </span>
+                  </div>
+                  <p className="text-xs font-semibold text-ink line-clamp-2 mb-1">
+                    {c.payload.question}
+                  </p>
+                  <p className="text-[11px] text-ink-3">
+                    {c.payload.citationDoc} - Điều {c.payload.citationArticle}
+                  </p>
+                  {c.note && (
+                    <p className="mt-1.5 text-[11px] text-danger bg-danger-soft p-2 rounded-lg">
+                      <strong>Ghi chú admin:</strong> {c.note}
+                    </p>
+                  )}
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <Card className="p-4 text-center border-dashed border-line">
+              <p className="text-xs text-ink-3 mb-2">
+                Bạn chưa đóng góp câu hỏi nào. Đóng góp câu hỏi đúng chuẩn để mở khóa huy hiệu "Người đóng góp" và giúp đỡ các bạn khác!
+              </p>
+              <button
+                onClick={() => setShowContributeModal(true)}
+                className="text-xs font-bold text-gold hover:underline cursor-pointer"
+              >
+                Gửi câu hỏi đóng góp đầu tiên →
+              </button>
+            </Card>
+          )}
+        </section>
+
+        <ContributeQuestionModal
+          isOpen={showContributeModal}
+          onClose={() => {
+            setShowContributeModal(false);
+            refreshAll();
+          }}
+        />
 
         <NicknameModal
         isOpen={showNickModal}
