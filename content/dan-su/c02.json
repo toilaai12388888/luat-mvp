@@ -47,6 +47,69 @@
         "ten": "Phạt vi phạm",
         "ghi_chu": "Tự do thỏa thuận mức phạt theo BLDS, trừ trường hợp luật khác có quy định."
       }
+    ],
+    "so_sanh": [
+      {
+        "tieu_de": "Bảng so sánh: Cầm cố tài sản vs Thế chấp tài sản",
+        "cot": [
+          "Tiêu chí",
+          "Cầm cố tài sản (Điều 309)",
+          "Thế chấp tài sản (Điều 317)"
+        ],
+        "hang": [
+          [
+            "Chuyển giao tài sản",
+            "Bắt buộc giao tài sản cho bên nhận cầm cố giữ",
+            "Không giao tài sản; bên thế chấp tiếp tục giữ tài sản"
+          ],
+          [
+            "Đối tượng áp dụng phổ biến",
+            "Động sản, kim khí quý, đá quý, sổ tiết kiệm, giấy tờ có giá",
+            "Bất động sản (nhà đất), tàu biển, máy bay, động sản có đăng ký"
+          ],
+          [
+            "Quyền định đoạt trong thời hạn",
+            "Bên cầm cố không được bán/chuyển nhượng tài sản",
+            "Bên thế chấp không được bán, trừ hàng hóa luân chuyển hoặc được bên nhận thế chấp đồng ý"
+          ],
+          [
+            "Hiệu lực đối kháng",
+            "Có hiệu lực từ thời điểm bên nhận cầm cố nắm giữ tài sản",
+            "Có hiệu lực từ thời điểm đăng ký biện pháp bảo đảm tại cơ quan thẩm quyền"
+          ]
+        ]
+      }
+    ],
+    "so_do": [
+      {
+        "tieu_de": "Sơ đồ phân loại: 9 Biện pháp bảo đảm thực hiện nghĩa vụ (Điều 292 BLDS 2015)",
+        "nut": [
+          {
+            "ten": "Biện pháp có chuyển giao tài sản bảo đảm",
+            "con": [
+              "1. Cầm cố tài sản (Điều 309): Giao tài sản cho bên nhận cầm cố giữ",
+              "2. Đặt cọc (Điều 328): Giao tiền/vật có giá để bảo đảm giao kết hoặc thực hiện hợp đồng",
+              "3. Ký cược (Điều 329): Thuê động sản giao tài sản bảo đảm việc trả lại tài sản thuê",
+              "4. Ký quỹ (Điều 330): Gửi một khoản tiền vào tài khoản phong tỏa tại ngân hàng"
+            ]
+          },
+          {
+            "ten": "Biện pháp không chuyển giao tài sản bảo đảm",
+            "con": [
+              "5. Thế chấp tài sản (Điều 317): Dùng tài sản bảo đảm nhưng không giao tài sản",
+              "6. Bảo lưu quyền sở hữu (Điều 331): Trong hợp đồng mua bán tài sản cho đến khi trả đủ tiền"
+            ]
+          },
+          {
+            "ten": "Biện pháp bảo đảm bằng cam kết cá nhân & quyền chiếm giữ theo luật",
+            "con": [
+              "7. Bảo lãnh (Điều 335): Người thứ ba cam kết thực hiện thay nghĩa vụ khi bên có nghĩa vụ vi phạm",
+              "8. Tín chấp (Điều 344): Tổ chức chính trị - xã hội bảo đảm cho cá nhân, hộ gia đình nghèo vay vốn",
+              "9. Cầm giữ tài sản (Điều 346): Bên có quyền chiếm giữ hợp pháp tài sản khi bên có nghĩa vụ chưa trả nợ"
+            ]
+          }
+        ]
+      }
     ]
   },
   "trac_nghiem": [

@@ -47,6 +47,55 @@
         "ten": "Thời hạn ra quyết định",
         "ghi_chu": "Thời hạn 7 ngày làm việc, kéo dài tối đa 01 tháng hoặc 02 tháng đối với vụ việc phức tạp."
       }
+    ],
+    "so_sanh": [
+      {
+        "tieu_de": "Bảng so sánh: Hình thức xử phạt VPHC vs Biện pháp khắc phục hậu quả",
+        "cot": [
+          "Tiêu chí",
+          "Hình thức xử phạt (Điều 21)",
+          "Biện pháp khắc phục hậu quả (Điều 28)"
+        ],
+        "hang": [
+          [
+            "Mục đích",
+            "Trừng phạt, răn đe, cưỡng chế trách nhiệm pháp lý đối với hành vi vi phạm",
+            "Khôi phục lại trật tự quản lý và tình trạng ban đầu do hành vi vi phạm gây ra"
+          ],
+          [
+            "Các biện pháp cụ thể",
+            "Cảnh cáo, Phạt tiền, Tước quyền sử dụng GP/CCHN, Tịch thu tang vật, Trục xuất",
+            "Buộc khôi phục tình trạng ban đầu, buộc tháo dỡ, buộc tiêu hủy, buộc nộp lại số lợi bất hợp pháp..."
+          ],
+          [
+            "Nguyên tắc áp dụng",
+            "Áp dụng độc lập hình thức chính, có thể kèm theo hình thức phạt bổ sung",
+            "Áp dụng kèm theo hình thức xử phạt hoặc áp dụng độc lập khi không xử phạt (hết thời hiệu, không tìm ra đối tượng)"
+          ]
+        ]
+      }
+    ],
+    "so_do": [
+      {
+        "tieu_de": "Sơ đồ: Hệ thống 5 hình thức xử phạt vi phạm hành chính (Điều 21 Luật XLVPHC)",
+        "nut": [
+          {
+            "ten": "Chỉ được quy định và áp dụng là HÌNH THỨC XỬ PHẠT CHÍNH",
+            "con": [
+              "1. Cảnh cáo (Điều 22): Áp dụng cho vi phạm không nghiêm trọng có giảm nhẹ hoặc người từ đủ 14 đến dưới 16 tuổi",
+              "2. Phạt tiền (Điều 23): Mức phạt cá nhân tối đa từ 50.000đ đến 1 tỷ đồng tùy lĩnh vực; tổ chức gấp 2 lần cá nhân"
+            ]
+          },
+          {
+            "ten": "Có thể áp dụng là HÌNH THỨC XỬ PHẠT CHÍNH hoặc PHẠT BỔ SUNG",
+            "con": [
+              "3. Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn / đình chỉ hoạt động có thời hạn (Điều 25)",
+              "4. Tịch thu tang vật vi phạm hành chính, phương tiện được sử dụng để vi phạm hành chính (Điều 26)",
+              "5. Trục xuất: Áp dụng đối với người nước ngoài có hành vi vi phạm hành chính tại Việt Nam (Điều 27)"
+            ]
+          }
+        ]
+      }
     ]
   },
   "trac_nghiem": [

@@ -6,6 +6,8 @@ import ReactMarkdown from "react-markdown";
 import { Button } from "@/components/ui/Button";
 import { SUBJECTS, getSubject, getChapter } from "@/lib/content";
 import { DeCuongDieuList } from "@/components/de-cuong/DeCuongDieuList";
+import { SoSanhTable } from "@/components/de-cuong/SoSanhTable";
+import { SoDoTree } from "@/components/de-cuong/SoDoTree";
 
 export function generateStaticParams() {
   const params: { mon: string; chuong: string }[] = [];
@@ -48,22 +50,24 @@ export default async function DeCuongPage({ params }: PageProps) {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 p-4">
-        <div className="mb-1 text-xs font-bold uppercase tracking-wider text-navy-ink">
-          {chuong.toUpperCase()} · ĐỀ CƯƠNG
+      <main className="flex-1 p-4 space-y-8">
+        <div>
+          <div className="mb-1 text-xs font-bold uppercase tracking-wider text-navy-ink">
+            {chuong.toUpperCase()} · ĐỀ CƯƠNG
+          </div>
+          <h1 className="text-2xl font-bold tracking-tight text-ink">
+            {ten_chuong.replace(" (MẪU)", "")}
+          </h1>
+          <p className="mt-1 text-sm text-ink-2">{subject.lawName}</p>
         </div>
-        <h1 className="text-2xl font-bold tracking-tight text-ink">
-          {ten_chuong.replace(" (MẪU)", "")}
-        </h1>
-        <p className="mt-1 mb-4 text-sm text-ink-2">{subject.lawName}</p>
 
         {/* FLASHCARD ACTION BANNER */}
         <Link
           href={`/mon/${mon}/flashcard/${chuong}`}
-          className="press mb-6 flex items-center justify-between rounded-2xl border border-navy-bar/40 bg-navy-soft/60 p-4 transition-all hover:border-navy-bar"
+          className="press flex items-center justify-between rounded-2xl border border-navy-bar/40 bg-navy-soft/60 p-4 transition-all hover:border-navy-bar shadow-xs"
         >
           <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-navy-bar text-white shadow-sm">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-navy-bar text-white shadow-sm flex-none">
               <Sparkles size={20} />
             </span>
             <div>
@@ -79,15 +83,29 @@ export default async function DeCuongPage({ params }: PageProps) {
         </Link>
 
         {/* Section: Tóm tắt */}
-        <section className="mb-8">
+        <section>
           <h2 className="mb-3 text-lg font-bold text-ink">Tóm tắt trọng tâm</h2>
-          <div className="prose prose-sm max-w-none text-ink leading-relaxed rounded-2xl border border-line bg-surface p-4 text-[15px]">
+          <div className="prose prose-sm max-w-none text-ink leading-relaxed rounded-2xl border border-line bg-surface p-4 text-[15px] shadow-xs">
             <ReactMarkdown>{de_cuong.tom_tat}</ReactMarkdown>
           </div>
         </section>
 
+        {/* Section: Bảng so sánh (nếu có) */}
+        {de_cuong.so_sanh && de_cuong.so_sanh.length > 0 && (
+          <section>
+            <SoSanhTable items={de_cuong.so_sanh} />
+          </section>
+        )}
+
+        {/* Section: Sơ đồ nhóm / cây (nếu có) */}
+        {de_cuong.so_do && de_cuong.so_do.length > 0 && (
+          <section>
+            <SoDoTree items={de_cuong.so_do} />
+          </section>
+        )}
+
         {/* Section: Điều hay ra đề */}
-        <section className="mb-8">
+        <section>
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-bold text-ink">Điều luật hay ra đề</h2>
             <Link

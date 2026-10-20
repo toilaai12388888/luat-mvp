@@ -47,6 +47,79 @@
         "ten": "Thời hiệu tuyên bố vô hiệu",
         "ghi_chu": "Thời hiệu 2 năm đối với vô hiệu tương đối, không hạn chế với vô hiệu tuyệt đối."
       }
+    ],
+    "so_sanh": [
+      {
+        "tieu_de": "Bảng so sánh: Các trường hợp giao dịch dân sự vô hiệu và thời hiệu khởi kiện",
+        "cot": [
+          "Trường hợp vô hiệu",
+          "Căn cứ luật",
+          "Thời hiệu yêu cầu tuyên vô hiệu",
+          "Hậu quả pháp lý"
+        ],
+        "hang": [
+          [
+            "Vi phạm điều cấm của luật, trái đạo đức xã hội",
+            "Điều 123 BLDS 2015",
+            "Không bị hạn chế thời gian",
+            "Vô hiệu tuyệt đối, hoàn trả tài sản, bên có lỗi bồi thường"
+          ],
+          [
+            "Giao dịch dân sự giả tạo",
+            "Điều 124 BLDS 2015",
+            "Không bị hạn chế thời gian",
+            "Giao dịch giả tạo vô hiệu, giao dịch bị che giấu vẫn có hiệu lực nếu đủ điều kiện"
+          ],
+          [
+            "Người chưa thành niên, mất NLHVDS xác lập",
+            "Điều 125 BLDS 2015",
+            "02 năm kể từ ngày người đại diện biết",
+            "Vô hiệu tương đối; trừ giao dịch phục vụ nhu cầu thiết yếu hàng ngày"
+          ],
+          [
+            "Giao dịch do bị nhầm lẫn",
+            "Điều 126 BLDS 2015",
+            "02 năm kể từ ngày biết mình bị nhầm lẫn",
+            "Không vô hiệu nếu mục đích các bên đã đạt được hoặc khắc phục ngay"
+          ],
+          [
+            "Do bị lừa dối, đe dọa, cưỡng ép",
+            "Điều 127 BLDS 2015",
+            "02 năm kể từ ngày biết bị lừa dối / chấm dứt đe dọa",
+            "Bên bị lừa dối, đe dọa có quyền yêu cầu Tòa án tuyên bố vô hiệu"
+          ],
+          [
+            "Không tuân thủ quy định về hình thức",
+            "Điều 129 BLDS 2015",
+            "02 năm kể từ ngày xác lập giao dịch",
+            "Không vô hiệu nếu một bên hoặc các bên đã thực hiện từ 2/3 nghĩa vụ trở lên"
+          ]
+        ]
+      }
+    ],
+    "so_do": [
+      {
+        "tieu_de": "Sơ đồ phân loại: Giao dịch dân sự vô hiệu (Tuyệt đối vs Tương đối)",
+        "nut": [
+          {
+            "ten": "Vô hiệu tuyệt đối (Thời hiệu yêu cầu KHÔNG BỊ HẠN CHẾ)",
+            "con": [
+              "Điều 123: Vi phạm điều cấm của luật, trái đạo đức xã hội",
+              "Điều 124: Giao dịch giả tạo (nhằm che giấu giao dịch khác hoặc trốn tránh nghĩa vụ)"
+            ]
+          },
+          {
+            "ten": "Vô hiệu tương đối (Thời hiệu yêu cầu là 02 NĂM)",
+            "con": [
+              "Điều 125: Người chưa thành niên, mất NLHVDS, khó khăn trong nhận thức xác lập",
+              "Điều 126: Giao dịch xác lập do bị nhầm lẫn",
+              "Điều 127: Giao dịch xác lập do bị lừa dối, đe dọa, cưỡng ép",
+              "Điều 128: Xác lập vào thời điểm không nhận thức và làm chủ được hành vi",
+              "Điều 129: Vi phạm điều kiện bắt buộc về hình thức (văn bản, công chứng)"
+            ]
+          }
+        ]
+      }
     ]
   },
   "trac_nghiem": [

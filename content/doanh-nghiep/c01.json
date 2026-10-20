@@ -47,6 +47,69 @@
         "ten": "Điều kiện họp HĐTV",
         "ghi_chu": "Tỷ lệ dự họp lần 1 ít nhất 65%, lần 2 ít nhất 50%, lần 3 không phụ thuộc."
       }
+    ],
+    "so_sanh": [
+      {
+        "tieu_de": "Bảng so sánh: Công ty TNHH 2 thành viên trở lên vs Công ty Cổ phần",
+        "cot": [
+          "Tiêu chí",
+          "Công ty TNHH 2 thành viên trở lên (Điều 46)",
+          "Công ty Cổ phần (Điều 111)"
+        ],
+        "hang": [
+          [
+            "Số lượng thành viên/cổ đông",
+            "Từ 02 đến tối đa 50 thành viên",
+            "Tối thiểu 03 cổ đông, không hạn chế số lượng tối đa"
+          ],
+          [
+            "Cơ cấu vốn điều lệ",
+            "Góp theo phần vốn góp cam kết, không chia nhỏ thành cổ phần",
+            "Vốn điều lệ bắt buộc chia thành nhiều phần bằng nhau gọi là cổ phần"
+          ],
+          [
+            "Phát hành chứng khoán",
+            "Không được phát hành cổ phần (chỉ phát hành trái phiếu)",
+            "Được phát hành cổ phần các loại, trái phiếu và các chứng khoán khác"
+          ],
+          [
+            "Chuyển nhượng vốn ra bên ngoài",
+            "Bị hạn chế: bắt buộc chào bán nội bộ 30 ngày cho các thành viên còn lại",
+            "Tự do chuyển nhượng rộng rãi (trừ hạn chế CĐSL trong 3 năm đầu)"
+          ],
+          [
+            "Cơ quan quyết định cao nhất",
+            "Hội đồng thành viên",
+            "Đại hội đồng cổ đông"
+          ]
+        ]
+      }
+    ],
+    "so_do": [
+      {
+        "tieu_de": "Sơ đồ: Cơ cấu tổ chức quản lý Công ty TNHH 2 TV trở lên (Điều 54 Luật Doanh nghiệp 2020)",
+        "nut": [
+          {
+            "ten": "Cơ quan quyết định cao nhất của công ty",
+            "con": [
+              "Hội đồng thành viên (Điều 55): Gồm tất cả thành viên cá nhân và đại diện theo ủy quyền của thành viên tổ chức",
+              "Chủ tịch Hội đồng thành viên (Điều 56): Do HĐTV bầu trong số các thành viên"
+            ]
+          },
+          {
+            "ten": "Cơ quan điều hành hoạt động kinh doanh hàng ngày",
+            "con": [
+              "Giám đốc hoặc Tổng giám đốc (Điều 63): Do HĐTV bổ nhiệm hoặc thuê, chịu trách nhiệm trước HĐTV"
+            ]
+          },
+          {
+            "ten": "Cơ quan kiểm soát",
+            "con": [
+              "Ban kiểm soát (Điều 54 khoản 2): Bắt buộc thành lập đối với Doanh nghiệp nhà nước (nắm trên 50% vốn) và công ty con của DNNN; các trường hợp khác do công ty tự quyết định trong Điều lệ"
+            ]
+          }
+        ]
+      }
     ]
   },
   "trac_nghiem": [
