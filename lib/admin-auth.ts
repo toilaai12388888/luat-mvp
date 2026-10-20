@@ -29,7 +29,7 @@ export type AdminCheck =
 
 export function checkAdminPin(req: NextRequest, providedPin: string | null | undefined): AdminCheck {
   const expected = (process.env.ADMIN_PIN || "").trim();
-  if (expected.length < 4) {
+  if (expected.length < 12) {
     return { ok: false, status: 503, error: "Trang quản trị chưa được cấu hình (ADMIN_PIN chưa cài hoặc ngắn hơn 12 ký tự)." };
   }
 
