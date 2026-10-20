@@ -1,11 +1,11 @@
-{
+﻿{
   "name": "Luật Lẹ — Ôn thi Luật theo phương pháp chủ động",
   "short_name": "Luật Lẹ",
   "description": "Web app ôn thi Luật trắc nghiệm, nhận định đúng sai, đề cương tóm tắt",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f8fafc",
-  "theme_color": "#1e293b",
+  "background_color": "#0B1528",
+  "theme_color": "#14284B",
   "icons": [
     {
       "src": "/icons/icon-192.png",

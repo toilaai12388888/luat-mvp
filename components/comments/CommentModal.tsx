@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import {
@@ -6,11 +6,12 @@ import {
   X,
   Send,
   Flag,
+  Trash2,
   Loader2,
   AlertCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { CommentItem, fetchComments, postComment, reportComment } from "@/lib/comments";
+import { CommentItem, fetchComments, postComment, reportComment, deleteComment } from "@/lib/comments";
 import { getLocalPlayer, PlayerProfile } from "@/lib/player";
 import { NicknameModal } from "@/components/auth/NicknameModal";
 
@@ -76,6 +77,13 @@ export function CommentModal({ isOpen, onClose, itemId }: CommentModalProps) {
     }
   };
 
+  const handleDelete = async (cId: string) => {
+    if (confirm("Bạn có chắc muốn xóa bình luận của mình?")) {
+      await deleteComment(cId);
+      setComments((prev) => prev.filter((c) => c.id !== cId));
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-0 sm:p-4 animate-in fade-in duration-200">
       <div className="relative w-full max-w-md h-[85vh] sm:h-[600px] rounded-t-3xl sm:rounded-3xl border border-line bg-surface flex flex-col overflow-hidden shadow-2xl">
@@ -104,42 +112,57 @@ export function CommentModal({ isOpen, onClose, itemId }: CommentModalProps) {
               Đang tải bình luận...
             </div>
           ) : comments.length > 0 ? (
-            comments.map((cmt) => (
-              <div
-                key={cmt.id}
-                className="rounded-2xl border border-line bg-bg-2 p-3 text-xs flex flex-col gap-1.5"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1.5">
-                    <span className="font-bold text-ink">{cmt.nickname}</span>
-                    <span className="rounded bg-navy-soft px-1.5 py-0.2 text-[10px] font-bold text-navy-ink">
-                      {cmt.school}
-                    </span>
+            comments.map((cmt) => {
+              const isOwner = player && (cmt.playerId === player.id);
+              return (
+                <div
+                  key={cmt.id}
+                  className="rounded-2xl border border-line bg-bg-2 p-3 text-xs flex flex-col gap-1.5"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-bold text-ink">{cmt.nickname}</span>
+                      <span className="rounded bg-navy-soft px-1.5 py-0.2 text-[10px] font-bold text-navy-ink">
+                        {cmt.school}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      {isOwner ? (
+                        <button
+                          onClick={() => handleDelete(cmt.id)}
+                          className="press text-ink-3 hover:text-danger flex items-center gap-0.5 text-[10px]"
+                          title="Xóa bình luận của bạn"
+                        >
+                          <Trash2 size={12} /> Xóa
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => handleReport(cmt.id)}
+                          className="press text-ink-3 hover:text-danger flex items-center gap-0.5 text-[10px]"
+                          title="Báo cáo bình luận"
+                        >
+                          <Flag size={11} /> Báo cáo
+                        </button>
+                      )}
+                    </div>
                   </div>
 
-                  <button
-                    onClick={() => handleReport(cmt.id)}
-                    className="press text-ink-3 hover:text-danger flex items-center gap-0.5 text-[10px]"
-                    title="Báo cáo bình luận"
-                  >
-                    <Flag size={11} /> Báo cáo
-                  </button>
+                  <p className="text-ink text-xs leading-relaxed break-words">
+                    {cmt.body}
+                  </p>
+
+                  <span className="text-[10px] text-ink-3">
+                    {new Date(cmt.createdAt).toLocaleDateString("vi-VN", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      day: "2-digit",
+                      month: "2-digit",
+                    })}
+                  </span>
                 </div>
-
-                <p className="text-ink text-xs leading-relaxed break-words">
-                  {cmt.body}
-                </p>
-
-                <span className="text-[10px] text-ink-3">
-                  {new Date(cmt.createdAt).toLocaleDateString("vi-VN", {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    day: "2-digit",
-                    month: "2-digit",
-                  })}
-                </span>
-              </div>
-            ))
+              );
+            })
           ) : (
             <div className="flex flex-col items-center justify-center h-full text-center text-ink-3 py-10">
               <MessageSquare size={36} className="mb-2 opacity-40" />

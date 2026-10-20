@@ -1,10 +1,11 @@
-"use client";
+﻿"use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Zap, Flame, Swords, Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { createChallenge } from "@/lib/challenge";
+import { recordActivityToday } from "@/lib/push";
 
 interface ResultScreenProps {
   correct: number;
@@ -54,6 +55,15 @@ export function ResultScreen({
   const [challengeLink, setChallengeLink] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [creating, setCreating] = useState(false);
+
+  useEffect(() => {
+    recordActivityToday();
+    const hasCompletedBefore = localStorage.getItem("luat_has_completed_quiz");
+    if (!hasCompletedBefore) {
+      localStorage.setItem("luat_has_completed_quiz", "true");
+      window.dispatchEvent(new CustomEvent("luat_first_quiz_completed"));
+    }
+  }, []);
 
   let title = "Xong rồi!";
   let lead = "Hãy xem lại các câu sai để ghi nhớ điều luật nhé.";

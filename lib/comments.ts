@@ -1,4 +1,4 @@
-import { supabase, isSupabaseConfigured } from "./supabase";
+﻿import { supabase, isSupabaseConfigured } from "./supabase";
 import { getLocalPlayer, hasProfanity } from "./player";
 
 export interface CommentItem {
@@ -142,25 +142,44 @@ export async function reportComment(commentId: string): Promise<void> {
     } catch {}
   }
 
-  // Update Supabase
+  // Update Supabase via RPC (chống sửa trực tiếp table)
   if (isSupabaseConfigured && supabase && !commentId.startsWith("cmt-")) {
     try {
-      const { data } = await supabase
-        .from("comments")
-        .select("reports")
-        .eq("id", commentId)
-        .single();
-
-      const newReports = (data?.reports || 0) + 1;
-      await supabase
-        .from("comments")
-        .update({
-          reports: newReports,
-          hidden: newReports >= 3,
-        })
-        .eq("id", commentId);
+      const numId = Number(commentId);
+      if (!isNaN(numId)) {
+        await supabase.rpc("report_comment", { target_comment_id: numId });
+      }
     } catch (err) {
-      console.warn("Failed to report comment on Supabase:", err);
+      console.warn("Failed to report comment on Supabase RPC:", err);
     }
   }
+}
+
+export async function deleteComment(commentId: string): Promise<boolean> {
+  // Update local
+  if (typeof window !== "undefined") {
+    try {
+      const raw = localStorage.getItem(LOCAL_COMMENTS_KEY);
+      if (raw) {
+        const list: CommentItem[] = JSON.parse(raw);
+        const next = list.filter((c) => c.id !== commentId);
+        localStorage.setItem(LOCAL_COMMENTS_KEY, JSON.stringify(next));
+      }
+    } catch {}
+  }
+
+  // Delete in Supabase (chỉ cho phép xóa bình luận của chính mình theo RLS)
+  if (isSupabaseConfigured && supabase && !commentId.startsWith("cmt-")) {
+    try {
+      const numId = Number(commentId);
+      if (!isNaN(numId)) {
+        const { error } = await supabase.from("comments").delete().eq("id", numId);
+        return !error;
+      }
+    } catch (err) {
+      console.warn("Failed to delete comment on Supabase:", err);
+    }
+  }
+
+  return true;
 }
