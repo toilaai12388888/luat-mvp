@@ -12,13 +12,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { TabBar } from "@/components/ui/TabBar";
-import { PlayerProfile } from "@/lib/player";
+import { PlayerProfile, getLocalPlayer } from "@/lib/player";
 import { fetchLeaderboard, LeaderboardEntry } from "@/lib/leaderboard";
 import { NicknameModal } from "@/components/auth/NicknameModal";
 
 export function LeaderboardView() {
   const [scope, setScope] = useState<"all" | "school">("all");
-  const [player, setPlayer] = useState<PlayerProfile | null>(null);
+  const [player, setPlayer] = useState<PlayerProfile | null>(() => getLocalPlayer());
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
   const [myEntry, setMyEntry] = useState<LeaderboardEntry | null>(null);
   const [showNickModal, setShowNickModal] = useState(false);

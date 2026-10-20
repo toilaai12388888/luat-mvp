@@ -24,18 +24,57 @@ export interface ChallengeResult {
 const LOCAL_CHALLENGES_KEY = "luat_challenges_local";
 const LOCAL_RESULTS_KEY = "luat_challenge_results_local";
 
+function toBase64Url(str: string): string {
+  try {
+    if (typeof window !== "undefined" && window.btoa) {
+      return window.btoa(unescape(encodeURIComponent(str)))
+        .replace(/\+/g, "-")
+        .replace(/\//g, "_")
+        .replace(/=+$/, "");
+    }
+    return Buffer.from(str, "utf-8").toString("base64url");
+  } catch {
+    return "";
+  }
+}
+
+function fromBase64Url(b64: string): string {
+  try {
+    if (typeof window !== "undefined" && window.atob) {
+      const base64 = b64.replace(/-/g, "+").replace(/_/g, "/");
+      const padded = base64.padEnd(base64.length + (4 - (base64.length % 4)) % 4, "=");
+      return decodeURIComponent(escape(window.atob(padded)));
+    }
+    return Buffer.from(b64, "base64url").toString("utf-8");
+  } catch {
+    return "";
+  }
+}
+
 export async function createChallenge(
   itemIds: string[],
   creatorScore: number
 ): Promise<string> {
   const player = getLocalPlayer();
-  const id = `c-${Math.random().toString(36).substring(2, 9)}`;
+  const nickname = player?.nickname || "Bạn học";
+  const school = player?.school || "Sinh viên Luật";
+
+  // Self-contained compact payload so challenges work via link in incognito / other devices
+  const payload = {
+    q: itemIds,
+    s: creatorScore,
+    n: nickname,
+    sc: school,
+    t: Date.now(),
+  };
+  const encoded = toBase64Url(JSON.stringify(payload));
+  const id = encoded ? `c-v1-${encoded}` : `c-${Math.random().toString(36).substring(2, 9)}`;
 
   const challenge: Challenge = {
     id,
     creatorId: player?.id || "anon",
-    creatorNickname: player?.nickname || "Người bạn ẩn danh",
-    creatorSchool: player?.school || "Sinh viên Luật",
+    creatorNickname: nickname,
+    creatorSchool: school,
     creatorScore,
     itemIds,
     createdAt: new Date().toISOString(),
@@ -69,7 +108,29 @@ export async function createChallenge(
 }
 
 export async function getChallenge(id: string): Promise<Challenge | null> {
-  // Try Supabase first
+  // 1. Try decoding self-contained link payload (works seamlessly in incognito & across devices)
+  if (id.startsWith("c-v1-")) {
+    const rawB64 = id.slice(5);
+    const jsonStr = fromBase64Url(rawB64);
+    if (jsonStr) {
+      try {
+        const parsed = JSON.parse(jsonStr);
+        if (parsed && Array.isArray(parsed.q) && parsed.q.length > 0) {
+          return {
+            id,
+            creatorId: "shared",
+            creatorNickname: parsed.n || "Bạn học",
+            creatorSchool: parsed.sc || "Sinh viên Luật",
+            creatorScore: Number(parsed.s) || 0,
+            itemIds: parsed.q,
+            createdAt: parsed.t ? new Date(parsed.t).toISOString() : new Date().toISOString(),
+          };
+        }
+      } catch {}
+    }
+  }
+
+  // 2. Try Supabase
   if (isSupabaseConfigured && supabase) {
     try {
       const { data, error } = await supabase
@@ -94,7 +155,7 @@ export async function getChallenge(id: string): Promise<Challenge | null> {
     }
   }
 
-  // Fallback to local
+  // 3. Fallback to local
   if (typeof window !== "undefined") {
     try {
       const raw = localStorage.getItem(LOCAL_CHALLENGES_KEY);

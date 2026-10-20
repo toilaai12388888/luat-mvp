@@ -41,6 +41,7 @@ export function ChallengeView({ challengeId }: ChallengeViewProps) {
   const [copied, setCopied] = useState(false);
   const [showNickModal, setShowNickModal] = useState(false);
   const [player, setPlayer] = useState<PlayerProfile | null>(() => getLocalPlayer());
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let isMounted = true;
@@ -53,6 +54,9 @@ export function ChallengeView({ challengeId }: ChallengeViewProps) {
           .filter((q): q is QuizQuestion => q !== null);
         setQuestions(qList);
       }
+      setLoading(false);
+    }).catch(() => {
+      if (isMounted) setLoading(false);
     });
     getChallengeResults(challengeId).then((res) => {
       if (isMounted) setResults(res);
@@ -85,12 +89,29 @@ export function ChallengeView({ challengeId }: ChallengeViewProps) {
     }
   };
 
-  if (!challenge) {
+  if (loading) {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center p-6 text-center">
         <Swords size={40} className="text-ink-3 mb-2 animate-bounce" />
         <h1 className="text-base font-bold text-ink">Đang tải phòng thách đấu...</h1>
         <p className="mt-1 text-xs text-ink-3">Vui lòng đợi trong giây lát</p>
+      </div>
+    );
+  }
+
+  if (!challenge) {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center p-6 text-center max-w-[480px] mx-auto">
+        <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-500">
+          <Swords size={32} />
+        </div>
+        <h1 className="text-lg font-bold text-ink">Không tìm thấy phòng thách đấu</h1>
+        <p className="mt-2 text-sm text-ink-2 max-w-xs">
+          Phòng thách đấu này không tồn tại hoặc link liên kết chưa đúng.
+        </p>
+        <Link href="/" className="mt-6">
+          <Button variant="primary">Về trang chủ</Button>
+        </Link>
       </div>
     );
   }
