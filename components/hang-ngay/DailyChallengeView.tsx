@@ -1,5 +1,7 @@
 "use client";
 
+import { SITE_URL } from "@/lib/config";
+
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import {
@@ -87,7 +89,7 @@ export function DailyChallengeView() {
         await navigator.share({
           title: "Thử thách hằng ngày Luật Lẹ",
           text,
-          url: "https://luat-mvp.vercel.app/",
+          url: `${SITE_URL}/`,
         });
       } catch {
         // user cancelled share
@@ -181,7 +183,7 @@ export function DailyChallengeView() {
 
     ctx.fillStyle = "#60a5fa";
     ctx.font = "bold 44px sans-serif";
-    ctx.fillText("luat-mvp.vercel.app", 180, 1540);
+    ctx.fillText(SITE_URL.replace(/^https?:\/\//, ""), 180, 1540);
 
     // Trigger download
     const link = document.createElement("a");

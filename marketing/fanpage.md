@@ -9,8 +9,8 @@
   > Ôn thi Luật miễn phí: trắc nghiệm, nhận định, tình huống. Câu nào cũng có căn cứ điều luật.
 - **Giới thiệu dài (mục "Giới thiệu" trên Facebook):**
   > Luật Lẹ là web ôn thi do sinh viên làm cho sinh viên Luật. Mỗi câu trắc nghiệm, nhận định Đúng/Sai và bài tập tình huống đều có giải thích và căn cứ điều luật, bấm vào là đọc nguyên văn. Hiện có Luật Dân sự, Luật Hành chính, Luật Doanh nghiệp; thêm chương mới mỗi tuần. Miễn phí, không cần đăng ký.
-- **Nút hành động:** "Sử dụng ứng dụng" hoặc "Tìm hiểu thêm", trỏ tới `<LINK>`
-- **Link ở bio Instagram và Threads:** `<LINK>`
+- **Nút hành động:** "Sử dụng ứng dụng" hoặc "Tìm hiểu thêm", trỏ tới `https://luatle.vercel.app`
+- **Link ở bio Instagram và Threads:** `https://luatle.vercel.app`
 
 ## Ảnh
 

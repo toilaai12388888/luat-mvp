@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/config";
 import { getAllQuizItems } from "./all-questions";
 import { QuizItem } from "@/components/quiz/useQuizSession";
 
@@ -84,5 +85,5 @@ export function formatWordleShareText(record: DailyResultRecord, streak = 1): st
 Điểm: ${record.score}/${record.total} câu đúng (+${record.score * 10} XP)
 ${squares}
 Chuỗi học tập: 🔥 ${streak} ngày
-Ôn thi luật chủ động tại: https://luat-mvp.vercel.app/`;
+Ôn thi luật chủ động tại: ${SITE_URL}/`;
 }

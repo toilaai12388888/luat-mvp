@@ -1,7 +1,7 @@
 ﻿import type { Metadata, Viewport } from "next";
 import { Be_Vietnam_Pro, Lora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import { APP_NAME } from "@/lib/config";
+import { APP_NAME, SITE_URL } from "@/lib/config";
 import { PwaRegister } from "@/components/pwa/PwaRegister";
 import "./globals.css";
 
@@ -26,6 +26,23 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  openGraph: {
+    title: `${APP_NAME} — Ôn thi Luật theo phương pháp chủ động`,
+    description: "Web app ôn thi Luật miễn phí: đề cương tóm tắt, trắc nghiệm và nhận định đúng/sai có căn cứ điều luật chính thức.",
+    url: SITE_URL,
+    siteName: APP_NAME,
+    images: [
+      {
+        url: `${SITE_URL}/icons/icon-512.png`,
+        width: 512,
+        height: 512,
+        alt: APP_NAME,
+      },
+    ],
+    locale: "vi_VN",
+    type: "website",
+  },
   title: `${APP_NAME} — Ôn thi Luật theo phương pháp chủ động`,
   description:
     "Web app ôn thi Luật miễn phí: đề cương tóm tắt, trắc nghiệm và nhận định đúng/sai có căn cứ điều luật chính thức.",
