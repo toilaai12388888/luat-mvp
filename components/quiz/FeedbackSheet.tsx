@@ -100,24 +100,26 @@ export function FeedbackSheet({
           <AiNote />
         </div>
 
-        <div className="flex items-center gap-2">
-                      {/* MỤC G: HỎI AI NẾU SERVER CÓ KEY */}
-            {aiEnabled && itemId && (
-              <Button
-                variant="secondary"
-                type="button"
-                onClick={() => setShowAiModal(true)}
-                className="h-12 px-3 border-purple-500/40 text-purple-600 dark:text-purple-300 hover:bg-purple-500/10 flex items-center gap-1.5 font-semibold text-xs transition"
-              >
-                <Bot size={16} className="text-purple-500" />
-                Hỏi AI
-              </Button>
-            )}
-
-            {itemId && (
+        <div className="flex items-center gap-2.5">
+          {/* MỤC G: HỎI AI NẾU SERVER CÓ KEY */}
+          {aiEnabled && itemId && (
             <Button
               variant="secondary"
-              className="flex items-center gap-1.5 px-3"
+              fullWidth={false}
+              type="button"
+              onClick={() => setShowAiModal(true)}
+              className="h-[52px] px-3.5 border-purple-500/40 text-purple-600 dark:text-purple-300 hover:bg-purple-500/10 flex items-center gap-1.5 font-semibold text-xs whitespace-nowrap shrink-0"
+            >
+              <Bot size={16} className="text-purple-500" />
+              <span>Hỏi AI</span>
+            </Button>
+          )}
+
+          {itemId && (
+            <Button
+              variant="secondary"
+              fullWidth={false}
+              className="h-[52px] px-3.5 flex items-center gap-1.5 whitespace-nowrap shrink-0"
               onClick={() => setShowComments(true)}
             >
               <MessageSquare size={16} />
@@ -125,7 +127,12 @@ export function FeedbackSheet({
             </Button>
           )}
 
-          <Button variant="primary" className="flex-1" onClick={handleNext}>
+          <Button
+            variant="primary"
+            fullWidth={true}
+            className="flex-1 min-w-[120px] whitespace-nowrap"
+            onClick={handleNext}
+          >
             {isLast ? "Hoàn thành" : "Tiếp tục"}
           </Button>
         </div>

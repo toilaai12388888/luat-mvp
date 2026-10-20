@@ -16,7 +16,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const base =
-    "press flex items-center justify-center gap-2 rounded-xl font-bold cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed select-none transition-all";
+    "press flex items-center justify-center gap-2 rounded-xl font-bold cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed select-none transition-all whitespace-nowrap";
   const width = fullWidth ? "w-full" : "px-4";
   const sizeCls = size === "sm" ? "h-9 text-xs" : size === "lg" ? "h-14 text-lg" : "h-[52px] text-base";
 
