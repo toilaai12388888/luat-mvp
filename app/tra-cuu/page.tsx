@@ -2,8 +2,8 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { ArrowLeft, Search, X, BookOpen, ExternalLink, ShieldCheck } from "lucide-react";
-import { searchDieuLuat, getAllDieuLuat, TraCuuDieuResult, VAN_BAN_MAP } from "@/lib/van-ban";
+import { ArrowLeft, Search, X, BookOpen, ShieldCheck } from "lucide-react";
+import { searchDieuLuat, getAllDieuLuat, TraCuuDieuResult } from "@/lib/van-ban";
 import { DieuLuatSheet } from "@/components/van-ban/DieuLuatSheet";
 import { TabBar } from "@/components/ui/TabBar";
 

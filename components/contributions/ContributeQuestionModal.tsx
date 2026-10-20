@@ -179,7 +179,7 @@ export function ContributeQuestionModal({
             </div>
             <h3 className="text-lg font-bold text-white">Đã gửi đóng góp thành công!</h3>
             <p className="text-xs text-slate-300 max-w-sm mx-auto leading-relaxed">
-              Cảm ơn bạn! Câu hỏi đã được chuyển đến ban biên tập để đối chiếu điều luật. Bạn vừa mở khóa huy hiệu <strong className="text-gold">"Người đóng góp"</strong> 🏅!
+              Cảm ơn bạn! Câu hỏi đã được chuyển đến ban biên tập để đối chiếu điều luật. Bạn vừa mở khóa huy hiệu <strong className="text-gold">&ldquo;Người đóng góp&rdquo;</strong> 🏅!
             </p>
             <button
               onClick={onClose}
@@ -192,7 +192,7 @@ export function ContributeQuestionModal({
           /* Nickname Prompt Gate */
           <form onSubmit={handleSaveNickname} className="py-8 space-y-4 text-center">
             <p className="text-xs text-slate-300">
-              Trước khi đóng góp, bạn cần một biệt danh để được ghi nhận công lao (ví dụ: "Đóng góp bởi Tuấn Luật K45"):
+              Trước khi đóng góp, bạn cần một biệt danh để được ghi nhận công lao (ví dụ: &ldquo;Đóng góp bởi Tuấn Luật K45&rdquo;):
             </p>
             <input
               type="text"
@@ -219,7 +219,7 @@ export function ContributeQuestionModal({
                 <label className="block text-xs font-semibold text-slate-300 mb-1">Môn học</label>
                 <select
                   value={subject}
-                  onChange={(e) => handleSubjectChange(e.target.value as any)}
+                  onChange={(e) => handleSubjectChange(e.target.value as "dan-su" | "hanh-chinh" | "doanh-nghiep")}
                   className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-xl text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-gold"
                 >
                   {SUBJECT_OPTIONS.map((s) => (

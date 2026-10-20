@@ -21,7 +21,6 @@ import {
   Briefcase,
   Trophy,
   Lock,
-  Scale,
   HeartHandshake,
 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
@@ -555,7 +554,7 @@ export function TienDoView() {
           ) : (
             <Card className="p-4 text-center border-dashed border-line">
               <p className="text-xs text-ink-3 mb-2">
-                Bạn chưa đóng góp câu hỏi nào. Đóng góp câu hỏi đúng chuẩn để mở khóa huy hiệu "Người đóng góp" và giúp đỡ các bạn khác!
+                Bạn chưa đóng góp câu hỏi nào. Đóng góp câu hỏi đúng chuẩn để mở khóa huy hiệu &ldquo;Người đóng góp&rdquo; và giúp đỡ các bạn khác!
               </p>
               <button
                 onClick={() => setShowContributeModal(true)}

@@ -123,7 +123,7 @@ export async function getApprovedCommunityQuestions(
   if (!isSupabaseConfigured || !supabase) return [];
 
   try {
-    let query = supabase
+    const query = supabase
       .from("contributions")
       .select("*")
       .eq("status", "approved")

@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
-  BookOpen,
   CheckCircle2,
   XCircle,
   Award,
@@ -34,7 +33,6 @@ interface TinhHuongRunnerProps {
 export function TinhHuongRunner({
   monSlug,
   monName,
-  chuongSlug,
   chuongTitle,
   scenarios,
   exitHref,
@@ -162,7 +160,7 @@ export function TinhHuongRunner({
         <header className="sticky top-0 z-20 flex h-14 items-center justify-between border-b border-line bg-surface px-4 backdrop-blur-md">
           <div className="flex items-center gap-2">
             <ShieldCheck size={18} className="text-good" />
-            <h2 className="text-sm font-bold text-ink">Lời giải mẫu hoàn chỉnh</h2>
+            <h2 className="text-sm font-bold text-ink">Lời giải mẫu ({stepResults.filter((r) => r.isCorrect).length}/3 bước đúng)</h2>
           </div>
           <span className="rounded-lg bg-gold-soft px-2.5 py-1 text-xs font-bold text-gold">
             +15 XP

@@ -173,7 +173,7 @@ export default async function SubjectPage({ params }: PageProps) {
         ))}
 
         {/* MỤC E: CÂU HỎI TỪ CỘNG ĐỒNG */}
-        <CommunityQuestionsList subject={mon as any} chapter="c01" />
+        <CommunityQuestionsList subject={mon as "dan-su" | "hanh-chinh" | "doanh-nghiep"} chapter="c01" />
       </main>
 
       <TabBar />

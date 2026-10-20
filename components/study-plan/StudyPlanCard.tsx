@@ -1,34 +1,25 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Calendar, CheckCircle2, Flame, ArrowRight, Zap, Target } from "lucide-react";
 import { getClosestActivePlan, SubjectStudyPlan } from "@/lib/study-plan";
 
 export function StudyPlanCard() {
-  const [plan, setPlan] = useState<SubjectStudyPlan | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  const refreshPlan = useCallback(() => {
-    setPlan(getClosestActivePlan());
-  }, []);
+  const [plan, setPlan] = useState<SubjectStudyPlan | null>(() => getClosestActivePlan());
 
   useEffect(() => {
-    setMounted(true);
-    refreshPlan();
-
-    window.addEventListener("luat_attempts_updated", refreshPlan);
-    window.addEventListener("luat_exam_dates_updated", refreshPlan);
-    window.addEventListener("luat_daily_goal_rewarded", refreshPlan);
+    const refresh = () => setPlan(getClosestActivePlan());
+    window.addEventListener("luat_attempts_updated", refresh);
+    window.addEventListener("luat_exam_dates_updated", refresh);
+    window.addEventListener("luat_daily_goal_rewarded", refresh);
 
     return () => {
-      window.removeEventListener("luat_attempts_updated", refreshPlan);
-      window.removeEventListener("luat_exam_dates_updated", refreshPlan);
-      window.removeEventListener("luat_daily_goal_rewarded", refreshPlan);
+      window.removeEventListener("luat_attempts_updated", refresh);
+      window.removeEventListener("luat_exam_dates_updated", refresh);
+      window.removeEventListener("luat_daily_goal_rewarded", refresh);
     };
-  }, [refreshPlan]);
-
-  if (!mounted) return null;
+  }, []);
 
   // Empty state: No active exam date
   if (!plan) {

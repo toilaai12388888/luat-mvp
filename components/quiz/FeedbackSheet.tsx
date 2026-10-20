@@ -132,11 +132,19 @@ export function FeedbackSheet({
       </section>
 
       {itemId && (
-        <CommentModal
-          itemId={itemId}
-          isOpen={showComments}
-          onClose={() => setShowComments(false)}
-        />
+        <>
+          <HoiAiModal
+            isOpen={showAiModal}
+            onClose={() => setShowAiModal(false)}
+            itemId={itemId}
+            questionText={displayExplanation}
+          />
+          <CommentModal
+            itemId={itemId}
+            isOpen={showComments}
+            onClose={() => setShowComments(false)}
+          />
+        </>
       )}
     </>
   );

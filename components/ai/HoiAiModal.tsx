@@ -8,7 +8,6 @@ import {
   Send, 
   AlertCircle, 
   RefreshCw, 
-  HelpCircle,
   ShieldAlert
 } from "lucide-react";
 import { getLocalPlayer } from "@/lib/player";
@@ -108,7 +107,7 @@ export function HoiAiModal({ isOpen, onClose, itemId, questionText }: HoiAiModal
         <div className="flex-1 overflow-y-auto py-4 space-y-4 pr-1">
           {questionText && (
             <div className="p-3 bg-slate-950/60 rounded-xl border border-slate-800 text-xs text-slate-300 line-clamp-2 italic">
-              "{questionText}"
+              &ldquo;{questionText}&rdquo;
             </div>
           )}
 

@@ -63,16 +63,18 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  let body: any = {};
+  let body: Record<string, unknown> = {};
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "Payload JSON không hợp lệ" }, { status: 400 });
   }
 
-  const pin = req.headers.get("x-admin-pin") || body.pin;
-  const expectedPin = process.env.ADMIN_PIN || "882026";
-  if (!pin || pin.trim() !== expectedPin.trim()) {
+  const pinHeader = req.headers.get("x-admin-pin");
+  const pinBody = (body as { pin?: string }).pin;
+  const pin = typeof pinHeader === "string" ? pinHeader.trim() : (typeof pinBody === "string" ? pinBody.trim() : "");
+  const expectedPin = (process.env.ADMIN_PIN || "882026").trim();
+  if (!pin || pin !== expectedPin) {
     return NextResponse.json({ error: "Mã PIN không chính xác" }, { status: 401 });
   }
 
@@ -90,11 +92,11 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const { action, id, payload, note, resolved } = body;
+    const { action, id, payload, note, resolved } = body as { action?: string; id?: string | number; payload?: Record<string, unknown>; note?: string; resolved?: boolean };
 
     switch (action) {
       case "approve_contribution": {
-        const updateData: Record<string, any> = { status: "approved" };
+        const updateData: Record<string, unknown> = { status: "approved" };
         if (payload) updateData.payload = payload;
         if (note !== undefined) updateData.note = note;
         const { error } = await supabaseAdmin.from("contributions").update(updateData).eq("id", id);

@@ -71,11 +71,11 @@ interface ItemReport {
 }
 
 export default function QuanTriPage() {
-  const [pin, setPin] = useState("");
+  const [pin, setPin] = useState(() => (typeof window !== "undefined" ? sessionStorage.getItem("luat_admin_pin") || "" : ""));
   const [pinInput, setPinInput] = useState("");
   const [pinError, setPinError] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => Boolean(typeof window !== "undefined" && sessionStorage.getItem("luat_admin_pin")));
 
   // Data states
   const [loading, setLoading] = useState(false);
@@ -140,15 +140,24 @@ export default function QuanTriPage() {
     }
   }, []);
 
-  // Check stored PIN on mount
+  // Load data on mount if already authenticated
   useEffect(() => {
-    const savedPin = sessionStorage.getItem("luat_admin_pin");
-    if (savedPin) {
-      setPin(savedPin);
-      setIsAuthenticated(true);
-      fetchData(savedPin);
-    }
-  }, [fetchData]);
+    if (!pin) return;
+    let active = true;
+    fetch("/api/admin", { headers: { "x-admin-pin": pin } })
+      .then((res) => res.json())
+      .then((data) => {
+        if (!active) return;
+        if (data.stats) setStats(data.stats);
+        if (data.contributions) setContributions(data.contributions);
+        if (data.comments) setComments(data.comments);
+        if (data.reports) setReports(data.reports);
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+    };
+  }, [pin]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();

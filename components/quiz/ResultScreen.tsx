@@ -229,6 +229,10 @@ export function ResultScreen({
           </Link>
         )}
       </div>
+      <ContributeQuestionModal
+        isOpen={showContributeModal}
+        onClose={() => setShowContributeModal(false)}
+      />
     </main>
   );
 }

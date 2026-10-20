@@ -1,13 +1,11 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   HeartHandshake, 
   Sparkles, 
   CheckCircle2, 
   XCircle, 
-  ChevronDown, 
-  ChevronUp, 
   PlusCircle, 
   ExternalLink 
 } from "lucide-react";
@@ -26,23 +24,27 @@ export function CommunityQuestionsList({ subject, chapter }: CommunityQuestionsL
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string | number, number | boolean>>({});
   const [showExplanations, setShowExplanations] = useState<Record<string | number, boolean>>({});
 
-  const loadData = useCallback(async () => {
-    setLoading(true);
-    try {
-      const data = await getApprovedCommunityQuestions(subject, chapter);
-      setQuestions(data);
-    } finally {
-      setLoading(false);
-    }
-  }, [subject, chapter]);
-
   useEffect(() => {
-    loadData();
-    window.addEventListener("luat_contribution_submitted", loadData);
-    return () => {
-      window.removeEventListener("luat_contribution_submitted", loadData);
+    let active = true;
+    getApprovedCommunityQuestions(subject, chapter).then((data) => {
+      if (active) {
+        setQuestions(data);
+        setLoading(false);
+      }
+    });
+
+    const onSubmitted = () => {
+      getApprovedCommunityQuestions(subject, chapter).then((data) => {
+        if (active) setQuestions(data);
+      });
     };
-  }, [loadData]);
+
+    window.addEventListener("luat_contribution_submitted", onSubmitted);
+    return () => {
+      active = false;
+      window.removeEventListener("luat_contribution_submitted", onSubmitted);
+    };
+  }, [subject, chapter]);
 
   const handleSelectOption = (qId: string | number, optIdx: number) => {
     setSelectedAnswers((prev) => ({ ...prev, [qId]: optIdx }));

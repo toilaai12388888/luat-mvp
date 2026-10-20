@@ -18,14 +18,14 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  let body: any = {};
+  let body: Record<string, unknown> = {};
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "Payload không hợp lệ" }, { status: 400 });
   }
 
-  const { itemId, userQuestion, playerId } = body;
+  const { itemId, userQuestion, playerId } = body as { itemId?: string; userQuestion?: string; playerId?: string };
   if (!itemId) {
     return NextResponse.json({ error: "Thiếu mã câu hỏi itemId" }, { status: 400 });
   }
@@ -40,8 +40,7 @@ export async function POST(req: NextRequest) {
 
   // Rate Limiting (5 times/day Vietnam time)
   const todayVn = getVietnamDateString();
-  const effectivePlayerId = playerId || req.headers.get("x-forwarded-for") || "anonymous-user";
-  let currentUsage = 0;
+    let currentUsage = 0;
 
   const supabaseAdmin = getSupabaseAdmin();
   if (supabaseAdmin && playerId) {
