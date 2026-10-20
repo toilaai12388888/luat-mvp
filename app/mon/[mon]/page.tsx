@@ -1,8 +1,8 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, BookOpen, CheckSquare, HelpCircle, ChevronRight } from "lucide-react";
+import { ArrowLeft, BookOpen, CheckSquare, HelpCircle, ChevronRight, Scale } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { TabBar } from "@/components/ui/TabBar";
 import { SUBJECTS, getSubject, getChapter } from "@/lib/content";
@@ -78,7 +78,7 @@ export default async function SubjectPage({ params }: PageProps) {
         <div className="flex items-center gap-4 text-ink-2">
           <span>{c01 && c02 ? "2 chương" : c01 ? "1 chương mở" : "Đang soạn"}</span>
           <span>·</span>
-          <span>{totalQuestions} câu hỏi</span>
+          <span>{totalQuestions} câu hỏi · 2 tình huống</span>
         </div>
         <span className="font-semibold text-good">Tỉ lệ đúng: --</span>
       </div>
@@ -110,6 +110,27 @@ export default async function SubjectPage({ params }: PageProps) {
                   <div className="flex items-center gap-3">
                     <BookOpen size={18} className="text-navy-bar" />
                     <span className="text-sm font-semibold">Đề cương tóm tắt</span>
+                  </div>
+                  <ChevronRight size={18} className="text-ink-3" />
+                </Link>
+
+                <Link
+                  href={`/mon/${mon}/tinh-huong/${ch.id}`}
+                  className="press flex items-center justify-between p-4 hover:bg-bg-2 text-ink bg-navy-soft/20"
+                >
+                  <div className="flex items-center gap-3">
+                    <Scale size={18} className="text-navy-bar" />
+                    <div>
+                      <span className="text-sm font-semibold flex items-center gap-1.5 text-navy-ink">
+                        Bài tập tình huống
+                        <span className="rounded bg-navy-soft px-1.5 py-0.2 text-[10px] font-bold text-navy-ink">
+                          Mới
+                        </span>
+                      </span>
+                      <span className="text-xs text-ink-3">
+                        {ch.data.tinh_huong?.length || 2} bài tập thực tiễn (3 bước)
+                      </span>
+                    </div>
                   </div>
                   <ChevronRight size={18} className="text-ink-3" />
                 </Link>

@@ -45,8 +45,47 @@ export type DieuHayRaDe = z.infer<typeof DieuHayRaDeSchema>;
 export const DeCuongSchema = z.object({
   tom_tat: z.string().min(1),
   dieu_hay_ra_de: z.array(DieuHayRaDeSchema),
+  so_sanh: z
+    .array(
+      z.object({
+        tieu_de: z.string().min(1),
+        cot: z.array(z.string().min(1)),
+        hang: z.array(z.array(z.string())),
+      })
+    )
+    .optional(),
+  so_do: z
+    .array(
+      z.object({
+        tieu_de: z.string().min(1),
+        nut: z.array(
+          z.object({
+            ten: z.string().min(1),
+            con: z.array(z.string()).optional(),
+          })
+        ),
+      })
+    )
+    .optional(),
 });
 export type DeCuong = z.infer<typeof DeCuongSchema>;
+
+export const TinhHuongBuocSchema = z.object({
+  hoi: z.string().min(1),
+  lua_chon: z.array(z.string().min(1)).min(3).max(4),
+  dap_an: z.number().int().min(0).max(3),
+  giai_thich: z.string().min(1),
+  can_cu: z.array(CanCuSchema).min(1, "Phai co it nhat 1 can cu"),
+});
+export type TinhHuongBuoc = z.infer<typeof TinhHuongBuocSchema>;
+
+export const TinhHuongSchema = z.object({
+  id: z.string().regex(/^[a-z-]+-c\d{2}-th\d{2}$/, "ID phai co dang <mon>-<chuong>-th01"),
+  tieu_de: z.string().min(1),
+  de_bai: z.string().min(1),
+  buoc: z.array(TinhHuongBuocSchema).length(3, "Moi tinh huong phai co dung 3 buoc"),
+});
+export type TinhHuong = z.infer<typeof TinhHuongSchema>;
 
 export const ChapterSchema = z.object({
   mon: SubjectSlugSchema,
@@ -55,5 +94,6 @@ export const ChapterSchema = z.object({
   de_cuong: DeCuongSchema,
   trac_nghiem: z.array(McqSchema),
   nhan_dinh: z.array(NhanDinhSchema),
+  tinh_huong: z.array(TinhHuongSchema).optional(),
 });
 export type Chapter = z.infer<typeof ChapterSchema>;

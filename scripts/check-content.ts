@@ -1,4 +1,4 @@
-import fs from "fs";
+﻿import fs from "fs";
 import path from "path";
 import { ChapterSchema } from "../lib/content-schema";
 
@@ -9,12 +9,14 @@ if (!fs.existsSync(contentDir)) {
   process.exit(0);
 }
 
+// Chi duyet cac thu muc mon hoc, bo qua van-ban
 const subjects = fs.readdirSync(contentDir).filter((f) => {
-  return fs.statSync(path.join(contentDir, f)).isDirectory();
+  return fs.statSync(path.join(contentDir, f)).isDirectory() && f !== "van-ban";
 });
 
 let hasError = false;
 const seenIds = new Set<string>();
+let totalTinhHuong = 0;
 
 for (const mon of subjects) {
   const monDir = path.join(contentDir, mon);
@@ -57,7 +59,7 @@ for (const mon of subjects) {
       hasError = true;
     }
 
-    // Kiem tra trung ID
+    // Kiem tra trung ID trac nghiem
     for (const q of chapter.trac_nghiem) {
       if (seenIds.has(q.id)) {
         console.error(`[ERROR] Trung ID trac nghiem: ${q.id} trong file ${filePath}`);
@@ -66,12 +68,38 @@ for (const mon of subjects) {
       seenIds.add(q.id);
     }
 
+    // Kiem tra trung ID nhan dinh
     for (const nd of chapter.nhan_dinh) {
       if (seenIds.has(nd.id)) {
         console.error(`[ERROR] Trung ID nhan dinh: ${nd.id} trong file ${filePath}`);
         hasError = true;
       }
       seenIds.add(nd.id);
+    }
+
+    // Kiem tra tinh huong neu co
+    if (chapter.tinh_huong) {
+      for (const th of chapter.tinh_huong) {
+        if (seenIds.has(th.id)) {
+          console.error(`[ERROR] Trung ID tinh huong: ${th.id} trong file ${filePath}`);
+          hasError = true;
+        }
+        seenIds.add(th.id);
+        totalTinhHuong++;
+
+        // Kiem tra buoc
+        if (th.buoc.length !== 3) {
+          console.error(`[ERROR] Tinh huong ${th.id} phai co dung 3 buoc: ${filePath}`);
+          hasError = true;
+        }
+        for (let i = 0; i < th.buoc.length; i++) {
+          const b = th.buoc[i];
+          if (b.dap_an < 0 || b.dap_an >= b.lua_chon.length) {
+            console.error(`[ERROR] Tinh huong ${th.id} buoc ${i + 1} dap_an (${b.dap_an}) ngoai pham vi lua_chon: ${filePath}`);
+            hasError = true;
+          }
+        }
+      }
     }
   }
 }
@@ -80,5 +108,5 @@ if (hasError) {
   console.error("Content check failed!");
   process.exit(1);
 } else {
-  console.log(`Content check passed! Verified ${seenIds.size} questions.`);
+  console.log(`Content check passed! Verified ${seenIds.size} total items (${totalTinhHuong} tinh huong).`);
 }

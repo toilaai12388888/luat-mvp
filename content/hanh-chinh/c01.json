@@ -467,5 +467,129 @@
         }
       ]
     }
+  ],
+  "tinh_huong": [
+    {
+      "id": "hanh-chinh-c01-th01",
+      "tieu_de": "Xử phạt vi phạm hành chính đối với người 15 tuổi điều khiển xe gắn máy",
+      "de_bai": "Em H (sinh ngày 10/05/2011, tại thời điểm vi phạm tháng 09/2026 là 15 tuổi 4 tháng) điều khiển xe mô tô 110cc đi học và có hành vi vượt đèn đỏ tại ngã tư. Đội Cảnh sát giao thông lập biên bản và người có thẩm quyền ra quyết định xử phạt tiền 400.000 đồng đối với H về hành vi vượt đèn đỏ.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định nguyên tắc xử lý vi phạm hành chính đối với đối tượng từ đủ 14 tuổi đến dưới 16 tuổi?",
+          "lua_chon": [
+            "Người từ đủ 14 tuổi đến dưới 16 tuổi bị xử phạt như người thành niên.",
+            "Người từ đủ 14 tuổi đến dưới 16 tuổi chỉ bị xử phạt về vi phạm do cố ý và không bị phạt tiền.",
+            "Người từ đủ 14 tuổi đến dưới 16 tuổi không phải chịu bất kỳ trách nhiệm pháp lý nào.",
+            "Người từ đủ 14 tuổi đến dưới 16 tuổi luôn bị áp dụng biện pháp đưa vào trường giáo dưỡng."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo điểm a khoản 1 Điều 5 và Điều 22 Luật Xử lý VPHC 2012, người từ đủ 14 đến dưới 16 tuổi chỉ bị xử phạt về hành vi cố ý và chỉ áp dụng hình thức cảnh cáo, không áp dụng phạt tiền.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 5 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý quy định về hình thức xử phạt áp dụng đối với người từ đủ 14 tuổi đến dưới 16 tuổi?",
+          "lua_chon": [
+            "Điều 22 Luật Xử lý vi phạm hành chính 2012 về cảnh cáo.",
+            "Điều 23 Luật Xử lý vi phạm hành chính 2012 về phạt tiền.",
+            "Điều 21 Luật Xử lý vi phạm hành chính 2012 về tịch thu tang vật.",
+            "Điều 25 Luật Xử lý vi phạm hành chính 2012 về đình chỉ hoạt động."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Căn cứ Điều 22 Luật XLVPHC 2012: Cảnh cáo được áp dụng đối với mọi hành vi vi phạm hành chính do người chưa thành niên từ đủ 14 tuổi đến dưới 16 tuổi thực hiện.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 22",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận tính hợp pháp của quyết định xử phạt tiền 400.000 đồng đối với H?",
+          "lua_chon": [
+            "Quyết định xử phạt đúng vì H đã trên 14 tuổi và vi phạm giao thông rõ ràng.",
+            "Quyết định xử phạt tiền đối với H là trái pháp luật; người có thẩm quyền chỉ được ra quyết định xử phạt cảnh cáo bằng văn bản đối với H.",
+            "Quyết định phạt tiền chuyển sang phạt bố mẹ H với mức tiền gấp đôi.",
+            "H phải bị tịch thu xe máy đang điều khiển."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Áp dụng hình thức phạt tiền đối với người 15 tuổi là trái quy định tại Điều 22 Luật XLVPHC. Quyết định xử phạt phải được hủy bỏ hoặc sửa đổi thành hình thức Cảnh cáo.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 22",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c01-th02",
+      "tieu_de": "Phạt vi phạm giao thông 800.000 đồng tại chỗ không lập biên bản",
+      "de_bai": "Anh B điều khiển ô tô con đi sai làn đường trên tuyến phố đô thị. Chiến sĩ Cảnh sát giao thông dừng xe, thông báo mức phạt 800.000 đồng theo Nghị định xử phạt giao thông đường bộ và yêu cầu anh B nộp phạt trực tiếp 800.000 đồng tại chỗ để nhận quyết định xử phạt không lập biên bản. Anh B thắc mắc liệu mức phạt 800.000 đồng có được phép xử phạt tại chỗ không lập biên bản không.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định quy định pháp luật về thủ tục xử phạt vi phạm hành chính không lập biên bản?",
+          "lua_chon": [
+            "Mọi hành vi vi phạm giao thông dưới 1 triệu đồng đều được phạt tại chỗ không lập biên bản.",
+            "Xử phạt không lập biên bản chỉ áp dụng với cảnh cáo hoặc phạt tiền đến mức giới hạn luật định đối với cá nhân.",
+            "Cảnh sát giao thông luôn có quyền chọn lập hoặc không lập biên bản tùy ý.",
+            "Xử phạt không lập biên bản không cần ra quyết định bằng văn bản."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo Điều 56 Luật XLVPHC, thủ tục xử phạt không lập biên bản chỉ áp dụng trong trường hợp phạt cảnh cáo hoặc phạt tiền đến một mức tối đa nhất định do luật định.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 56 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý quy định mức phạt tiền tối đa không lập biên bản theo luật hiện hành?",
+          "lua_chon": [
+            "Điều 56 khoản 1 Luật XLVPHC (sửa đổi bổ sung bởi Luật số 88/2025/QH15 hiệu lực từ 01/07/2025).",
+            "Điều 58 Luật XLVPHC về thời hạn ra quyết định.",
+            "Điều 66 Luật XLVPHC về khiếu nại quyết định.",
+            "Điều 73 Luật XLVPHC về cưỡng chế thi hành."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Căn cứ Điều 56 khoản 1 Luật XLVPHC được sửa đổi theo Luật số 88/2025/QH15: Xử phạt không lập biên bản áp dụng trong trường hợp phạt cảnh cáo hoặc phạt tiền đến 500.000 đồng đối với cá nhân, 1.000.000 đồng đối với tổ chức.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 56 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận về tính hợp pháp trong việc xử phạt 800.000 đồng không lập biên bản đối với anh B?",
+          "lua_chon": [
+            "Hành vi của CSGT đúng vì mức phạt dưới 1 triệu đồng.",
+            "Việc xử phạt 800.000 đồng không lập biên bản là trái pháp luật; vì mức phạt đối với cá nhân vượt quá 500.000 đồng nên bắt buộc phải lập biên bản vi phạm hành chính theo Điều 58.",
+            "CSGT có quyền giữ bằng lái xe vĩnh viễn nếu anh B không nộp tại chỗ.",
+            "Anh B bị phạt thêm tiền chậm nộp nếu yêu cầu lập biên bản."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo Luật XLVPHC sửa đổi 2025, mức phạt tối đa không lập biên bản đối với cá nhân là 500.000 đồng. Mức phạt 800.000 đồng bắt buộc phải lập biên bản vi phạm hành chính theo thủ tục thông thường tại Điều 58.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 58",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

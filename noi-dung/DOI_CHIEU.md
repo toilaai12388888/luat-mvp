@@ -155,3 +155,24 @@
 | 148 | `doanh-nghiep-c02-nd08` | Nhận định | **SAI** | Luật Doanh nghiệp 2020 - Điều 156 khoản 1 | [Link](https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx) | Nhận định này sai. Khoản 1 Điều 156 Luật Doanh nghiệp 2020 quy định Chủ tịch Hội đồng quản... | Rất cao |
 | 149 | `doanh-nghiep-c02-nd09` | Nhận định | **ĐÚNG** | Luật Doanh nghiệp 2020 - Điều 148 khoản 3 | [Link](https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx) | Nhận định này đúng. Khoản 3 Điều 148 Luật Doanh nghiệp 2020 quy định việc biểu quyết bầu t... | Rất cao |
 | 150 | `doanh-nghiep-c02-nd10` | Nhận định | **ĐÚNG** | Luật Doanh nghiệp 2020 - Điều 111 khoản 3 | [Link](https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-432711.aspx) | Nhận định này đúng. Khoản 3 Điều 111 Luật Doanh nghiệp 2020 quy định công ty cổ phần có qu... | Rất cao |
+
+---
+
+## 12 BÀI TẬP TÌNH HUỐNG THỰC TIỄN (ĐỢT 2 - 20/10/2026)
+
+Tất cả 12 tình huống được thiết kế theo quy trình 3 bước chuẩn: Xác định vấn đề pháp lý → Chọn căn cứ pháp lý → Kết luận hướng giải quyết. Đã đối chiếu 100% với văn bản quy phạm pháp luật hiện hành.
+
+| STT | Mã tình huống | Môn & Chương | Tiêu đề tình huống | Căn cứ pháp lý đối chiếu | Tình trạng hiệu lực |
+|---|---|---|---|---|---|
+| 1 | `dan-su-c01-th01` | Dân sự C01 | Người 16 tuổi tự mua xe máy bằng tiền tiết kiệm | Điều 21 khoản 4, Điều 125, Điều 131 BLDS 2015 | Hiện hành |
+| 2 | `dan-su-c01-th02` | Dân sự C01 | Hợp đồng chuyển nhượng nhà đất giả tạo che giấu hợp đồng vay | Điều 124 khoản 1, Điều 131 BLDS 2015 | Hiện hành |
+| 3 | `dan-su-c02-th01` | Dân sự C02 | Tranh chấp phạt cọc khi bên nhận đặt cọc từ chối bán nhà | Điều 328 khoản 1 & 2 BLDS 2015 | Hiện hành |
+| 4 | `dan-su-c02-th02` | Dân sự C02 | Tự ý bán tài sản đang thế chấp ngân hàng mà không có sự đồng ý | Điều 317, Điều 320 khoản 8, Điều 323 BLDS 2015 | Hiện hành |
+| 5 | `hanh-chinh-c01-th01` | Hành chính C01 | Xử phạt vi phạm hành chính đối với người 15 tuổi điều khiển xe gắn máy | Điều 5 khoản 1 điểm a, Điều 22 Luật XLVPHC 2012 | Hiện hành |
+| 6 | `hanh-chinh-c01-th02` | Hành chính C01 | Phạt vi phạm giao thông 800.000đ tại chỗ không lập biên bản | Điều 56 khoản 1 Luật XLVPHC (sửa đổi 2025 bởi Luật 88/2025/QH15) | Hiện hành từ 01/07/2025 |
+| 7 | `hanh-chinh-c02-th01` | Hành chính C02 | Tạm giữ người theo thủ tục hành chính quá thời hạn luật định | Điều 12, Điều 122 khoản 1 & 2 Luật XLVPHC 2012 | Hiện hành |
+| 8 | `hanh-chinh-c02-th02` | Hành chính C02 | Khám người theo thủ tục hành chính không đúng quy định về người cùng giới | Điều 127 khoản 1 & 2 Luật XLVPHC 2012 | Hiện hành |
+| 9 | `doanh-nghiep-c01-th01` | Doanh nghiệp C01 | Chuyển nhượng phần vốn góp trong công ty TNHH hai thành viên trở lên | Điều 52 khoản 1 điểm a & b Luật Doanh nghiệp 2020 | Hiện hành |
+| 10 | `doanh-nghiep-c01-th02` | Doanh nghiệp C01 | Chậm góp vốn điều lệ sau 90 ngày kể từ ngày cấp đăng ký doanh nghiệp | Điều 47 khoản 2, 3, 4 Luật Doanh nghiệp 2020 | Hiện hành |
+| 11 | `doanh-nghiep-c02-th01` | Doanh nghiệp C02 | Cổ đông sáng lập chuyển nhượng cổ phần phổ thông trong 3 năm đầu | Điều 120 khoản 3 Luật Doanh nghiệp 2020 | Hiện hành |
+| 12 | `doanh-nghiep-c02-th02` | Doanh nghiệp C02 | Quyền biểu quyết của cổ đông sở hữu cổ phần ưu đãi cổ tức | Điều 117 khoản 3, Điều 148 Luật Doanh nghiệp 2020 | Hiện hành |

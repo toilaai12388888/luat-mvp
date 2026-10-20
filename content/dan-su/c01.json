@@ -467,5 +467,129 @@
         }
       ]
     }
+  ],
+  "tinh_huong": [
+    {
+      "id": "dan-su-c01-th01",
+      "tieu_de": "Giao dịch của người 16 tuổi tự mua xe máy bằng tiền tiết kiệm",
+      "de_bai": "Nguyễn Văn A (16 tuổi, học sinh lớp 11) dùng số tiền tiết kiệm 35 triệu đồng do mình tự để dành để đến cửa hàng xe máy X mua một chiếc xe máy Honda Wave Alpha. Hợp đồng mua bán được lập thành văn bản, A đã thanh toán đủ tiền và nhận xe. Khi bố mẹ A phát hiện đã đến cửa hàng yêu cầu hủy hợp đồng, trả lại xe và lấy lại tiền nhưng chủ cửa hàng từ chối vì cho rằng A mua bằng tiền của mình và đã hoàn tất thanh toán.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định quan hệ pháp lý và điều kiện hiệu lực về chủ thể đối với giao dịch này?",
+          "lua_chon": [
+            "A đã đủ 15 tuổi nên có quyền tự mình xác lập mọi giao dịch mua bán tài sản.",
+            "A từ đủ 15 tuổi đến chưa đủ 18 tuổi tự mình xác lập giao dịch không cần người đại diện.",
+            "A là người chưa thành niên (từ đủ 15 đến dưới 18 tuổi), giao dịch mua xe máy là động sản phải đăng ký phải được người đại diện đồng ý.",
+            "Giao dịch mua bán xe máy là hợp đồng thương mại nên không áp dụng quy định về năng lực hành vi dân sự."
+          ],
+          "dap_an": 2,
+          "giai_thich": "Theo khoản 4 Điều 21 BLDS 2015, người từ đủ mười lăm tuổi đến chưa đủ mười tám tuổi tự mình xác lập, thực hiện giao dịch dân sự, trừ giao dịch dân sự liên quan đến bất động sản, động sản phải đăng ký và giao dịch dân sự khác theo quy định của luật phải được người đại diện theo pháp luật đồng ý. Xe máy là động sản phải đăng ký quyền sở hữu nên bắt buộc phải có sự đồng ý của cha mẹ.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 21 khoản 4",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý nào quy định về hậu quả pháp lý khi người chưa thành niên xác lập giao dịch mà không có sự đồng ý của người đại diện?",
+          "lua_chon": [
+            "Điều 125 Bộ luật Dân sự 2015 về giao dịch dân sự vô hiệu do người chưa thành niên xác lập.",
+            "Điều 127 Bộ luật Dân sự 2015 về giao dịch dân sự vô hiệu do bị lừa dối, đe dọa.",
+            "Điều 129 Bộ luật Dân sự 2015 về giao dịch vi phạm điều kiện hình thức.",
+            "Điều 132 Bộ luật Dân sự 2015 về thời hiệu khởi kiện yêu cầu chia tài sản."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Căn cứ Điều 125 khoản 1 BLDS 2015: Khi giao dịch dân sự do người chưa thành niên xác lập, thực hiện thì theo yêu cầu của người đại diện của người đó, Tòa án tuyên bố giao dịch đó vô hiệu nếu giao dịch này phải do người đại diện xác lập, thực hiện hoặc đồng ý.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 125 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận hướng giải quyết đúng đối với yêu cầu của cha mẹ A?",
+          "lua_chon": [
+            "Cửa hàng xe máy X đúng vì A đã 16 tuổi và tự trả tiền, hợp đồng có hiệu lực đầy đủ.",
+            "Hợp đồng vô hiệu; cha mẹ A có quyền yêu cầu Tòa án tuyên bố vô hiệu, hai bên hoàn trả cho nhau những gì đã nhận (cửa hàng trả lại tiền, cha mẹ A trả lại xe).",
+            "Hợp đồng có hiệu lực một phần; cửa hàng chỉ phải hoàn trả 50% số tiền đã nhận.",
+            "A bị phạt hành chính và bị tịch thu toàn bộ số tiền mua xe."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo Điều 125 và Điều 131 BLDS 2015, giao dịch vô hiệu do không có sự đồng ý của người đại diện hợp pháp. Khi giao dịch vô hiệu, các bên khôi phục lại tình trạng ban đầu, hoàn trả cho nhau những gì đã nhận: cửa hàng trả lại 35 triệu đồng và nhận lại xe.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 131 khoản 2",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c01-th02",
+      "tieu_de": "Hợp đồng chuyển nhượng nhà đất giả tạo để che giấu hợp đồng vay tài sản",
+      "de_bai": "Ông A cần vay của bà B số tiền 1 tỷ đồng với lãi suất thỏa thuận. Bà B yêu cầu ông A phải ký một hợp đồng công chứng chuyển nhượng quyền sử dụng đất và quyền sở hữu nhà ở của gia đình ông A sang tên bà B với giá 1 tỷ đồng làm tin, cam kết khi ông A trả hết gốc và lãi thì bà B sẽ chuyển nhượng lại. Sau 6 tháng, ông A đem 1 tỷ đồng cùng lãi đến trả nhưng bà B không nhận và làm thủ tục sang tên nhà đất, yêu cầu gia đình ông A dọn đi.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định bản chất pháp lý của hợp đồng chuyển nhượng nhà đất giữa ông A và bà B?",
+          "lua_chon": [
+            "Hợp đồng chuyển nhượng nhà đất có hiệu lực tuyệt đối vì đã được công chứng hợp pháp.",
+            "Hợp đồng chuyển nhượng nhà đất là giao dịch dân sự giả tạo nhằm che giấu hợp đồng vay tài sản.",
+            "Hợp đồng chuyển nhượng nhà đất là giao dịch đơn phương không làm phát sinh quyền nghĩa vụ.",
+            "Hợp đồng chuyển nhượng là hợp đồng tặng cho tài sản có điều kiện."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Các bên không có ý chí mua bán chuyển nhượng nhà đất thực sự mà chỉ xác lập nhằm bảo đảm/che giấu việc vay mượn 1 tỷ đồng. Do đó hợp đồng chuyển nhượng là giao dịch giả tạo theo Điều 124 BLDS 2015.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 124 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý giải quyết hiệu lực của giao dịch giả tạo và giao dịch bị che giấu?",
+          "lua_chon": [
+            "Căn cứ Điều 123 BLDS 2015 về vi phạm điều cấm của luật.",
+            "Căn cứ Điều 124 khoản 1 BLDS 2015: giao dịch giả tạo vô hiệu, giao dịch bị che giấu vẫn có hiệu lực nếu đáp ứng đủ điều kiện luật định.",
+            "Căn cứ Điều 126 BLDS 2015 về giao dịch vô hiệu do nhầm lẫn.",
+            "Căn cứ Điều 130 BLDS 2015 về giao dịch vô hiệu một phần."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo khoản 1 Điều 124 BLDS 2015: Khi các bên xác lập giao dịch dân sự một cách giả tạo nhằm che giấu một giao dịch dân sự khác thì giao dịch dân sự giả tạo vô hiệu, còn giao dịch dân sự bị che giấu vẫn có hiệu lực, trừ trường hợp giao dịch đó cũng vô hiệu.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 124 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận về quyền của ông A đối với căn nhà và nghĩa vụ trả nợ?",
+          "lua_chon": [
+            "Bà B được sở hữu toàn bộ căn nhà vì đã có hợp đồng công chứng.",
+            "Hợp đồng chuyển nhượng nhà đất vô hiệu; ông A có quyền yêu cầu hủy việc sang tên nhà đất, đồng thời ông A có nghĩa vụ thanh toán khoản nợ vay 1 tỷ đồng cùng lãi suất hợp pháp cho bà B.",
+            "Ông A mất nhà nhưng không phải trả 1 tỷ đồng tiền vay.",
+            "Cả hai hợp đồng đều có hiệu lực song song và bà B có quyền bán nhà cho người thứ ba."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Tòa án sẽ tuyên bố hợp đồng chuyển nhượng nhà đất vô hiệu, hủy giấy chứng nhận sang tên bà B (nếu đã cấp) và giải quyết quan hệ vay tài sản theo quy định: ông A trả gốc và lãi hợp pháp cho bà B.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 131",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

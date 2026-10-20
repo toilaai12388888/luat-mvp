@@ -467,5 +467,129 @@
         }
       ]
     }
+  ],
+  "tinh_huong": [
+    {
+      "id": "doanh-nghiep-c01-th01",
+      "tieu_de": "Chuyển nhượng phần vốn góp trong công ty TNHH hai thành viên trở lên",
+      "de_bai": "Ông X là thành viên sở hữu 30% vốn điều lệ trong Công ty TNHH Bình Minh (gồm 3 thành viên: X sở hữu 30%, Y sở hữu 40%, Z sở hữu 30%). Do cần tiền đầu tư riêng, ông X đã ký hợp đồng chuyển nhượng toàn bộ 30% phần vốn góp của mình cho người bạn thân là ông K (người ngoài công ty) với giá 3 tỷ đồng mà không thông báo hay chào bán cho Y và Z. Khi ông K mang hợp đồng đến yêu cầu ghi tên vào sổ đăng ký thành viên, Y và Z kịch liệt phản đối.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định nguyên tắc ưu tiên mua phần vốn góp trong công ty TNHH hai thành viên trở lên?",
+          "lua_chon": [
+            "Thành viên được tự do chuyển nhượng vốn cho bất kỳ ai không cần chào bán nội bộ.",
+            "Thành viên chuyển nhượng phải chào bán phần vốn góp đó cho các thành viên còn lại theo tỷ lệ tương ứng trước khi bán cho người ngoài.",
+            "Thành viên chỉ được chuyển nhượng vốn cho người cùng huyết thống.",
+            "Phần vốn góp chỉ có thể bán lại cho chính công ty."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo Điều 52 khoản 1 Luật Doanh nghiệp 2020, thành viên muốn chuyển nhượng vốn phải chào bán cho các thành viên còn lại theo tỷ lệ tương ứng với cùng điều kiện.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 52 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý quy định thời hạn chào bán nội bộ trước khi được bán cho người ngoài?",
+          "lua_chon": [
+            "Điều 52 điểm b khoản 1 Luật Doanh nghiệp 2020.",
+            "Điều 51 Luật Doanh nghiệp 2020 về mua lại phần vốn góp.",
+            "Điều 47 Luật Doanh nghiệp 2020 về góp vốn thành lập.",
+            "Điều 54 Luật Doanh nghiệp 2020 về cơ cấu tổ chức."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Căn cứ điểm b khoản 1 Điều 52 Luật Doanh nghiệp 2020: Chỉ được chuyển nhượng cho người không phải là thành viên với cùng điều kiện nếu các thành viên còn lại không mua hoặc không mua hết trong thời hạn 30 ngày kể từ ngày chào bán.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 52 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận hiệu lực hợp đồng giữa ông X và ông K, và quyền của công ty Bình Minh?",
+          "lua_chon": [
+            "Hợp đồng chuyển nhượng có hiệu lực ngay và công ty bắt buộc phải đăng ký tên ông K.",
+            "Hợp đồng chuyển nhượng giữa X và K vi phạm quy chế ưu tiên chuyển nhượng của luật; công ty có quyền từ chối ghi nhận tư cách thành viên của K; X phải chào bán lại cho Y và Z theo luật định.",
+            "Ông K bị phạt tịch thu toàn bộ 3 tỷ đồng.",
+            "Công ty Bình Minh tự động bị giải thể vì thay đổi thành viên trái luật."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Do ông X chưa thực hiện thủ tục chào bán cho Y và Z trong thời hạn 30 ngày theo quy định tại Điều 52, việc chuyển nhượng cho người ngoài không có giá trị pháp lý với công ty; công ty từ chối ghi nhận ông K vào sổ thành viên.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 52 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c01-th02",
+      "tieu_de": "Chậm góp vốn điều lệ sau 90 ngày kể từ ngày cấp đăng ký doanh nghiệp",
+      "de_bai": "Công ty TNHH An Phát được cấp Giấy chứng nhận đăng ký doanh nghiệp ngày 15/01/2026 với vốn điều lệ đăng ký là 2 tỷ đồng gồm 2 thành viên: bà Lan cam kết góp 1,2 tỷ (60%) và ông Hùng cam kết góp 800 triệu (40%). Đến ngày 20/04/2026 (sau hơn 95 ngày), bà Lan đã góp đủ 1,2 tỷ đồng nhưng ông Hùng mới chỉ nộp vào tài khoản công ty 300 triệu đồng và xin khất nợ phần còn lại.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định thời hạn luật định thành viên công ty TNHH phải góp đủ phần vốn đã cam kết?",
+          "lua_chon": [
+            "Thời hạn là 30 ngày kể từ ngày cấp GCNĐKDN.",
+            "Thời hạn là 90 ngày kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp.",
+            "Thời hạn là 180 ngày kể từ ngày bắt đầu hoạt động thực tế.",
+            "Thời hạn là 1 năm kể từ ngày thành lập."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo khoản 2 Điều 47 Luật Doanh nghiệp 2020, thành viên phải góp vốn cho công ty đủ và đúng loại tài sản đã cam kết trong thời hạn 90 ngày kể từ ngày được cấp GCNĐKDN.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 47 khoản 2",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý quy định quyền biểu quyết và nghĩa vụ xử lý vốn khi chưa góp đủ sau 90 ngày?",
+          "lua_chon": [
+            "Điều 47 khoản 3 và khoản 4 Luật Doanh nghiệp 2020.",
+            "Điều 51 Luật Doanh nghiệp 2020 về mua lại phần vốn góp.",
+            "Điều 55 Luật Doanh nghiệp 2020 về Đại hội đồng cổ đông.",
+            "Điều 68 Luật Doanh nghiệp 2020 về phát hành cổ phiếu."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Căn cứ khoản 3 Điều 47 Luật DN 2020: Thành viên chưa góp hoặc chưa góp đủ vốn chỉ có quyền tương ứng với phần vốn đã góp; công ty phải đăng ký thay đổi vốn điều lệ trong thời hạn 30 ngày.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 47 khoản 3",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận về quyền của ông Hùng và thủ tục công ty An Phát phải thực hiện?",
+          "lua_chon": [
+            "Ông Hùng vẫn giữ nguyên 40% quyền biểu quyết vì đã cam kết.",
+            "Ông Hùng chỉ có quyền tương ứng số vốn 300 triệu đã góp (20% vốn thực góp); công ty phải đăng ký điều chỉnh giảm vốn điều lệ xuống 1,5 tỷ đồng hoặc chào bán phần vốn chưa góp trong 30 ngày.",
+            "Ông Hùng bị khai trừ khỏi công ty và mất trắng 300 triệu đồng.",
+            "Công ty An Phát bị cơ quan đăng ký kinh doanh thu hồi giấy phép ngay lập tức."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo Điều 47 Luật DN 2020, ông Hùng chỉ có quyền tương ứng với phần vốn thực tế đã góp (300 triệu). Công ty An Phát phải đăng ký điều chỉnh vốn điều lệ và tỷ lệ phần vốn góp của các thành viên trong thời hạn 30 ngày.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 47 khoản 3",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

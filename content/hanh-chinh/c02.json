@@ -467,5 +467,129 @@
         }
       ]
     }
+  ],
+  "tinh_huong": [
+    {
+      "id": "hanh-chinh-c02-th01",
+      "tieu_de": "Tạm giữ người theo thủ tục hành chính quá thời hạn luật định",
+      "de_bai": "Ông D có hành vi gây rối trật tự công cộng tại trụ sở UBND xã và có biểu hiện đập phá tài sản. Trưởng Công an xã đã ra quyết định tạm giữ ông D theo thủ tục hành chính từ lúc 09:00 sáng thứ Hai. Đến 15:00 chiều thứ Ba (đã qua 30 giờ), ông D vẫn bị giữ tại phòng tạm giữ của công an xã mà không có quyết định gia hạn hay chuyển giao cho cơ quan tố tụng.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định trường hợp và thẩm quyền áp dụng biện pháp tạm giữ người theo thủ tục hành chính?",
+          "lua_chon": [
+            "Tạm giữ người áp dụng cho mọi trường hợp vi phạm hành chính không giới hạn.",
+            "Tạm giữ người chỉ áp dụng trong trường hợp cần ngăn chặn hành vi gây rối trật tự, buôn lậu hoặc đưa vào cơ sở bắt buộc...",
+            "Trưởng Công an xã không bao giờ có quyền tạm giữ người.",
+            "Tạm giữ người chỉ được thực hiện sau khi có bản án của Tòa án."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo Điều 122 khoản 1 Luật XLVPHC, tạm giữ người chỉ áp dụng trong một số trường hợp thật cần thiết như ngăn chặn ngay hành vi gây rối trật tự công cộng, gây thương tích cho người khác...",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 122 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý quy định thời hạn tạm giữ người theo thủ tục hành chính?",
+          "lua_chon": [
+            "Điều 122 khoản 2 Luật Xử lý vi phạm hành chính 2012 về thời hạn tạm giữ người.",
+            "Điều 124 Luật Xử lý vi phạm hành chính 2012 về áp giải người vi phạm.",
+            "Điều 125 Luật Xử lý vi phạm hành chính 2012 về tạm giữ tang vật.",
+            "Điều 127 Luật Xử lý vi phạm hành chính 2012 về khám người."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Căn cứ khoản 2 Điều 122 Luật XLVPHC: Thời hạn tạm giữ người không được quá 12 giờ; trong trường hợp cần thiết có thể kéo dài hơn nhưng không quá 24 giờ; vùng biên giới, rừng núi, hải đảo xa xôi tối đa không quá 48 giờ.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 122 khoản 2",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận tính hợp pháp của việc giữ ông D kéo dài 30 giờ tại công an xã?",
+          "lua_chon": [
+            "Hợp pháp vì công an có quyền giữ đến khi đối tượng hối lỗi.",
+            "Việc giữ ông D 30 giờ tại địa bàn thông thường đã vượt quá thời hạn tối đa 24 giờ luật định, là hành vi giam giữ trái pháp luật bị nghiêm cấm theo Điều 12 Luật XLVPHC.",
+            "Hợp pháp nếu công an xã xin ý kiến bằng miệng của Chủ tịch xã.",
+            "Thời hạn tối đa là 7 ngày nên giữ 30 giờ vẫn hoàn toàn hợp lệ."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Thời hạn tạm giữ tối đa trong trường hợp cần thiết ở địa bàn đồng bằng thông thường không được quá 24 giờ. Việc giữ người 30 giờ là trái pháp luật và xâm phạm quyền tự do thân thể của công dân.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 122 khoản 2",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hanh-chinh-c02-th02",
+      "tieu_de": "Khám người theo thủ tục hành chính không đúng quy định về người cùng giới",
+      "de_bai": "Chị T bị nghi ngờ cất giấu pháo nổ trái phép trong túi xách và trên người khi đi qua trạm kiểm soát giao thông. Tổ công tác gồm 3 cán bộ nam đã tiến hành kiểm tra túi xách và sau đó một cán bộ nam đã trực tiếp thực hiện việc khám người, lục soát trên người chị T dù chị T liên tục phản đối và yêu cầu phải có nữ cán bộ thực hiện.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định điều kiện áp dụng biện pháp khám người theo thủ tục hành chính?",
+          "lua_chon": [
+            "Khám người được tiến hành bất kỳ lúc nào cơ quan chức năng nghi ngờ mà không cần căn cứ.",
+            "Khám người chỉ được tiến hành khi có căn cứ cho rằng người đó cất giấu trong người đồ vật, tài liệu, phương tiện vi phạm hành chính.",
+            "Khám người chỉ được tiến hành khi đã có lệnh bắt tạm giam hình sự.",
+            "Khám người chỉ áp dụng cho người phạm tội quả tang."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo Điều 127 khoản 1 Luật XLVPHC, việc khám người chỉ được tiến hành khi có căn cứ cho rằng người đó cất giấu trong người đồ vật, tài liệu, phương tiện được sử dụng để vi phạm hành chính.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 127 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý quy định nguyên tắc và thủ tục khám người?",
+          "lua_chon": [
+            "Điều 127 khoản 2 Luật Xử lý vi phạm hành chính 2012.",
+            "Điều 128 Luật Xử lý vi phạm hành chính 2012 về khám phương tiện.",
+            "Điều 129 Luật Xử lý vi phạm hành chính 2012 về khám nơi cất giấu.",
+            "Điều 126 Luật Xử lý vi phạm hành chính 2012 về xử lý tang vật."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Căn cứ khoản 2 Điều 127 Luật XLVPHC 2012: Khi khám người, nam khám nam, nữ khám nữ và phải có người cùng giới chứng kiến.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 127 khoản 2",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận tính hợp pháp của hành vi khám người do cán bộ nam thực hiện đối với chị T?",
+          "lua_chon": [
+            "Hợp pháp vì cán bộ nam đang thi hành công vụ cấp bách.",
+            "Trái pháp luật vì luật quy định nghiêm ngặt nam khám nam, nữ khám nữ và phải có người cùng giới chứng kiến; cán bộ nam khám người đối với nữ là vi phạm nghiêm trọng thủ tục.",
+            "Hợp pháp nếu có sự đồng ý của Trưởng trạm kiểm soát.",
+            "Chỉ trái luật nếu không tìm thấy tang vật vi phạm."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Luật XLVPHC quy định bắt buộc bảo đảm quyền bất khả xâm phạm về thân thể của công dân: nam khám nam, nữ khám nữ và có người cùng giới chứng kiến. Cán bộ nam khám người phụ nữ là vi phạm pháp luật.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+              "dieu": "Điều 127 khoản 2",
+              "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143773.aspx"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

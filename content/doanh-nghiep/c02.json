@@ -467,5 +467,129 @@
         }
       ]
     }
+  ],
+  "tinh_huong": [
+    {
+      "id": "doanh-nghiep-c02-th01",
+      "tieu_de": "Cổ đông sáng lập chuyển nhượng cổ phần phổ thông trong 3 năm đầu",
+      "de_bai": "Công ty Cổ phần Xây dựng Nam Việt thành lập tháng 03/2025 gồm 4 cổ đông sáng lập A, B, C, D. Tháng 09/2026 (sau 1,5 năm kể từ ngày thành lập), cổ đông sáng lập A muốn chuyển nhượng toàn bộ 100.000 cổ phần phổ thông của mình cho bà E (người ngoài công ty, không phải cổ đông sáng lập). Cổ đông B và C không đồng ý và cho rằng việc chuyển nhượng này chưa được Đại hội đồng cổ đông thông qua.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định quy định pháp luật về việc chuyển nhượng cổ phần phổ thông của cổ đông sáng lập trong 3 năm đầu?",
+          "lua_chon": [
+            "Cổ đông sáng lập bị cấm chuyển nhượng tuyệt đối trong mọi trường hợp trong 3 năm đầu.",
+            "Cổ đông sáng lập được tự do chuyển nhượng cho cổ đông sáng lập khác; chuyển nhượng cho người không phải cổ đông sáng lập phải được Đại hội đồng cổ đông chấp thuận.",
+            "Cổ đông sáng lập được tự do chuyển nhượng cho bất kỳ ai mà không cần điều kiện.",
+            "Cổ phần phổ thông của cổ đông sáng lập tự động chuyển thành cổ phần ưu đãi biểu quyết."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo khoản 3 Điều 120 Luật Doanh nghiệp 2020, trong thời hạn 3 năm kể từ ngày cấp GCNĐKDN, chuyển nhượng cổ phần phổ thông của CĐSL cho người không phải CĐSL bắt buộc phải được ĐHĐCĐ chấp thuận.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 120 khoản 3",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý quy định quyền biểu quyết của cổ đông sáng lập dự định chuyển nhượng cổ phần?",
+          "lua_chon": [
+            "Điều 120 khoản 3 Luật Doanh nghiệp 2020.",
+            "Điều 116 Luật Doanh nghiệp 2020 về cổ phần ưu đãi biểu quyết.",
+            "Điều 137 Luật Doanh nghiệp 2020 về Hội đồng quản trị.",
+            "Điều 148 Luật Doanh nghiệp 2020 về thể thức biểu quyết."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Căn cứ Điều 120 khoản 3 Luật DN 2020: Cổ đông sáng lập dự định chuyển nhượng cổ phần phổ thông cho người ngoài thì không có quyền biểu quyết về việc chuyển nhượng cổ phần đó.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 120 khoản 3",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận về yêu cầu chuyển nhượng của cổ đông A cho bà E?",
+          "lua_chon": [
+            "Cổ đông A có quyền tự do bán cho bà E mà không cần họp ĐHĐCĐ.",
+            "Hợp đồng chuyển nhượng cho bà E chỉ hợp pháp khi được ĐHĐCĐ công ty Nam Việt chấp thuận (ông A không được biểu quyết); nếu ĐHĐCĐ không chấp thuận thì việc chuyển nhượng không có giá trị với công ty.",
+            "Cổ đông B và C bắt buộc phải mua lại số cổ phần của ông A bằng mọi giá.",
+            "Ông A phải đợi đủ 5 năm mới được quyền bán cổ phần."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Trong 3 năm đầu, chuyển nhượng cổ phần phổ thông của CĐSL cho người ngoài bắt buộc phải triệu tập ĐHĐCĐ để xem xét thông qua (ông A không được biểu quyết). Nếu ĐHĐCĐ không chấp thuận thì việc chuyển nhượng không có hiệu lực đối với công ty.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 120 khoản 3",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doanh-nghiep-c02-th02",
+      "tieu_de": "Quyền biểu quyết của cổ đông sở hữu cổ phần ưu đãi cổ tức",
+      "de_bai": "Bà Mai sở hữu 50.000 cổ phần ưu đãi cổ tức tại Công ty Cổ phần Thương mại Hoàng Hà. Tại cuộc họp Đại hội đồng cổ đông thường niên năm 2026, khi bàn về nội dung bầu miễn nhiệm và thay thế 2 thành viên Hội đồng quản trị, bà Mai yêu cầu được phát phiếu biểu quyết để tham gia bỏ phiếu. Chủ tọa cuộc họp từ chối cấp phiếu biểu quyết cho bà Mai, dẫn đến việc bà Mai khiếu nại cuộc họp vi phạm quyền lợi cổ đông.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định quyền và giới hạn quyền của cổ đông sở hữu cổ phần ưu đãi cổ tức?",
+          "lua_chon": [
+            "Cổ đông sở hữu cổ phần ưu đãi cổ tức có mọi quyền biểu quyết như cổ đông phổ thông.",
+            "Cổ đông sở hữu cổ phần ưu đãi cổ tức được nhận cổ tức ưu đãi nhưng không có quyền biểu quyết, dự họp ĐHĐCĐ để bầu cử người vào HĐQT.",
+            "Cổ phần ưu đãi cổ tức có số phiếu biểu quyết gấp 2 lần cổ phần phổ thông.",
+            "Cổ đông ưu đãi cổ tức bắt buộc phải là thành viên Ban kiểm soát."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo Điều 117 khoản 3 Luật Doanh nghiệp 2020, cổ đông sở hữu cổ phần ưu đãi cổ tức không có quyền biểu quyết, dự họp Đại hội đồng cổ đông, đề cử người vào HĐQT và Ban kiểm soát (trừ trường hợp quy định tại khoản 6 Điều 148).",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 117 khoản 3",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý quy định quyền biểu quyết của cổ phần ưu đãi cổ tức?",
+          "lua_chon": [
+            "Điều 117 khoản 3 Luật Doanh nghiệp 2020.",
+            "Điều 116 Luật Doanh nghiệp 2020 về ưu đãi biểu quyết.",
+            "Điều 118 Luật Doanh nghiệp 2020 về ưu đãi hoàn lại.",
+            "Điều 111 Luật Doanh nghiệp 2020 về công ty cổ phần."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Căn cứ khoản 3 Điều 117 Luật Doanh nghiệp 2020 quy định rõ ràng về hạn chế quyền biểu quyết của cổ đông sở hữu cổ phần ưu đãi cổ tức.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 117 khoản 3",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận về tính hợp pháp trong quyết định của Chủ tọa cuộc họp ĐHĐCĐ?",
+          "lua_chon": [
+            "Chủ tọa vi phạm nghiêm trọng vì tước quyền cổ đông của bà Mai.",
+            "Quyết định của Chủ tọa từ chối cấp phiếu biểu quyết bầu HĐQT cho bà Mai là hoàn toàn đúng pháp luật theo Điều 117 khoản 3 Luật Doanh nghiệp 2020.",
+            "Bà Mai có quyền khởi kiện yêu cầu hủy bỏ tư cách pháp nhân của công ty.",
+            "Chủ tọa phải bồi thường thiệt hại bằng tiền mặt cho bà Mai."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Luật Doanh nghiệp quy định người nắm cổ phần ưu đãi cổ tức đã được hưởng lợi ích tài chính cố định/ưu đãi nên bị hạn chế quyền quản trị và biểu quyết bầu HĐQT. Chủ tọa từ chối cấp phiếu biểu quyết là chuẩn xác.",
+          "can_cu": [
+            {
+              "van_ban": "Luật Doanh nghiệp 2020",
+              "dieu": "Điều 117 khoản 3",
+              "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-427514.aspx"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

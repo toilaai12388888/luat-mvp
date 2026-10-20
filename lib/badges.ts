@@ -1,4 +1,4 @@
-import { getStoredAttempts } from "./attempts";
+﻿import { getStoredAttempts } from "./attempts";
 import { getStoredStreak } from "./stats";
 import { getMockTestHistory } from "./mock-test";
 import { getDailyRecord } from "./daily-challenge";
@@ -39,15 +39,37 @@ export function saveUnlockedBadge(id: string) {
   }
 }
 
+export function getSolvedScenarioIds(): string[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = localStorage.getItem("luat_solved_tinh_huong");
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function saveSolvedScenario(id: string) {
+  if (typeof window === "undefined") return;
+  try {
+    const list = getSolvedScenarioIds();
+    if (!list.includes(id)) {
+      list.push(id);
+      localStorage.setItem("luat_solved_tinh_huong", JSON.stringify(list));
+      window.dispatchEvent(new CustomEvent("luat_scenario_solved", { detail: { id } }));
+    }
+  } catch {}
+}
+
 export function checkAllBadges(): Badge[] {
   const attempts = getStoredAttempts();
   const streak = getStoredStreak();
   const mockHistory = getMockTestHistory();
   const todayRecord = getDailyRecord();
   const unlockedMap = getUnlockedBadgeIds();
+  const solvedScenarios = getSolvedScenarioIds();
 
   const totalAttempts = attempts.length;
-  
 
   const danSuCount = attempts.filter((a) => a.subject === "dan-su" && a.isCorrect).length;
   const hanhChinhCount = attempts.filter((a) => a.subject === "hanh-chinh" && a.isCorrect).length;
@@ -131,6 +153,22 @@ export function checkAllBadges(): Badge[] {
       iconName: "Star",
       isUnlocked: todayRecord !== null && todayRecord.score === 5,
       progressText: todayRecord ? `${todayRecord.score}/5 đúng` : "0/5 đúng",
+    },
+    {
+      id: "tinh_huong_5",
+      title: "Giải 5 tình huống",
+      description: "Giải thành công 5 bài tập tình huống thực tiễn",
+      iconName: "Scale",
+      isUnlocked: solvedScenarios.length >= 5,
+      progressText: `${Math.min(solvedScenarios.length, 5)}/5 tình huống`,
+    },
+    {
+      id: "contributor",
+      title: "Người đóng góp",
+      description: "Đóng góp câu hỏi cho cộng đồng",
+      iconName: "HeartHandshake",
+      isUnlocked: Boolean(unlockedMap["contributor"]),
+      progressText: unlockedMap["contributor"] ? "Đã đạt" : "0/1 câu",
     },
     {
       id: "dan_su_master",

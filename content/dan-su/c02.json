@@ -467,5 +467,129 @@
         }
       ]
     }
+  ],
+  "tinh_huong": [
+    {
+      "id": "dan-su-c02-th01",
+      "tieu_de": "Tranh chấp phạt cọc khi bên nhận đặt cọc từ chối bán nhà",
+      "de_bai": "Chị M ký hợp đồng đặt cọc 200 triệu đồng cho ông N để bảo đảm giao kết hợp đồng mua căn nhà của ông N với giá 3 tỷ đồng. Hợp đồng đặt cọc thỏa thuận trong 30 ngày hai bên sẽ đến văn phòng công chứng ký hợp đồng mua bán chính thức. Đến ngày thứ 20, giá nhà đất tăng cao, ông N thông báo không bán nhà nữa và chỉ đồng ý trả lại đúng 200 triệu đồng cho chị M vì cho rằng hợp đồng mua bán chính thức chưa được ký kết.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định tính chất và mục đích của thỏa thuận đặt cọc giữa chị M và ông N?",
+          "lua_chon": [
+            "Khoản 200 triệu đồng chỉ là khoản tiền ứng trước, ông N trả lại là chấm dứt nghĩa vụ.",
+            "Đặt cọc là biện pháp bảo đảm thực hiện giao kết hợp đồng dân sự hợp pháp.",
+            "Thỏa thuận đặt cọc vô hiệu vì chưa có hợp đồng mua bán nhà có công chứng.",
+            "Khoản 200 triệu đồng là tài sản ký quỹ tại ngân hàng thương mại."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo Điều 328 khoản 1 BLDS 2015, đặt cọc là việc một bên giao cho bên kia một khoản tiền trong một thời hạn để bảo đảm giao kết hoặc thực hiện hợp đồng.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 328 khoản 1",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý quy định chế tài xử lý khi bên nhận đặt cọc từ chối giao kết hợp đồng?",
+          "lua_chon": [
+            "Điều 328 khoản 2 Bộ luật Dân sự 2015 về hậu quả pháp lý của đặt cọc.",
+            "Điều 317 Bộ luật Dân sự 2015 về thế chấp tài sản.",
+            "Điều 418 Bộ luật Dân sự 2015 về phạt vi phạm nghĩa vụ.",
+            "Điều 422 Bộ luật Dân sự 2015 về chấm dứt hợp đồng."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Căn cứ khoản 2 Điều 328 BLDS 2015: nếu bên nhận đặt cọc từ chối việc giao kết, thực hiện hợp đồng thì phải trả cho bên đặt cọc tài sản đặt cọc và một khoản tiền tương đương giá trị tài sản đặt cọc, trừ trường hợp có thỏa thuận khác.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 328 khoản 2",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận nghĩa vụ tài chính của ông N đối với chị M?",
+          "lua_chon": [
+            "Ông N chỉ phải trả lại 200 triệu đồng tiền đặt cọc đã nhận.",
+            "Ông N phải trả lại 200 triệu đồng tiền cọc và bị phạt một khoản tiền tương đương giá trị cọc là 200 triệu đồng (tổng cộng trả chị M 400 triệu đồng).",
+            "Ông N phải bồi thường toàn bộ giá trị căn nhà 3 tỷ đồng.",
+            "Ông N không phải trả bất kỳ khoản tiền nào vì giao kết chưa công chứng."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo Điều 328 khoản 2 BLDS 2015, do ông N từ chối giao kết hợp đồng nên phải hoàn trả 200 triệu đồng tiền cọc và thanh toán thêm 200 triệu đồng tiền phạt cọc, tổng cộng 400 triệu đồng cho chị M.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 328 khoản 2",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dan-su-c02-th02",
+      "tieu_de": "Tự ý bán tài sản đang thế chấp ngân hàng mà không có sự đồng ý",
+      "de_bai": "Công ty K thế chấp chiếc xe ô tô tải thuộc sở hữu của mình tại Ngân hàng T để vay 800 triệu đồng. Hợp đồng thế chấp hợp pháp và đã đăng ký biện pháp bảo đảm. Do khó khăn tài chính, Công ty K đã tự ý ký hợp đồng bán chiếc xe tải trên cho ông P với giá 700 triệu đồng mà không thông báo và không được Ngân hàng T đồng ý. Khi Ngân hàng T phát hiện và đến thu hồi xe để xử lý nợ, ông P phản đối vì cho rằng mình là người mua ngay tình.",
+      "buoc": [
+        {
+          "hoi": "Bước 1: Xác định quyền định đoạt tài sản thế chấp của bên thế chấp (Công ty K)?",
+          "lua_chon": [
+            "Bên thế chấp có quyền tự do bán tài sản bất cứ lúc nào không cần hỏi ý kiến.",
+            "Bên thế chấp không được bán, thay thế, trao đổi, tặng cho tài sản thế chấp, trừ trường hợp được bên nhận thế chấp đồng ý hoặc theo quy định của luật.",
+            "Bên thế chấp mất quyền sở hữu ngay khi ký hợp đồng thế chấp.",
+            "Ngân hàng đương nhiên trở thành chủ sở hữu tài sản thế chấp."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Theo khoản 8 Điều 320 BLDS 2015, bên thế chấp không được bán, thay thế, trao đổi, tặng cho tài sản thế chấp, trừ trường hợp tài sản thế chấp là hàng hóa luân chuyển trong quá trình sản xuất, kinh doanh hoặc được bên nhận thế chấp đồng ý.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 320 khoản 8",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 2: Căn cứ pháp lý xác định quyền xử lý tài sản thế chấp của Ngân hàng T đối với bên thứ ba?",
+          "lua_chon": [
+            "Căn cứ Điều 317 và Điều 323 Bộ luật Dân sự 2015 về quyền của bên nhận thế chấp.",
+            "Căn cứ Điều 309 Bộ luật Dân sự 2015 về cầm cố tài sản.",
+            "Căn cứ Điều 335 Bộ luật Dân sự 2015 về bảo lãnh thực hiện nghĩa vụ.",
+            "Căn cứ Điều 329 Bộ luật Dân sự 2015 về ký cược tài sản."
+          ],
+          "dap_an": 0,
+          "giai_thich": "Hợp đồng thế chấp đã đăng ký biện pháp bảo đảm có hiệu lực đối kháng với người thứ ba (Điều 317, 323 BLDS 2015). Ngân hàng có quyền yêu cầu người đang giữ tài sản thế chấp giao lại tài sản để xử lý.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 317",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        },
+        {
+          "hoi": "Bước 3: Kết luận giải quyết tranh chấp giữa Ngân hàng T, Công ty K và ông P?",
+          "lua_chon": [
+            "Ông P được giữ xe tải và Ngân hàng T mất quyền xử lý tài sản.",
+            "Ngân hàng T có quyền thu hồi tài sản thế chấp để xử lý thu hồi nợ; hợp đồng mua bán giữa Công ty K và ông P vô hiệu; ông P có quyền yêu cầu Công ty K hoàn trả tiền mua xe và bồi thường thiệt hại.",
+            "Công ty K bị phá sản ngay lập tức mà không cần thủ tục tố tụng.",
+            "Ông P phải trả nợ 800 triệu thay cho Công ty K."
+          ],
+          "dap_an": 1,
+          "giai_thich": "Do biện pháp bảo đảm đã đăng ký nên có hiệu lực đối kháng; Ngân hàng T được quyền ưu tiên xử lý xe tải. Ông P không được coi là người thứ ba ngay tình được bảo vệ trước biện pháp bảo đảm đã đăng ký công khai; ông P có quyền đòi Công ty K bồi thường.",
+          "can_cu": [
+            {
+              "van_ban": "Bộ luật Dân sự 2015",
+              "dieu": "Điều 317",
+              "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-296215.aspx"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
