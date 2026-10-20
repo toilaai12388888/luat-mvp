@@ -60,3 +60,9 @@ g) **Sáng mai 21/10**: đăng bài ra mắt (mỗi nhóm cách nhau ≥ 30 phú
 - 15h30–19h: mục 5 (marketing) rồi mục 6 (chương 3).
 - 19h–22h: sửa theo góp ý bạn bè, kiểm thử lại toàn bộ, 22h khóa code, báo cáo tổng.
 Trễ thì cắt: chương 3 (dời sau ra mắt) → màn giới thiệu lần đầu → ảnh OG riêng từng trang. Không cắt: mục 1, mục 2, bài đăng ra mắt.
+
+## 9. Luật an toàn bắt buộc (thêm 20/10 chiều)
+
+- KHÔNG hạ yêu cầu độ dài `ADMIN_PIN` (≥ 12 ký tự) trong `lib/admin-auth.ts`, dù file team cũ nói PIN 6 số. DOT_3 thắng.
+- KHÔNG ghi giá trị bí mật (PIN, CRON_SECRET, khóa VAPID private, service role key, Gemini key) vào bất kỳ file nào trong repo, kể cả file tiến độ. Repo đang public. Chỉ ghi tên biến.
+- Mã 882026 đã lộ công khai trên GitHub: coi như bỏ, không dùng lại.
