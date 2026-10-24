@@ -119,6 +119,7 @@ export default async function HomePage() {
         <footer className="mt-8 pb-4 text-center text-xs text-ink-3 space-y-1">
           <p>Ảnh minh họa từ Unsplash theo Unsplash License</p>
           <p className="font-medium text-ink-2">Nội dung chỉ để ôn tập, hãy đối chiếu văn bản luật hiện hành.</p>
+          <p>Web đếm lượt dùng ẩn danh để cải thiện nội dung, không lưu tên hay email.</p>
         </footer>
       </main>
       <TabBar />

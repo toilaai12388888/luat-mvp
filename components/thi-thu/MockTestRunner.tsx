@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/Button";
 import { QuizQuestion } from "@/lib/all-questions";
 import { MockTestConfig, saveMockTestResult } from "@/lib/mock-test";
 import { saveAttempt } from "@/lib/attempts";
+import { trackUsage } from "@/lib/usage";
 import { TrueFalseOptions } from "@/components/nhan-dinh/TrueFalseOptions";
 
 interface MockTestRunnerProps {
@@ -41,6 +42,7 @@ export function MockTestRunner({ items, config, onExit }: MockTestRunnerProps) {
     if (isSubmitted) return;
     setIsSubmitted(true);
     if (timerRef.current) clearInterval(timerRef.current);
+    trackUsage("lesson", Object.keys(answers).length);
 
     let correct = 0;
     items.forEach((item, idx) => {

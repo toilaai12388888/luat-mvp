@@ -32,6 +32,7 @@ import { CheckBar } from "@/components/quiz/CheckBar";
 import { FeedbackSheet } from "@/components/quiz/FeedbackSheet";
 import { TrueFalseOptions } from "@/components/nhan-dinh/TrueFalseOptions";
 import { getStoredStreak } from "@/lib/stats";
+import { trackUsage } from "@/lib/usage";
 
 export function DailyChallengeView() {
   const todayStr = getTodayDateString();
@@ -67,6 +68,7 @@ export function DailyChallengeView() {
 
     saveDailyRecord(newRecord);
     setRecord(newRecord);
+    trackUsage("daily", 5);
   };
 
   const handleCopy = async () => {

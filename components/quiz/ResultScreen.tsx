@@ -6,6 +6,7 @@ import { Zap, Flame, Swords, Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { createChallenge } from "@/lib/challenge";
 import { recordActivityToday } from "@/lib/push";
+import { trackUsage } from "@/lib/usage";
 import { HeartHandshake } from "lucide-react";
 import { ContributeQuestionModal } from "@/components/contributions/ContributeQuestionModal";
 
@@ -61,6 +62,7 @@ export function ResultScreen({
 
   useEffect(() => {
     recordActivityToday();
+    trackUsage("lesson", total);
     const hasCompletedBefore = localStorage.getItem("luat_has_completed_quiz");
     if (!hasCompletedBefore) {
       localStorage.setItem("luat_has_completed_quiz", "true");

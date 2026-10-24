@@ -19,6 +19,7 @@ import { saveAttempt } from "@/lib/attempts";
 import { syncWeeklyXpToSupabase } from "@/lib/player";
 import { saveSolvedScenario } from "@/lib/badges";
 import { recordActivityToday } from "@/lib/push";
+import { trackUsage } from "@/lib/usage";
 import { CanCuList } from "@/components/ui/CanCuList";
 
 interface TinhHuongRunnerProps {
@@ -102,6 +103,7 @@ export function TinhHuongRunner({
       setScenarioIndex((prev) => prev + 1);
     } else {
       setIsFinishedAll(true);
+      trackUsage("lesson", scenarios.reduce((sum, s) => sum + s.buoc.length, 0));
     }
   };
 

@@ -3,6 +3,7 @@ import { Be_Vietnam_Pro, Lora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { APP_NAME, SITE_URL } from "@/lib/config";
 import { PwaRegister } from "@/components/pwa/PwaRegister";
+import { UsageTracker } from "@/components/analytics/UsageTracker";
 import "./globals.css";
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -91,6 +92,7 @@ export default function RootLayout({
           {children}
         </div>
         <PwaRegister />
+        <UsageTracker />
         <Analytics />
       </body>
     </html>
