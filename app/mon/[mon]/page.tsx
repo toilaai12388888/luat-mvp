@@ -1,11 +1,20 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, BookOpen, CheckSquare, HelpCircle, ChevronRight, Scale } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  CheckSquare,
+  HelpCircle,
+  ChevronRight,
+  Scale,
+} from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { TabBar } from "@/components/ui/TabBar";
 import { SUBJECTS, getSubject, getChapter } from "@/lib/content";
+import { getCaseStudiesBySubject } from "@/lib/case-studies";
+import { CaseStudyCard } from "@/components/luyen-an/CaseStudyCard";
 import { CommunityQuestionsList } from "@/components/contributions/CommunityQuestionsList";
 
 export function generateStaticParams() {
@@ -23,6 +32,7 @@ export default async function SubjectPage({ params }: PageProps) {
 
   const c01 = getChapter(mon, "c01");
   const c02 = getChapter(mon, "c02");
+  const caseStudies = getCaseStudiesBySubject(mon);
 
   const chapters = [
     {
@@ -172,8 +182,34 @@ export default async function SubjectPage({ params }: PageProps) {
           </Card>
         ))}
 
+        {/* MỤC: LUYỆN ÁN THẬT MÔN NÀY */}
+        {caseStudies.length > 0 && (
+          <div className="space-y-3 pt-2">
+            <div className="flex items-center justify-between">
+              <h2 className="text-base font-bold text-ink flex items-center gap-2">
+                <Scale size={18} className="text-navy-bar" />
+                <span>Luyện án thật môn {subject.name}</span>
+              </h2>
+              <Link
+                href="/luyen-an"
+                className="text-xs font-semibold text-navy-bar hover:underline"
+              >
+                Tất cả vụ án
+              </Link>
+            </div>
+            <div className="space-y-3">
+              {caseStudies.map((cs) => (
+                <CaseStudyCard key={cs.id} caseStudy={cs} />
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* MỤC E: CÂU HỎI TỪ CỘNG ĐỒNG */}
-        <CommunityQuestionsList subject={mon as "dan-su" | "hanh-chinh" | "doanh-nghiep"} chapter="c01" />
+        <CommunityQuestionsList
+          subject={mon as "dan-su" | "hanh-chinh" | "doanh-nghiep"}
+          chapter="c01"
+        />
       </main>
 
       <TabBar />

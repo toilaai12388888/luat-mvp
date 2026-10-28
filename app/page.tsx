@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, ChevronRight } from "lucide-react";
+import { Calendar, ChevronRight, Scale } from "lucide-react";
 import { TopBar } from "@/components/ui/TopBar";
 import { TabBar } from "@/components/ui/TabBar";
 import { HomeHero } from "@/components/home/HomeHero";
@@ -47,7 +47,7 @@ export default async function HomePage() {
         {/* FEATURE 3: THỬ THÁCH HẰNG NGÀY BANNER */}
         <Link
           href="/hang-ngay"
-          className="press mb-6 flex items-center justify-between rounded-2xl border border-navy-bar/30 bg-navy-soft/60 p-4 transition-all hover:border-navy-bar"
+          className="press mb-3 flex items-center justify-between rounded-2xl border border-navy-bar/30 bg-navy-soft/60 p-4 transition-all hover:border-navy-bar"
         >
           <div className="flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-navy-bar text-white shadow-sm">
@@ -62,6 +62,33 @@ export default async function HomePage() {
               </div>
               <p className="text-xs text-ink-2">
                 Bộ đề chung toàn quốc · Thẻ kết quả Wordle chia sẻ story
+              </p>
+            </div>
+          </div>
+          <ChevronRight size={18} className="text-navy-bar" />
+        </Link>
+
+        {/* TÍNH NĂNG MỚI: LUYỆN ÁN THẬT BANNER */}
+        <Link
+          href="/luyen-an"
+          className="press mb-6 flex items-center justify-between rounded-2xl border border-navy-bar/30 bg-surface p-4 transition-all hover:border-navy-bar hover:shadow-md"
+        >
+          <div className="flex items-center gap-3">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-navy-bar text-white shadow-sm">
+              <Scale size={20} />
+            </span>
+            <div>
+              <div className="flex items-center gap-1.5">
+                <span className="text-sm font-bold text-navy-ink">Luyện án thật</span>
+                <span className="rounded bg-purple-500/10 px-1.5 py-0.2 text-[10px] font-bold text-purple-700 dark:text-purple-300 border border-purple-500/20">
+                  Mới
+                </span>
+                <span className="rounded bg-gold-soft px-1.5 py-0.2 text-[10px] font-bold text-gold-ink">
+                  3 vụ án
+                </span>
+              </div>
+              <p className="text-xs text-ink-2">
+                Bản án & Án lệ thực tế · Tự đối chiếu với phán quyết của Tòa án
               </p>
             </div>
           </div>

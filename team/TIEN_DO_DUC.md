@@ -59,3 +59,27 @@
 - Mạng nội bộ cơ quan (`10.1.206.36`) có tường lửa chặn `Application: github-uploading` (trả về lỗi HTTP 503 khi thực hiện lệnh POST `git push`).
 - Đức chỉ cần kết nối mạng cá nhân (hoặc phát 4G/hotspot) và gõ `git push origin main` trên máy tính để đẩy commit lên GitHub. Vercel sẽ tự động deploy bản mới.
 - Trên Supabase SQL Editor: Dán file `supabase/migrations/20261028_complete_usage_and_leaderboard.sql` và bấm Run.
+
+
+---
+
+# PHASE 4: TÍNH NĂNG "LUYỆN ÁN THẬT" (28/10)
+
+## Trạng thái tổng quan: HOÀN THÀNH 100% VÀ SẴN SÀNG TRIỂN KHAI PRODUCTION
+- **Kiểm tra chất lượng:** `npm run check` -> 0 lỗi lint, 0 lỗi typecheck, 177 items nội dung được kiểm tra (12 tình huống, 3 vụ án thật với 12 câu hỏi), build production static HTML hoàn tất.
+- **Phạm vi hoàn thành:**
+  1. **Nguồn án chính thức và xác thực:**
+     - **Dân sự:** Án lệ số 25/2018/AL của Hội đồng Thẩm phán TANDTC (Tranh chấp phạt cọc mua bán nhà khi chậm cấp sổ đỏ vì lý do khách quan). Gắn với Chương c02: Hợp đồng và Biện pháp bảo đảm (Điều 328 BLDS 2015).
+     - **Doanh nghiệp:** Quyết định giải quyết việc dân sự số 126/2022/KDTM-PT ngày 22/03/2022 của TAND TP. Hồ Chí Minh (Yêu cầu hủy bỏ Nghị quyết Đại hội đồng cổ đông do vi phạm thủ tục mời họp và gửi tài liệu). Gắn với Chương c02: Công ty cổ phần (Điều 143, 151 Luật Doanh nghiệp 2020).
+     - **Hành chính:** Bản án hành chính phúc thẩm số 01/2021/HC-PT ngày 27/05/2021 của TAND tỉnh Tuyên Quang (Khiếu kiện Quyết định xử phạt VPHC của Trưởng Công an thị trấn). Gắn với Chương c01: Xử phạt vi phạm hành chính (Điều 39, 58 Luật Xử lý vi phạm hành chính).
+  2. **Quy trình luyện tập 4 bước:**
+     - **Bước 1 — Hồ sơ vụ việc:** Tóm tắt tình tiết trung tính, thông tin nguồn gốc tòa án, cấp xét xử, ngày ban hành, các bên đương sự, diễn biến và yêu cầu khởi kiện. Có liên kết đến bản án gốc kèm cảnh báo mở sớm có thể thấy trước kết quả.
+     - **Bước 2 — Câu hỏi trọng tâm:** 4 câu hỏi trắc nghiệm theo chuỗi tư duy (vấn đề pháp lý → tình tiết then chốt → căn cứ → áp dụng → kết quả). Có nút mở xem lại tình tiết bất kỳ lúc nào mà không mất lựa chọn. Không làm lộ đáp án và phán quyết trước bước 4.
+     - **Bước 3 — Lập luận tùy chọn:** 3 ô chuẩn (Vấn đề – Căn cứ – Kết luận) kèm gợi ý tư duy. Lưu nháp an toàn trên thiết bị (localStorage), không gửi lên server. Nút "Bỏ qua và xem đối chiếu" và "Hoàn thành & Xem đối chiếu".
+     - **Bước 4 — Đối chiếu:** Hiển thị chi tiết đáp án câu hỏi kèm căn cứ điều luật, nhận định nguyên văn của Tòa án, phán quyết cuối cùng, bảng tự đối chiếu 3 cột và ghi chú sư phạm (kết luận khác Tòa không đồng nghĩa với vô giá trị).
+  3. **Tích hợp hệ thống:**
+     - Tích hợp ghi nhận đo lường `trackUsage("lesson", count, sessionKey)` chống ghi trùng.
+     - Tích hợp cộng điểm hoàn thành (+20 XP), cập nhật chuỗi streak ngày.
+     - Nút báo sai in-app (`ReportButton`) kết nối bảng `item_reports` trên Supabase.
+     - Điểm truy cập từ Trang chủ (`app/page.tsx`), trang chi tiết môn (`app/mon/[mon]/page.tsx`) và sitemap (`app/sitemap.ts`).
+  4. **Tài liệu bàn giao:** Đã tạo file hướng dẫn chi tiết `team/HUONG_DAN_THEM_AN_THAT.md` hướng dẫn cấu trúc file JSON và quy trình thêm vụ mới.

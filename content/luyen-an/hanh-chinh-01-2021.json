@@ -1,0 +1,160 @@
+{
+  "id": "hanh-chinh-01-2021",
+  "slug": "khieu-kien-quyet-dinh-xu-phat-vi-pham-hanh-chinh-cua-truong-cong-an",
+  "title": "Khiếu kiện Quyết định xử phạt vi phạm hành chính của Trưởng Công an thị trấn",
+  "mon": "hanh-chinh",
+  "chuong": "c01",
+  "ten_chuong": "Xử phạt vi phạm hành chính",
+  "thoi_gian_phut": 7,
+  "do_kho": "vua-suc",
+  "nguon": {
+    "so_hieu": "Bản án phúc thẩm số 01/2021/HC-PT",
+    "ngay_ban_hanh": "2021-05-27",
+    "toa_an": "Tòa án nhân dân tỉnh Tuyên Quang",
+    "cap_xet_xu": "Phúc thẩm",
+    "loai_nguon": "ban-an-phuc-tham",
+    "url_cong_bo": "https://congbobanan.toaan.gov.vn",
+    "ngay_truy_cap": "2026-10-28",
+    "hieu_luc": "Bản án phúc thẩm có hiệu lực pháp luật kể từ ngày tuyên án (27/05/2021)",
+    "la_an_le": false
+  },
+  "luat_ap_dung": {
+    "luat_thoi_diem": "Luật Xử lý vi phạm hành chính 2012 (Điều 39, Điều 58, Điều 66)",
+    "luat_hien_hanh": "Luật Xử lý vi phạm hành chính sửa đổi, bổ sung 2020",
+    "ghi_chu_thay_doi": "Thẩm quyền xử phạt của Trưởng Công an cấp xã/thị trấn tại Điều 39 và thủ tục lập biên bản VPHC tại Điều 58 Luật XLVPHC 2012 tiếp tục được kế thừa và hoàn thiện trong Luật sửa đổi 2020."
+  },
+  "ho_so": {
+    "cac_ben": [
+      {
+        "vai_tro": "Người khởi kiện (Người kháng cáo)",
+        "ten": "Bà Nguyễn Thị H",
+        "mo_ta": "Cá nhân bị lập biên bản và ban hành quyết định xử phạt vi phạm hành chính về hành vi vi phạm trật tự công cộng tại địa phương."
+      },
+      {
+        "vai_tro": "Người bị kiện",
+        "ten": "Trưởng Công an thị trấn N, huyện N, tỉnh Tuyên Quang",
+        "mo_ta": "Người có thẩm quyền xử phạt vi phạm hành chính thuộc lực lượng Công an nhân dân cấp cơ sở."
+      }
+    ],
+    "dien_bien": [
+      "Tại khu vực chợ thị trấn N xảy ra vụ xô xát, gây rối trật tự công cộng giữa bà Nguyễn Thị H và một số người dân, làm xáo trộn hoạt động kinh doanh buôn bán và an ninh trật tự khu vực.",
+      "Cán bộ Công an thị trấn N đã kịp thời có mặt giải tán đám đông, lấy lời khai của người làm chứng và tiến hành lập Biên bản vi phạm hành chính đối với bà Nguyễn Thị H về hành vi gây mất trật tự công cộng. Bà H không đồng ý và từ chối ký biên bản, người lập biên bản đã ghi rõ lý do và có chữ ký xác nhận của đại diện chính quyền cơ sở cùng người chứng kiến.",
+      "Căn cứ biên bản vi phạm hành chính và kết quả xác minh, trong thời hạn luật định, Trưởng Công an thị trấn N ban hành Quyết định xử phạt vi phạm hành chính số 15/QĐ-XPHC phạt tiền 300.000 đồng đối với bà Nguyễn Thị H.",
+      "Bà H khởi kiện ra Tòa án nhân dân huyện N yêu cầu hủy quyết định xử phạt với lý do bản thân không có lỗi, bị vu khống và cho rằng Trưởng Công an thị trấn không có thẩm quyền xử phạt.",
+      "Tòa án cấp sơ thẩm xét xử bác toàn bộ đơn khởi kiện của bà H. Bà H tiếp tục kháng cáo lên Tòa án nhân dân tỉnh Tuyên Quang theo thủ tục phúc thẩm."
+    ],
+    "yeu_cau_khoi_kien": "Bà Nguyễn Thị H yêu cầu Tòa án tuyên hủy Quyết định xử phạt vi phạm hành chính số 15/QĐ-XPHC của Trưởng Công an thị trấn N.",
+    "can_cu_tom_tat": [
+      "Bản án hành chính sơ thẩm số 01/2021/HC-ST của TAND huyện N và Bản án hành chính phúc thẩm số 01/2021/HC-PT của TAND tỉnh Tuyên Quang."
+    ]
+  },
+  "cau_hoi": [
+    {
+      "id": "hc-01-q1",
+      "cau_hoi": "Theo Luật Xử lý vi phạm hành chính, Trưởng Công an cấp xã/thị trấn có thẩm quyền xử phạt vi phạm hành chính không?",
+      "lua_chon": [
+        "Có thẩm quyền, được phạt cảnh cáo và phạt tiền trong hạn mức luật định theo Điều 39 Luật XLVPHC",
+        "Hoàn toàn không có thẩm quyền xử phạt, chỉ Chủ tịch UBND cấp huyện mới được ra quyết định",
+        "Chỉ có quyền hòa giải mâu thuẫn chứ không được xử phạt bất kỳ hành vi nào",
+        "Chỉ có quyền xử phạt người có hộ khẩu thường trú tại địa phương khác"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Căn cứ khoản 2 Điều 39 Luật Xử lý vi phạm hành chính 2012, Trưởng Công an cấp xã/thị trấn có thẩm quyền phạt cảnh cáo và phạt tiền đến mức quy định đối với các hành vi vi phạm trật tự công cộng, trật tự an toàn xã hội thuộc địa bàn quản lý.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+          "dieu": "Điều 39 Khoản 2",
+          "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143794.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hc-01-q2",
+      "cau_hoi": "Khi người vi phạm từ chối ký vào Biên bản vi phạm hành chính, biên bản đó có giá trị pháp lý làm căn cứ ra quyết định xử phạt không?",
+      "lua_chon": [
+        "Vẫn có giá trị pháp lý nếu người lập biên bản ghi rõ lý do và có chữ ký xác nhận của đại diện chính quyền hoặc người chứng kiến",
+        "Tự động mất hiệu lực pháp luật ngay lập tức và vụ việc bị đình chỉ",
+        "Cơ quan công an buộc phải áp dụng biện pháp tạm giữ người để bắt buộc ký vào biên bản",
+        "Biên bản chỉ có giá trị nếu được Tòa án nhân dân công nhận bằng bản án"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Khoản 2 và khoản 3 Điều 58 Luật XLVPHC 2012 quy định rõ: trường hợp người vi phạm không ký biên bản thì người lập biên bản phải ghi rõ lý do vào biên bản và có chữ ký của đại diện chính quyền cấp xã hoặc người chứng kiến. Biên bản được lập đúng thủ tục này vẫn có giá trị pháp lý đầy đủ.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Xử lý vi phạm hành chính 2012",
+          "dieu": "Điều 58",
+          "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Xu-ly-vi-pham-hanh-chinh-2012-143794.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hc-01-q3",
+      "cau_hoi": "Tại phiên tòa phúc thẩm, người khởi kiện không cung cấp được tài liệu, chứng cứ mới phản bác hồ sơ xác minh của cơ quan công an. Hội đồng xét xử đánh giá chứng cứ như thế nào?",
+      "lua_chon": [
+        "Căn cứ vào biên bản, lời khai nhân chứng và tài liệu xác minh trong hồ sơ để khẳng định hành vi vi phạm có thật",
+        "Mặc nhiên tuyên hủy quyết định xử phạt vì người dân luôn được suy đoán không vi phạm hành chính",
+        "Đình chỉ giải quyết vụ án vô thời hạn để chờ đương sự tìm kiếm thêm chứng cứ",
+        "Chuyển toàn bộ hồ sơ cho Viện kiểm sát nhân dân tối cao giải quyết"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Theo Luật Tố tụng hành chính, Tòa án đánh giá chứng cứ khách quan, toàn diện. Khi các tài liệu, biên bản và lời khai nhân chứng độc lập trong hồ sơ chứng minh hành vi vi phạm xảy ra trên thực tế mà người khởi kiện không có chứng cứ phản bác thì tính có căn cứ của quyết định xử phạt được công nhận.",
+      "can_cu": [
+        {
+          "van_ban": "Luật Tố tụng hành chính 2015",
+          "dieu": "Điều 86",
+          "link": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-to-tung-hanh-chinh-2015-292350.aspx"
+        }
+      ]
+    },
+    {
+      "id": "hc-01-q4",
+      "cau_hoi": "Tòa án nhân dân tỉnh Tuyên Quang đã phán quyết như thế nào trong Bản án phúc thẩm số 01/2021/HC-PT?",
+      "lua_chon": [
+        "Bác kháng cáo của bà Nguyễn Thị H, giữ nguyên bản án sơ thẩm, công nhận Quyết định xử phạt là hợp pháp",
+        "Chấp nhận kháng cáo, tuyên hủy toàn bộ Quyết định xử phạt vi phạm hành chính",
+        "Giảm mức tiền phạt từ 300.000 đồng xuống 100.000 đồng và cảnh cáo Trưởng Công an thị trấn",
+        "Tuyên hủy bản án sơ thẩm để giao hồ sơ cho cơ quan điều tra hình sự"
+      ],
+      "dap_an": 0,
+      "giai_thich": "Tòa án cấp phúc thẩm xác định Quyết định xử phạt vi phạm hành chính của Trưởng Công an thị trấn N ban hành đúng thẩm quyền, đúng trình tự thủ tục và có đầy đủ căn cứ thực tế. Tòa phúc thẩm bác toàn bộ kháng cáo của bà H.",
+      "can_cu": [
+        {
+          "van_ban": "Bản án số 01/2021/HC-PT",
+          "dieu": "Phần Quyết định",
+          "link": "https://congbobanan.toaan.gov.vn"
+        }
+      ]
+    }
+  ],
+  "goi_y_lap_luan": {
+    "van_de": "Xác định rõ: Quyết định xử phạt của Trưởng Công an thị trấn có bảo đảm đúng thẩm quyền (Điều 39) và trình tự lập biên bản (Điều 58) theo Luật Xử lý vi phạm hành chính hay không?",
+    "can_cu": "Vận dụng Điều 39 về thẩm quyền xử phạt của Công an nhân dân và Điều 58 về giá trị của biên bản khi người vi phạm không chịu ký.",
+    "ket_luan": "Đưa ra đánh giá công tâm dựa trên hồ sơ chứng cứ hiện trường và nguyên tắc thượng tôn pháp luật trong quản lý hành chính công."
+  },
+  "doi_chieu": {
+    "nhan_dinh_toa_an": [
+      "Biên bản vi phạm hành chính do Công an thị trấn N lập đã phản ánh đúng diễn biến vụ việc gây rối trật tự tại hiện trường, có chữ ký của người chứng kiến và đại diện chính quyền cơ sở theo đúng quy định tại Điều 58 Luật Xử lý vi phạm hành chính.",
+      "Căn cứ khoản 2 Điều 39 Luật Xử lý vi phạm hành chính 2012, Trưởng Công an thị trấn N có đầy đủ thẩm quyền ban hành quyết định xử phạt tiền 300.000 đồng đối với hành vi vi phạm trật tự công cộng trên địa bàn quản lý.",
+      "Tại phiên tòa phúc thẩm, người kháng cáo không đưa ra được tài liệu, chứng cứ mới làm thay đổi bản chất vụ án. Quyết định xử phạt của Trưởng Công an thị trấn N là có căn cứ, đúng pháp luật."
+    ],
+    "quyet_dinh_cuoi_cung": "Bác kháng cáo của bà Nguyễn Thị H. Giữ nguyên Bản án hành chính sơ thẩm số 01/2021/HC-ST của TAND huyện N, tỉnh Tuyên Quang: Bác toàn bộ yêu cầu khởi kiện của bà Nguyễn Thị H về việc hủy Quyết định xử phạt vi phạm hành chính số 15/QĐ-XPHC của Trưởng Công an thị trấn N.",
+    "bang_tu_doi_chieu": [
+      {
+        "van_de": "Thẩm quyền xử phạt của Trưởng Công an",
+        "y_chinh_toa_an": "Trưởng Công an cấp xã/thị trấn có thẩm quyền xử phạt đối với hành vi vi phạm trật tự công cộng trên địa bàn trong hạn mức luật định.",
+        "cau_hoi_tu_ra": "Bạn có kiểm tra đúng thẩm quyền của Trưởng Công an thị trấn theo khoản 2 Điều 39 Luật XLVPHC chưa?"
+      },
+      {
+        "van_de": "Giá trị pháp lý của biên bản khi từ chối ký",
+        "y_chinh_toa_an": "Biên bản vẫn có giá trị chứng cứ đầy đủ khi có người chứng kiến và đại diện chính quyền ký xác nhận.",
+        "cau_hoi_tu_ra": "Lập luận của bạn đã làm rõ quy trình xử lý khi người vi phạm không chịu ký biên bản theo Điều 58 chưa?"
+      },
+      {
+        "van_de": "Đánh giá chứng cứ khách quan",
+        "y_chinh_toa_an": "Quyết định xử phạt được ban hành dựa trên tài liệu xác minh hiện trường, lời khai nhân chứng độc lập.",
+        "cau_hoi_tu_ra": "Kết luận của bạn có dựa trên tính có căn cứ của tài liệu hồ sơ hay dựa vào lời khẳng định một chiều của người khiếu kiện?"
+      }
+    ],
+    "luu_y_bien_tap": "Nội dung vụ việc được biên tập dựa trên Bản án hành chính phúc thẩm số 01/2021/HC-PT của TAND tỉnh Tuyên Quang. Tên các đương sự và địa chỉ cụ thể đã được ẩn danh theo quy định bảo vệ bí mật đời tư."
+  }
+}
