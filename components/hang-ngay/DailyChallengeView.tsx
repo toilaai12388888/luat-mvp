@@ -68,7 +68,7 @@ export function DailyChallengeView() {
 
     saveDailyRecord(newRecord);
     setRecord(newRecord);
-    trackUsage("daily", 5);
+    trackUsage("daily", 5, `daily_${todayStr}`);
   };
 
   const handleCopy = async () => {

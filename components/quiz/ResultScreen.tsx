@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Zap, Flame, Swords, Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -60,9 +60,14 @@ export function ResultScreen({
   const [creating, setCreating] = useState(false);
   const [showContributeModal, setShowContributeModal] = useState(false);
 
+  const sessionIdRef = useRef<string>("");
+
   useEffect(() => {
+    if (!sessionIdRef.current) {
+      sessionIdRef.current = `quiz_${Date.now()}_${total}`;
+    }
     recordActivityToday();
-    trackUsage("lesson", total);
+    trackUsage("lesson", total, sessionIdRef.current);
     const hasCompletedBefore = localStorage.getItem("luat_has_completed_quiz");
     if (!hasCompletedBefore) {
       localStorage.setItem("luat_has_completed_quiz", "true");

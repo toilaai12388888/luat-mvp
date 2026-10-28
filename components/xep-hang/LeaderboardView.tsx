@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import Link from "next/link";
 import {
   Trophy,
   School,
@@ -9,11 +10,14 @@ import {
   Medal,
   Zap,
   Sparkles,
+  AlertCircle,
+  RefreshCw,
+  BookOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { TabBar } from "@/components/ui/TabBar";
 import { PlayerProfile, getLocalPlayer } from "@/lib/player";
-import { fetchLeaderboard, LeaderboardEntry } from "@/lib/leaderboard";
+import { fetchLeaderboard, LeaderboardEntry, LeaderboardStatus } from "@/lib/leaderboard";
 import { NicknameModal } from "@/components/auth/NicknameModal";
 
 export function LeaderboardView() {
@@ -21,19 +25,36 @@ export function LeaderboardView() {
   const [player, setPlayer] = useState<PlayerProfile | null>(() => getLocalPlayer());
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
   const [myEntry, setMyEntry] = useState<LeaderboardEntry | null>(null);
+  const [status, setStatus] = useState<LeaderboardStatus>("loading");
+  const [errorMessage, setErrorMessage] = useState<string>("");
   const [showNickModal, setShowNickModal] = useState(false);
-  
+
+  const handleRefresh = useCallback(async () => {
+    setStatus("loading");
+    setErrorMessage("");
+    const res = await fetchLeaderboard(scope);
+    setEntries(res.entries);
+    setMyEntry(res.myEntry);
+    setStatus(res.status);
+    if (res.errorMessage) {
+      setErrorMessage(res.errorMessage);
+    }
+  }, [scope]);
 
   useEffect(() => {
-    let isMounted = true;
+    let ignore = false;
     fetchLeaderboard(scope).then((res) => {
-      if (isMounted) {
+      if (!ignore) {
         setEntries(res.entries);
         setMyEntry(res.myEntry);
+        setStatus(res.status);
+        if (res.errorMessage) {
+          setErrorMessage(res.errorMessage);
+        }
       }
     });
     return () => {
-      isMounted = false;
+      ignore = true;
     };
   }, [scope]);
 
@@ -113,110 +134,185 @@ export function LeaderboardView() {
           </button>
         </div>
 
-        {/* Top 3 Podium Cards */}
-        {top3.length > 0 && (
-          <div className="grid grid-cols-3 gap-2 pt-2">
-            {/* Rank 2 */}
-            {top3[1] && (
-              <div className="flex flex-col items-center justify-end rounded-2xl border border-line bg-surface p-3 text-center shadow-sm">
-                <div className="relative mb-2">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-bg-2 text-ink-2 font-bold text-base border border-line">
-                    2
-                  </div>
-                  <Medal size={16} className="absolute -bottom-1 -right-1 text-slate-400" />
-                </div>
-                <span className="text-xs font-bold text-ink truncate w-full">
-                  {top3[1].nickname}
-                </span>
-                <span className="text-[10px] text-ink-3 truncate w-full">
-                  {top3[1].school}
-                </span>
-                <span className="mt-1 text-xs font-extrabold text-navy-ink">
-                  {top3[1].xp} XP
-                </span>
-              </div>
-            )}
-
-            {/* Rank 1 (Tallest/Prominent) */}
-            {top3[0] && (
-              <div className="flex flex-col items-center justify-end rounded-2xl border-2 border-gold/60 bg-gold-soft/30 p-3 text-center shadow-md relative -translate-y-2">
-                <Crown size={20} className="text-gold fill-current mb-1" />
-                <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-gold text-white font-black text-lg shadow-sm mb-2">
-                  1
-                </div>
-                <span className="text-xs font-black text-ink truncate w-full">
-                  {top3[0].nickname}
-                </span>
-                <span className="text-[10px] text-ink-3 truncate w-full font-medium">
-                  {top3[0].school}
-                </span>
-                <span className="mt-1 text-xs font-black text-gold-ink">
-                  {top3[0].xp} XP
-                </span>
-              </div>
-            )}
-
-            {/* Rank 3 */}
-            {top3[2] && (
-              <div className="flex flex-col items-center justify-end rounded-2xl border border-line bg-surface p-3 text-center shadow-sm">
-                <div className="relative mb-2">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-bg-2 text-ink-2 font-bold text-base border border-line">
-                    3
-                  </div>
-                  <Medal size={16} className="absolute -bottom-1 -right-1 text-amber-700" />
-                </div>
-                <span className="text-xs font-bold text-ink truncate w-full">
-                  {top3[2].nickname}
-                </span>
-                <span className="text-[10px] text-ink-3 truncate w-full">
-                  {top3[2].school}
-                </span>
-                <span className="mt-1 text-xs font-extrabold text-navy-ink">
-                  {top3[2].xp} XP
-                </span>
-              </div>
-            )}
+        {/* 1. TRẠNG THÁI ĐANG TẢI (LOADING) */}
+        {status === "loading" && (
+          <div className="flex flex-col gap-3 py-4">
+            <div className="grid grid-cols-3 gap-2 pt-2">
+              <div className="h-32 rounded-2xl bg-bg-2 animate-pulse" />
+              <div className="h-36 rounded-2xl bg-bg-2 animate-pulse -translate-y-2" />
+              <div className="h-32 rounded-2xl bg-bg-2 animate-pulse" />
+            </div>
+            <div className="flex flex-col gap-2 mt-2">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="h-14 rounded-xl bg-bg-2 animate-pulse" />
+              ))}
+            </div>
           </div>
         )}
 
-        {/* Rest of the leaderboard (4-50) */}
-        <div className="flex flex-col gap-2 mt-1">
-          {rest.map((entry) => (
-            <div
-              key={entry.playerId}
-              className={`flex items-center justify-between rounded-xl border p-3 transition-colors ${
-                entry.isMe
-                  ? "border-navy-bar bg-navy-soft/60 text-navy-ink shadow-sm"
-                  : "border-line bg-surface text-ink"
-              }`}
-            >
-              <div className="flex items-center gap-3">
-                <span className="w-6 text-center text-xs font-bold text-ink-3">
-                  #{entry.rank}
-                </span>
-                <div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-xs font-bold text-ink">
-                      {entry.nickname}
-                    </span>
-                    {entry.isMe && (
-                      <span className="rounded bg-navy-bar px-1.5 py-0.2 text-[9px] font-bold text-white">
-                        BẠN
-                      </span>
-                    )}
-                  </div>
-                  <span className="text-[10px] text-ink-3 block">
-                    {entry.school}
-                  </span>
-                </div>
-              </div>
-
-              <span className="text-xs font-black text-navy-ink">
-                +{entry.xp} XP
-              </span>
+        {/* 2. TRẠNG THÁI LỖI TRUY VẤN HOẶC MẤT MẠNG */}
+        {status === "error" && (
+          <div className="flex flex-col items-center justify-center p-6 text-center rounded-2xl border border-line bg-surface mt-2">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 text-rose-600 mb-3">
+              <AlertCircle size={24} />
             </div>
-          ))}
-        </div>
+            <h3 className="text-sm font-bold text-ink">Chưa thể tải bảng xếp hạng</h3>
+            <p className="mt-1 text-xs text-ink-2 max-w-xs">
+              {errorMessage || "Đã có lỗi xảy ra trong quá trình tải dữ liệu. Vui lòng kiểm tra kết nối mạng và thử lại."}
+            </p>
+            <Button
+              onClick={handleRefresh}
+              size="sm"
+              className="mt-4 h-9 px-4 text-xs font-bold flex items-center gap-1.5"
+            >
+              <RefreshCw size={14} />
+              Thử lại
+            </Button>
+          </div>
+        )}
+
+        {/* 3. TRẠNG THÁI CHƯA CÓ NGƯỜI TÍCH LŨY XP TUẦN NÀY (EMPTY) */}
+        {status === "empty" && (
+          <div className="flex flex-col items-center justify-center p-8 text-center rounded-2xl border border-line bg-surface mt-2">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-soft text-gold mb-3">
+              <Trophy size={28} />
+            </div>
+            <h3 className="text-sm font-bold text-ink">Tuần này chưa có người tích lũy XP</h3>
+            <p className="mt-1.5 text-xs text-ink-2 max-w-xs leading-relaxed">
+              {scope === "school" && player
+                ? `Trường ${player.school} chưa có sinh viên nào tích lũy điểm trong tuần. Hãy là người mở đầu!`
+                : "Bảng xếp hạng được làm mới vào đầu mỗi tuần (Thứ Hai). Hãy làm bài tập ngay để trở thành người dẫn đầu tuần này!"}
+            </p>
+            <div className="mt-5 flex gap-2">
+              <Link href="/">
+                <Button size="sm" className="h-9 px-4 text-xs font-bold flex items-center gap-1.5">
+                  <BookOpen size={14} />
+                  Bắt đầu làm bài
+                </Button>
+              </Link>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleRefresh}
+                className="h-9 px-3 text-xs font-bold text-ink-2"
+              >
+                <RefreshCw size={14} />
+              </Button>
+            </div>
+          </div>
+        )}
+
+        {/* 4. TRẠNG THÁI CÓ DỮ LIỆU THẬT */}
+        {status === "ok" && (
+          <>
+            {/* Top 3 Podium Cards */}
+            {top3.length > 0 && (
+              <div className="grid grid-cols-3 gap-2 pt-2">
+                {/* Rank 2 */}
+                {top3[1] && (
+                  <div className="flex flex-col items-center justify-end rounded-2xl border border-line bg-surface p-3 text-center shadow-sm">
+                    <div className="relative mb-2">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-bg-2 text-ink-2 font-bold text-base border border-line">
+                        2
+                      </div>
+                      <Medal size={16} className="absolute -bottom-1 -right-1 text-slate-400" />
+                    </div>
+                    <span className="text-xs font-bold text-ink truncate w-full">
+                      {top3[1].nickname}
+                    </span>
+                    <span className="text-[10px] text-ink-3 truncate w-full">
+                      {top3[1].school}
+                    </span>
+                    <span className="mt-1 text-xs font-extrabold text-navy-ink">
+                      {top3[1].xp} XP
+                    </span>
+                  </div>
+                )}
+
+                {/* Rank 1 (Tallest/Prominent) */}
+                {top3[0] && (
+                  <div className="flex flex-col items-center justify-end rounded-2xl border-2 border-gold/60 bg-gold-soft/30 p-3 text-center shadow-md relative -translate-y-2">
+                    <Crown size={20} className="text-gold fill-current mb-1" />
+                    <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-gold text-white font-black text-lg shadow-sm mb-2">
+                      1
+                    </div>
+                    <span className="text-xs font-black text-ink truncate w-full">
+                      {top3[0].nickname}
+                    </span>
+                    <span className="text-[10px] text-ink-3 truncate w-full font-medium">
+                      {top3[0].school}
+                    </span>
+                    <span className="mt-1 text-xs font-black text-gold-ink">
+                      {top3[0].xp} XP
+                    </span>
+                  </div>
+                )}
+
+                {/* Rank 3 */}
+                {top3[2] && (
+                  <div className="flex flex-col items-center justify-end rounded-2xl border border-line bg-surface p-3 text-center shadow-sm">
+                    <div className="relative mb-2">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-bg-2 text-ink-2 font-bold text-base border border-line">
+                        3
+                      </div>
+                      <Medal size={16} className="absolute -bottom-1 -right-1 text-amber-700" />
+                    </div>
+                    <span className="text-xs font-bold text-ink truncate w-full">
+                      {top3[2].nickname}
+                    </span>
+                    <span className="text-[10px] text-ink-3 truncate w-full">
+                      {top3[2].school}
+                    </span>
+                    <span className="mt-1 text-xs font-extrabold text-navy-ink">
+                      {top3[2].xp} XP
+                    </span>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Rest of the leaderboard (4-50) */}
+            {rest.length > 0 && (
+              <div className="flex flex-col gap-2 mt-1">
+                {rest.map((entry) => (
+                  <div
+                    key={entry.playerId}
+                    className={`flex items-center justify-between rounded-xl border p-3 transition-colors ${
+                      entry.isMe
+                        ? "border-navy-bar bg-navy-soft/60 text-navy-ink shadow-sm"
+                        : "border-line bg-surface text-ink"
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="w-6 text-center text-xs font-bold text-ink-3">
+                        #{entry.rank}
+                      </span>
+                      <div>
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-xs font-bold text-ink">
+                            {entry.nickname}
+                          </span>
+                          {entry.isMe && (
+                            <span className="rounded bg-navy-bar px-1.5 py-0.2 text-[9px] font-bold text-white">
+                              BẠN
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-[10px] text-ink-3 block">
+                          {entry.school}
+                        </span>
+                      </div>
+                    </div>
+
+                    <span className="text-xs font-black text-navy-ink">
+                      +{entry.xp} XP
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </>
+        )}
       </main>
 
       {/* Sticky Bottom: My Current Rank */}
@@ -250,7 +346,7 @@ export function LeaderboardView() {
         onClose={() => setShowNickModal(false)}
         onSuccess={(p) => {
           setPlayer(p);
-          fetchLeaderboard(scope).then((res) => { setEntries(res.entries); setMyEntry(res.myEntry); });
+          handleRefresh();
         }}
       />
     </div>

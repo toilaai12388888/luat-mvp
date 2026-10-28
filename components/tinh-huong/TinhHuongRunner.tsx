@@ -103,7 +103,7 @@ export function TinhHuongRunner({
       setScenarioIndex((prev) => prev + 1);
     } else {
       setIsFinishedAll(true);
-      trackUsage("lesson", scenarios.reduce((sum, s) => sum + s.buoc.length, 0));
+      trackUsage("lesson", scenarios.reduce((sum, s) => sum + s.buoc.length, 0), `th_${monSlug}_${Date.now()}`);
     }
   };
 

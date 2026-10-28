@@ -42,7 +42,7 @@ export function MockTestRunner({ items, config, onExit }: MockTestRunnerProps) {
     if (isSubmitted) return;
     setIsSubmitted(true);
     if (timerRef.current) clearInterval(timerRef.current);
-    trackUsage("lesson", Object.keys(answers).length);
+    trackUsage("lesson", Object.keys(answers).length, `mock_${Date.now()}`);
 
     let correct = 0;
     items.forEach((item, idx) => {

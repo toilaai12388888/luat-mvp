@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { UsageAnalyticsView } from "@/components/admin/UsageAnalyticsView";
 import { 
+  BarChart3,
   ShieldAlert, 
   CheckCircle2, 
   XCircle, 
@@ -92,7 +94,7 @@ export default function QuanTriPage() {
   const [reports, setReports] = useState<ItemReport[]>([]);
 
   // Tab state
-  const [activeTab, setActiveTab] = useState<"contribs" | "comments" | "reports">("contribs");
+  const [activeTab, setActiveTab] = useState<"usage" | "contribs" | "comments" | "reports">("usage");
   const [contribFilter, setContribFilter] = useState<"all" | "pending" | "approved" | "rejected">("pending");
   const [reportFilter, setReportFilter] = useState<"all" | "unresolved" | "resolved">("unresolved");
 
@@ -466,7 +468,18 @@ export default function QuanTriPage() {
         </div>
 
         {/* Tab Navigator */}
-        <div className="flex border-b border-slate-800 mb-6 gap-2">
+        <div className="flex border-b border-slate-800 mb-6 gap-2 overflow-x-auto">
+          <button
+            onClick={() => setActiveTab("usage")}
+            className={`pb-3 px-3 text-sm font-semibold border-b-2 flex items-center gap-2 transition cursor-pointer whitespace-nowrap ${
+              activeTab === "usage"
+                ? "border-amber-500 text-amber-400"
+                : "border-transparent text-slate-400 hover:text-slate-200"
+            }`}
+          >
+            <BarChart3 size={16} />
+            Thống kê sử dụng
+          </button>
           <button
             onClick={() => setActiveTab("contribs")}
             className={`pb-3 px-3 text-sm font-semibold border-b-2 flex items-center gap-2 transition cursor-pointer ${
@@ -518,6 +531,9 @@ export default function QuanTriPage() {
             )}
           </button>
         </div>
+
+        {/* TAB 0: THỐNG KÊ NGƯỜI DÙNG */}
+        {activeTab === "usage" && <UsageAnalyticsView pin={pin} />}
 
         {/* TAB 1: CÂU ĐÓNG GÓP */}
         {activeTab === "contribs" && (
