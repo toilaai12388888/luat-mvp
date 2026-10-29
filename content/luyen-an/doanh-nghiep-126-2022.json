@@ -13,15 +13,15 @@
     "toa_an": "Tòa án nhân dân Thành phố Hồ Chí Minh",
     "cap_xet_xu": "Phúc thẩm",
     "loai_nguon": "ban-an-phuc-tham",
-    "url_cong_bo": "https://congbobanan.toaan.gov.vn",
+    "url_cong_bo": "https://congbobanan.toaan.gov.vn/2ta897042t1cvn/chi-tiet-ban-an",
     "ngay_truy_cap": "2026-10-28",
     "hieu_luc": "Quyết định có hiệu lực pháp luật kể từ ngày ra quyết định (22/03/2022)",
     "la_an_le": false
   },
   "luat_ap_dung": {
-    "luat_thoi_diem": "Luật Doanh nghiệp 2014 (Điều 114, Điều 139, Điều 147)",
-    "luat_hien_hanh": "Luật Doanh nghiệp 2020 (Điều 115, Điều 143, Điều 151)",
-    "ghi_chu_thay_doi": "Khoản 1 Điều 143 Luật Doanh nghiệp 2020 quy định thời hạn gửi thông báo mời họp ĐHĐCĐ tối thiểu là 21 ngày trước ngày khai mạc nếu Điều lệ không quy định thời hạn dài hơn. Quyền yêu cầu Tòa án hủy bỏ nghị quyết ĐHĐCĐ trong 90 ngày được quy định tại Điều 151."
+    "luat_thoi_diem": "Luật Doanh nghiệp 2014 (Điều 114, Điều 139, Điều 147 - áp dụng cho việc triệu tập và biểu quyết tại ĐHĐCĐ tháng 10 và tháng 11/2020)",
+    "luat_hien_hanh": "Luật Doanh nghiệp 2020 (Điều 115, Điều 143, Điều 151 - quy định tương ứng có hiệu lực từ 01/01/2021)",
+    "ghi_chu_thay_doi": "Hai điểm thay đổi quan trọng trong Luật Doanh nghiệp 2020 so với luật 2014: (1) Thời hạn gửi thông báo mời họp ĐHĐCĐ tối thiểu tăng từ 15 ngày lên 21 ngày (Khoản 1 Điều 143 LDN 2020); (2) Tỷ lệ sở hữu cổ phần để cổ đông yêu cầu hủy nghị quyết ĐHĐCĐ giảm từ 10% xuống 5% và bãi bỏ điều kiện phải sở hữu liên tục 6 tháng (Khoản 2 Điều 115 và Điều 151 LDN 2020)."
   },
   "ho_so": {
     "cac_ben": [
@@ -54,17 +54,22 @@
       "cau_hoi": "Nhóm cổ đông sở hữu 24,5% cổ phần phổ thông có quyền yêu cầu Tòa án hủy bỏ Nghị quyết Đại hội đồng cổ đông hay không?",
       "lua_chon": [
         "Có quyền, vì đáp ứng tỷ lệ sở hữu luật định và nộp đơn trong thời hiệu 90 ngày",
-        "Không có quyền, vì chỉ cổ đông nắm giữ từ 51% cổ phần mới có quyền khởi kiện công ty",
-        "Không có quyền, vì nghị quyết ĐHĐCĐ là quyết định nội bộ tối cao mà Tòa án không được can thiệp",
-        "Chỉ có quyền nếu được sự đồng ý bằng văn bản của Chủ tịch Hội đồng quản trị"
+        "Không có quyền, vì phải sở hữu trên 51% cổ phần mới được yêu cầu hủy",
+        "Không có quyền, vì Nghị quyết đã được thông qua bởi đa số trên 65% tổng số phiếu",
+        "Chỉ có quyền nếu được Hội đồng quản trị công ty đồng ý bằng văn bản"
       ],
       "dap_an": 0,
-      "giai_thich": "Căn cứ Điều 151 Luật Doanh nghiệp 2020 (kế thừa Điều 147 Luật Doanh nghiệp 2014), cổ đông hoặc nhóm cổ đông sở hữu từ 5% tổng số cổ phần phổ thông trở lên có quyền yêu cầu Tòa án hủy bỏ nghị quyết ĐHĐCĐ trong thời hạn 90 ngày kể từ ngày nhận được nghị quyết.",
+      "giai_thich": "Căn cứ khoản 2 Điều 114 và Điều 147 Luật Doanh nghiệp 2014 áp dụng tại thời điểm xảy ra sự việc (tương ứng Điều 115 và Điều 151 Luật Doanh nghiệp 2020 hiện hành), nhóm cổ đông sở hữu từ 10% (nay theo luật 2020 là từ 5%) tổng số cổ phần phổ thông có quyền yêu cầu Tòa án hủy bỏ nghị quyết ĐHĐCĐ trong thời hạn 90 ngày kể từ ngày nhận được biên bản họp hoặc nghị quyết. Nhóm nguyên đơn sở hữu 24,5% nên có đầy đủ quyền khởi kiện.",
       "can_cu": [
         {
-          "van_ban": "Luật Doanh nghiệp 2020",
-          "dieu": "Điều 151",
-          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-445984.aspx"
+          "van_ban": "Quyết định số 126/2022/KDTM-PT",
+          "dieu": "Đoạn [2] phần Nhận định của Tòa án (Trang 4-5 bản án gốc)",
+          "link": "https://congbobanan.toaan.gov.vn/2ta897042t1cvn/chi-tiet-ban-an"
+        },
+        {
+          "van_ban": "Luật Doanh nghiệp 2014 / LDN 2020",
+          "dieu": "Điều 114 Khoản 2 & Điều 147 LDN 2014 (tương ứng Điều 115 & Điều 151 LDN 2020)",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-2014-259730.aspx"
         }
       ]
     },
@@ -73,17 +78,22 @@
       "cau_hoi": "Hành vi nào của Công ty Cổ phần Đ6 cấu thành vi phạm nghiêm trọng về thủ tục triệu tập họp ĐHĐCĐ?",
       "lua_chon": [
         "Gửi thư mời họp không bảo đảm thời hạn tối thiểu và không gửi kèm tài liệu thảo luận, biểu quyết",
-        "Tổ chức cuộc họp tại trụ sở công ty thay vì thuê phòng hội nghị tại khách sạn 5 sao",
-        "Không phát biểu khai mạc cuộc họp bằng cả tiếng Việt và tiếng Anh",
-        "Không phát quà lưu niệm và tài trợ chi phí đi lại cho các cổ đông tham dự"
+        "Tổ chức họp tại trụ sở chính của công ty thay vì thuê hội trường bên ngoài",
+        "Chỉ gửi thông báo bằng đường bưu điện mà không đăng bài trên báo in trung ương",
+        "Cho phép cổ đông ủy quyền cho người khác tham dự cuộc họp"
       ],
       "dap_an": 0,
-      "giai_thich": "Theo Luật Doanh nghiệp và Điều lệ công ty, thông báo mời họp phải được gửi đúng thời hạn quy định kèm theo chương trình, tài liệu liên quan đến nội dung biểu quyết. Vi phạm thời hạn và không gửi tài liệu tước bỏ quyền nghiên cứu, thảo luận và biểu quyết của cổ đông.",
+      "giai_thich": "Theo khoản 1 Điều 139 Luật Doanh nghiệp 2014 và Điều lệ công ty, thông báo mời họp phải gửi chậm nhất 15 ngày trước ngày khai mạc (Luật Doanh nghiệp 2020 hiện hành nâng lên 21 ngày theo Điều 143) kèm theo chương trình, tài liệu thảo luận, dự thảo nghị quyết. Công ty gửi thông báo ngày 28/10/2020 cho cuộc họp ngày 10/11/2020 (chỉ cách 13 ngày) và không gửi kèm tài liệu biểu quyết, tước đoạt quyền nghiên cứu và biểu quyết thực chất của cổ đông.",
       "can_cu": [
         {
-          "van_ban": "Luật Doanh nghiệp 2020",
-          "dieu": "Điều 143",
-          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-445984.aspx"
+          "van_ban": "Quyết định số 126/2022/KDTM-PT",
+          "dieu": "Đoạn [3.1] & [3.2] phần Nhận định của Tòa án (Trang 5 bản án gốc)",
+          "link": "https://congbobanan.toaan.gov.vn/2ta897042t1cvn/chi-tiet-ban-an"
+        },
+        {
+          "van_ban": "Luật Doanh nghiệp 2014",
+          "dieu": "Điều 139 Khoản 1 & Khoản 3 (tương ứng Điều 143 LDN 2020)",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-2014-259730.aspx"
         }
       ]
     },
@@ -92,17 +102,22 @@
       "cau_hoi": "Lập luận của Công ty Đ6 cho rằng Nghị quyết đã được đa số trên 65% phiếu tán thành nên không thể bị hủy có đúng với quy định pháp luật không?",
       "lua_chon": [
         "Không đúng, vì việc vi phạm nghiêm trọng trình tự triệu tập đã xâm phạm trực tiếp quyền của cổ đông khác, là căn cứ luật định để Tòa án hủy bỏ",
-        "Đúng hoàn toàn, vì trong công ty cổ phần nguyên tắc biểu quyết theo đa số luôn vượt lên trên mọi thủ tục",
-        "Đúng, vì nghị quyết một khi đã thi hành trên thực tế thì Tòa án không có quyền xem xét lại",
-        "Chỉ đúng nếu công ty chia thêm cổ tức bằng tiền mặt cho các cổ đông vắng mặt"
+        "Đúng hoàn toàn, vì nguyên tắc tập trung dân chủ công nhận quyết định của phe đa số luôn có hiệu lực tối cao",
+        "Đúng, vì Tòa án chỉ được hủy nghị quyết nếu có gian lận kiểm phiếu trực tiếp tại phòng họp",
+        "Đúng, vì cổ đông thiểu số chỉ có quyền yêu cầu mua lại cổ phần chứ không có quyền kiện hủy"
       ],
       "dap_an": 0,
-      "giai_thich": "Pháp luật doanh nghiệp bảo vệ quyền của cổ đông thiểu số. Ngoại trừ trường hợp 100% cổ phần có quyền biểu quyết tham dự và thông qua (Điều 152), mọi nghị quyết được thông qua từ cuộc họp vi phạm nghiêm trọng trình tự, thủ tục triệu tập đều là căn cứ để Tòa án tuyên hủy.",
+      "giai_thich": "Căn cứ Điều 147 Luật Doanh nghiệp 2014 (tương ứng Điều 151 LDN 2020), khi trình tự và thủ tục triệu tập họp ĐHĐCĐ vi phạm nghiêm trọng quy định của Luật và Điều lệ công ty thì Tòa án xem xét hủy bỏ nghị quyết. Ngoại trừ trường hợp 100% cổ phần có quyền biểu quyết tham dự và thông qua (Điều 148 LDN 2014 / Điều 152 LDN 2020), tỷ lệ đa số 65% không thể hợp thức hóa việc tước quyền tham gia và biểu quyết hợp pháp của các cổ đông khác.",
       "can_cu": [
         {
-          "van_ban": "Luật Doanh nghiệp 2020",
-          "dieu": "Điều 151, Điều 152",
-          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-so-59-2020-QH14-445984.aspx"
+          "van_ban": "Quyết định số 126/2022/KDTM-PT",
+          "dieu": "Đoạn [4] phần Nhận định của Tòa án (Trang 6 bản án gốc)",
+          "link": "https://congbobanan.toaan.gov.vn/2ta897042t1cvn/chi-tiet-ban-an"
+        },
+        {
+          "van_ban": "Luật Doanh nghiệp 2014",
+          "dieu": "Điều 147 & Điều 148 (tương ứng Điều 151 & Điều 152 LDN 2020)",
+          "link": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Luat-Doanh-nghiep-2014-259730.aspx"
         }
       ]
     },
@@ -111,25 +126,25 @@
       "cau_hoi": "Tòa án nhân dân Thành phố Hồ Chí Minh đã phán quyết như thế nào trong vụ việc này?",
       "lua_chon": [
         "Bác kháng cáo của Công ty Đ6, giữ nguyên quyết định sơ thẩm tuyên hủy bỏ toàn bộ hai Nghị quyết ĐHĐCĐ",
-        "Chấp nhận kháng cáo của Công ty Đ6, công nhận tính hiệu lực của hai Nghị quyết",
-        "Buộc Công ty Đ6 phải mua lại toàn bộ cổ phần của bà T và bà H với giá thị trường",
-        "Đình chỉ giải quyết vụ việc vì cho rằng tranh chấp phải thuộc thẩm quyền của Trọng tài thương mại"
+        "Chấp nhận kháng cáo của Công ty Đ6, công nhận hai Nghị quyết ĐHĐCĐ có hiệu lực",
+        "Tuyên hủy một phần nội dung nghị quyết liên quan đến nhóm nguyên đơn",
+        "Đình chỉ giải quyết vụ việc và chuyển hồ sơ sang cơ quan công an điều tra"
       ],
       "dap_an": 0,
-      "giai_thich": "Tòa án xác định việc triệu tập họp vi phạm nghiêm trọng thời hạn gửi thông báo và thiếu tài liệu biểu quyết, ảnh hưởng đến quyền của cổ đông. Tòa phúc thẩm bác kháng cáo của công ty và giữ nguyên quyết định tuyên hủy cả hai nghị quyết.",
+      "giai_thich": "TAND TP.HCM xác định Công ty Đ6 vi phạm nghiêm trọng thời hạn gửi thông báo và không gửi kèm tài liệu biểu quyết, ảnh hưởng đến quyền của cổ đông. Tòa phúc thẩm không chấp nhận kháng cáo của công ty và giữ nguyên quyết định sơ thẩm tuyên hủy bỏ toàn bộ Nghị quyết ĐHĐCĐ thường niên và Nghị quyết ĐHĐCĐ bất thường.",
       "can_cu": [
         {
           "van_ban": "Quyết định số 126/2022/KDTM-PT",
-          "dieu": "Phần Quyết định",
-          "link": "https://congbobanan.toaan.gov.vn"
+          "dieu": "Phần Quyết định (Trang 7 bản án gốc)",
+          "link": "https://congbobanan.toaan.gov.vn/2ta897042t1cvn/chi-tiet-ban-an"
         }
       ]
     }
   ],
   "goi_y_lap_luan": {
-    "van_de": "Xác định rõ: Việc không bảo đảm thời hạn gửi thông báo mời họp và không gửi kèm tài liệu biểu quyết có cấu thành vi phạm nghiêm trọng trình tự, thủ tục theo Điều 151 Luật Doanh nghiệp hay không?",
-    "can_cu": "Vận dụng Điều 115 (quyền của cổ đông), Điều 143 (mời họp ĐHĐCĐ) và Điều 151 (hủy bỏ nghị quyết ĐHĐCĐ) của Luật Doanh nghiệp.",
-    "ket_luan": "Đưa ra kết luận vì sao nguyên tắc bảo vệ quyền cổ đông thiểu số đòi hỏi phải tuyên hủy các nghị quyết được ban hành từ cuộc họp vi phạm nghiêm trọng thủ tục luật định."
+    "van_de": "Xác định rõ: Việc không bảo đảm thời hạn gửi thông báo mời họp và không gửi kèm tài liệu biểu quyết có cấu thành vi phạm nghiêm trọng trình tự, thủ tục triệu tập theo Luật Doanh nghiệp và Điều lệ công ty hay không?",
+    "can_cu": "Vận dụng quy định về quyền cổ đông, thời hạn gửi thông báo mời họp và căn cứ yêu cầu Tòa án hủy bỏ nghị quyết ĐHĐCĐ theo Luật Doanh nghiệp 2014 (Điều 114, 139, 147) và đối chiếu Luật Doanh nghiệp 2020 tương ứng.",
+    "ket_luan": "Đưa ra đánh giá: Vi phạm về thủ tục triệu tập có làm ảnh hưởng đến giá trị pháp lý của nghị quyết được đa số thông qua hay không? Quyết định xử lý đối với yêu cầu khởi kiện của nhóm cổ đông nên như thế nào?"
   },
   "doi_chieu": {
     "nhan_dinh_toa_an": [

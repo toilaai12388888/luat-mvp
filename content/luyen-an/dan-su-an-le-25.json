@@ -20,9 +20,9 @@
     "so_an_le": "Án lệ số 25/2018/AL"
   },
   "luat_ap_dung": {
-    "luat_thoi_diem": "Điều 358 Bộ luật Dân sự 2005",
-    "luat_hien_hanh": "Điều 328 Bộ luật Dân sự 2015",
-    "ghi_chu_thay_doi": "Bản chất quy định về đặt cọc và hậu quả xử lý tài sản đặt cọc tại Điều 328 BLDS 2015 kế thừa Điều 358 BLDS 2005; Án lệ số 25/2018/AL giải thích rõ nguyên tắc không áp dụng phạt cọc khi vi phạm do lý do khách quan."
+    "luat_thoi_diem": "Bộ luật Dân sự 2005 (Điều 358 - áp dụng cho việc giao kết đặt cọc và giải quyết tranh chấp trong Quyết định giám đốc thẩm năm 2012)",
+    "luat_hien_hanh": "Bộ luật Dân sự 2015 (Điều 328 - quy định tương ứng hiện hành)",
+    "ghi_chu_thay_doi": "Bản chất quy định về đặt cọc và phạt cọc tại Điều 358 BLDS 2005 được kế thừa tại Điều 328 BLDS 2015. Quyết định giám đốc thẩm năm 2012 áp dụng BLDS 2005; sau đó được Hội đồng Thẩm phán TANDTC phát triển thành Án lệ số 25/2018/AL (thông qua ngày 17/10/2018, công bố theo QĐ 269/QĐ-CA ngày 06/11/2018) để áp dụng thống nhất cho các vụ việc tương tự."
   },
   "ho_so": {
     "cac_ben": [
@@ -51,26 +51,31 @@
   "cau_hoi": [
     {
       "id": "ds-al25-q1",
-      "cau_hoi": "Mục đích pháp lý của thỏa thuận đặt cọc giữa Bên A và Bên B theo quy định của Bộ luật Dân sự là gì?",
+      "cau_hoi": "Mục đích pháp lý của thỏa thuận đặt cọc giữa Bên A và Bên B theo quy định pháp luật về đặt cọc là gì?",
       "lua_chon": [
         "Bảo đảm cho việc giao kết hợp đồng mua bán nhà ở",
-        "Thực hiện một phần nghĩa vụ thanh toán của hợp đồng mua bán",
-        "Ủy quyền cho Bên B đứng tên làm sổ đỏ thay cho Bên A",
-        "Đặt cược phụ thuộc vào quyết định hành chính của cơ quan nhà nước"
+        "Thay thế hoàn toàn hợp đồng chuyển nhượng quyền sở hữu nhà ở",
+        "Thực hiện nghĩa vụ trả nợ vay tài sản có bảo đảm",
+        "Đặt trước tiền để cơ quan nhà nước cấp Giấy chứng nhận"
       ],
       "dap_an": 0,
-      "giai_thich": "Căn cứ Điều 328 Bộ luật Dân sự 2015 (kế thừa Điều 358 BLDS 2005), đặt cọc là việc một bên giao tài sản đặt cọc cho bên kia trong một thời hạn để bảo đảm giao kết hoặc thực hiện hợp đồng. Ở đây hợp đồng mua bán chưa được giao kết, đặt cọc nhằm mục đích bảo đảm giao kết hợp đồng.",
+      "giai_thich": "Căn cứ khoản 1 Điều 358 Bộ luật Dân sự 2005 áp dụng tại thời điểm xét xử vụ án (tương ứng khoản 1 Điều 328 BLDS 2015 hiện hành), đặt cọc là việc một bên giao cho bên kia một khoản tiền hoặc tài sản trong một thời hạn để bảo đảm giao kết hoặc thực hiện hợp đồng dân sự. Ở đây hai bên lập hợp đồng đặt cọc nhằm mục đích bảo đảm cho việc sau đó sẽ ký hợp đồng mua bán nhà ở chính thức.",
       "can_cu": [
         {
-          "van_ban": "Bộ luật Dân sự 2015",
-          "dieu": "Điều 328 Khoản 1",
+          "van_ban": "Án lệ số 25/2018/AL (nguồn: Quyết định 79/2012/DS-GĐT)",
+          "dieu": "Đoạn [1] phần Khái quát nội dung án lệ & Đoạn [1] phần Nhận định của Tòa án",
+          "link": "https://anle.toaan.gov.vn/webcenter/portal/anle/chi-tiet-an-le?dDocName=TAND072049"
+        },
+        {
+          "van_ban": "Bộ luật Dân sự 2005 / BLDS 2015",
+          "dieu": "Điều 358 Khoản 1 BLDS 2005 (tương ứng Điều 328 Khoản 1 BLDS 2015)",
           "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-283877.aspx"
         }
       ]
     },
     {
       "id": "ds-al25-q2",
-      "cau_hoi": "Yếu tố pháp lý nào có ý nghĩa quyết định khi xem xét Bên B có phải chịu chế tài phạt cọc hay không?",
+      "cau_hoi": "Yếu tố pháp lý nào có ý nghĩa quyết định khi Tòa án xem xét Bên B có phải chịu chế tài phạt cọc hay không?",
       "lua_chon": [
         "Yếu tố lỗi chủ quan của Bên B trong việc không hoàn tất thủ tục đúng hạn",
         "Biến động giá trị của căn nhà trên thị trường bất động sản",
@@ -78,18 +83,18 @@
         "Hợp đồng đặt cọc có được công chứng tại phòng công chứng nhà nước hay không"
       ],
       "dap_an": 0,
-      "giai_thich": "Phạt cọc là chế tài dân sự áp dụng khi bên vi phạm có lỗi chủ quan trong việc từ chối giao kết hoặc không thực hiện cam kết. Nếu sự kiện chậm trễ xảy ra do nguyên nhân khách quan ngoài ý chí và nỗ lực của đương sự, yếu tố lỗi bị loại trừ.",
+      "giai_thich": "Theo nguyên tắc trách nhiệm dân sự và nội dung Án lệ 25/2018/AL, phạt cọc chỉ áp dụng khi bên vi phạm có lỗi chủ quan trong việc từ chối giao kết hoặc không thực hiện cam kết. Nếu việc chậm trễ do nguyên nhân khách quan từ cơ quan nhà nước kéo dài thủ tục cấp giấy chứng nhận ngoài ý chí của đương sự thì lỗi chủ quan bị loại trừ và không áp dụng phạt cọc.",
       "can_cu": [
         {
           "van_ban": "Án lệ số 25/2018/AL",
-          "dieu": "Nội dung án lệ",
+          "dieu": "Đoạn [2] phần Khái quát nội dung án lệ & Đoạn [3] phần Nhận định của Tòa án",
           "link": "https://anle.toaan.gov.vn/webcenter/portal/anle/chi-tiet-an-le?dDocName=TAND072049"
         }
       ]
     },
     {
       "id": "ds-al25-q3",
-      "cau_hoi": "Theo khoản 2 Điều 328 Bộ luật Dân sự 2015, chế tài phạt cọc đối với bên nhận đặt cọc được quy định như thế nào nếu không có thỏa thuận khác?",
+      "cau_hoi": "Theo quy định pháp luật dân sự về đặt cọc, chế tài phạt cọc đối với bên nhận đặt cọc được quy định như thế nào nếu không có thỏa thuận khác?",
       "lua_chon": [
         "Phải trả cho bên đặt cọc tài sản đặt cọc và một khoản tiền tương đương giá trị tài sản đặt cọc",
         "Chỉ cần hoàn trả lại đúng số tiền đặt cọc đã nhận mà không phải chịu bất kỳ khoản tiền nào",
@@ -97,12 +102,17 @@
         "Bị phạt vi phạm hợp đồng tối đa 8% giá trị phần nghĩa vụ vi phạm"
       ],
       "dap_an": 0,
-      "giai_thich": "Khoản 2 Điều 328 BLDS 2015 quy định: Trường hợp bên nhận đặt cọc từ chối việc giao kết, thực hiện hợp đồng thì phải trả cho bên đặt cọc tài sản đặt cọc và một khoản tiền tương đương giá trị tài sản đặt cọc, trừ trường hợp có thỏa thuận khác.",
+      "giai_thich": "Khoản 2 Điều 358 BLDS 2005 áp dụng trong vụ việc (và tương ứng khoản 2 Điều 328 BLDS 2015 hiện hành) quy định: Trường hợp bên nhận đặt cọc từ chối việc giao kết, thực hiện hợp đồng dân sự thì phải trả cho bên đặt cọc tài sản đặt cọc và một khoản tiền tương đương giá trị tài sản đặt cọc, trừ trường hợp có thỏa thuận khác.",
       "can_cu": [
         {
-          "van_ban": "Bộ luật Dân sự 2015",
-          "dieu": "Điều 328 Khoản 2",
+          "van_ban": "Bộ luật Dân sự 2005 / BLDS 2015",
+          "dieu": "Khoản 2 Điều 358 BLDS 2005 (tương ứng Khoản 2 Điều 328 BLDS 2015)",
           "link": "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-dan-su-2015-283877.aspx"
+        },
+        {
+          "van_ban": "Án lệ số 25/2018/AL",
+          "dieu": "Đoạn [2] phần Khái quát nội dung án lệ",
+          "link": "https://anle.toaan.gov.vn/webcenter/portal/anle/chi-tiet-an-le?dDocName=TAND072049"
         }
       ]
     },
@@ -116,20 +126,20 @@
         "Tuyên hủy hợp đồng đặt cọc và tịch thu số tiền cọc nộp vào ngân sách nhà nước"
       ],
       "dap_an": 0,
-      "giai_thich": "Hội đồng Thẩm phán TANDTC xác định việc Bên B chậm hoàn thành thủ tục cấp Giấy chứng nhận là do nguyên nhân khách quan từ cơ quan nhà nước kéo dài thời gian xử lý hồ sơ, Bên B không có lỗi nên không phải chịu phạt cọc mà chỉ phải hoàn trả số tiền cọc đã nhận cho Bên A.",
+      "giai_thich": "Hội đồng Thẩm phán TANDTC xác định việc Bên B chậm hoàn thành thủ tục cấp Giấy chứng nhận là do nguyên nhân khách quan từ cơ quan nhà nước kéo dài thời gian xử lý hồ sơ. Bên B không có lỗi nên không phải chịu phạt cọc mà chỉ có nghĩa vụ hoàn trả số tiền cọc đã nhận cho Bên A.",
       "can_cu": [
         {
-          "van_ban": "Án lệ số 25/2018/AL",
-          "dieu": "Đoạn 4 phần Nhận định",
+          "van_ban": "Án lệ số 25/2018/AL (Quyết định 79/2012/DS-GĐT)",
+          "dieu": "Đoạn [4] phần Nhận định của Tòa án & Phần Quyết định",
           "link": "https://anle.toaan.gov.vn/webcenter/portal/anle/chi-tiet-an-le?dDocName=TAND072049"
         }
       ]
     }
   ],
   "goi_y_lap_luan": {
-    "van_de": "Xác định rõ: Việc Bên B chậm trễ hoàn tất thủ tục cấp Giấy chứng nhận quyền sở hữu nhà ở có phải là hành vi vi phạm có lỗi dẫn đến chế tài phạt cọc theo Điều 328 BLDS hay không?",
-    "can_cu": "Vận dụng Điều 328 BLDS 2015 kết hợp nguyên tắc của Án lệ số 25/2018/AL về việc loại trừ trách nhiệm phạt cọc do nguyên nhân khách quan từ cơ quan nhà nước.",
-    "ket_luan": "Đưa ra hướng giải quyết công bằng: Bên B không có lỗi chủ quan nên không phải chịu phạt cọc, nhưng không được chiếm giữ tài sản cọc vô căn cứ mà phải hoàn trả lại tiền cọc cho Bên A."
+    "van_de": "Xác định rõ: Việc Bên B chậm trễ hoàn tất thủ tục cấp Giấy chứng nhận quyền sở hữu nhà ở có phải là hành vi vi phạm do lỗi chủ quan dẫn đến chế tài phạt cọc hay không?",
+    "can_cu": "Đối chiếu quy định về đặt cọc và điều kiện áp dụng phạt cọc (Điều 358 BLDS 2005 / Điều 328 BLDS 2015); đánh giá tác động của yếu tố khách quan từ phía cơ quan nhà nước.",
+    "ket_luan": "Đưa ra đề xuất hướng phán quyết: Có chấp nhận yêu cầu phạt cọc của Bên A hay không? Nghĩa vụ hoàn trả hoặc xử lý khoản tiền đặt cọc đã nhận giữa hai bên được giải quyết như thế nào?"
   },
   "doi_chieu": {
     "nhan_dinh_toa_an": [

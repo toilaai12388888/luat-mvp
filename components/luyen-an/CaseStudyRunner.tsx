@@ -1,32 +1,30 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
-  BookOpen,
-  CheckCircle2,
-  XCircle,
-  ExternalLink,
   ChevronRight,
   ChevronLeft,
-  Scale,
-  FileText,
-  HelpCircle,
-  PenTool,
   Check,
-  AlertTriangle,
+  CheckCircle2,
+  XCircle,
+  HelpCircle,
   RotateCcw,
+  BookOpen,
+  Scale,
   Sparkles,
-  Info,
+  ExternalLink,
+  FileText,
+  AlertTriangle,
+  PenTool,
 } from "lucide-react";
-import { CaseStudy } from "@/lib/case-study-schema";
 import { Button } from "@/components/ui/Button";
-import { CanCuList } from "@/components/ui/CanCuList";
 import { ReportButton } from "@/components/ui/ReportButton";
-import { saveAttempt } from "@/lib/attempts";
-import { recordActivityToday } from "@/lib/push";
+import { CaseStudy } from "@/lib/case-study-schema";
 import { trackUsage } from "@/lib/usage";
+import { saveAttempt } from "@/lib/attempts";
+import { syncWeeklyXpToSupabase } from "@/lib/player";
 
 interface CaseStudyRunnerProps {
   caseStudy: CaseStudy;
@@ -41,11 +39,51 @@ interface DraftArgument {
 }
 
 export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
-  const [step, setStep] = useState<Step>(1);
+  // Khởi tạo step an toàn từ localStorage (chống trang trắng)
+  const [step, setStepState] = useState<Step>(() => {
+    if (typeof window === "undefined") return 1;
+    try {
+      const saved = localStorage.getItem(`luatle_case_step_${caseStudy.id}`);
+      if (saved) {
+        const num = Number(saved);
+        if ([1, 2, 3, 4].includes(num)) return num as Step;
+      }
+    } catch {
+      // Bỏ qua lỗi lưu trữ
+    }
+    return 1;
+  });
+
+  const setStep = (newStep: Step) => {
+    setStepState(newStep);
+    try {
+      localStorage.setItem(`luatle_case_step_${caseStudy.id}`, String(newStep));
+    } catch {
+      // Bỏ qua lỗi lưu trữ
+    }
+  };
+
   const [currentQIndex, setCurrentQIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<number, number>>({});
+
+  // Khởi tạo câu trả lời trắc nghiệm an toàn từ localStorage (chống mất khi reload/xem lại hồ sơ)
+  const [answers, setAnswers] = useState<Record<number, number>>(() => {
+    if (typeof window === "undefined") return {};
+    try {
+      const saved = localStorage.getItem(`luatle_case_answers_${caseStudy.id}`);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed && typeof parsed === "object") return parsed;
+      }
+    } catch {
+      // Bỏ qua lỗi lưu trữ
+    }
+    return {};
+  });
+
   const [showFactModal, setShowFactModal] = useState(false);
   const [skippedArgument, setSkippedArgument] = useState(false);
+
+  // Khởi tạo bản nháp 3 ô tự luận an toàn từ localStorage
   const [draft, setDraft] = useState<DraftArgument>(() => {
     if (typeof window === "undefined") {
       return { vanDe: "", canCu: "", ketLuan: "" };
@@ -63,18 +101,28 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
         }
       }
     } catch {
-      // Bỏ qua lỗi localStorage bị chặn
+      // Bỏ qua lỗi lưu trữ
     }
     return { vanDe: "", canCu: "", ketLuan: "" };
   });
+
   const [draftSavedToast, setDraftSavedToast] = useState(false);
   const [isEditingArgumentInStep4, setIsEditingArgumentInStep4] = useState(false);
 
-  const sessionKeyRef = useRef<string>("");
-
-  useEffect(() => {
-    sessionKeyRef.current = `casestudy_${caseStudy.id}_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
-  }, [caseStudy.id]);
+  // Khởi tạo runId duy nhất cho phiên làm bài hiện tại (tránh double count XP & Analytics)
+  const [runId] = useState<string>(() => {
+    if (typeof window === "undefined") return `run_${caseStudy.id}_${Date.now()}`;
+    try {
+      let current = sessionStorage.getItem(`luatle_case_run_${caseStudy.id}`);
+      if (!current) {
+        current = `run_${caseStudy.id}_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
+        sessionStorage.setItem(`luatle_case_run_${caseStudy.id}`, current);
+      }
+      return current;
+    } catch {
+      return `run_${caseStudy.id}_${Date.now()}`;
+    }
+  });
 
   const saveDraftToStorage = (newDraft: DraftArgument) => {
     setDraft(newDraft);
@@ -83,36 +131,61 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
       setDraftSavedToast(true);
       setTimeout(() => setDraftSavedToast(false), 2000);
     } catch {
-      // Bỏ qua
+      // Bỏ qua lỗi lưu trữ
     }
   };
 
   const handleSelectAnswer = (qIdx: number, optIdx: number) => {
-    setAnswers((prev) => ({
-      ...prev,
-      [qIdx]: optIdx,
-    }));
+    setAnswers((prev) => {
+      const next = {
+        ...prev,
+        [qIdx]: optIdx,
+      };
+      try {
+        localStorage.setItem(`luatle_case_answers_${caseStudy.id}`, JSON.stringify(next));
+      } catch {
+        // Bỏ qua lỗi lưu trữ
+      }
+      return next;
+    });
   };
 
   const handleCompleteToStep4 = (skipped: boolean) => {
     setSkippedArgument(skipped);
     setStep(4);
 
-    // Ghi nhận đo lường không trùng lặp và lưu XP/tiến độ
-    if (sessionKeyRef.current) {
-      trackUsage("lesson", caseStudy.cau_hoi.length, sessionKeyRef.current);
+    // Khóa chống trao thưởng và ghi nhận trùng lặp cho cùng một phiên làm bài
+    const awardedKey = `luatle_case_awarded_${caseStudy.id}_${runId}`;
+    let alreadyAwarded = false;
+    try {
+      alreadyAwarded = localStorage.getItem(awardedKey) === "true";
+    } catch {
+      // Bỏ qua lỗi lưu trữ
     }
 
-    try {
-      // Đánh dấu đã hoàn thành vụ án
-      const rawCompleted = localStorage.getItem("luatle_completed_cases");
-      const list: string[] = rawCompleted ? JSON.parse(rawCompleted) : [];
-      if (!list.includes(caseStudy.slug)) {
-        list.push(caseStudy.slug);
-        localStorage.setItem("luatle_completed_cases", JSON.stringify(list));
+    if (!alreadyAwarded) {
+      try {
+        localStorage.setItem(awardedKey, "true");
+      } catch {
+        // Bỏ qua lỗi lưu trữ
       }
 
-      // Lưu attempts câu hỏi để tính vào thống kê luyện tập
+      // 1. Ghi nhận đo lường không trùng lặp (1 lần / sessionKey)
+      trackUsage("lesson", caseStudy.cau_hoi.length, runId);
+
+      // 2. Thưởng +15 XP duy nhất cho lượt hoàn thành (tuân thủ giới hạn add_weekly_xp: 1 <= delta <= 15)
+      syncWeeklyXpToSupabase(15).catch(() => {});
+
+      // 3. Lưu attempt vụ án hoàn thành với 15 XP
+      saveAttempt({
+        itemId: `case-${caseStudy.id}`,
+        itemType: "mcq",
+        subject: caseStudy.mon,
+        isCorrect: true,
+        xp: 15,
+      });
+
+      // 4. Lưu attempts cho từng câu hỏi với xp: 0 (ghi nhận lịch sử và wrong tracker mà không spam rate-limit 2 giây)
       caseStudy.cau_hoi.forEach((q, idx) => {
         const userChoice = answers[idx];
         const isCorrect = userChoice === q.dap_an;
@@ -121,15 +194,38 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
           itemType: "mcq",
           subject: caseStudy.mon,
           isCorrect,
-          xp: isCorrect ? 10 : 0,
+          xp: 0,
         });
       });
 
-      // Tích lũy streak ngày
-      recordActivityToday();
-    } catch {
-      // Bỏ qua
+      // 5. Đánh dấu đã hoàn thành vụ án vào danh sách
+      try {
+        const rawCompleted = localStorage.getItem("luatle_completed_cases");
+        const list: string[] = rawCompleted ? JSON.parse(rawCompleted) : [];
+        if (!list.includes(caseStudy.slug)) {
+          list.push(caseStudy.slug);
+          localStorage.setItem("luatle_completed_cases", JSON.stringify(list));
+        }
+      } catch {
+        // Bỏ qua lỗi lưu trữ
+      }
+
+      // 6. Tích lũy streak ngày
     }
+  };
+
+  const handleResetToPracticeAgain = () => {
+    try {
+      localStorage.removeItem(`luatle_case_answers_${caseStudy.id}`);
+      localStorage.removeItem(`luatle_case_step_${caseStudy.id}`);
+      sessionStorage.removeItem(`luatle_case_run_${caseStudy.id}`);
+    } catch {
+      // Bỏ qua lỗi lưu trữ
+    }
+    setStep(1);
+    setCurrentQIndex(0);
+    setAnswers({});
+    setSkippedArgument(false);
   };
 
   const allAnswered = caseStudy.cau_hoi.every((_, idx) => answers[idx] !== undefined);
@@ -150,34 +246,46 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
 
           <div className="flex items-center gap-1.5 sm:gap-2">
             {[
-              { num: 1, label: "Hồ sơ" },
-              { num: 2, label: "Câu hỏi" },
-              { num: 3, label: "Lập luận" },
-              { num: 4, label: "Đối chiếu" },
+              { num: 1 as Step, label: "Hồ sơ" },
+              { num: 2 as Step, label: "Câu hỏi" },
+              { num: 3 as Step, label: "Lập luận" },
+              { num: 4 as Step, label: "Đối chiếu" },
             ].map((s) => {
               const active = step === s.num;
               const passed = step > s.num;
+              const canNavigate = s.num <= step || (s.num === 2) || (s.num === 3 && allAnswered);
+
               return (
                 <div key={s.num} className="flex items-center gap-1 sm:gap-1.5">
-                  <span
-                    className={`flex h-6 px-2 sm:px-2.5 items-center justify-center rounded-full text-xs font-bold transition-colors ${
+                  <button
+                    type="button"
+                    disabled={!canNavigate}
+                    onClick={() => {
+                      if (canNavigate) setStep(s.num);
+                    }}
+                    className={`flex h-6 px-2 sm:px-2.5 items-center justify-center rounded-full text-xs font-bold transition-all ${
                       active
-                        ? "bg-navy-bar text-white shadow-sm"
+                        ? "bg-navy-bar text-white shadow-sm ring-2 ring-navy-bar/20"
                         : passed
-                        ? "bg-good-soft text-good"
-                        : "bg-bg text-ink-3 border border-line"
+                        ? "bg-good-soft text-good hover:opacity-80 cursor-pointer"
+                        : canNavigate
+                        ? "bg-bg text-ink-2 border border-line hover:border-navy-bar cursor-pointer"
+                        : "bg-bg text-ink-3 border border-line opacity-50 cursor-not-allowed"
                     }`}
                   >
                     {passed ? <Check size={12} className="inline mr-0.5" /> : null}
                     {s.num}. {s.label}
-                  </span>
+                  </button>
                   {s.num < 4 && <ChevronRight size={12} className="text-ink-3" />}
                 </div>
               );
             })}
           </div>
 
-          <ReportButton itemId={caseStudy.id} />
+          <div className="flex items-center gap-1">
+            <span className="text-[11px] text-ink-3 hidden sm:inline">Vụ:</span>
+            <ReportButton itemId={caseStudy.id} />
+          </div>
         </div>
       </header>
 
@@ -218,56 +326,43 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
 
             {/* Hộp nguồn gốc chính thức */}
             <div className="rounded-2xl border border-line bg-surface p-4 space-y-2 text-xs">
-              <div className="flex items-center gap-2 font-bold text-navy-ink">
-                <Scale size={16} className="text-navy-bar" />
+              <div className="flex items-center gap-2 font-bold text-ink">
+                <Scale size={15} className="text-navy-bar" />
                 <span>Nguồn công bố chính thức</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-ink-2">
+              <div className="space-y-1 text-ink-2">
                 <p>
                   <span className="font-semibold text-ink">Số hiệu:</span> {caseStudy.nguon.so_hieu}
                 </p>
                 <p>
-                  <span className="font-semibold text-ink">Cơ quan:</span> {caseStudy.nguon.toa_an}
+                  <span className="font-semibold text-ink">Cơ quan xét xử:</span> {caseStudy.nguon.toa_an} (Cấp {caseStudy.nguon.cap_xet_xu})
                 </p>
                 <p>
-                  <span className="font-semibold text-ink">Cấp xét xử:</span> {caseStudy.nguon.cap_xet_xu}
+                  <span className="font-semibold text-ink">Hiệu lực:</span> {caseStudy.nguon.hieu_luc}
                 </p>
-                <p>
-                  <span className="font-semibold text-ink">Ngày ban hành:</span> {caseStudy.nguon.ngay_ban_hanh}
+                <p className="pt-1">
+                  <a
+                    href={caseStudy.nguon.url_cong_bo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-navy-bar underline hover:text-navy-bar/80 font-medium"
+                  >
+                    <span>Xem văn bản công bố chính thức</span>
+                    <ExternalLink size={12} />
+                  </a>
                 </p>
               </div>
-              <div className="pt-2 border-t border-line flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <span className="text-[11px] text-ink-3">
-                  Hiệu lực: {caseStudy.nguon.hieu_luc}
-                </span>
-                <a
-                  href={caseStudy.nguon.url_cong_bo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-semibold text-navy-bar hover:underline"
-                >
-                  <span>Mở văn bản gốc</span>
-                  <ExternalLink size={12} />
-                </a>
-              </div>
-              <p className="text-[11px] text-amber-700 dark:text-amber-400 bg-amber-500/10 rounded-lg p-2 mt-1">
-                <Info size={13} className="inline mr-1" />
-                Lưu ý: Mở văn bản gốc trước khi làm có thể nhìn thấy trước kết quả xét xử của Tòa án.
-              </p>
             </div>
 
-            {/* Các bên đương sự */}
+            {/* Các bên tham gia tranh chấp */}
             <div className="rounded-2xl border border-line bg-surface p-4 space-y-3">
               <h2 className="text-sm font-bold text-ink flex items-center gap-2">
                 <FileText size={16} className="text-navy-bar" />
                 <span>Các bên đương sự</span>
               </h2>
-              <div className="space-y-2">
+              <div className="space-y-2 text-xs">
                 {caseStudy.ho_so.cac_ben.map((b, idx) => (
-                  <div
-                    key={idx}
-                    className="rounded-xl border border-line bg-bg p-3 text-xs space-y-1"
-                  >
+                  <div key={idx} className="rounded-xl bg-bg p-3 border border-line space-y-1">
                     <div className="flex items-center justify-between">
                       <span className="font-bold text-ink">{b.ten}</span>
                       <span className="rounded bg-navy-soft px-2 py-0.5 text-[11px] font-semibold text-navy-ink">
@@ -310,7 +405,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
             <div className="rounded-2xl border border-line bg-surface p-4 space-y-2 text-xs">
               <h3 className="font-bold text-ink">Luật áp dụng tại thời điểm và hiện hành</h3>
               <p className="text-ink-2">
-                <span className="font-semibold text-ink">Thời điểm xét xử:</span>{" "}
+                <span className="font-semibold text-ink">Thời điểm sự việc / xét xử:</span>{" "}
                 {caseStudy.luat_ap_dung.luat_thoi_diem}
               </p>
               <p className="text-ink-2">
@@ -344,13 +439,17 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
           <div className="space-y-4 animate-in fade-in duration-200">
             {/* Header thanh tiến độ câu hỏi */}
             <div className="flex items-center justify-between border-b border-line pb-3">
-              <span className="text-xs font-bold text-navy-ink">
-                Câu {currentQIndex + 1} / {caseStudy.cau_hoi.length}
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold text-navy-ink">
+                  Câu {currentQIndex + 1} / {caseStudy.cau_hoi.length}
+                </span>
+                <span className="text-xs text-ink-3">·</span>
+                <ReportButton itemId={caseStudy.cau_hoi[currentQIndex]?.id} />
+              </div>
               <button
                 type="button"
                 onClick={() => setShowFactModal(true)}
-                className="press inline-flex items-center gap-1.5 rounded-xl border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-navy-bar hover:bg-navy-soft/30"
+                className="press inline-flex items-center gap-1.5 rounded-xl border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-navy-bar hover:bg-navy-soft/30 cursor-pointer"
               >
                 <BookOpen size={13} />
                 <span>Xem lại hồ sơ</span>
@@ -373,7 +472,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
                     </h2>
                   </div>
 
-                  {/* Danh sách 4 lựa chọn */}
+                  {/* Danh sách 4 lựa chọn (Không lộ kết quả đúng/sai trước bước đối chiếu) */}
                   <div className="space-y-2.5">
                     {q.lua_chon.map((opt, optIdx) => {
                       const isSelected = selectedOpt === optIdx;
@@ -447,7 +546,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
 
             {!allAnswered && (
               <p className="text-center text-[11px] text-ink-3">
-                * Vui lòng chọn đáp án cho tất cả câu hỏi trước khi chuyển bước. Lời giải chi tiết sẽ hiển thị ở bước Đối chiếu để không làm lộ kết quả.
+                * Vui lòng chọn đáp án cho tất cả câu hỏi trước khi chuyển bước. Lời giải chi tiết và kết quả sẽ hiển thị ở bước Đối chiếu để rèn luyện tư duy độc lập.
               </p>
             )}
           </div>
@@ -466,7 +565,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
                 <span className="font-semibold text-ink">Vấn đề – Căn cứ – Kết luận</span>. Bạn có thể tự viết để đối chiếu với nhận định thực tế của Tòa án, hoặc bấm bỏ qua để xem ngay đối chiếu.
               </p>
               <p className="text-[11px] text-ink-3">
-                * Bản nháp được lưu riêng tư trên trình duyệt của bạn, không gửi lên máy chủ.
+                * Bản nháp được lưu riêng tư trên trình duyệt của bạn, tự động giữ nguyên khi tải lại trang.
               </p>
             </div>
 
@@ -572,7 +671,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
                 <span className="font-bold text-good">
                   {correctCount}/{caseStudy.cau_hoi.length}
                 </span>{" "}
-                câu hỏi. Thưởng <span className="font-bold text-gold-ink">+20 XP</span> tích lũy!
+                câu hỏi. Thưởng <span className="font-bold text-gold-ink">+15 XP</span> tích lũy!
               </p>
             </div>
 
@@ -596,15 +695,18 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
                       <span className="text-xs font-bold text-ink leading-relaxed">
                         Câu {qIdx + 1}: {q.cau_hoi}
                       </span>
-                      {isCorrect ? (
-                        <span className="shrink-0 inline-flex items-center gap-1 rounded-md bg-good-soft px-2 py-0.5 text-[11px] font-bold text-good">
-                          <Check size={12} /> Đúng
-                        </span>
-                      ) : (
-                        <span className="shrink-0 inline-flex items-center gap-1 rounded-md bg-bad-soft px-2 py-0.5 text-[11px] font-bold text-bad">
-                          <XCircle size={12} /> Chưa đúng
-                        </span>
-                      )}
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        {isCorrect ? (
+                          <span className="inline-flex items-center gap-1 rounded-md bg-good-soft px-2 py-0.5 text-[11px] font-bold text-good">
+                            <Check size={12} /> Đúng
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1 rounded-md bg-bad-soft px-2 py-0.5 text-[11px] font-bold text-bad">
+                            <XCircle size={12} /> Chưa đúng
+                          </span>
+                        )}
+                        <ReportButton itemId={q.id} />
+                      </div>
                     </div>
 
                     <div className="space-y-1.5 text-xs">
@@ -642,7 +744,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
                 <button
                   type="button"
                   onClick={() => setIsEditingArgumentInStep4(!isEditingArgumentInStep4)}
-                  className="text-xs text-navy-bar font-semibold hover:underline"
+                  className="text-xs text-navy-bar font-semibold hover:underline cursor-pointer"
                 >
                   {isEditingArgumentInStep4 ? "Thu gọn" : "Chỉnh sửa bài viết"}
                 </button>
@@ -788,12 +890,8 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
               <div className="flex gap-2">
                 <button
                   type="button"
-                  onClick={() => {
-                    setStep(1);
-                    setCurrentQIndex(0);
-                    setAnswers({});
-                  }}
-                  className="press flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl border border-line bg-surface py-2.5 text-xs font-medium text-ink-2 hover:text-ink"
+                  onClick={handleResetToPracticeAgain}
+                  className="press flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl border border-line bg-surface py-2.5 text-xs font-medium text-ink-2 hover:text-ink cursor-pointer"
                 >
                   <RotateCcw size={14} />
                   <span>Luyện lại vụ này</span>
@@ -823,7 +921,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
               <button
                 type="button"
                 onClick={() => setShowFactModal(false)}
-                className="press rounded-lg p-1 text-ink-3 hover:text-ink"
+                className="press rounded-lg p-1 text-ink-3 hover:text-ink cursor-pointer"
                 aria-label="Đóng"
               >
                 ✕
@@ -888,5 +986,40 @@ function ClockIcon() {
       <circle cx="12" cy="12" r="10" strokeWidth="2" />
       <polyline points="12 6 12 12 16 14" strokeWidth="2" />
     </svg>
+  );
+}
+
+function CanCuList({
+  items,
+}: {
+  items: Array<{ van_ban: string; dieu: string; link?: string }>;
+}) {
+  return (
+    <div className="mt-2 space-y-1 border-t border-line/60 pt-2">
+      <span className="font-medium text-ink">Căn cứ:</span>
+      <ul className="list-inside list-disc space-y-0.5 text-[11px] text-ink-3">
+        {items.map((c, i) => (
+          <li key={i}>
+            {c.link ? (
+              <a
+                href={c.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-navy-bar underline hover:text-navy-bar/80 inline-flex items-center gap-1"
+              >
+                <span>
+                  {c.van_ban} – {c.dieu}
+                </span>
+                <ExternalLink size={10} />
+              </a>
+            ) : (
+              <span>
+                {c.van_ban} – {c.dieu}
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
