@@ -1,4 +1,4 @@
-﻿import { supabase, isSupabaseConfigured } from "./supabase";
+import { supabase, isSupabaseConfigured } from "./supabase";
 
 export const LAW_SCHOOLS = [
   "ĐH Luật Hà Nội",
@@ -159,20 +159,35 @@ export async function ensureAnonymousPlayer(
   }
 }
 
-export async function syncWeeklyXpToSupabase(deltaXp: number): Promise<void> {
-  if (!isSupabaseConfigured || !supabase || deltaXp <= 0) return;
+export interface SyncXpResult {
+  success: boolean;
+  skipped?: boolean;
+  error?: string;
+  newXp?: number;
+}
+
+export async function syncWeeklyXpToSupabase(deltaXp: number): Promise<SyncXpResult> {
+  if (!isSupabaseConfigured || !supabase || deltaXp <= 0) {
+    return { success: true, skipped: true };
+  }
 
   const player = getLocalPlayer();
-  if (!player || player.id.startsWith("anon-")) return;
+  if (!player || player.id.startsWith("anon-")) {
+    return { success: true, skipped: true };
+  }
 
   try {
     // Gọi RPC add_weekly_xp SECURITY DEFINER (1 <= delta <= 15, tối đa 5000/tuần)
     const delta = Math.min(Math.max(1, Math.round(deltaXp)), 15);
-    const { error } = await supabase.rpc("add_weekly_xp", { delta });
+    const { data, error } = await supabase.rpc("add_weekly_xp", { delta });
     if (error) {
       console.warn("Failed to add_weekly_xp via RPC:", error);
+      return { success: false, error: error.message };
     }
-  } catch (err) {
+    return { success: true, newXp: data?.new_xp };
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
     console.error("syncWeeklyXpToSupabase error:", err);
+    return { success: false, error: msg };
   }
 }

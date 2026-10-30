@@ -31,6 +31,7 @@ interface CaseStudyRunnerProps {
 }
 
 type Step = 1 | 2 | 3 | 4;
+type XpSyncState = "idle" | "syncing" | "synced" | "failed";
 
 interface DraftArgument {
   vanDe: string;
@@ -65,7 +66,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
 
   const [currentQIndex, setCurrentQIndex] = useState(0);
 
-  // Khởi tạo câu trả lời trắc nghiệm an toàn từ localStorage (chống mất khi reload/xem lại hồ sơ)
+  // Khởi tạo câu trả lời trắc nghiệm an toàn từ localStorage
   const [answers, setAnswers] = useState<Record<number, number>>(() => {
     if (typeof window === "undefined") return {};
     try {
@@ -109,7 +110,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
   const [draftSavedToast, setDraftSavedToast] = useState(false);
   const [isEditingArgumentInStep4, setIsEditingArgumentInStep4] = useState(false);
 
-  // Khởi tạo runId duy nhất cho phiên làm bài hiện tại (tránh double count XP & Analytics)
+  // Khởi tạo runId duy nhất cho phiên làm bài hiện tại
   const [runId] = useState<string>(() => {
     if (typeof window === "undefined") return `run_${caseStudy.id}_${Date.now()}`;
     try {
@@ -124,6 +125,18 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
     }
   });
 
+  // Trạng thái đồng bộ XP: chỉ xác nhận đã thưởng khi máy chủ ghi nhận hoặc là tài khoản khách
+  const [xpSyncStatus, setXpSyncStatus] = useState<XpSyncState>(() => {
+    if (typeof window === "undefined") return "idle";
+    try {
+      const awardedKey = `luatle_case_awarded_${caseStudy.id}_${runId}`;
+      if (localStorage.getItem(awardedKey) === "true") return "synced";
+    } catch {
+      // Bỏ qua
+    }
+    return "idle";
+  });
+
   const saveDraftToStorage = (newDraft: DraftArgument) => {
     setDraft(newDraft);
     try {
@@ -131,7 +144,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
       setDraftSavedToast(true);
       setTimeout(() => setDraftSavedToast(false), 2000);
     } catch {
-      // Bỏ qua lỗi lưu trữ
+      // Bỏ qua
     }
   };
 
@@ -144,48 +157,34 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
       try {
         localStorage.setItem(`luatle_case_answers_${caseStudy.id}`, JSON.stringify(next));
       } catch {
-        // Bỏ qua lỗi lưu trữ
+        // Bỏ qua
       }
       return next;
     });
   };
 
-  const handleCompleteToStep4 = (skipped: boolean) => {
+  const handleCompleteToStep4 = async (skipped: boolean) => {
     setSkippedArgument(skipped);
     setStep(4);
 
-    // Khóa chống trao thưởng và ghi nhận trùng lặp cho cùng một phiên làm bài
     const awardedKey = `luatle_case_awarded_${caseStudy.id}_${runId}`;
     let alreadyAwarded = false;
     try {
       alreadyAwarded = localStorage.getItem(awardedKey) === "true";
     } catch {
-      // Bỏ qua lỗi lưu trữ
+      // Bỏ qua
     }
 
-    if (!alreadyAwarded) {
-      try {
-        localStorage.setItem(awardedKey, "true");
-      } catch {
-        // Bỏ qua lỗi lưu trữ
-      }
+    if (alreadyAwarded) {
+      setXpSyncStatus("synced");
+      return;
+    }
 
-      // 1. Ghi nhận đo lường không trùng lặp (1 lần / sessionKey)
+    // 1. Ghi nhận đo lường và lịch sử câu hỏi cục bộ (chỉ 1 lần / runId)
+    try {
       trackUsage("lesson", caseStudy.cau_hoi.length, runId);
 
-      // 2. Thưởng +15 XP duy nhất cho lượt hoàn thành (tuân thủ giới hạn add_weekly_xp: 1 <= delta <= 15)
-      syncWeeklyXpToSupabase(15).catch(() => {});
-
-      // 3. Lưu attempt vụ án hoàn thành với 15 XP
-      saveAttempt({
-        itemId: `case-${caseStudy.id}`,
-        itemType: "mcq",
-        subject: caseStudy.mon,
-        isCorrect: true,
-        xp: 15,
-      });
-
-      // 4. Lưu attempts cho từng câu hỏi với xp: 0 (ghi nhận lịch sử và wrong tracker mà không spam rate-limit 2 giây)
+      // Lưu attempts cho từng câu hỏi với xp: 0 để phục vụ ôn tập & câu hỏi hay sai
       caseStudy.cau_hoi.forEach((q, idx) => {
         const userChoice = answers[idx];
         const isCorrect = userChoice === q.dap_an;
@@ -198,19 +197,70 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
         });
       });
 
-      // 5. Đánh dấu đã hoàn thành vụ án vào danh sách
-      try {
-        const rawCompleted = localStorage.getItem("luatle_completed_cases");
-        const list: string[] = rawCompleted ? JSON.parse(rawCompleted) : [];
-        if (!list.includes(caseStudy.slug)) {
-          list.push(caseStudy.slug);
-          localStorage.setItem("luatle_completed_cases", JSON.stringify(list));
-        }
-      } catch {
-        // Bỏ qua lỗi lưu trữ
+      // Đánh dấu đã hoàn thành vụ án vào danh sách
+      const rawCompleted = localStorage.getItem("luatle_completed_cases");
+      const list: string[] = rawCompleted ? JSON.parse(rawCompleted) : [];
+      if (!list.includes(caseStudy.slug)) {
+        list.push(caseStudy.slug);
+        localStorage.setItem("luatle_completed_cases", JSON.stringify(list));
       }
+    } catch {
+      // Bỏ qua
+    }
 
-      // 6. Tích lũy streak ngày
+    // 2. Xác thực và đồng bộ +15 XP: CHỈ ĐÁNH DẤU HOÀN TẤT KHI MÁY CHỦ XÁC NHẬN
+    setXpSyncStatus("syncing");
+    try {
+      const res = await syncWeeklyXpToSupabase(15);
+      if (res.success) {
+        try {
+          localStorage.setItem(awardedKey, "true");
+        } catch {
+          // Bỏ qua
+        }
+        // Lưu attempt hoàn thành với 15 XP
+        saveAttempt({
+          itemId: `case-${caseStudy.id}`,
+          itemType: "mcq",
+          subject: caseStudy.mon,
+          isCorrect: true,
+          xp: 15,
+        });
+        setXpSyncStatus("synced");
+      } else {
+        // Máy chủ chưa ghi nhận: không khóa awardedKey để cho phép thử lại
+        setXpSyncStatus("failed");
+      }
+    } catch {
+      setXpSyncStatus("failed");
+    }
+  };
+
+  const handleRetrySyncXp = async () => {
+    if (xpSyncStatus === "syncing") return;
+    setXpSyncStatus("syncing");
+    const awardedKey = `luatle_case_awarded_${caseStudy.id}_${runId}`;
+    try {
+      const res = await syncWeeklyXpToSupabase(15);
+      if (res.success) {
+        try {
+          localStorage.setItem(awardedKey, "true");
+        } catch {
+          // Bỏ qua
+        }
+        saveAttempt({
+          itemId: `case-${caseStudy.id}`,
+          itemType: "mcq",
+          subject: caseStudy.mon,
+          isCorrect: true,
+          xp: 15,
+        });
+        setXpSyncStatus("synced");
+      } else {
+        setXpSyncStatus("failed");
+      }
+    } catch {
+      setXpSyncStatus("failed");
     }
   };
 
@@ -220,12 +270,13 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
       localStorage.removeItem(`luatle_case_step_${caseStudy.id}`);
       sessionStorage.removeItem(`luatle_case_run_${caseStudy.id}`);
     } catch {
-      // Bỏ qua lỗi lưu trữ
+      // Bỏ qua
     }
     setStep(1);
     setCurrentQIndex(0);
     setAnswers({});
     setSkippedArgument(false);
+    setXpSyncStatus("idle");
   };
 
   const allAnswered = caseStudy.cau_hoi.every((_, idx) => answers[idx] !== undefined);
@@ -253,7 +304,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
             ].map((s) => {
               const active = step === s.num;
               const passed = step > s.num;
-              const canNavigate = s.num <= step || (s.num === 2) || (s.num === 3 && allAnswered);
+              const canNavigate = s.num <= step || s.num === 2 || (s.num === 3 && allAnswered);
 
               return (
                 <div key={s.num} className="flex items-center gap-1 sm:gap-1.5">
@@ -409,7 +460,7 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
                 {caseStudy.luat_ap_dung.luat_thoi_diem}
               </p>
               <p className="text-ink-2">
-                <span className="font-semibold text-ink">Quy định hiện hành tương ứng:</span>{" "}
+                <span className="font-semibold text-ink">Quy định tương ứng hiện hành:</span>{" "}
                 {caseStudy.luat_ap_dung.luat_hien_hanh}
               </p>
               {caseStudy.luat_ap_dung.ghi_chu_thay_doi && (
@@ -660,20 +711,54 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
         {/* ==================== BƯỚC 4: ĐỐI CHIẾU PHÁN QUYẾT ==================== */}
         {step === 4 && (
           <div className="space-y-5 animate-in fade-in duration-200">
-            {/* Banner kết quả + XP */}
-            <div className="rounded-2xl border border-good/30 bg-good-soft/30 p-4 text-center space-y-1.5 shadow-sm">
-              <div className="flex items-center justify-center gap-2 text-good font-bold text-base">
-                <Sparkles size={20} />
-                <span>Hoàn thành lượt luyện án thật!</span>
+            {/* Banner kết quả + XP (Có xử lý trạng thái đồng bộ và nút thử lại) */}
+            {xpSyncStatus === "syncing" ? (
+              <div className="rounded-2xl border border-navy-bar/30 bg-navy-soft/30 p-4 text-center space-y-1.5 shadow-sm">
+                <div className="flex items-center justify-center gap-2 text-navy-ink font-bold text-base">
+                  <Sparkles size={20} className="animate-spin" />
+                  <span>Đang ghi nhận điểm kinh nghiệm...</span>
+                </div>
+                <p className="text-xs text-ink-2">
+                  Đang đồng bộ điểm thưởng +15 XP với máy chủ...
+                </p>
               </div>
-              <p className="text-xs text-ink-2">
-                Bạn đã trả lời đúng{" "}
-                <span className="font-bold text-good">
-                  {correctCount}/{caseStudy.cau_hoi.length}
-                </span>{" "}
-                câu hỏi. Thưởng <span className="font-bold text-gold-ink">+15 XP</span> tích lũy!
-              </p>
-            </div>
+            ) : xpSyncStatus === "failed" ? (
+              <div className="rounded-2xl border border-amber-500/40 bg-amber-500/10 p-4 text-center space-y-2 shadow-sm">
+                <div className="flex items-center justify-center gap-2 text-amber-800 dark:text-amber-300 font-bold text-base">
+                  <AlertTriangle size={20} />
+                  <span>Hoàn thành lượt luyện án thật!</span>
+                </div>
+                <p className="text-xs text-ink-2">
+                  Bạn đã trả lời đúng{" "}
+                  <span className="font-bold text-good">
+                    {correctCount}/{caseStudy.cau_hoi.length}
+                  </span>{" "}
+                  câu hỏi. Chưa thể ghi nhận +15 XP lên máy chủ (do kết nối mạng hoặc chờ giãn cách 2 giây).
+                </p>
+                <button
+                  type="button"
+                  onClick={handleRetrySyncXp}
+                  className="press inline-flex items-center gap-1.5 rounded-xl bg-navy-bar px-3 py-1.5 text-xs font-bold text-white shadow-sm hover:opacity-90 cursor-pointer"
+                >
+                  <RotateCcw size={13} />
+                  <span>Thử đồng bộ lại XP</span>
+                </button>
+              </div>
+            ) : (
+              <div className="rounded-2xl border border-good/30 bg-good-soft/30 p-4 text-center space-y-1.5 shadow-sm">
+                <div className="flex items-center justify-center gap-2 text-good font-bold text-base">
+                  <Sparkles size={20} />
+                  <span>Hoàn thành lượt luyện án thật!</span>
+                </div>
+                <p className="text-xs text-ink-2">
+                  Bạn đã trả lời đúng{" "}
+                  <span className="font-bold text-good">
+                    {correctCount}/{caseStudy.cau_hoi.length}
+                  </span>{" "}
+                  câu hỏi. Thưởng <span className="font-bold text-gold-ink">+15 XP</span> tích lũy!
+                </p>
+              </div>
+            )}
 
             {/* MỤC 1: ĐÁP ÁN & GIẢI THÍCH CHI TIẾT */}
             <div className="space-y-3">

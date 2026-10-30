@@ -1,4 +1,4 @@
-﻿# TIáº¾N Äá»˜ Cá»¦A Äá»¨C â€” CHáº¾ Äá»˜ Má»˜T MÃŒNH (SOLO + Äáº¶C Táº¢ TÃNH NÄ‚NG Má»šI)
+# TIáº¾N Äá»˜ Cá»¦A Äá»¨C â€” CHáº¾ Äá»˜ Má»˜T MÃŒNH (SOLO + Äáº¶C Táº¢ TÃNH NÄ‚NG Má»šI)
 
 - **Dá»± Ã¡n**: Web app Ã´n thi Luáº­t â€” **Luáº­t Láº¹**
 - **Quy táº¯c**: TuÃ¢n thá»§ team/TINH_NANG.md (tháº¯ng team/SOLO.md á»Ÿ cÃ¡c Ä‘iá»ƒm khÃ¡c nhau)
@@ -106,3 +106,8 @@ Sau khi Äá»©c cháº¡y xong Supabase vÃ  Vercel deploy, má»Ÿ link ht
 - [20/10 10:22] Hoàn thành Mục C: Lộ trình ôn đến ngày thi (đặt ngày thi theo môn tại tab Tôi, thẻ mục tiêu hôm nay tại trang chủ, công thức tính số câu X chia theo ngày còn lại, chế độ nước rút 3 ngày cuối gợi ý thi thử, thưởng +15 XP khi hoàn thành mục tiêu). All checks passed.
 - [20/10 10:25] Hoàn thành Mục E: Sinh viên đóng góp câu hỏi (Modal form đủ trường bắt buộc + link kiểm chứng chính thức, lưu bảng contributions & local fallback, mở khóa huy hiệu "Người đóng góp", nút đóng góp ở tab Tôi và cuối bài làm ResultScreen, danh sách "Câu hỏi cộng đồng" trong môn học ghi nhận tên tác giả). All checks passed.
 - [20/10 10:28] Hoàn thành Mục G: Hỏi AI về câu này (Làm sẵn nhưng ẩn; kiểm tra qua API /api/hoi-ai không lộ key, nút Hỏi AI trong FeedbackSheet, API Gemini Flash kèm ngữ cảnh nguyên văn điều luật căn cứ, giới hạn 5 lần/người/ngày lưu bảng ai_usage, dòng cảnh báo "AI có thể sai, hãy đối chiếu điều luật"). All checks passed.
+- [30/10 10:35] Hoàn thành Tính năng Luyện án thật & Khắc phục hàm add_weekly_xp trên database:
+  + Áp dụng thành công migration trực tiếp lên Supabase zolxwrrhdwssuqlcnkkr qua SQL Editor, khóa dòng FOR UPDATE chống race condition, sửa lỗi COALESCE khi tuần mới chưa có bản ghi, trần 5000 XP/tuần, tự động đảm bảo bản ghi players.
+  + Kiểm thử toàn diện test suite trên server thật: thưởng +15 XP cho tài khoản mới thành công, từ chối rate limit < 2s, từ chối delta ngoài [1, 15], cộng dồn chính xác sau 2s, xử lý an toàn 2 request đồng thời.
+  + Giao diện CaseStudyRunner cập nhật luồng thưởng XP an toàn: chỉ đánh dấu đã nhận khi server xác nhận thành công, hỗ trợ nút bấm thử lại khi lỗi mạng/giãn cách, giữ nguyên trạng thái làm bài/nháp khi reload, báo sai chính xác từng câu hỏi.
+  + Dọn dẹp sạch tài khoản thử nghiệm khỏi database, không làm ô nhiễm bảng xếp hạng công khai. All checks passed.
