@@ -7,6 +7,7 @@
   "ten_chuong": "Xử phạt vi phạm hành chính",
   "thoi_gian_phut": 7,
   "do_kho": "vua-suc",
+  "xuat_ban": false,
   "nguon": {
     "so_hieu": "Bản án phúc thẩm số 01/2021/HC-PT",
     "ngay_ban_hanh": "2021-05-27",
@@ -176,6 +177,6 @@
         "cau_hoi_tu_ra": "Kết luận của bạn có xem xét khách quan các nguồn chứng cứ hiện trường hay chỉ căn cứ vào lời khai đơn phương của người khiếu kiện?"
       }
     ],
-    "luu_y_bien_tap": "Nội dung vụ việc được biên tập dựa trên Bản án hành chính phúc thẩm số 01/2021/HC-PT ngày 27/05/2021 của Tòa án nhân dân tỉnh Tuyên Quang (xét xử phúc thẩm Bản án sơ thẩm số 01/2021/HC-ST ngày 02/03/2021 của TAND huyện N). Tên các đương sự và địa chỉ cụ thể được viết tắt để bảo vệ bí mật đời tư theo quy định pháp luật."
+    "luu_y_bien_tap": "Nguồn hiện có là bản đăng lại trên Thư Viện Bản Án (Thư Viện Pháp Luật), chưa xác minh được liên kết công bố chính thức từ Cổng thông tin điện tử Tòa án nhân dân tối cao. Theo tiêu chuẩn an toàn nội dung, vụ việc này tạm để riêng ở trạng thái chưa xuất bản, toàn bộ nội dung tình tiết và đối chiếu được bảo lưu nguyên vẹn để xuất bản sau khi xác minh được liên kết công bố chính thức từ Tòa."
   }
 }

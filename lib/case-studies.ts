@@ -6,7 +6,7 @@ import { SubjectSlug } from "./content-schema";
 
 const caseStudyDir = path.join(process.cwd(), "content", "luyen-an");
 
-export function getAllCaseStudies(): CaseStudy[] {
+export function getAllCaseStudies(includeUnpublished = false): CaseStudy[] {
   try {
     if (!fs.existsSync(caseStudyDir)) {
       return [];
@@ -23,7 +23,9 @@ export function getAllCaseStudies(): CaseStudy[] {
       raw = raw.replace(/^\uFEFF/, "");
       const data = JSON.parse(raw);
       const parsed = CaseStudySchema.parse(data);
-      cases.push(parsed);
+      if (includeUnpublished || parsed.xuat_ban !== false) {
+        cases.push(parsed);
+      }
     }
     return cases;
   } catch (err) {

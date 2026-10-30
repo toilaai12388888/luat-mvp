@@ -63,6 +63,7 @@ export const CaseStudySchema = z.object({
   ten_chuong: z.string().min(1),
   thoi_gian_phut: z.number().int().min(3).max(15),
   do_kho: z.enum(["co-ban", "vua-suc", "nang-cao"]),
+  xuat_ban: z.boolean().default(true).optional(),
   nguon: CaseSourceSchema,
   luat_ap_dung: z.object({
     luat_thoi_diem: z.string().min(1),
