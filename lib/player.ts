@@ -164,9 +164,13 @@ export interface SyncXpResult {
   skipped?: boolean;
   error?: string;
   newXp?: number;
+  alreadyAwarded?: boolean;
 }
 
-export async function syncWeeklyXpToSupabase(deltaXp: number): Promise<SyncXpResult> {
+export async function syncWeeklyXpToSupabase(
+  deltaXp: number,
+  sessionKey?: string
+): Promise<SyncXpResult> {
   if (!isSupabaseConfigured || !supabase || deltaXp <= 0) {
     return { success: true, skipped: true };
   }
@@ -177,14 +181,22 @@ export async function syncWeeklyXpToSupabase(deltaXp: number): Promise<SyncXpRes
   }
 
   try {
-    // Gọi RPC add_weekly_xp SECURITY DEFINER (1 <= delta <= 15, tối đa 5000/tuần)
+    // Gọi RPC add_weekly_xp SECURITY DEFINER (1 <= delta <= 15, tối đa 5000/tuần, hỗ trợ p_session_key)
     const delta = Math.min(Math.max(1, Math.round(deltaXp)), 15);
-    const { data, error } = await supabase.rpc("add_weekly_xp", { delta });
+    const rpcParams: { delta: number; p_session_key?: string } = { delta };
+    if (sessionKey && sessionKey.trim()) {
+      rpcParams.p_session_key = sessionKey.trim();
+    }
+    const { data, error } = await supabase.rpc("add_weekly_xp", rpcParams);
     if (error) {
       console.warn("Failed to add_weekly_xp via RPC:", error);
       return { success: false, error: error.message };
     }
-    return { success: true, newXp: data?.new_xp };
+    return {
+      success: true,
+      newXp: data?.new_xp,
+      alreadyAwarded: Boolean(data?.already_awarded),
+    };
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);
     console.error("syncWeeklyXpToSupabase error:", err);

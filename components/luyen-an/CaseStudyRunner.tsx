@@ -208,24 +208,32 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
       // Bỏ qua
     }
 
-    // 2. Xác thực và đồng bộ +15 XP: CHỈ ĐÁNH DẤU HOÀN TẤT KHI MÁY CHỦ XÁC NHẬN
+    // 2. Xác thực và đồng bộ +15 XP với sessionKey (runId) chống cộng trùng phía server
     setXpSyncStatus("syncing");
     try {
-      const res = await syncWeeklyXpToSupabase(15);
+      const res = await syncWeeklyXpToSupabase(15, runId);
       if (res.success) {
         try {
           localStorage.setItem(awardedKey, "true");
         } catch {
           // Bỏ qua
         }
-        // Lưu attempt hoàn thành với 15 XP
-        saveAttempt({
-          itemId: `case-${caseStudy.id}`,
-          itemType: "mcq",
-          subject: caseStudy.mon,
-          isCorrect: true,
-          xp: 15,
-        });
+        // Lưu attempt hoàn thành với 15 XP (chỉ 1 lần cho cùng runId)
+        const attemptKey = `luatle_case_attempt_saved_${caseStudy.id}_${runId}`;
+        if (localStorage.getItem(attemptKey) !== "true") {
+          saveAttempt({
+            itemId: `case-${caseStudy.id}`,
+            itemType: "mcq",
+            subject: caseStudy.mon,
+            isCorrect: true,
+            xp: 15,
+          });
+          try {
+            localStorage.setItem(attemptKey, "true");
+          } catch {
+            // Bỏ qua
+          }
+        }
         setXpSyncStatus("synced");
       } else {
         // Máy chủ chưa ghi nhận: không khóa awardedKey để cho phép thử lại
@@ -241,20 +249,28 @@ export function CaseStudyRunner({ caseStudy }: CaseStudyRunnerProps) {
     setXpSyncStatus("syncing");
     const awardedKey = `luatle_case_awarded_${caseStudy.id}_${runId}`;
     try {
-      const res = await syncWeeklyXpToSupabase(15);
+      const res = await syncWeeklyXpToSupabase(15, runId);
       if (res.success) {
         try {
           localStorage.setItem(awardedKey, "true");
         } catch {
           // Bỏ qua
         }
-        saveAttempt({
-          itemId: `case-${caseStudy.id}`,
-          itemType: "mcq",
-          subject: caseStudy.mon,
-          isCorrect: true,
-          xp: 15,
-        });
+        const attemptKey = `luatle_case_attempt_saved_${caseStudy.id}_${runId}`;
+        if (localStorage.getItem(attemptKey) !== "true") {
+          saveAttempt({
+            itemId: `case-${caseStudy.id}`,
+            itemType: "mcq",
+            subject: caseStudy.mon,
+            isCorrect: true,
+            xp: 15,
+          });
+          try {
+            localStorage.setItem(attemptKey, "true");
+          } catch {
+            // Bỏ qua
+          }
+        }
         setXpSyncStatus("synced");
       } else {
         setXpSyncStatus("failed");

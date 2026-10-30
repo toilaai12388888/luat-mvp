@@ -49,8 +49,9 @@ export async function fetchLeaderboard(scope: "all" | "school"): Promise<{
   try {
     const query = supabase
       .from("weekly_xp")
-      .select("player_id, xp, players(nickname, school)")
+      .select("player_id, xp, players!inner(nickname, school, is_internal)")
       .eq("week_start", weekStart)
+      .eq("players.is_internal", false)
       .order("xp", { ascending: false })
       .limit(50);
 
