@@ -1,113 +1,113 @@
-# TIáº¾N Äá»˜ Cá»¦A Äá»¨C â€” CHáº¾ Äá»˜ Má»˜T MÃŒNH (SOLO + Äáº¶C Táº¢ TÃNH NÄ‚NG Má»šI)
+# TIẾN ĐỘ CỦA ĐỨC — CHẾ ĐỘ MỘT MÌNH (SOLO + ĐẶC TẢ TÍNH NĂNG MỚI)
 
-- **Dá»± Ã¡n**: Web app Ã´n thi Luáº­t â€” **Luáº­t Láº¹**
-- **Quy táº¯c**: TuÃ¢n thá»§ team/TINH_NANG.md (tháº¯ng team/SOLO.md á»Ÿ cÃ¡c Ä‘iá»ƒm khÃ¡c nhau)
+- **Dự án**: Web app ôn thi Luật — **Luật Lẹ**
+- **Quy tắc**: Tuân thủ team/TINH_NANG.md (thắng team/SOLO.md ở các điểm khác nhau)
 - **Repo GitHub**: https://github.com/toilaai12388888/luat-mvp
 - **Link web**: https://luat-mvp.vercel.app/
-- **Thá»i gian ra máº¯t**: Thá»© SÃ¡u 23/10/2026.
-- **Cáº­p nháº­t láº§n cuá»‘i**: Thá»© Hai 19/10/2026 16:50
+- **Thời gian ra mắt**: Thứ Sáu 23/10/2026.
+- **Cập nhật lần cuối**: Thứ Hai 19/10/2026 16:50
 
 ---
 
-## Tiáº¿n Ä‘á»™ theo Äáº¶C Táº¢ (team/TINH_NANG.md)
+## Tiến độ theo ĐẶC TẢ (team/TINH_NANG.md)
 
-| Má»¥c | Ná»™i dung | Tráº¡ng thÃ¡i | Ghi chÃº |
+| Mục | Nội dung | Trạng thái | Ghi chú |
 |---|---|---|---|
-| **0** | **Sá»­a ná»™i dung trÆ°á»›c** | **HOÃ€N THÃ€NH** | Sá»­a doanh-nghiep-c01-nd05 & tn08 (Ban kiá»ƒm soÃ¡t chá»‰ báº¯t buá»™c vá»›i DNNN theo Ä54 LDN 2020); sá»­a hanh-chinh-c01-tn09 & nd05 theo Luáº­t sá»‘ 88/2025/QH15 (nÃ¢ng má»©c pháº¡t khÃ´ng láº­p biÃªn báº£n lÃªn 500k/1tr tá»« 01/07/2025). |
-| **1** | **ThÃªm ChÆ°Æ¡ng 2 má»—i mÃ´n (~150 cÃ¢u tá»•ng)** | **HOÃ€N THÃ€NH** | DÃ¢n sá»± c02 (Há»£p Ä‘á»“ng & Biá»‡n phÃ¡p báº£o Ä‘áº£m), HÃ nh chÃ­nh c02 (Biá»‡n phÃ¡p ngÄƒn cháº·n & báº£o Ä‘áº£m xá»­ pháº¡t VPHC), Doanh nghiá»‡p c02 (CÃ´ng ty cá»• pháº§n). ÄÃ£ xuáº¥t noi-dung/DOI_CHIEU.md vÃ  noi-dung/15_CAU_KIEM.json. |
-| **2** | **TÃ i khoáº£n biá»‡t danh (Supabase Anon + SQL)** | **CODE XONG** | Viáº¿t file migration SQL supabase/migrations/20261019_initial_schema.sql (báº£ng players, weekly_xp, challenges, challenge_results, comments, báº­t full RLS); hoÃ n thiá»‡n lib/player.ts, lib/supabase.ts, components/auth/NicknameModal.tsx (chá»n 7 trÆ°á»ng Luáº­t + KhÃ¡c). |
-| **3.1** | **Ã”n cÃ¢u sai + ÄÃ¡nh dáº¥u cÃ¢u** | **HOÃ€N THÃ€NH** | NÃºt Ä‘Ã¡nh dáº¥u Bookmark trÃªn QuizTopBar; lÆ°u activeWrongIds, lÃ m Ä‘Ãºng 2 láº§n liÃªn tiáº¿p tá»± rá»i danh sÃ¡ch; trang /on-tap Ã´n táº­p riÃªng cÃ¢u sai / Ä‘Ã£ Ä‘Ã¡nh dáº¥u. |
-| **3.2** | **Thi thá»­ cÃ³ giá»** | **HOÃ€N THÃ€NH** | Trang /thi-thu: chá»n mÃ´n, chÆ°Æ¡ng, 10/20/40 cÃ¢u; Ä‘áº¿m ngÆ°á»£c ~1 phÃºt/cÃ¢u; khÃ´ng lá»™ Ä‘Ã¡p Ã¡n khi lÃ m; ná»™p bÃ i tÃ­nh Ä‘iá»ƒm thang 10, xem láº¡i giáº£i thÃ­ch chi tiáº¿t, lÆ°u lá»‹ch sá»­. |
-| **3.3** | **Thá»­ thÃ¡ch háº±ng ngÃ y** | **HOÃ€N THÃ€NH** | Trang /hang-ngay: 5 cÃ¢u/ngÃ y deterministic báº±ng PRNG theo ngÃ y; lÃ m 1 láº§n/ngÃ y; xuáº¥t tháº» Wordle chia sáº» vÃ  canvas áº£nh Story 1080Ã—1920 táº£i vá»; cá»™ng streak chuá»—i ngÃ y. |
-| **3.4** | **Huy hiá»‡u** | **HOÃ€N THÃ€NH** | ThÆ° viá»‡n lib/badges.ts gá»“m 12 huy hiá»‡u; toast micro-animation khi má»Ÿ khÃ³a; hiá»ƒn thá»‹ gallery huy hiá»‡u trÃªn trang /tien-do. |
-| **3.5** | **Thá»‘ng kÃª Ä‘iá»ƒm yáº¿u** | **HOÃ€N THÃ€NH** | PhÃ¢n tÃ­ch Ä‘iá»u luáº­t sai nhiá»u nháº¥t (lib/weakness.ts); nÃºt 'Ã”n ngay' trÃªn /tien-do má»Ÿ trá»±c tiáº¿p bá»™ cÃ¢u há»i xoay quanh Ä‘iá»u luáº­t Ä‘Ã³. |
-| **3.6** | **TÃ¬m kiáº¿m** | **HOÃ€N THÃ€NH** | Component HomeSearch.tsx táº¡i trang chá»§; tÃ¬m kiáº¿m khÃ´ng dáº¥u tiáº¿ng Viá»‡t theo tá»« khÃ³a hoáº·c sá»‘ Ä‘iá»u (vÃ­ dá»¥: 'Äiá»u 117', 'bá»“i thÆ°á»ng'); click má»Ÿ bÃ i Ã´n ngay. |
-| **3.7** | **Flashcard Ä‘iá»u luáº­t** | **HOÃ€N THÃ€NH** | Trang /mon/[mon]/flashcard/[chuong]: láº­t tháº» trÆ°á»›c/sau (sá»‘ Ä‘iá»u & ná»™i dung); nÃºt 'Nhá»› rá»“i / ChÆ°a nhá»›'; thuáº­t toÃ¡n láº·p láº¡i ngáº¯t quÃ£ng Ä‘Æ¡n giáº£n lÆ°u localStorage. |
-| **3.8** | **Báº£ng xáº¿p háº¡ng** | **HOÃ€N THÃ€NH** | Trang /xep-hang: BXH XP theo tuáº§n (thá»© Hai - Chá»§ nháº­t); 2 tab ToÃ n quá»‘c & TrÆ°á»ng tÃ´i; hiá»ƒn thá»‹ Top 50 + thá»© háº¡ng cá»§a báº£n thÃ¢n; tá»± Ä‘á»“ng bá»™ XP lÃªn Supabase khi cÃ³ nickname. |
-| **3.9** | **ThÃ¡ch Ä‘áº¥u báº¡n bÃ¨** | **HOÃ€N THÃ€NH** | Sau bÃ i thi / trang káº¿t quáº£ cÃ³ nÃºt 'ThÃ¡ch Ä‘áº¥u báº¡n' -> táº¡o link /thach-dau/[id]; báº¡n má»Ÿ lÃ m Ä‘Ãºng 10 cÃ¢u Ä‘Ã³ -> so Ä‘iá»ƒm 2 bÃªn trÃªn báº£ng Ä‘áº¥u; ngÆ°á»i táº¡o xem danh sÃ¡ch ai Ä‘Ã£ nháº­n Ä‘áº¥u. |
-| **3.10** | **BÃ¬nh luáº­n dÆ°á»›i cÃ¢u** | **HOÃ€N THÃ€NH** | Trong FeedbackSheet, nÃºt 'Tháº£o luáº­n' má»Ÿ modal xem/gá»­i bÃ¬nh luáº­n dÆ°á»›i cÃ¢u (<= 500 kÃ½ tá»±); bá»™ lá»c tá»« ngá»¯ thÃ´ tá»¥c cÆ¡ báº£n; nÃºt bÃ¡o cÃ¡o (3 láº§n tá»± áº©n). |
-| **3.11** | **Nháº¯c há»c (PWA)** | **HOÃ€N THÃ€NH** | PWA manifest public/manifest.json, service worker public/sw.js, PwaRegister.tsx xin quyá»n thÃ´ng bÃ¡o vÃ  kiá»ƒm tra nháº¯c há»c lÃºc 20h. |
-| **4** | **Giao diá»‡n & Navigation** | **HOÃ€N THÃ€NH** | Bottom navigation 5 tab: Há»c (/) Â· Ã”n táº­p (/on-tap) Â· Thi thá»­ (/thi-thu) Â· Xáº¿p háº¡ng (/xep-hang) Â· TÃ´i (/tien-do). Chuáº©n theme Navy design/DESIGN.md. |
+| **0** | **Sửa nội dung trước** | **HOÀN THÀNH** | Sửa doanh-nghiep-c01-nd05 & tn08 (Ban kiểm soát chỉ bắt buộc với DNNN theo Đ54 LDN 2020); sửa hanh-chinh-c01-tn09 & nd05 theo Luật số 88/2025/QH15 (nâng mức phạt không lập biên bản lên 500k/1tr từ 01/07/2025). |
+| **1** | **Thêm Chương 2 mỗi môn (~150 câu tổng)** | **HOÀN THÀNH** | Dân sự c02 (Hợp đồng & Biện pháp bảo đảm), Hành chính c02 (Biện pháp ngăn chặn & bảo đảm xử phạt VPHC), Doanh nghiệp c02 (Công ty cổ phần). Đã xuất noi-dung/DOI_CHIEU.md và noi-dung/15_CAU_KIEM.json. |
+| **2** | **Tài khoản biệt danh (Supabase Anon + SQL)** | **CODE XONG** | Viết file migration SQL supabase/migrations/20261019_initial_schema.sql (bảng players, weekly_xp, challenges, challenge_results, comments, bật full RLS); hoàn thiện lib/player.ts, lib/supabase.ts, components/auth/NicknameModal.tsx (chọn 7 trường Luật + Khác). |
+| **3.1** | **Ôn câu sai + Đánh dấu câu** | **HOÀN THÀNH** | Nút đánh dấu Bookmark trên QuizTopBar; lưu activeWrongIds, làm đúng 2 lần liên tiếp tự rời danh sách; trang /on-tap ôn tập riêng câu sai / đã đánh dấu. |
+| **3.2** | **Thi thử có giờ** | **HOÀN THÀNH** | Trang /thi-thu: chọn môn, chương, 10/20/40 câu; đếm ngược ~1 phút/câu; không lộ đáp án khi làm; nộp bài tính điểm thang 10, xem lại giải thích chi tiết, lưu lịch sử. |
+| **3.3** | **Thử thách hằng ngày** | **HOÀN THÀNH** | Trang /hang-ngay: 5 câu/ngày deterministic bằng PRNG theo ngày; làm 1 lần/ngày; xuất thẻ Wordle chia sẻ và canvas ảnh Story 1080×1920 tải về; cộng streak chuỗi ngày. |
+| **3.4** | **Huy hiệu** | **HOÀN THÀNH** | Thư viện lib/badges.ts gồm 12 huy hiệu; toast micro-animation khi mở khóa; hiển thị gallery huy hiệu trên trang /tien-do. |
+| **3.5** | **Thống kê điểm yếu** | **HOÀN THÀNH** | Phân tích điều luật sai nhiều nhất (lib/weakness.ts); nút 'Ôn ngay' trên /tien-do mở trực tiếp bộ câu hỏi xoay quanh điều luật đó. |
+| **3.6** | **Tìm kiếm** | **HOÀN THÀNH** | Component HomeSearch.tsx tại trang chủ; tìm kiếm không dấu tiếng Việt theo từ khóa hoặc số điều (ví dụ: 'Điều 117', 'bồi thường'); click mở bài ôn ngay. |
+| **3.7** | **Flashcard điều luật** | **HOÀN THÀNH** | Trang /mon/[mon]/flashcard/[chuong]: lật thẻ trước/sau (số điều & nội dung); nút 'Nhớ rồi / Chưa nhớ'; thuật toán lặp lại ngắt quãng đơn giản lưu localStorage. |
+| **3.8** | **Bảng xếp hạng** | **HOÀN THÀNH** | Trang /xep-hang: BXH XP theo tuần (thứ Hai - Chủ nhật); 2 tab Toàn quốc & Trường tôi; hiển thị Top 50 + thứ hạng của bản thân; tự đồng bộ XP lên Supabase khi có nickname. |
+| **3.9** | **Thách đấu bạn bè** | **HOÀN THÀNH** | Sau bài thi / trang kết quả có nút 'Thách đấu bạn' -> tạo link /thach-dau/[id]; bạn mở làm đúng 10 câu đó -> so điểm 2 bên trên bảng đấu; người tạo xem danh sách ai đã nhận đấu. |
+| **3.10** | **Bình luận dưới câu** | **HOÀN THÀNH** | Trong FeedbackSheet, nút 'Thảo luận' mở modal xem/gửi bình luận dưới câu (<= 500 ký tự); bộ lọc từ ngữ thô tục cơ bản; nút báo cáo (3 lần tự ẩn). |
+| **3.11** | **Nhắc học (PWA)** | **HOÀN THÀNH** | PWA manifest public/manifest.json, service worker public/sw.js, PwaRegister.tsx xin quyền thông báo và kiểm tra nhắc học lúc 20h. |
+| **4** | **Giao diện & Navigation** | **HOÀN THÀNH** | Bottom navigation 5 tab: Học (/) · Ôn tập (/on-tap) · Thi thử (/thi-thu) · Xếp hạng (/xep-hang) · Tôi (/tien-do). Chuẩn theme Navy design/DESIGN.md. |
 
 ---
 
-## ðŸ“¢ Má»¤C 5: VIá»†C Cá»¦A Äá»¨C (Äang chá» Äá»©c thá»±c hiá»‡n)
+## 📢 MỤC 5: VIỆC CỦA ĐỨC (Đang chờ Đức thực hiện)
 
 ### a) Supabase
-1. VÃ o Supabase Dashboard -> **Authentication** -> **Providers** -> Báº­t **Anonymous sign-ins**.
-2. VÃ o **SQL Editor** -> Táº¡o query má»›i -> DÃ¡n toÃ n bá»™ ná»™i dung file `supabase/migrations/20261019_initial_schema.sql` -> Báº¥m **Run**.
+1. Vào Supabase Dashboard -> **Authentication** -> **Providers** -> Bật **Anonymous sign-ins**.
+2. Vào **SQL Editor** -> Tạo query mới -> Dán toàn bộ nội dung file `supabase/migrations/20261019_initial_schema.sql` -> Bấm **Run**.
 
 ### b) Vercel
-1. VÃ o Vercel Dashboard dá»± Ã¡n `luat-mvp` -> **Settings** -> **Environment Variables**.
-2. ThÃªm 2 biáº¿n mÃ´i trÆ°á»ng:
-   - `NEXT_PUBLIC_SUPABASE_URL`: URL Supabase cá»§a báº¡n
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Anon Key cá»§a báº¡n
-3. Chá»n cáº£ **Production** vÃ  **Preview** -> Báº¥m **Save** -> **Redeploy**.
+1. Vào Vercel Dashboard dự án `luat-mvp` -> **Settings** -> **Environment Variables**.
+2. Thêm 2 biến môi trường:
+   - `NEXT_PUBLIC_SUPABASE_URL`: URL Supabase của bạn
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Anon Key của bạn
+3. Chọn cả **Production** và **Preview** -> Bấm **Save** -> **Redeploy**.
 
-### c) Kiá»ƒm 15 cÃ¢u má»›i
-Xem 15 cÃ¢u chá»n lá»c trong file `noi-dung/15_CAU_KIEM.json`.
+### c) Kiểm 15 câu mới
+Xem 15 câu chọn lọc trong file `noi-dung/15_CAU_KIEM.json`.
 
-### d) Thá»­ trÃªn Ä‘iá»‡n thoáº¡i
-Sau khi Äá»©c cháº¡y xong Supabase vÃ  Vercel deploy, má»Ÿ link https://luat-mvp.vercel.app/ trÃªn Ä‘iá»‡n thoáº¡i Ä‘á»ƒ tráº£i nghiá»‡m 11 tÃ­nh nÄƒng má»›i!
+### d) Thử trên điện thoại
+Sau khi Đức chạy xong Supabase và Vercel deploy, mở link https://luat-mvp.vercel.app/ trên điện thoại để trải nghiệm 11 tính năng mới!
 
 ---
 
-## Nháº­t kÃ½
-- [19/10 13:22] Chuyá»ƒn cháº¿ Ä‘á»™ SOLO, gá»¡ khÃ³a main.
-- [19/10 13:34] Xong Ná»n mÃ³ng & Giao diá»‡n chung, push main.
-- [19/10 13:49] Äá»©c Ä‘Ã£ deploy Vercel vÃ  cung cáº¥p link: https://luat-mvp.vercel.app/
-- [19/10 13:56] Xong toÃ n bá»™ Bá»™ lÃ m bÃ i, Tráº¯c nghiá»‡m, Nháº­n Ä‘á»‹nh, Trang chá»§, Äá» cÆ°Æ¡ng, Tiáº¿n Ä‘á»™.
-- [19/10 14:07] HoÃ n thÃ nh BÆ°á»›c 7 ban Ä‘áº§u (75 cÃ¢u há»i).
-- [19/10 16:05] Nháº­n Äáº¶C Táº¢ má»›i tá»« Äá»©c: lÆ°u team/TINH_NANG.md.
-- [19/10 16:15] HoÃ n thÃ nh Má»¥c 0: sá»­a ná»™i dung Äiá»u 54 Luáº­t Doanh nghiá»‡p & Luáº­t Xá»­ lÃ½ VPHC sá»­a Ä‘á»•i 2025.
-- [19/10 16:25] HoÃ n thÃ nh Má»¥c 1: thÃªm ChÆ°Æ¡ng 2 cáº£ 3 mÃ´n (tá»•ng 150 cÃ¢u), xuáº¥t 15 cÃ¢u máº«u kiá»ƒm tra.
-- [19/10 16:40] HoÃ n thÃ nh Má»¥c 2: tÃ i khoáº£n biá»‡t danh, Supabase Anonymous auth & migration SQL.
-- [19/10 16:50] HoÃ n thÃ nh Má»¥c 3 (trá»n bá»™ 11 tÃ­nh nÄƒng) & Má»¥c 4 (TabBar 5 tab). All checks passed (lint 0 err, typecheck 0 err, build 54 static pages ok).
-## Tiáº¿n Ä‘á»™ Äá»¢T 2 (team/TINH_NANG_2.md - 20/10/2026)
+## Nhật ký
+- [19/10 13:22] Chuyển chế độ SOLO, gỡ khóa main.
+- [19/10 13:34] Xong Nền móng & Giao diện chung, push main.
+- [19/10 13:49] Đức đã deploy Vercel và cung cấp link: https://luat-mvp.vercel.app/
+- [19/10 13:56] Xong toàn bộ Bộ làm bài, Trắc nghiệm, Nhận định, Trang chủ, Đề cương, Tiến độ.
+- [19/10 14:07] Hoàn thành Bước 7 ban đầu (75 câu hỏi).
+- [19/10 16:05] Nhận ĐẶC TẢ mới từ Đức: lưu team/TINH_NANG.md.
+- [19/10 16:15] Hoàn thành Mục 0: sửa nội dung Điều 54 Luật Doanh nghiệp & Luật Xử lý VPHC sửa đổi 2025.
+- [19/10 16:25] Hoàn thành Mục 1: thêm Chương 2 cả 3 môn (tổng 150 câu), xuất 15 câu mẫu kiểm tra.
+- [19/10 16:40] Hoàn thành Mục 2: tài khoản biệt danh, Supabase Anonymous auth & migration SQL.
+- [19/10 16:50] Hoàn thành Mục 3 (trọn bộ 11 tính năng) & Mục 4 (TabBar 5 tab). All checks passed (lint 0 err, typecheck 0 err, build 54 static pages ok).
+## Tiến độ ĐỢT 2 (team/TINH_NANG_2.md - 20/10/2026)
 
-| Má»¥c | Ná»™i dung | Tráº¡ng thÃ¡i | Ghi chÃº |
+| Mục | Nội dung | Trạng thái | Ghi chú |
 |---|---|---|---|
-| **0.1** | **Báº£o máº­t bÃ¬nh luáº­n** | **HOÃ€N THÃ€NH** | XÃ³a policy má»Ÿ toang, báº£ng comment_reports, RPC report_comment (3 bÃ¡o cÃ¡o tá»± áº©n), ngÆ°á»i viáº¿t tá»± xÃ³a Ä‘Æ°á»£c bÃ¬nh luáº­n. |
-| **0.2** | **Chá»‘ng gian láº­n XP** | **HOÃ€N THÃ€NH** | Bá» INSERT/UPDATE trÃªn weekly_xp, thÃªm RPC add_weekly_xp (1-15 XP, rate limit 2s, cap 5000/tuáº§n). |
-| **0.3** | **Icon app chuáº©n** | **HOÃ€N THÃ€NH** | Icon-192, icon-512, apple-touch-icon (#14284B dáº¥u Â§ tráº¯ng), manifest theme_color #14284B, xÃ³a SVG Next thá»«a. |
-| **0.4** | **Cho phÃ©p phÃ³ng to** | **HOÃ€N THÃ€NH** | Bá» maximumScale & userScalable trong viewport layout. |
-| **0.5** | **Nháº¯c há»c tháº­t (Web Push)** | **HOÃ€N THÃ€NH** | web-push, báº£ng push_subscriptions, modal xin quyá»n sau bÃ i Ä‘áº§u / hÆ°á»›ng dáº«n Safari iPhone, cron 13:00 UTC (20:00 VN). |
-| **0.6** | **BÃ¡o sai trong app** | **HOÃ€N THÃ€NH** | Modal bÃ¡o sai in-app 4 lÃ½ do + ghi chÃº, lÆ°u báº£ng item_reports & local fallback. |
-| **A** | **NguyÃªn vÄƒn Ä‘iá»u luáº­t** | **ÄANG LÃ€M** | content/van-ban/*.json, chip cÄƒn cá»© trÆ°á»£t lÃªn, trang /tra-cuu. |
-| **B** | **Bài tập tình huống** | **HOÀN THÀNH** | 2 tÃ¬nh huá»‘ng má»—i chÆ°Æ¡ng (12 tÃ¬nh huá»‘ng), trang giáº£i tá»«ng bÆ°á»›c. |
-| **C** | **Lộ trình ôn thi** | **HOÀN THÀNH** | Äáº·t ngÃ y thi, tháº» tiáº¿n Ä‘á»™ má»—i ngÃ y trÃªn trang chá»§. |
-| **D** | **So sánh & Sơ đồ** | **HOÀN THÀNH** | Báº£ng cuá»™n ngang vÃ  sÆ¡ Ä‘á»“ khá»‘i trong Ä‘á» cÆ°Æ¡ng. |
-| **E** | **ÄÃ³ng gÃ³p cÃ¢u há»i** | **CHá»œ** | Form Ä‘Ã³ng gÃ³p, báº£ng contributions, cÃ¢u duyá»‡t vÃ o chÆ°Æ¡ng. |
-| **F** | **Trang duyệt /quan-tri** | **HOÀN THÀNH** | Quáº£n trá»‹ báº£o vá»‡ mÃ£ PIN: duyá»‡t cÃ¢u, bÃ¡o cÃ¡o bÃ¬nh luáº­n, bÃ¡o sai. |
-| **G** | **Há»i AI (áº©n)** | **CHá»œ** | API Gemini, giá»›i háº¡n 5 láº§n/ngÃ y/ngÆ°á»i. |
+| **0.1** | **Bảo mật bình luận** | **HOÀN THÀNH** | Xóa policy mở toang, bảng comment_reports, RPC report_comment (3 báo cáo tự ẩn), người viết tự xóa được bình luận. |
+| **0.2** | **Chống gian lận XP** | **HOÀN THÀNH** | Bỏ INSERT/UPDATE trên weekly_xp, thêm RPC add_weekly_xp (1-15 XP, rate limit 2s, cap 5000/tuần). |
+| **0.3** | **Icon app chuẩn** | **HOÀN THÀNH** | Icon-192, icon-512, apple-touch-icon (#14284B dấu § trắng), manifest theme_color #14284B, xóa SVG Next thừa. |
+| **0.4** | **Cho phép phóng to** | **HOÀN THÀNH** | Bỏ maximumScale & userScalable trong viewport layout. |
+| **0.5** | **Nhắc học thật (Web Push)** | **HOÀN THÀNH** | web-push, bảng push_subscriptions, modal xin quyền sau bài đầu / hướng dẫn Safari iPhone, cron 13:00 UTC (20:00 VN). |
+| **0.6** | **Báo sai trong app** | **HOÀN THÀNH** | Modal báo sai in-app 4 lý do + ghi chú, lưu bảng item_reports & local fallback. |
+| **A** | **Nguyên văn điều luật** | **ĐANG LÀM** | content/van-ban/*.json, chip căn cứ trượt lên, trang /tra-cuu. |
+| **B** | **B�i tập t�nh huống** | **HO�N TH�NH** | 2 tình huống mỗi chương (12 tình huống), trang giải từng bước. |
+| **C** | **Lộ tr�nh �n thi** | **HO�N TH�NH** | Đặt ngày thi, thẻ tiến độ mỗi ngày trên trang chủ. |
+| **D** | **So s�nh & Sơ đồ** | **HO�N TH�NH** | Bảng cuộn ngang và sơ đồ khối trong đề cương. |
+| **E** | **Đóng góp câu hỏi** | **CHỜ** | Form đóng góp, bảng contributions, câu duyệt vào chương. |
+| **F** | **Trang duyệt /quan-tri** | **HO�N TH�NH** | Quản trị bảo vệ mã PIN: duyệt câu, báo cáo bình luận, báo sai. |
+| **G** | **Hỏi AI (ẩn)** | **CHỜ** | API Gemini, giới hạn 5 lần/ngày/người. |
 
 ---
 
-## Nháº­t kÃ½
-- [19/10 13:22] Chuyá»ƒn cháº¿ Ä‘á»™ SOLO, gá»¡ khÃ³a main.
-- [19/10 13:34] Xong Ná»n mÃ³ng & Giao diá»‡n chung, push main.
-- [19/10 13:49] Äá»©c Ä‘Ã£ deploy Vercel vÃ  cung cáº¥p link: https://luat-mvp.vercel.app/
-- [19/10 13:56] Xong toÃ n bá»™ Bá»™ lÃ m bÃ i, Tráº¯c nghiá»‡m, Nháº­n Ä‘á»‹nh, Trang chá»§, Äá» cÆ°Æ¡ng, Tiáº¿n Ä‘á»™.
-- [19/10 14:07] HoÃ n thÃ nh BÆ°á»›c 7 ban Ä‘áº§u (75 cÃ¢u há»i).
-- [19/10 16:05] Nháº­n Äáº¶C Táº¢ má»›i tá»« Äá»©c: lÆ°u team/TINH_NANG.md.
-- [19/10 16:15] HoÃ n thÃ nh Má»¥c 0: sá»­a ná»™i dung Äiá»u 54 Luáº­t Doanh nghiá»‡p & Luáº­t Xá»­ lÃ½ VPHC sá»­a Ä‘á»•i 2025.
-- [19/10 16:25] HoÃ n thÃ nh Má»¥c 1: thÃªm ChÆ°Æ¡ng 2 cáº£ 3 mÃ´n (tá»•ng 150 cÃ¢u), xuáº¥t 15 cÃ¢u máº«u kiá»ƒm tra.
-- [19/10 16:40] HoÃ n thÃ nh Má»¥c 2: tÃ i khoáº£n biá»‡t danh, Supabase Anonymous auth & migration SQL.
-- [19/10 16:50] HoÃ n thÃ nh Má»¥c 3 (trá»n bá»™ 11 tÃ­nh nÄƒng) & Má»¥c 4 (TabBar 5 tab). All checks passed.
-- [20/10 09:40] Báº¯t Ä‘áº§u Äá»¢T 2 (team/TINH_NANG_2.md). Commit Ä‘áº·c táº£ Ä‘á»£t 2 lÃªn GitHub.
-- [20/10 09:52] HoÃ n thÃ nh Má»¥c 0 Ä‘á»£t 2: sá»­a 5 lá»—i + bÃ¡o sai trong app + Web Push nháº¯c há»c tháº­t + chá»‘ng gian láº­n XP + báº£o máº­t bÃ¬nh luáº­n + app icon má»›i + cho phÃ©p phÃ³ng to. Check passed 100%.
-- [20/10 10:00] Hoàn thành Mục A: Nguyên văn điều luật ngay trong app (77 điều, /tra-cuu, DieuLuatSheet, HomeSearch).
-- [20/10 10:08] Hoàn thành Mục B: Bài tập tình huống 3 bước (12 tình huống, runner đề bài ghim, lời giải mẫu, huy hiệu). All checks passed (66 static pages).
-- [20/10 10:11] Hoàn thành Mục D: Bảng so sánh cuộn ngang và sơ đồ khối phân loại trong đề cương. All checks passed.
+## Nhật ký
+- [19/10 13:22] Chuyển chế độ SOLO, gỡ khóa main.
+- [19/10 13:34] Xong Nền móng & Giao diện chung, push main.
+- [19/10 13:49] Đức đã deploy Vercel và cung cấp link: https://luat-mvp.vercel.app/
+- [19/10 13:56] Xong toàn bộ Bộ làm bài, Trắc nghiệm, Nhận định, Trang chủ, Đề cương, Tiến độ.
+- [19/10 14:07] Hoàn thành Bước 7 ban đầu (75 câu hỏi).
+- [19/10 16:05] Nhận ĐẶC TẢ mới từ Đức: lưu team/TINH_NANG.md.
+- [19/10 16:15] Hoàn thành Mục 0: sửa nội dung Điều 54 Luật Doanh nghiệp & Luật Xử lý VPHC sửa đổi 2025.
+- [19/10 16:25] Hoàn thành Mục 1: thêm Chương 2 cả 3 môn (tổng 150 câu), xuất 15 câu mẫu kiểm tra.
+- [19/10 16:40] Hoàn thành Mục 2: tài khoản biệt danh, Supabase Anonymous auth & migration SQL.
+- [19/10 16:50] Hoàn thành Mục 3 (trọn bộ 11 tính năng) & Mục 4 (TabBar 5 tab). All checks passed.
+- [20/10 09:40] Bắt đầu ĐỢT 2 (team/TINH_NANG_2.md). Commit đặc tả đợt 2 lên GitHub.
+- [20/10 09:52] Hoàn thành Mục 0 đợt 2: sửa 5 lỗi + báo sai trong app + Web Push nhắc học thật + chống gian lận XP + bảo mật bình luận + app icon mới + cho phép phóng to. Check passed 100%.
+- [20/10 10:00] Ho�n th�nh Mục A: Nguy�n văn điều luật ngay trong app (77 điều, /tra-cuu, DieuLuatSheet, HomeSearch).
+- [20/10 10:08] Ho�n th�nh Mục B: B�i tập t�nh huống 3 bước (12 t�nh huống, runner đề b�i ghim, lời giải mẫu, huy hiệu). All checks passed (66 static pages).
+- [20/10 10:11] Ho�n th�nh Mục D: Bảng so s�nh cuộn ngang v� sơ đồ khối ph�n loại trong đề cương. All checks passed.
 
 
 
-- [20/10 10:17] Hoàn thành Mục F: Trang quản trị duyệt nội dung /quan-tri (mã PIN trong biến ADMIN_PIN, API server SUPABASE_SERVICE_ROLE_KEY, duyệt câu hỏi đóng góp, bình luận báo cáo, báo sai). All checks passed.
-- [20/10 10:22] Hoàn thành Mục C: Lộ trình ôn đến ngày thi (đặt ngày thi theo môn tại tab Tôi, thẻ mục tiêu hôm nay tại trang chủ, công thức tính số câu X chia theo ngày còn lại, chế độ nước rút 3 ngày cuối gợi ý thi thử, thưởng +15 XP khi hoàn thành mục tiêu). All checks passed.
-- [20/10 10:25] Hoàn thành Mục E: Sinh viên đóng góp câu hỏi (Modal form đủ trường bắt buộc + link kiểm chứng chính thức, lưu bảng contributions & local fallback, mở khóa huy hiệu "Người đóng góp", nút đóng góp ở tab Tôi và cuối bài làm ResultScreen, danh sách "Câu hỏi cộng đồng" trong môn học ghi nhận tên tác giả). All checks passed.
-- [20/10 10:28] Hoàn thành Mục G: Hỏi AI về câu này (Làm sẵn nhưng ẩn; kiểm tra qua API /api/hoi-ai không lộ key, nút Hỏi AI trong FeedbackSheet, API Gemini Flash kèm ngữ cảnh nguyên văn điều luật căn cứ, giới hạn 5 lần/người/ngày lưu bảng ai_usage, dòng cảnh báo "AI có thể sai, hãy đối chiếu điều luật"). All checks passed.
-- [30/10 10:35] Hoàn thành Tính năng Luyện án thật & Khắc phục hàm add_weekly_xp trên database:
-  + Áp dụng thành công migration trực tiếp lên Supabase zolxwrrhdwssuqlcnkkr qua SQL Editor, khóa dòng FOR UPDATE chống race condition, sửa lỗi COALESCE khi tuần mới chưa có bản ghi, trần 5000 XP/tuần, tự động đảm bảo bản ghi players.
-  + Kiểm thử toàn diện test suite trên server thật: thưởng +15 XP cho tài khoản mới thành công, từ chối rate limit < 2s, từ chối delta ngoài [1, 15], cộng dồn chính xác sau 2s, xử lý an toàn 2 request đồng thời.
-  + Giao diện CaseStudyRunner cập nhật luồng thưởng XP an toàn: chỉ đánh dấu đã nhận khi server xác nhận thành công, hỗ trợ nút bấm thử lại khi lỗi mạng/giãn cách, giữ nguyên trạng thái làm bài/nháp khi reload, báo sai chính xác từng câu hỏi.
-  + Dọn dẹp sạch tài khoản thử nghiệm khỏi database, không làm ô nhiễm bảng xếp hạng công khai. All checks passed.
+- [20/10 10:17] Ho�n th�nh Mục F: Trang quản trị duyệt nội dung /quan-tri (m� PIN trong biến ADMIN_PIN, API server SUPABASE_SERVICE_ROLE_KEY, duyệt c�u hỏi đ�ng g�p, b�nh luận b�o c�o, b�o sai). All checks passed.
+- [20/10 10:22] Ho�n th�nh Mục C: Lộ tr�nh �n đến ng�y thi (đặt ng�y thi theo m�n tại tab T�i, thẻ mục ti�u h�m nay tại trang chủ, c�ng thức t�nh số c�u X chia theo ng�y c�n lại, chế độ nước r�t 3 ng�y cuối gợi � thi thử, thưởng +15 XP khi ho�n th�nh mục ti�u). All checks passed.
+- [20/10 10:25] Ho�n th�nh Mục E: Sinh vi�n đ�ng g�p c�u hỏi (Modal form đủ trường bắt buộc + link kiểm chứng ch�nh thức, lưu bảng contributions & local fallback, mở kh�a huy hiệu "Người đ�ng g�p", n�t đ�ng g�p ở tab T�i v� cuối b�i l�m ResultScreen, danh s�ch "C�u hỏi cộng đồng" trong m�n học ghi nhận t�n t�c giả). All checks passed.
+- [20/10 10:28] Ho�n th�nh Mục G: Hỏi AI về c�u n�y (L�m sẵn nhưng ẩn; kiểm tra qua API /api/hoi-ai kh�ng lộ key, n�t Hỏi AI trong FeedbackSheet, API Gemini Flash k�m ngữ cảnh nguy�n văn điều luật căn cứ, giới hạn 5 lần/người/ng�y lưu bảng ai_usage, d�ng cảnh b�o "AI c� thể sai, h�y đối chiếu điều luật"). All checks passed.
+- [30/10 10:35] Ho�n th�nh T�nh năng Luyện �n thật & Khắc phục h�m add_weekly_xp tr�n database:
+  + �p dụng th�nh c�ng migration trực tiếp l�n Supabase zolxwrrhdwssuqlcnkkr qua SQL Editor, kh�a d�ng FOR UPDATE chống race condition, sửa lỗi COALESCE khi tuần mới chưa c� bản ghi, trần 5000 XP/tuần, tự động đảm bảo bản ghi players.
+  + Kiểm thử to�n diện test suite tr�n server thật: thưởng +15 XP cho t�i khoản mới th�nh c�ng, từ chối rate limit < 2s, từ chối delta ngo�i [1, 15], cộng dồn ch�nh x�c sau 2s, xử l� an to�n 2 request đồng thời.
+  + Giao diện CaseStudyRunner cập nhật luồng thưởng XP an to�n: chỉ đ�nh dấu đ� nhận khi server x�c nhận th�nh c�ng, hỗ trợ n�t bấm thử lại khi lỗi mạng/gi�n c�ch, giữ nguy�n trạng th�i l�m b�i/nh�p khi reload, b�o sai ch�nh x�c từng c�u hỏi.
+  + Dọn dẹp sạch t�i khoản thử nghiệm khỏi database, kh�ng l�m � nhiễm bảng xếp hạng c�ng khai. All checks passed.

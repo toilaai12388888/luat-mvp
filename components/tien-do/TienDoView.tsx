@@ -101,9 +101,9 @@ export function TienDoView() {
   const todayIndex = (new Date().getDay() + 6) % 7;
 
   const subjectMeta: Record<string, { name: string; photo: string }> = {
-    "dan-su": { name: "Luáº­t DÃ¢n sá»±", photo: "/photos/dan-su.jpg" },
-    "hanh-chinh": { name: "Luáº­t HÃ nh chÃ­nh", photo: "/photos/hanh-chinh.jpg" },
-    "doanh-nghiep": { name: "Luáº­t Doanh nghiá»‡p", photo: "/photos/doanh-nghiep.jpg" },
+    "dan-su": { name: "Luật Dân sự", photo: "/photos/dan-su.jpg" },
+    "hanh-chinh": { name: "Luật Hành chính", photo: "/photos/hanh-chinh.jpg" },
+    "doanh-nghiep": { name: "Luật Doanh nghiệp", photo: "/photos/doanh-nghiep.jpg" },
   };
 
   const bySubject = stats?.bySubject || [
@@ -118,7 +118,7 @@ export function TienDoView() {
       .filter((q): q is QuizQuestion => q !== null);
 
     if (items.length === 0) return;
-    setPracticeTitle(`Ã”n táº­p: ${weakness.article}`);
+    setPracticeTitle(`Ôn tập: ${weakness.article}`);
     setPracticeItems(items);
   };
 
@@ -177,7 +177,7 @@ export function TienDoView() {
           <div>
             <div className="flex items-center gap-2">
               <span className="font-bold text-sm text-ink">
-                {player ? player.nickname : "ChÆ°a Ä‘áº·t biá»‡t danh"}
+                {player ? player.nickname : "Chưa đặt biệt danh"}
               </span>
               {player && (
                 <span className="text-[10px] font-bold text-navy-ink bg-navy-soft px-1.5 py-0.5 rounded">
@@ -187,8 +187,8 @@ export function TienDoView() {
             </div>
             <p className="text-[11px] text-ink-3">
               {player
-                ? "TÃ i khoáº£n áº©n danh Ä‘Ã£ kÃ­ch hoáº¡t cá»™ng Ä‘á»“ng"
-                : "Äáº·t biá»‡t danh Ä‘á»ƒ xáº¿p háº¡ng vÃ  thÃ¡ch Ä‘áº¥u"}
+                ? "Tài khoản ẩn danh đã kích hoạt cộng đồng"
+                : "Đặt biệt danh để xếp hạng và thách đấu"}
             </p>
           </div>
         </div>
@@ -199,28 +199,28 @@ export function TienDoView() {
           variant="secondary"
           className="h-8 text-xs font-semibold"
         >
-          {player ? "Sá»­a" : "Äáº·t tÃªn"}
+          {player ? "Sửa" : "Đặt tên"}
         </Button>
       </Card>
 
       {/* Header with XP */}
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-bold tracking-tight text-ink">Há»“ sÆ¡ & Tiáº¿n Ä‘á»™</h1>
+        <h1 className="text-xl font-bold tracking-tight text-ink">Hồ sơ & Tiến độ</h1>
         <Chip aria-label={`${xp} XP`}>
           <Zap size={15} className="text-gold" fill="currentColor" />
           <span>{xp} XP</span>
         </Chip>
       </div>
 
-      {/* Chuá»—i ngÃ y Card */}
+      {/* Chuỗi ngày Card */}
       <Card>
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2 font-bold text-sm text-ink">
             <Flame size={18} className="text-fire" fill="currentColor" />
-            <span>Chuá»—i {streak} ngÃ y</span>
+            <span>Chuỗi {streak} ngày</span>
           </div>
           <span className="text-xs text-ink-2">
-            {stats?.doneToday ? "ÄÃ£ Ã´n táº­p hÃ´m nay" : "ChÆ°a lÃ m bÃ i hÃ´m nay"}
+            {stats?.doneToday ? "Đã ôn tập hôm nay" : "Chưa làm bài hôm nay"}
           </span>
         </div>
 
@@ -242,7 +242,7 @@ export function TienDoView() {
                   {day}
                 </span>
                 <span className={`grid h-8 w-8 place-items-center rounded-full text-xs ${dotCls}`}>
-                  {isDone ? "âœ“" : isToday ? "â€¢" : ""}
+                  {isDone ? "✓" : isToday ? "•" : ""}
                 </span>
               </div>
             );
@@ -253,29 +253,29 @@ export function TienDoView() {
       {/* 3 Metric Tiles */}
       <div className="grid grid-cols-3 gap-2">
         <div className="rounded-2xl border border-line bg-surface p-3 text-center">
-          <span className="text-xs text-ink-3 block mb-1">Tá»•ng XP</span>
+          <span className="text-xs text-ink-3 block mb-1">Tổng XP</span>
           <span className="text-xl font-extrabold text-gold">+{xp}</span>
         </div>
 
         <div className="rounded-2xl border border-line bg-surface p-3 text-center">
-          <span className="text-xs text-ink-3 block mb-1">CÃ¢u Ä‘Ã£ lÃ m</span>
+          <span className="text-xs text-ink-3 block mb-1">Câu đã làm</span>
           <span className="text-xl font-extrabold text-ink">{answered}</span>
         </div>
 
         <div className="rounded-2xl border border-line bg-surface p-3 text-center">
-          <span className="text-xs text-ink-3 block mb-1">Tá»‰ lá»‡ Ä‘Ãºng</span>
+          <span className="text-xs text-ink-3 block mb-1">Tỷ lệ đúng</span>
           <span className="text-xl font-extrabold text-good">{pctCorrect}%</span>
         </div>
       </div>
 
-      {/* FEATURE 5: THá»NG KÃŠ ÄIá»‚M Yáº¾U */}
+      {/* FEATURE 5: THỐNG KÊ ĐIỂM YẾU */}
       <section>
         <div className="flex items-center justify-between mb-2.5">
           <h2 className="text-base font-bold text-ink flex items-center gap-1.5">
             <AlertTriangle size={17} className="text-danger" />
-            Äiá»ƒm yáº¿u cáº§n cá»§ng cá»‘
+            Điểm yếu cần củng cố
           </h2>
-          <span className="text-xs text-ink-3">Äiá»u luáº­t sai nhiá»u</span>
+          <span className="text-xs text-ink-3">Điều luật sai nhiều</span>
         </div>
 
         {weaknesses.length > 0 ? (
@@ -284,10 +284,10 @@ export function TienDoView() {
               <Card key={w.key} className="p-3.5 flex items-center justify-between border-line">
                 <div>
                   <span className="text-xs font-bold text-navy-ink block">
-                    {w.article} Â· {w.lawName}
+                    {w.article} · {w.lawName}
                   </span>
                   <span className="text-[11px] font-medium text-danger">
-                    ÄÃ£ sai {w.wrongCount} láº§n ({w.questionIds.length} cÃ¢u liÃªn quan)
+                    Đã sai {w.wrongCount} lần ({w.questionIds.length} câu liên quan)
                   </span>
                 </div>
 
@@ -297,7 +297,7 @@ export function TienDoView() {
                   className="h-8 text-xs font-bold"
                 >
                   <Play size={12} className="mr-1 fill-current" />
-                  Ã”n ngay
+                  Ôn ngay
                 </Button>
               </Card>
             ))}
@@ -305,18 +305,18 @@ export function TienDoView() {
         ) : (
           <Card className="p-4 text-center border-dashed border-line">
             <p className="text-xs text-ink-3">
-              ChÆ°a phÃ¡t hiá»‡n Ä‘iá»ƒm yáº¿u nÃ o tá»“n Ä‘á»ng! Há»‡ thá»‘ng sáº½ tá»± Ä‘á»™ng phÃ¢n tÃ­ch sau cÃ¡c bÃ i lÃ m cá»§a báº¡n.
+              Chưa phát hiện điểm yếu nào tồn đọng! Hệ thống sẽ tự động phân tích sau các bài làm của bạn.
             </p>
           </Card>
         )}
       </section>
 
-      {/* FEATURE 4: HUY HIá»†U */}
+      {/* FEATURE 4: HUY HIỆU */}
       <section>
         <div className="flex items-center justify-between mb-2.5">
           <h2 className="text-base font-bold text-ink flex items-center gap-1.5">
             <Award size={18} className="text-gold" />
-            Huy hiá»‡u Ä‘áº¡t Ä‘Æ°á»£c
+            Huy hiệu đạt được
           </h2>
           <span className="text-xs text-ink-3 font-semibold">
             {badges.filter((b) => b.unlocked).length} / {badges.length}
@@ -344,7 +344,7 @@ export function TienDoView() {
                   </span>
                   {badge.unlocked ? (
                     <span className="text-[10px] font-bold text-good bg-good-soft px-1.5 py-0.5 rounded">
-                      ÄÃ£ má»Ÿ
+                      Đã mở
                     </span>
                   ) : (
                     <Lock size={13} className="text-ink-3" />
@@ -365,9 +365,9 @@ export function TienDoView() {
         </div>
       </section>
 
-      {/* Theo MÃ´n Card */}
+      {/* Theo Môn Card */}
       <section>
-        <h2 className="text-base font-bold text-ink mb-3">Tiáº¿n Ä‘á»™ theo mÃ´n há»c</h2>
+        <h2 className="text-base font-bold text-ink mb-3">Tiến độ theo môn học</h2>
         <Card className="divide-y divide-line p-0 overflow-hidden">
           {bySubject.map((item) => {
             const meta = subjectMeta[item.slug];
@@ -393,7 +393,7 @@ export function TienDoView() {
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="font-bold text-sm text-ink">{meta.name}</span>
                     <span className="text-xs font-semibold text-good">
-                      {item.answered > 0 ? `${item.pctCorrect}% Ä‘Ãºng` : "ChÆ°a lÃ m"}
+                      {item.answered > 0 ? `${item.pctCorrect}% đúng` : "Chưa làm"}
                     </span>
                   </div>
 
@@ -405,7 +405,7 @@ export function TienDoView() {
                       />
                     </div>
                     <span className="text-[11px] text-ink-3 tabular-nums">
-                      {item.answered} cÃ¢u
+                      {item.answered} câu
                     </span>
                   </div>
                 </div>
